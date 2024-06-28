@@ -10,3 +10,10 @@ script = ExtResource("1_o3ekr")
 position = Vector2(533, 305)
 
 [node name="Node" type="Node" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1

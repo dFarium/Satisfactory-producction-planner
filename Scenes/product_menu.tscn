@@ -12,17 +12,21 @@ grow_vertical = 2
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
-offset_right = 187.0
-offset_bottom = 38.0
+offset_right = 500.0
+offset_bottom = 50.0
 placeholder_text = "Search..."
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_right = 503.0
-offset_bottom = 72.0
+offset_top = 55.0
+offset_right = 500.0
+offset_bottom = 183.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
 
 [node name="Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_j2lak")]
 layout_mode = 2
@@ -37,4 +41,13 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Button5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_j2lak")]
+layout_mode = 2
+
+[node name="Button6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_j2lak")]
+layout_mode = 2
+
+[node name="Button7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_j2lak")]
+layout_mode = 2
+
+[node name="Button8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_j2lak")]
 layout_mode = 2
