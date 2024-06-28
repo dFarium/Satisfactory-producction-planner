@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6fryj1xedsik"]
+
+[ext_resource type="Texture2D" uid="uid://cdev2sp64qvp5" path="res://icon.svg" id="1_h3o0g"]
+
+[node name="ButtonOption" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_right = 500.0
+offset_bottom = 67.0
+text = "Alclad sheet aluminum"
+alignment = 0
+icon_alignment = 2
+text_direction = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Button"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 13.0
+offset_right = 496.0
+offset_bottom = 57.0
+
+[node name="TextureRect" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="Button/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h3o0g")
+expand_mode = 2

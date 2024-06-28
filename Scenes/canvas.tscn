@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c21600ds4lm6u"]
+
+[ext_resource type="PackedScene" uid="uid://bsvh1vn5bcfx1" path="res://Scenes/drag_test.tscn" id="1_3ebnb"]
+[ext_resource type="Script" path="res://Scripts/canvas.gd" id="1_o3ekr"]
+
+[node name="Canvas" type="Node2D"]
+script = ExtResource("1_o3ekr")
+
+[node name="base" parent="." instance=ExtResource("1_3ebnb")]
+position = Vector2(533, 305)
+
+[node name="Node" type="Node" parent="."]
