@@ -1,52 +1,58 @@
 extends Control
 
-@onready var search_field:TextEdit = $TextEdit
-@onready var recipe_container:VBoxContainer = $ScrollContainer/VBoxContainer
-const BUTTON_OPTION = preload("res://Scenes/button_option.tscn")
-var recipe_list:Array[Recipe]
+# Variables de nodos de la escena
+@onready var search_field: TextEdit = $TextEdit
+@onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
 
-# Called when the node enters the scene tree for the first time.
+# Constante para la escena del botón de opción
+const BUTTON_OPTION = preload("res://Scenes/button_option.tscn")
+
+# Lista de recetas cargadas
+var recipe_list: Array[Recipe] = []
+
+# Función llamada cuando el nodo entra en el árbol de la escena por primera vez
 func _ready() -> void:
 	load_recipes()
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta:float) -> void:
-	pass
-
-
+# Función llamada cuando el texto en el campo de búsqueda cambia
 func _on_text_edit_text_changed() -> void:
+	# Limpiar las opciones anteriores
 	clear_children(recipe_container)
-	for recipe:Recipe in search_recipes(search_field.text.to_lower()):
+	
+	# Buscar recetas que coincidan con el texto de búsqueda
+	var search_results := search_recipes(search_field.text.to_lower())
+	
+	# Crear y añadir opciones de receta basadas en los resultados de búsqueda
+	for recipe:Recipe in search_results:
 		var recipe_option := BUTTON_OPTION.instantiate()
 		recipe_container.add_child(recipe_option)
-		var option :RecipeOption= recipe_container.get_child(-1)
-		set_recipe(option,recipe)
-
-func load_recipes() -> void:
-	for recipe in DirAccess.get_files_at("res://Recipes/"):
-		recipe_list.append(ResourceLoader.load("res://Recipes/"+recipe))
 		
-func search_recipes(input:String) -> Array:
-	var results:Array
+		# Obtener la última opción añadida y configurar la receta
+		var option: RecipeOption = recipe_container.get_child(recipe_container.get_child_count() - 1)
+		set_recipe(option, recipe)
+
+# Cargar las recetas desde la carpeta 'Recipes'
+func load_recipes() -> void:
+	var recipe_files := DirAccess.get_files_at("res://Recipes/")
+	for recipe_file in recipe_files:
+		var recipe := ResourceLoader.load("res://Recipes/" + recipe_file)
+		recipe_list.append(recipe)
+
+# Buscar recetas que coincidan parcial o completamente con la entrada
+func search_recipes(input: String) -> Array:
+	var results: Array = []
 	for recipe in recipe_list:
-		# Partial match
 		if input.length() > 0 and recipe.name.to_lower().find(input) != -1:
 			results.append(recipe)
-		# Perfect match
 		elif input == recipe.name:
 			results.append(recipe)
 	return results
-	
-func clear_children(node: Node) -> void:
-	if node.get_child_count() > 0:
-		var children := node.get_children()
-		for child in children:
-			child.queue_free()
-			
-func get_last_option_added(node:Node)-> Node:
-	return node.get_child(node.get_child_count()-1)
 
-func set_recipe(option:RecipeOption, recipe:Recipe) -> void:
+# Eliminar todos los hijos de un nodo
+func clear_children(node: Node) -> void:
+	for child in node.get_children():
+		child.queue_free()
+
+# Configurar la visualización de una opción de receta
+func set_recipe(option: RecipeOption, recipe: Recipe) -> void:
 	option.set_recipe_display(recipe)
