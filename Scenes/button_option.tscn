@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dnodskb5t767u"]
 
-[ext_resource type="Texture2D" uid="uid://cdev2sp64qvp5" path="res://icon.svg" id="1_0grq7"]
+[ext_resource type="Script" path="res://Scripts/recipe_option.gd" id="1_m6lh4"]
 
-[node name="Button" type="Button"]
+[node name="option" type="Button"]
 custom_minimum_size = Vector2(0, 50)
 offset_right = 495.0
 offset_bottom = 50.0
@@ -10,6 +10,7 @@ text = "Alclad sheet aluminum"
 alignment = 0
 icon_alignment = 2
 text_direction = 1
+script = ExtResource("1_m6lh4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -18,32 +19,26 @@ offset_top = 3.0
 offset_right = 488.0
 offset_bottom = 45.0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon2" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon3" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2
 
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon4" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2
 
-[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon5" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2
 
-[node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon6" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0grq7")
 expand_mode = 2

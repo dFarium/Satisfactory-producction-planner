@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://4nypsjs1fuua"]
+
+[ext_resource type="Script" path="res://Scripts/item_amount.gd" id="1_7rugv"]
+[ext_resource type="Script" path="res://Scripts/recipe.gd" id="1_e2n6q"]
+[ext_resource type="Resource" uid="uid://4mr0f8n86ml1" path="res://Items/iron_ore.tres" id="1_fcmc1"]
+[ext_resource type="Resource" uid="uid://c62j3x73veagt" path="res://Items/iron_ingot.tres" id="3_mynpe"]
+
+[sub_resource type="Resource" id="Resource_mnlix"]
+script = ExtResource("1_7rugv")
+item = ExtResource("1_fcmc1")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_6uiuc"]
+script = ExtResource("1_7rugv")
+item = ExtResource("3_mynpe")
+quantity = 1
+
+[resource]
+script = ExtResource("1_e2n6q")
+name = "Iron Ingot"
+inputs = Array[ExtResource("1_7rugv")]([SubResource("Resource_mnlix")])
+outputs = Array[ExtResource("1_7rugv")]([SubResource("Resource_6uiuc")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = false

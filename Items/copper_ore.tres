@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://d3jckxs840g5e"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_1rruc"]
+[ext_resource type="Texture2D" uid="uid://c8t0npbxawci" path="res://Items/Icons/Copper_Ore.webp" id="1_wdxlo"]
+
+[resource]
+script = ExtResource("1_1rruc")
+name = "Copper Ore"
+description = "Used for crafting. Basic resource mainly used for electricity."
+icon = ExtResource("1_wdxlo")

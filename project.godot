@@ -22,6 +22,8 @@ gdscript/warnings/untyped_declaration=2
 [file_customization]
 
 folder_colors={
+"res://Items/": "green",
+"res://Recipes/": "purple",
 "res://Scenes/": "red",
 "res://Scripts/": "orange"
 }
