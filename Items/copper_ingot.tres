@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dt2sw7mkbfvun"]
+
+[ext_resource type="Texture2D" uid="uid://c1hupf5soyik3" path="res://Items/Icons/Copper_Ingot.webp" id="1_1qkja"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="2_tx3h8"]
+
+[resource]
+script = ExtResource("2_tx3h8")
+name = "Copper Ingot"
+description = "Used for crafting.Crafted into the most basic parts."
+icon = ExtResource("1_1qkja")
