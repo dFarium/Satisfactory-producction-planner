@@ -1,0 +1,165 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnck544yvr326"]
+
+[ext_resource type="Script" path="res://Scripts/base_graph_node.gd" id="1_r4jqs"]
+[ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://Items/Icons/Heavy_Modular_Frame.webp" id="2_tc34l"]
+[ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://Items/Icons/Aluminum_Casing.webp" id="4_vgd7w"]
+[ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://Items/Icons/Nitrogen_Gas.webp" id="5_m8vbu"]
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="6_gppjd"]
+
+[node name="Building" type="GraphNode"]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 300.0
+offset_bottom = 368.0
+resizable = true
+title = "Fused Modular Frame"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 0, 0, 0.996078)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 0, 0, 0.996078)
+slot/0/right_icon = null
+slot/0/draw_stylebox = false
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 0, 0, 0.996078)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 0, 0, 0.996078)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = true
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 0, 0, 0.996078)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = true
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 0, 0, 0.996078)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+script = ExtResource("1_r4jqs")
+
+[node name="Buildings" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="Buildings"]
+layout_mode = 2
+
+[node name="TargetItem" type="Label" parent="Buildings"]
+layout_mode = 2
+text = "Manufaturer(s)
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input1" type="VBoxContainer" parent="HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Heavy Modular Frame"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_tc34l")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Fused Modular Frame
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_gppjd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input2" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer2/Input2"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Aluminum Casing"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/Input2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_vgd7w")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer2/Input2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input2" type="VBoxContainer" parent="HBoxContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer3/Input2"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Nitrogen Gas"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("5_m8vbu")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input2"]
+layout_mode = 2

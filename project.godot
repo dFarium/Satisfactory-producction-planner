@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Satisfactory Producction Planner"
-run/main_scene="res://Scenes/canvas.tscn"
+run/main_scene="res://Scenes/graph_node_test.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [debug]
 
-gdscript/warnings/untyped_declaration=2
+gdscript/warnings/untyped_declaration=1
 
 [file_customization]
 

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://c73h38vsyw36o"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_13a51"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_13a51")
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_offset = Vector2(-4, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="AddNode" type="Button" parent="."]
+offset_left = 324.0
+offset_top = 12.0
+offset_right = 445.0
+offset_bottom = 48.0
+text = "Add node"
+
+[connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="pressed" from="AddNode" to="." method="_on_add_node_pressed"]
