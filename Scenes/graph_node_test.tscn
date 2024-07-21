@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c73h38vsyw36o"]
+[gd_scene load_steps=6 format=3 uid="uid://c73h38vsyw36o"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_13a51"]
+[ext_resource type="PackedScene" uid="uid://csj5wribu5lh7" path="res://Scenes/add_building.tscn" id="2_y6ksl"]
+[ext_resource type="PackedScene" uid="uid://d30g4gyfdu85i" path="res://Scenes/Factories/assembler.tscn" id="4_tkjb5"]
+[ext_resource type="PackedScene" uid="uid://dnck544yvr326" path="res://Scenes/Factories/manufacturer3.tscn" id="5_nqa7k"]
+[ext_resource type="PackedScene" uid="uid://bcwvi3ipv6fet" path="res://Scenes/Factories/manufacturer4.tscn" id="6_1g1ge"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -18,15 +22,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_offset = Vector2(-4, 0)
 metadata/_edit_use_anchors_ = true
 
-[node name="AddNode" type="Button" parent="."]
-offset_left = 324.0
-offset_top = 12.0
-offset_right = 445.0
-offset_bottom = 48.0
-text = "Add node"
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 9.0
+offset_right = 901.0
+offset_bottom = 49.0
+
+[node name="Add Constructor" parent="HBoxContainer" instance=ExtResource("2_y6ksl")]
+layout_mode = 2
+
+[node name="Add Constructor2" parent="HBoxContainer" instance=ExtResource("2_y6ksl")]
+layout_mode = 2
+text = "Add Assembler	"
+building = ExtResource("4_tkjb5")
+
+[node name="Add Constructor3" parent="HBoxContainer" instance=ExtResource("2_y6ksl")]
+layout_mode = 2
+text = "Add Man 3"
+building = ExtResource("5_nqa7k")
+
+[node name="Add Constructor4" parent="HBoxContainer" instance=ExtResource("2_y6ksl")]
+layout_mode = 2
+text = "Add Man 4"
+building = ExtResource("6_1g1ge")
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
-[connection signal="pressed" from="AddNode" to="." method="_on_add_node_pressed"]
