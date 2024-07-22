@@ -1,7 +1,6 @@
 extends Control
 
 # Variables de nodos de la escena
-@onready var search_field: TextEdit = $TextEdit
 @onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
 
 # Constante para la escena del botón de opción
@@ -16,11 +15,10 @@ func _ready() -> void:
 	show_recipes(recipe_list)
 
 # Función llamada cuando el texto en el campo de búsqueda cambia
-func _on_text_edit_text_changed() -> void:
+func _on_text_edit_text_changed(new_text:String) -> void:
 	clear_children(recipe_container)
-	var input_field:TextEdit = get_node("TextEdit")
-	if input_field.text.length() > 0:
-		show_recipes(search_recipes(search_field.text.to_lower()))
+	if new_text.length() > 0:
+		show_recipes(search_recipes(new_text.to_lower()))
 	else:
 		show_recipes(recipe_list)
 
@@ -53,8 +51,11 @@ func set_recipe(option: RecipeOption, recipe: Recipe) -> void:
 func show_recipes(recipes_to_show:Array) -> void:
 	# Crear y añadir opciones de receta basadas en los resultados de búsqueda
 	for recipe:Recipe in recipes_to_show:
-		var recipe_option := BUTTON_OPTION.instantiate()
+		var recipe_option:Button = BUTTON_OPTION.instantiate()
 		recipe_container.add_child(recipe_option)
-		# Obtener la última opción añadida y configurar la receta
-		var option: RecipeOption = recipe_container.get_child(-1)
-		set_recipe(option, recipe)
+		set_recipe(recipe_option, recipe)
+
+
+
+func _on_node_deselected() -> void:
+	queue_free()

@@ -1,44 +1,72 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnodskb5t767u"]
+[gd_scene load_steps=9 format=3 uid="uid://dnodskb5t767u"]
 
 [ext_resource type="Script" path="res://Scripts/recipe_option.gd" id="1_m6lh4"]
+[ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://Items/Icons/Aluminum_Casing.webp" id="2_a7r63"]
+[ext_resource type="Texture2D" uid="uid://c1hupf5soyik3" path="res://Items/Icons/Copper_Ingot.webp" id="3_deuk6"]
+[ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://Items/Icons/Cooling_System.webp" id="4_ax6xl"]
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="5_4d0an"]
+[ext_resource type="Texture2D" uid="uid://badlij1l5cppy" path="res://Items/Icons/arrowRight.png" id="6_g1vmf"]
+[ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="7_lds2c"]
+[ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://Items/Icons/Modular_Engine.webp" id="8_in0kp"]
 
 [node name="option" type="Button"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(500, 50)
 offset_right = 495.0
 offset_bottom = 50.0
-text = "Alclad sheet aluminum"
 alignment = 0
 icon_alignment = 2
 text_direction = 1
 script = ExtResource("1_m6lh4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 210.0
-offset_top = 3.0
-offset_right = 488.0
-offset_bottom = 45.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -21.0
+offset_right = 489.0
+offset_bottom = 21.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Non-fissile Uranium"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
 
 [node name="option_icon" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("2_a7r63")
 expand_mode = 2
 
 [node name="option_icon2" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("3_deuk6")
 expand_mode = 2
 
 [node name="option_icon3" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("4_ax6xl")
 expand_mode = 2
 
 [node name="option_icon4" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("5_4d0an")
 expand_mode = 2
 
 [node name="option_icon5" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("6_g1vmf")
 expand_mode = 2
 
 [node name="option_icon6" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("7_lds2c")
+expand_mode = 2
+
+[node name="option_icon7" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_in0kp")
 expand_mode = 2

@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcwvi3ipv6fet"]
 
-[ext_resource type="Script" path="res://Scripts/base_graph_node.gd" id="1_r4jqs"]
+[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_wklas"]
 [ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://Items/Icons/Modular_Engine.webp" id="2_653yv"]
 [ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://Items/Icons/Thermal_Propulsion_Rocket.webp" id="3_t8rh7"]
 [ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://Items/Icons/Turbo_Motor.webp" id="4_8gww7"]
 [ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://Items/Icons/Cooling_System.webp" id="5_ctndu"]
 [ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="6_gppjd"]
 
-[node name="Building" type="GraphNode"]
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
-offset_bottom = 368.0
+offset_bottom = 675.0
 resizable = true
 title = "Thermal Propulsion Rocket"
 slot/0/left_enabled = false
@@ -58,7 +58,9 @@ slot/4/right_type = 0
 slot/4/right_color = Color(1, 1, 1, 1)
 slot/4/right_icon = null
 slot/4/draw_stylebox = true
-script = ExtResource("1_r4jqs")
+script = ExtResource("1_wklas")
+inputs = [NodePath("HBoxContainer/Input1"), NodePath("HBoxContainer2/Input2"), NodePath("HBoxContainer3/Input3"), NodePath("HBoxContainer4/Input4")]
+outputs = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -152,11 +154,11 @@ layout_mode = 2
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Input2" type="VBoxContainer" parent="HBoxContainer3"]
+[node name="Input3" type="VBoxContainer" parent="HBoxContainer3"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer3/Input2"]
+[node name="Label" type="Label" parent="HBoxContainer3/Input3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Cooling System"
@@ -164,24 +166,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input2"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("5_ctndu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input2"]
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input3"]
 layout_mode = 2
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Input2" type="VBoxContainer" parent="HBoxContainer4"]
+[node name="Input4" type="VBoxContainer" parent="HBoxContainer4"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer4/Input2"]
+[node name="Label" type="Label" parent="HBoxContainer4/Input4"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Fused Modular Frame"
@@ -189,12 +191,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer4/Input2"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer4/Input4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("6_gppjd")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer4/Input2"]
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer4/Input4"]
 layout_mode = 2

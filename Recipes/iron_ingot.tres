@@ -17,6 +17,7 @@ quantity = 1
 
 [resource]
 script = ExtResource("1_e2n6q")
+building = 11
 name = "Iron Ingot"
 inputs = Array[ExtResource("1_7rugv")]([SubResource("Resource_mnlix")])
 outputs = Array[ExtResource("1_7rugv")]([SubResource("Resource_6uiuc")])

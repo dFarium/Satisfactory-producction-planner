@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://d30g4gyfdu85i"]
+[gd_scene load_steps=4 format=3 uid="uid://cf87kopctjjm"]
 
-[ext_resource type="Script" path="res://Scripts/base_graph_node.gd" id="1_sulpr"]
-[ext_resource type="Texture2D" uid="uid://dsftpcc65ruwb" path="res://Items/Icons/Screw.png" id="3_d81xq"]
-[ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="4_6jmtf"]
-[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="5_hjlb2"]
+[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_a7dxp"]
+[ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="2_fwej2"]
+[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="3_f8c8e"]
 
 [node name="Building" type="GraphNode"]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
-offset_bottom = 368.0
+offset_bottom = 227.0
 resizable = true
 title = "Reinforced Iron Plate"
 slot/0/left_enabled = false
@@ -29,16 +28,7 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 0, 0, 0.996078)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
-slot/2/left_enabled = true
-slot/2/left_type = 0
-slot/2/left_color = Color(1, 0, 0, 0.996078)
-slot/2/left_icon = null
-slot/2/right_enabled = false
-slot/2/right_type = 0
-slot/2/right_color = Color(1, 1, 1, 1)
-slot/2/right_icon = null
-slot/2/draw_stylebox = true
-script = ExtResource("1_sulpr")
+script = ExtResource("1_a7dxp")
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -49,7 +39,7 @@ layout_mode = 2
 
 [node name="TargetItem" type="Label" parent="Buildings"]
 layout_mode = 2
-text = "Assembler(s)
+text = "Constructor(s)
 "
 horizontal_alignment = 1
 
@@ -74,7 +64,7 @@ custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("4_6jmtf")
+texture = ExtResource("2_fwej2")
 expand_mode = 3
 stretch_mode = 5
 
@@ -97,34 +87,9 @@ autowrap_mode = 2
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/Output1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture = ExtResource("5_hjlb2")
+texture = ExtResource("3_f8c8e")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
-layout_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-layout_mode = 2
-
-[node name="Input2" type="VBoxContainer" parent="HBoxContainer2"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="HBoxContainer2/Input2"]
-custom_minimum_size = Vector2(130, 50)
-layout_mode = 2
-text = "Screw"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/Input2"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-texture = ExtResource("3_d81xq")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer2/Input2"]
 layout_mode = 2

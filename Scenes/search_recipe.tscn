@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjgeegoath202"]
+
+[ext_resource type="Script" path="res://Scripts/search_product.gd" id="1_v4wa8"]
+
+[node name="Control" type="GraphNode"]
+offset_right = 536.0
+offset_bottom = 338.0
+selected = true
+title = "Search Recipe"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("1_v4wa8")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+placeholder_text = "Search Something..."
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[connection signal="node_deselected" from="." to="." method="_on_node_deselected"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_text_edit_text_changed"]

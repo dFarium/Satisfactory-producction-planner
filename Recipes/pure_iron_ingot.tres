@@ -23,6 +23,7 @@ quantity = 13
 
 [resource]
 script = ExtResource("4_rfivk")
+building = 10
 name = "Pure Iron Ingot"
 inputs = Array[ExtResource("2_pqs44")]([SubResource("Resource_mnlix"), SubResource("Resource_ai1oy")])
 outputs = Array[ExtResource("2_pqs44")]([SubResource("Resource_6uiuc")])

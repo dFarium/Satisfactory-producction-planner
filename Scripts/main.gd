@@ -1,10 +1,10 @@
 extends Control
 
 @onready var graph_edit:GraphEdit = $GraphEdit
-var constructor = load("res://Scenes/Factories/constructor.tscn")
-var assembler = load("res://Scenes/Factories/assembler.tscn")
-var manufacturer3 = load("res://Scenes/Factories/manufacturer3.tscn")
-var manufacturer4 = load("res://Scenes/Factories/manufacturer4.tscn")
+var constructor:PackedScene = load("res://Scenes/Factories/constructor.tscn")
+var assembler:PackedScene = load("res://Scenes/Factories/assembler.tscn")
+var manufacturer3:PackedScene = load("res://Scenes/Factories/manufacturer3.tscn")
+var manufacturer4:PackedScene = load("res://Scenes/Factories/manufacturer4.tscn")
 var initial_position:Vector2 = Vector2(40,40)
 
 # Called when the node enters the scene tree for the first time.

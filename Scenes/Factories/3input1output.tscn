@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnck544yvr326"]
 
-[ext_resource type="Script" path="res://Scripts/base_graph_node.gd" id="1_r4jqs"]
+[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_mtgy5"]
 [ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://Items/Icons/Heavy_Modular_Frame.webp" id="2_tc34l"]
 [ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://Items/Icons/Aluminum_Casing.webp" id="4_vgd7w"]
 [ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://Items/Icons/Nitrogen_Gas.webp" id="5_m8vbu"]
 [ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="6_gppjd"]
 
-[node name="Building" type="GraphNode"]
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
-offset_bottom = 368.0
+offset_bottom = 509.0
 resizable = true
 title = "Fused Modular Frame"
 slot/0/left_enabled = false
@@ -48,7 +48,9 @@ slot/3/right_type = 0
 slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
-script = ExtResource("1_r4jqs")
+script = ExtResource("1_mtgy5")
+inputs = [NodePath("HBoxContainer/Input1"), NodePath("HBoxContainer2/Input2"), NodePath("HBoxContainer3/Input3")]
+outputs = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -142,11 +144,11 @@ layout_mode = 2
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Input2" type="VBoxContainer" parent="HBoxContainer3"]
+[node name="Input3" type="VBoxContainer" parent="HBoxContainer3"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer3/Input2"]
+[node name="Label" type="Label" parent="HBoxContainer3/Input3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 text = "Nitrogen Gas"
@@ -154,12 +156,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input2"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("5_m8vbu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input2"]
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input3"]
 layout_mode = 2

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://fk84spd8nwdi"]
+
+[ext_resource type="Resource" uid="uid://4mr0f8n86ml1" path="res://Items/iron_ore.tres" id="1_ckyl1"]
+[ext_resource type="Script" path="res://Scripts/item_amount.gd" id="2_uau7q"]
+[ext_resource type="Resource" uid="uid://cjypxkrv7d0gm" path="res://Items/water.tres" id="3_5ut43"]
+[ext_resource type="Resource" uid="uid://c62j3x73veagt" path="res://Items/iron_ingot.tres" id="4_a3nv8"]
+[ext_resource type="Resource" uid="uid://dt2sw7mkbfvun" path="res://Items/copper_ingot.tres" id="4_hsn45"]
+[ext_resource type="Script" path="res://Scripts/recipe.gd" id="5_ldr0s"]
+
+[sub_resource type="Resource" id="Resource_mnlix"]
+script = ExtResource("2_uau7q")
+item = ExtResource("1_ckyl1")
+quantity = 7
+
+[sub_resource type="Resource" id="Resource_ai1oy"]
+script = ExtResource("2_uau7q")
+item = ExtResource("3_5ut43")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_5a28q"]
+script = ExtResource("2_uau7q")
+item = ExtResource("4_hsn45")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_phojg"]
+script = ExtResource("2_uau7q")
+item = ExtResource("3_5ut43")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_6uiuc"]
+script = ExtResource("2_uau7q")
+item = ExtResource("4_a3nv8")
+quantity = 13
+
+[sub_resource type="Resource" id="Resource_hhjus"]
+script = ExtResource("2_uau7q")
+item = ExtResource("3_5ut43")
+quantity = 1
+
+[resource]
+script = ExtResource("5_ldr0s")
+building = 1
+name = "Non-fissile uranium"
+inputs = Array[ExtResource("2_uau7q")]([SubResource("Resource_mnlix"), SubResource("Resource_ai1oy"), SubResource("Resource_5a28q"), SubResource("Resource_phojg")])
+outputs = Array[ExtResource("2_uau7q")]([SubResource("Resource_6uiuc"), SubResource("Resource_hhjus")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csj5wribu5lh7"]
 
-[ext_resource type="Script" path="res://Scenes/add_node.gd" id="1_wkm6o"]
+[ext_resource type="Script" path="res://Scripts/add_node.gd" id="1_wkm6o"]
 [ext_resource type="PackedScene" uid="uid://blgxcfyhpmmqh" path="res://Scenes/Factories/constructor.tscn" id="2_jonmy"]
 
 [node name="Add Constructor" type="Button" groups=["test"]]
