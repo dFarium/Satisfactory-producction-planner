@@ -23,7 +23,6 @@ func invoke_menu() -> void:
 		product_menu_instance = product_menu_resource.instantiate()
 		add_child(product_menu_instance)
 		product_menu_instance.position = get_global_mouse_position()
-		product_menu_instance.position = get_global_mouse_position()
 		
 func on_product_menu_mouse_exited() -> void:
 	print("sali")

@@ -9,8 +9,9 @@ var initial_position:Vector2 = Vector2(40,40)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for node in get_tree().get_nodes_in_group("test"):
+	for node in get_tree().get_nodes_in_group("recipe_option"):
 		node.add_building.connect(_on_add_building)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

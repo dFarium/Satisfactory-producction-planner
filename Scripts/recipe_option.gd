@@ -50,10 +50,11 @@ func set_recipe_display(recipe:Recipe) ->void:
 		icon_index+=1
 
 func _on_pressed() -> void:
-	setup_building()
+	setup_building(recipe_data)
+	#add_building.emit(recipe_data)
 	pass # Replace with function body.
 	
-func setup_building() -> void:
+func setup_building(recipe:Recipe) -> void:
 	match [recipe_data.inputs.size(),recipe_data.outputs.size()]:
 		[0,1]:
 			instantiate_building("res://Scenes/Factories/1output.tscn")
@@ -71,5 +72,7 @@ func setup_building() -> void:
 func instantiate_building(path:String) -> void:
 	var building:PackedScene = load(path)
 	var build_instance:GraphBuilding = building.instantiate()
+	var offset:Vector2 = get_parent().get_parent().get_parent().position_offset
 	build_instance.setup_building(recipe_data)
-	#get_node(/root/)
+	get_node("/root/Main/GraphEdit").add_child(build_instance)
+	build_instance.position_offset = offset

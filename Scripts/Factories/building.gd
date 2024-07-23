@@ -36,6 +36,6 @@ func set_close_button() -> void:
 	#Close button
 	var hbox:HBoxContainer = get_titlebar_hbox()
 	var btn:Button = Button.new()
-	btn.text = "X"
+	btn.text = " X "
 	btn.pressed.connect(queue_free)
 	hbox.add_child(btn)
