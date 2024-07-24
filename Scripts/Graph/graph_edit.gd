@@ -35,7 +35,7 @@ func _on_add_building(recipe: Recipe) -> void:
 		[4, 1]:
 			instantiate_building("res://Scenes/Factories/4input1output.tscn", recipe)
 		_:
-			print("NO ENCONTRADO")
+			print("BUILDING NOT FOUND")
 
 func instantiate_building(path: String, recipe: Recipe) -> void:
 	var building: PackedScene = load(path)

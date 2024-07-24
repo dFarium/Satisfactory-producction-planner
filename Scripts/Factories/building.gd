@@ -22,6 +22,7 @@ func _process(_delta:float) -> void:
 	pass
 
 func setup_building(recipe:Recipe) -> void:
+	title = recipe.name
 	building_name.text = get_building_name(recipe.building)
 	
 	#inputs
