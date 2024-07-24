@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjgeegoath202"]
 
-[ext_resource type="Script" path="res://Scripts/Graph/search_product.gd" id="1_v4wa8"]
+[ext_resource type="Script" path="res://Scripts/Graph/search_recipe.gd" id="1_v4wa8"]
 
 [node name="Control" type="GraphNode"]
 offset_right = 536.0

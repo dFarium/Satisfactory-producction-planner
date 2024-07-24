@@ -50,29 +50,21 @@ func set_recipe_display(recipe:Recipe) ->void:
 		icon_index+=1
 
 func _on_pressed() -> void:
-	setup_building(recipe_data)
+	#setup_building(recipe_data)
 	#add_building.emit(recipe_data)
 	pass # Replace with function body.
 	
-func setup_building(recipe:Recipe) -> void:
-	match [recipe_data.inputs.size(),recipe_data.outputs.size()]:
-		[0,1]:
-			instantiate_building("res://Scenes/Factories/1output.tscn")
-		[1,1]:
-			instantiate_building("res://Scenes/Factories/1input1output.tscn")
-		[2,1]:
-			instantiate_building("res://Scenes/Factories/2input1output.tscn")
-		[3,1]:
-			instantiate_building("res://Scenes/Factories/3input1output.tscn")
-		[4,1]:
-			instantiate_building("res://Scenes/Factories/4input1output.tscn")
-		_:
-			print("NO ENCONTRADO")
-
-func instantiate_building(path:String) -> void:
-	var building:PackedScene = load(path)
-	var build_instance:GraphBuilding = building.instantiate()
-	var offset:Vector2 = get_parent().get_parent().get_parent().position_offset
-	build_instance.setup_building(recipe_data)
-	get_node("/root/Main/GraphEdit").add_child(build_instance)
-	build_instance.position_offset = offset
+#func setup_building(recipe:Recipe) -> void:
+	#match [recipe_data.inputs.size(),recipe_data.outputs.size()]:
+		#[0,1]:
+			#instantiate_building("res://Scenes/Factories/1output.tscn")
+		#[1,1]:
+			#instantiate_building("res://Scenes/Factories/1input1output.tscn")
+		#[2,1]:
+			#instantiate_building("res://Scenes/Factories/2input1output.tscn")
+		#[3,1]:
+			#instantiate_building("res://Scenes/Factories/3input1output.tscn")
+		#[4,1]:
+			#instantiate_building("res://Scenes/Factories/4input1output.tscn")
+		#_:
+			#print("NO ENCONTRADO")
