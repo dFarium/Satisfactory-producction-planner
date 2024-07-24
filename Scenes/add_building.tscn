@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://csj5wribu5lh7"]
+[gd_scene load_steps=3 format=3 uid="uid://tkqy15pahc1h"]
 
-[ext_resource type="Script" path="res://Scripts/add_node.gd" id="1_wkm6o"]
+[ext_resource type="Script" path="res://Scripts/Graph/add_node.gd" id="1_10a0n"]
 [ext_resource type="PackedScene" uid="uid://cf87kopctjjm" path="res://Scenes/Factories/1input1output.tscn" id="2_jonmy"]
 
 [node name="Add Constructor" type="Button" groups=["test"]]
 text = "Add Constructor"
-script = ExtResource("1_wkm6o")
+script = ExtResource("1_10a0n")
 building = ExtResource("2_jonmy")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

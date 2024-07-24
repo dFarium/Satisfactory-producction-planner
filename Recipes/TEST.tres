@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://fk84spd8nwdi"]
 
 [ext_resource type="Resource" uid="uid://4mr0f8n86ml1" path="res://Items/iron_ore.tres" id="1_ckyl1"]
-[ext_resource type="Script" path="res://Scripts/item_amount.gd" id="2_uau7q"]
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="2_uau7q"]
 [ext_resource type="Resource" uid="uid://cjypxkrv7d0gm" path="res://Items/water.tres" id="3_5ut43"]
 [ext_resource type="Resource" uid="uid://c62j3x73veagt" path="res://Items/iron_ingot.tres" id="4_a3nv8"]
 [ext_resource type="Resource" uid="uid://dt2sw7mkbfvun" path="res://Items/copper_ingot.tres" id="4_hsn45"]
-[ext_resource type="Script" path="res://Scripts/recipe.gd" id="5_ldr0s"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_ldr0s"]
 
 [sub_resource type="Resource" id="Resource_mnlix"]
 script = ExtResource("2_uau7q")

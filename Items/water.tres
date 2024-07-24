@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cjypxkrv7d0gm"]
 
 [ext_resource type="Texture2D" uid="uid://bk65m517ysetc" path="res://Items/Icons/Water.webp" id="1_4hel2"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="1_71ufr"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_71ufr"]
 
 [resource]
 script = ExtResource("1_71ufr")
