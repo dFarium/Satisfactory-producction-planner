@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf87kopctjjm"]
+[gd_scene load_steps=5 format=3 uid="uid://cf87kopctjjm"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_a7dxp"]
 [ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="2_fwej2"]
+[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_leytv"]
 [ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="3_f8c8e"]
 
-[node name="Building" type="GraphNode"]
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
 offset_bottom = 227.0
@@ -29,15 +30,18 @@ slot/1/right_color = Color(1, 0, 0, 0.996078)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
 script = ExtResource("1_a7dxp")
+inputs = [NodePath("HBoxContainer/Input1")]
+outputs = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
 alignment = 1
 
-[node name="SpinBox" type="SpinBox" parent="Buildings"]
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
+script = ExtResource("2_leytv")
 
-[node name="TargetItem" type="Label" parent="Buildings"]
+[node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
 text = "Constructor(s)
 "
@@ -68,8 +72,9 @@ texture = ExtResource("2_fwej2")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Input1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
 layout_mode = 2
+script = ExtResource("2_leytv")
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -91,5 +96,6 @@ texture = ExtResource("3_f8c8e")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
 layout_mode = 2
+script = ExtResource("2_leytv")

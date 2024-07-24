@@ -1,7 +1,7 @@
 extends Button
 class_name RecipeOption
 
-var icons:Array[TextureRect] = []
+var recipe_icons:Array[TextureRect] = []
 @onready var label:Label = $HBoxContainer/Label
 @onready var option_icon:TextureRect = $HBoxContainer/option_icon
 @onready var option_icon_2:TextureRect = $HBoxContainer/option_icon2
@@ -13,46 +13,46 @@ var icons:Array[TextureRect] = []
 var arrow_icon:Resource = load("res://Items/Icons/arrowRight.png")
 var recipe_data:Recipe
 
-signal add_building(recipe:Recipe)
+signal recipe_pressed(recipe:Recipe)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() ->void:
-	icons.append(option_icon)
-	icons.append(option_icon_2)
-	icons.append(option_icon_3)
-	icons.append(option_icon_4)
-	icons.append(option_icon_5)
-	icons.append(option_icon_6)
-	icons.append(option_icon_7)
-	pressed.connect(_on_pressed)
-	
+	recipe_icons.append(option_icon)
+	recipe_icons.append(option_icon_2)
+	recipe_icons.append(option_icon_3)
+	recipe_icons.append(option_icon_4)
+	recipe_icons.append(option_icon_5)
+	recipe_icons.append(option_icon_6)
+	recipe_icons.append(option_icon_7)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta:float) ->void:
+func _process(_delta:float) ->void:
 	pass
 
 func set_recipe_display(recipe:Recipe) ->void:
 	recipe_data = recipe
 	label.text = recipe.name
 	var icon_index:int = 0
-	for icon:TextureRect in icons:
-		icon.texture = null
+	#set all icons to null
+	for recipe_icon:TextureRect in recipe_icons:
+		recipe_icon.texture = null
+
 	#set inputs
 	for input in recipe.inputs:
-		icons[icon_index].texture = input.item.icon
+		recipe_icons[icon_index].texture = input.item.icon
 		icon_index+=1
+
 	#set arrow	
-	icons[icon_index].texture = arrow_icon
+	recipe_icons[icon_index].texture = arrow_icon
 	icon_index+=1
+
 	#set outputs
 	for output in recipe.outputs:
-		icons[icon_index].texture = output.item.icon
+		recipe_icons[icon_index].texture = output.item.icon
 		icon_index+=1
 
 func _on_pressed() -> void:
-	#setup_building(recipe_data)
-	#add_building.emit(recipe_data)
-	pass # Replace with function body.
+	recipe_pressed.emit(recipe_data)
 	
 #func setup_building(recipe:Recipe) -> void:
 	#match [recipe_data.inputs.size(),recipe_data.outputs.size()]:

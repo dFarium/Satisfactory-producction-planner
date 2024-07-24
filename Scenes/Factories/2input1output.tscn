@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d30g4gyfdu85i"]
+[gd_scene load_steps=6 format=3 uid="uid://d30g4gyfdu85i"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_l0ux5"]
+[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_hmphi"]
 [ext_resource type="Texture2D" uid="uid://dsftpcc65ruwb" path="res://Items/Icons/Screw.png" id="3_d81xq"]
 [ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="4_6jmtf"]
 [ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="5_hjlb2"]
@@ -46,10 +47,11 @@ outputs = [NodePath("HBoxContainer/Output1")]
 layout_mode = 2
 alignment = 1
 
-[node name="SpinBox" type="SpinBox" parent="Buildings"]
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
+script = ExtResource("2_hmphi")
 
-[node name="TargetItem" type="Label" parent="Buildings"]
+[node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
 text = "Assembler(s)
 "
@@ -80,8 +82,9 @@ texture = ExtResource("4_6jmtf")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Input1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
 layout_mode = 2
+script = ExtResource("2_hmphi")
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -103,8 +106,9 @@ texture = ExtResource("5_hjlb2")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
 layout_mode = 2
+script = ExtResource("2_hmphi")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -128,5 +132,6 @@ texture = ExtResource("3_d81xq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer2/Input2"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2"]
 layout_mode = 2
+script = ExtResource("2_hmphi")

@@ -70,3 +70,5 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("8_in0kp")
 expand_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

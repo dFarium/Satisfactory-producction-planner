@@ -1,4 +1,5 @@
 extends Control
+class_name SearchRecipe
 
 # Variables de nodos de la escena
 @onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
@@ -9,6 +10,8 @@ const BUTTON_OPTION = preload ("res://Scenes/button_option.tscn")
 # Lista de recetas cargadas
 var recipe_list: Array[Recipe] = []
 var recipe_buttons: Array[Button] = []
+
+signal add_building(recipe: Recipe)
 
 # Función llamada cuando el nodo entra en el árbol de la escena por primera vez
 func _ready() -> void:
@@ -56,8 +59,13 @@ func initialize_buttons() -> void:
 	for recipe: Recipe in recipe_list:
 		var recipe_option: Button = BUTTON_OPTION.instantiate()
 		recipe_container.add_child(recipe_option)
+		recipe_option.recipe_pressed.connect(_on_recipe_pressed)
 		recipe_buttons.append(recipe_option)
 		recipe_option.set_recipe_display(recipe)
+
+func _on_recipe_pressed(recipe: Recipe) -> void:
+	visible = false
+	add_building.emit(recipe)
 
 func _on_node_deselected() -> void:
 	visible = false

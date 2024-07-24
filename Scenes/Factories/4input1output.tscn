@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcwvi3ipv6fet"]
+[gd_scene load_steps=8 format=3 uid="uid://bcwvi3ipv6fet"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_wklas"]
 [ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://Items/Icons/Modular_Engine.webp" id="2_653yv"]
+[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_pyps8"]
 [ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://Items/Icons/Thermal_Propulsion_Rocket.webp" id="3_t8rh7"]
 [ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://Items/Icons/Turbo_Motor.webp" id="4_8gww7"]
 [ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://Items/Icons/Cooling_System.webp" id="5_ctndu"]
@@ -66,10 +67,11 @@ outputs = [NodePath("HBoxContainer/Output1")]
 layout_mode = 2
 alignment = 1
 
-[node name="SpinBox" type="SpinBox" parent="Buildings"]
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
+script = ExtResource("2_pyps8")
 
-[node name="TargetItem" type="Label" parent="Buildings"]
+[node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
 text = "Manufaturer(s)
 "
@@ -100,8 +102,9 @@ texture = ExtResource("2_653yv")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Input1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
 layout_mode = 2
+script = ExtResource("2_pyps8")
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -123,8 +126,9 @@ texture = ExtResource("3_t8rh7")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
 layout_mode = 2
+script = ExtResource("2_pyps8")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -148,8 +152,9 @@ texture = ExtResource("4_8gww7")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer2/Input2"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2"]
 layout_mode = 2
+script = ExtResource("2_pyps8")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -173,8 +178,9 @@ texture = ExtResource("5_ctndu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input3"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3"]
 layout_mode = 2
+script = ExtResource("2_pyps8")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -198,5 +204,6 @@ texture = ExtResource("6_gppjd")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer4/Input4"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer4/Input4"]
 layout_mode = 2
+script = ExtResource("2_pyps8")

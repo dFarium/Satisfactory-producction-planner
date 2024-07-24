@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnck544yvr326"]
+[gd_scene load_steps=7 format=3 uid="uid://dnck544yvr326"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_mtgy5"]
+[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_4o0pe"]
 [ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://Items/Icons/Heavy_Modular_Frame.webp" id="2_tc34l"]
 [ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://Items/Icons/Aluminum_Casing.webp" id="4_vgd7w"]
 [ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://Items/Icons/Nitrogen_Gas.webp" id="5_m8vbu"]
@@ -56,10 +57,11 @@ outputs = [NodePath("HBoxContainer/Output1")]
 layout_mode = 2
 alignment = 1
 
-[node name="SpinBox" type="SpinBox" parent="Buildings"]
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
+script = ExtResource("2_4o0pe")
 
-[node name="TargetItem" type="Label" parent="Buildings"]
+[node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
 text = "Manufaturer(s)
 "
@@ -90,8 +92,9 @@ texture = ExtResource("2_tc34l")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Input1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
 layout_mode = 2
+script = ExtResource("2_4o0pe")
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -113,8 +116,9 @@ texture = ExtResource("6_gppjd")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/Output1"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
 layout_mode = 2
+script = ExtResource("2_4o0pe")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -138,8 +142,9 @@ texture = ExtResource("4_vgd7w")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer2/Input2"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2"]
 layout_mode = 2
+script = ExtResource("2_4o0pe")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -163,5 +168,6 @@ texture = ExtResource("5_m8vbu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer3/Input3"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3"]
 layout_mode = 2
+script = ExtResource("2_4o0pe")

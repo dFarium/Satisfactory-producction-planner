@@ -6,8 +6,7 @@ var menu_resource: PackedScene = load("res://Scenes/search_recipe.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	search_panel.visible = false
-	for node in get_tree().get_nodes_in_group("recipe_option"):
-		node.add_building.connect(_on_add_building)
+	search_panel.add_building.connect(_on_add_building)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -40,7 +39,8 @@ func _on_add_building(recipe: Recipe) -> void:
 
 func instantiate_building(path: String, recipe: Recipe) -> void:
 	var building: PackedScene = load(path)
-	var build_instance: GraphNode = building.instantiate()
-	build_instance.setup_building(recipe)
-	add_child(build_instance)
-	build_instance.position_offset = get_global_mouse_position()
+	if building:
+		var building_instance: GraphNode = building.instantiate()
+		add_child(building_instance)
+		building_instance.setup_building(recipe)
+		building_instance.position_offset = search_panel.position_offset

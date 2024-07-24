@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c73h38vsyw36o"]
 
 [ext_resource type="Script" path="res://Scripts/Graph/main.gd" id="1_13a51"]
-[ext_resource type="Script" path="res://Scripts/Graph/GraphEdit.gd" id="2_6f8bu"]
+[ext_resource type="Script" path="res://Scripts/Graph/graph_edit.gd" id="2_6f8bu"]
 [ext_resource type="PackedScene" uid="uid://bjgeegoath202" path="res://Scenes/search_recipe.tscn" id="3_o5aji"]
 
 [node name="Main" type="Control"]
