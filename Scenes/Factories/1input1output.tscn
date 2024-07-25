@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_a7dxp"]
 [ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="2_fwej2"]
-[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_leytv"]
+[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_leytv"]
 [ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="3_f8c8e"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
@@ -40,6 +40,7 @@ alignment = 1
 [node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
 script = ExtResource("2_leytv")
+slot = 13
 
 [node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
@@ -79,6 +80,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_leytv")
+slot = 1
 
 [node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
 layout_mode = 2
@@ -111,7 +113,12 @@ layout_mode = 2
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_leytv")
+slot = 7
 
 [node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
 layout_mode = 2
 text = "/min"
+
+[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://benpxn8bhggo0"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_fg35b"]
-[ext_resource type="Script" path="res://Scripts/Factories/only_positive_floats.gd" id="2_0sdgw"]
+[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_0sdgw"]
 [ext_resource type="Texture2D" uid="uid://c8t0npbxawci" path="res://Items/Icons/Copper_Ore.webp" id="2_6thum"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("outputs")]
@@ -38,6 +38,7 @@ alignment = 1
 [node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
 script = ExtResource("2_0sdgw")
+slot = 13
 
 [node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
@@ -75,7 +76,11 @@ layout_mode = 2
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_0sdgw")
+slot = 7
 
 [node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
 layout_mode = 2
 text = "/min"
+
+[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
