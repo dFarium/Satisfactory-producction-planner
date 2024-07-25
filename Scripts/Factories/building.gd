@@ -23,7 +23,7 @@ func _process(_delta:float) -> void:
 
 func setup_building(recipe:Recipe) -> void:
 	title = recipe.name
-	building_name.text = get_building_name(recipe.building)
+	building_name.text = get_building_name(recipe.building) +" ("+ str(recipe.manufacturing_cycle) + " sec)"
 	
 	#inputs
 	for i in range(input_nodes.size()):

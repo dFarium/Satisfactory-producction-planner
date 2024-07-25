@@ -102,9 +102,17 @@ texture = ExtResource("2_653yv")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_pyps8")
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -126,9 +134,17 @@ texture = ExtResource("3_t8rh7")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_pyps8")
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -152,9 +168,17 @@ texture = ExtResource("4_8gww7")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/Input2"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_pyps8")
+
+[node name="Label" type="Label" parent="HBoxContainer2/Input2/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -178,9 +202,17 @@ texture = ExtResource("5_ctndu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer3/Input3"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_pyps8")
+
+[node name="Label" type="Label" parent="HBoxContainer3/Input3/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -204,6 +236,14 @@ texture = ExtResource("6_gppjd")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer4/Input4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer4/Input4"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer4/Input4/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_pyps8")
+
+[node name="Label" type="Label" parent="HBoxContainer4/Input4/HBoxContainer"]
+layout_mode = 2
+text = "/min"

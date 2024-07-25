@@ -92,9 +92,17 @@ texture = ExtResource("2_tc34l")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_4o0pe")
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -116,9 +124,17 @@ texture = ExtResource("6_gppjd")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_4o0pe")
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -142,9 +158,17 @@ texture = ExtResource("4_vgd7w")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/Input2"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_4o0pe")
+
+[node name="Label" type="Label" parent="HBoxContainer2/Input2/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -168,6 +192,14 @@ texture = ExtResource("5_m8vbu")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer3/Input3"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_4o0pe")
+
+[node name="Label" type="Label" parent="HBoxContainer3/Input3/HBoxContainer"]
+layout_mode = 2
+text = "/min"

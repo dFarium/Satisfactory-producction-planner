@@ -72,9 +72,17 @@ texture = ExtResource("2_fwej2")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_leytv")
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
 
 [node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -96,6 +104,14 @@ texture = ExtResource("3_f8c8e")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_leytv")
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
