@@ -36,7 +36,6 @@ func setup_building(recipe: Recipe) -> void:
 	
 	#inputs
 	for i in range(input_nodes.size()):
-		print(recipe.inputs[i].item.name)
 		input_nodes[i][0].text = recipe.inputs[i].item.name
 		input_nodes[i][1].texture = recipe.inputs[i].item.icon
 
@@ -51,30 +50,29 @@ func setup_building(recipe: Recipe) -> void:
 	
 func _on_slot_value_updated(slot: int, value: float) -> void:
 	#value = items per minute
-	slot -= 1
-	print("Slot: " + str(slot) + " Value: " + str(value))
+	var building_count: float = 0
+	var items_per_min_per_building: float = 0
 	var cycles_per_minute: float = 60 / current_recipe.manufacturing_cycle
 	#si slot es un input
 	if slot >= 0 and slot <= 5:
-		var items_per_min_per_building: float = cycles_per_minute * current_recipe.inputs[slot].quantity
-		var building_count: float = value / items_per_min_per_building
-		print("Building count: " + str(building_count))
+		slot -= 1
+	elif slot >= 6 and slot <= 11:
+		slot -= 7
 
+	if slot == 13:
+		building_count = value
+	else:
+		items_per_min_per_building = cycles_per_minute * current_recipe.inputs[slot].quantity
+		building_count = value / items_per_min_per_building
 		building_count_text.text = str(building_count)
 
-		for i in input_values.size():
-			if i != slot:
-				var items_per_min: float = building_count * float(current_recipe.inputs[i].quantity) * cycles_per_minute
-				input_values[i].text = str(items_per_min)
-		
-		for i in output_values.size():
-			print("Quantity" + str(current_recipe.inputs[i].quantity))
-			var items_per_min: float = building_count * float(current_recipe.outputs[i].quantity) * cycles_per_minute
-			output_values[i].text = str(items_per_min)
-
-	#si slot es un output
-
-	pass
+	for i in input_values.size():
+		var items_per_min: float = building_count * float(current_recipe.inputs[i].quantity) * cycles_per_minute
+		input_values[i].text = str(items_per_min)
+	
+	for i in output_values.size():
+		var items_per_min: float = building_count * float(current_recipe.outputs[i].quantity) * cycles_per_minute
+		output_values[i].text = str(items_per_min)
 	
 func set_close_button() -> void:
 	#Close button
