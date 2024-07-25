@@ -1,5 +1,6 @@
 extends LineEdit
 
+var expr := preload("res://Scripts/expression.gd").new()
 const REGEX_PATTERN: String = r"^\d+(\.\d+)?$"
 var regex: RegEx
 var last_valid_value: String = "0"
@@ -51,11 +52,9 @@ func _on_text_submitted(_new_text: String) -> void:
 	slot_value_updated.emit(slot, text.to_float())
 
 func evaluate_math_expression(new_text: String) -> void:
-	var expression: Expression = Expression.new()
-	expression.parse(new_text)
-	var result: Variant = expression.execute()
-	if result == null:
-		text = last_valid_value
+	var rounded:float = snapped(expr.evalute(new_text),0.01)
+	print(rounded)
+	var result:String = str(rounded)
 	text = check_input(str(result))
 
 func check_input(input: String) -> String:
