@@ -46,7 +46,7 @@ func _on_focus_exited() -> void:
 	evaluate_math_expression(text)
 	slot_value_updated.emit(slot, text.to_float())
 
-func _on_text_submitted(_new_text: String) -> void:
+func _on_text_submitted(_new_text:String) -> void:
 	print("text submitted")
 	evaluate_math_expression(text)
 	slot_value_updated.emit(slot, text.to_float())

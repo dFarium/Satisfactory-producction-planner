@@ -19,7 +19,7 @@ func show_search_panel() -> void:
 	search_panel.position_offset = get_global_mouse_position()
 	
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("right_click"):
+	if Input.is_action_just_pressed("ui_up"):
 		show_search_panel()
 		
 func _on_add_building(recipe: Recipe) -> void:

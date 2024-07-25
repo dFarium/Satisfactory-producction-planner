@@ -53,18 +53,3 @@ func set_recipe_display(recipe:Recipe) ->void:
 
 func _on_pressed() -> void:
 	recipe_pressed.emit(recipe_data)
-	
-#func setup_building(recipe:Recipe) -> void:
-	#match [recipe_data.inputs.size(),recipe_data.outputs.size()]:
-		#[0,1]:
-			#instantiate_building("res://Scenes/Factories/1output.tscn")
-		#[1,1]:
-			#instantiate_building("res://Scenes/Factories/1input1output.tscn")
-		#[2,1]:
-			#instantiate_building("res://Scenes/Factories/2input1output.tscn")
-		#[3,1]:
-			#instantiate_building("res://Scenes/Factories/3input1output.tscn")
-		#[4,1]:
-			#instantiate_building("res://Scenes/Factories/4input1output.tscn")
-		#_:
-			#print("NO ENCONTRADO")

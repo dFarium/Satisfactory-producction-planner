@@ -34,3 +34,4 @@ mouse_filter = 1
 position_offset = Vector2(303, 172)
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
