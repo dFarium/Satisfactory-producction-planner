@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp07ncxgheyo4"
-path="res://.godot/imported/Fused_Modular_Frame.webp-e38f2d8724dbf8fe177bbf3851c7fe41.ctex"
+uid="uid://4aogobcpaec"
+path="res://.godot/imported/Modular_Engine.webp-000f7571a2fd0206d2daa9ca6c98509d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Fused_Modular_Frame.webp"
-dest_files=["res://.godot/imported/Fused_Modular_Frame.webp-e38f2d8724dbf8fe177bbf3851c7fe41.ctex"]
+source_file="res://ItemIcons/Modular_Engine.webp"
+dest_files=["res://.godot/imported/Modular_Engine.webp-000f7571a2fd0206d2daa9ca6c98509d.ctex"]
 
 [params]
 

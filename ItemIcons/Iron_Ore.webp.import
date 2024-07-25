@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsftpcc65ruwb"
-path="res://.godot/imported/Screw.png-b4503fc42427da9ee50d783783d6df1b.ctex"
+uid="uid://fqxgvbyuanvl"
+path="res://.godot/imported/Iron_Ore.webp-16bd6f844e7060b6fb8e2392698c8c5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Screw.png"
-dest_files=["res://.godot/imported/Screw.png-b4503fc42427da9ee50d783783d6df1b.ctex"]
+source_file="res://ItemIcons/Iron_Ore.webp"
+dest_files=["res://.godot/imported/Iron_Ore.webp-16bd6f844e7060b6fb8e2392698c8c5f.ctex"]
 
 [params]
 

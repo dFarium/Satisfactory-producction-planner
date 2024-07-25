@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8t0npbxawci"
-path="res://.godot/imported/Copper_Ore.webp-13c3dd159712d6e5ef125a83c462c977.ctex"
+uid="uid://c8i708o2mlncx"
+path="res://.godot/imported/Iron_Plate.png-65c04b96411602a247959f7edc5ff863.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Copper_Ore.webp"
-dest_files=["res://.godot/imported/Copper_Ore.webp-13c3dd159712d6e5ef125a83c462c977.ctex"]
+source_file="res://ItemIcons/Iron_Plate.png"
+dest_files=["res://.godot/imported/Iron_Plate.png-65c04b96411602a247959f7edc5ff863.ctex"]
 
 [params]
 

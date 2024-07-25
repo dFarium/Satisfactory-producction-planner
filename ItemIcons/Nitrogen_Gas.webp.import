@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4aogobcpaec"
-path="res://.godot/imported/Modular_Engine.webp-7ef8309039dcd4f38d68e6ea51b52799.ctex"
+uid="uid://cgqtlr26bgir7"
+path="res://.godot/imported/Nitrogen_Gas.webp-5a9eb749feecf5bb87d4d54a21624f6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Modular_Engine.webp"
-dest_files=["res://.godot/imported/Modular_Engine.webp-7ef8309039dcd4f38d68e6ea51b52799.ctex"]
+source_file="res://ItemIcons/Nitrogen_Gas.webp"
+dest_files=["res://.godot/imported/Nitrogen_Gas.webp-5a9eb749feecf5bb87d4d54a21624f6a.ctex"]
 
 [params]
 

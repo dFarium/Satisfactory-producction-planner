@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b51odr06ctb7a"
-path="res://.godot/imported/Cooling_System.webp-ff8292644bab299a942180b14e99679c.ctex"
+uid="uid://bjwf3dh7yiqto"
+path="res://.godot/imported/Turbo_Motor.webp-e3a51345facbd5c7cc305d1d9a130c05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Cooling_System.webp"
-dest_files=["res://.godot/imported/Cooling_System.webp-ff8292644bab299a942180b14e99679c.ctex"]
+source_file="res://ItemIcons/Turbo_Motor.webp"
+dest_files=["res://.godot/imported/Turbo_Motor.webp-e3a51345facbd5c7cc305d1d9a130c05.ctex"]
 
 [params]
 

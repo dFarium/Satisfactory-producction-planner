@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4xg0570ba2t3"
-path="res://.godot/imported/Aluminum_Casing.webp-ce4e41d3a1dfc3c904475cdbb7e7264b.ctex"
+uid="uid://badlij1l5cppy"
+path="res://.godot/imported/arrowRight.png-f14fb03d0debe2b6119ae8efcf23840d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Aluminum_Casing.webp"
-dest_files=["res://.godot/imported/Aluminum_Casing.webp-ce4e41d3a1dfc3c904475cdbb7e7264b.ctex"]
+source_file="res://ItemIcons/arrowRight.png"
+dest_files=["res://.godot/imported/arrowRight.png-f14fb03d0debe2b6119ae8efcf23840d.ctex"]
 
 [params]
 

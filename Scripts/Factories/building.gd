@@ -30,6 +30,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func setup_building(recipe: Recipe) -> void:
+	print(building_name)
 	current_recipe = recipe
 	title = recipe.name
 	building_name.text = get_building_name(recipe.building) + " (" + str(recipe.manufacturing_cycle) + " sec)"
@@ -61,8 +62,10 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 
 	if slot == 13:
 		building_count = value
-	else:
-		items_per_min_per_building = cycles_per_minute * current_recipe.inputs[slot].quantity
+	elif slot == 14:
+		return
+	else:	
+		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot].quantity
 		building_count = value / items_per_min_per_building
 		building_count_text.text = str(building_count)
 
@@ -74,6 +77,16 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 		var items_per_min: float = building_count * float(current_recipe.outputs[i].quantity) * cycles_per_minute
 		output_values[i].text = str(items_per_min)
 	
+func set_slot_type() -> void:
+	var i_count:int = get_input_port_count()
+	var o_count:int = get_output_port_count()
+
+	for i in range(i_count):
+		set_slot_type_left(i+1,current_recipe.inputs[i].item.id)
+	
+	for i in range(o_count):
+		set_slot_type_right(i+1,current_recipe.outputs[i].item.id)
+		
 func set_close_button() -> void:
 	#Close button
 	var hbox: HBoxContainer = get_titlebar_hbox()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk65m517ysetc"
-path="res://.godot/imported/Water.webp-ca27ff348908dd8f47e840d5b61a11fd.ctex"
+uid="uid://b4xg0570ba2t3"
+path="res://.godot/imported/Aluminum_Casing.webp-4de83905a8627bb75f6cba00f07ff5ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Water.webp"
-dest_files=["res://.godot/imported/Water.webp-ca27ff348908dd8f47e840d5b61a11fd.ctex"]
+source_file="res://ItemIcons/Aluminum_Casing.webp"
+dest_files=["res://.godot/imported/Aluminum_Casing.webp-4de83905a8627bb75f6cba00f07ff5ff.ctex"]
 
 [params]
 

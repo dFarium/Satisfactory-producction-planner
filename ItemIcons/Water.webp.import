@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xne8qx21yr"
-path="res://.godot/imported/Reinforced_Iron_Plate.webp-1453a946b95ea59e4b9855ff7cece802.ctex"
+uid="uid://bk65m517ysetc"
+path="res://.godot/imported/Water.webp-9281935b9399862b95e43b95f5d5a0d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Reinforced_Iron_Plate.webp"
-dest_files=["res://.godot/imported/Reinforced_Iron_Plate.webp-1453a946b95ea59e4b9855ff7cece802.ctex"]
+source_file="res://ItemIcons/Water.webp"
+dest_files=["res://.godot/imported/Water.webp-9281935b9399862b95e43b95f5d5a0d9.ctex"]
 
 [params]
 

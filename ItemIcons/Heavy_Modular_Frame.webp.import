@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpmf6qlw1yfkb"
-path="res://.godot/imported/Heavy_Modular_Frame.webp-916f5530dc95c7ff951d5100476e7ef5.ctex"
+path="res://.godot/imported/Heavy_Modular_Frame.webp-9e760df94d37e8d817852f7a6afc90dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Heavy_Modular_Frame.webp"
-dest_files=["res://.godot/imported/Heavy_Modular_Frame.webp-916f5530dc95c7ff951d5100476e7ef5.ctex"]
+source_file="res://ItemIcons/Heavy_Modular_Frame.webp"
+dest_files=["res://.godot/imported/Heavy_Modular_Frame.webp-9e760df94d37e8d817852f7a6afc90dc.ctex"]
 
 [params]
 

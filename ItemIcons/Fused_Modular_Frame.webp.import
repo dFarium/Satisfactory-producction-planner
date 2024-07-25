@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjymudpyrjf6h"
-path="res://.godot/imported/Thermal_Propulsion_Rocket.webp-fd53240c50584ee8ee2fb0d294711cb6.ctex"
+uid="uid://bp07ncxgheyo4"
+path="res://.godot/imported/Fused_Modular_Frame.webp-f13c442f9c523f666142a528f4fc4a22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Thermal_Propulsion_Rocket.webp"
-dest_files=["res://.godot/imported/Thermal_Propulsion_Rocket.webp-fd53240c50584ee8ee2fb0d294711cb6.ctex"]
+source_file="res://ItemIcons/Fused_Modular_Frame.webp"
+dest_files=["res://.godot/imported/Fused_Modular_Frame.webp-f13c442f9c523f666142a528f4fc4a22.ctex"]
 
 [params]
 

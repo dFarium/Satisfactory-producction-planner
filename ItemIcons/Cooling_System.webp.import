@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://badlij1l5cppy"
-path="res://.godot/imported/arrowRight.png-65e1a4bc069976085d70d64ed71b2b90.ctex"
+uid="uid://b51odr06ctb7a"
+path="res://.godot/imported/Cooling_System.webp-3545e73174fdbb1695aaa69fca302b35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/arrowRight.png"
-dest_files=["res://.godot/imported/arrowRight.png-65e1a4bc069976085d70d64ed71b2b90.ctex"]
+source_file="res://ItemIcons/Cooling_System.webp"
+dest_files=["res://.godot/imported/Cooling_System.webp-3545e73174fdbb1695aaa69fca302b35.ctex"]
 
 [params]
 

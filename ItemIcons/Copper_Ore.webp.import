@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1hupf5soyik3"
-path="res://.godot/imported/Copper_Ingot.webp-a13722a59575119a92de1d77412b5da2.ctex"
+uid="uid://c8t0npbxawci"
+path="res://.godot/imported/Copper_Ore.webp-5aced3daef3b84db7e08dec0e9fdfe06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Copper_Ingot.webp"
-dest_files=["res://.godot/imported/Copper_Ingot.webp-a13722a59575119a92de1d77412b5da2.ctex"]
+source_file="res://ItemIcons/Copper_Ore.webp"
+dest_files=["res://.godot/imported/Copper_Ore.webp-5aced3daef3b84db7e08dec0e9fdfe06.ctex"]
 
 [params]
 

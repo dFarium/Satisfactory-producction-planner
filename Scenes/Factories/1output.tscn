@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_fg35b"]
 [ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_0sdgw"]
-[ext_resource type="Texture2D" uid="uid://c8t0npbxawci" path="res://Items/Icons/Copper_Ore.webp" id="2_6thum"]
+[ext_resource type="Texture2D" uid="uid://c8t0npbxawci" path="res://ItemIcons/Copper_Ore.webp" id="2_6thum"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("outputs")]
 custom_minimum_size = Vector2(50, 50)
-offset_right = 223.0
-offset_bottom = 227.0
+offset_right = 166.0
+offset_bottom = 219.0
 resizable = true
 title = "Copper Ore"
 slot/0/left_enabled = false
@@ -34,11 +34,6 @@ outputs = [NodePath("HBoxContainer/Output1")]
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
 alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="Buildings"]
-layout_mode = 2
-script = ExtResource("2_0sdgw")
-slot = 13
 
 [node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
@@ -76,11 +71,10 @@ layout_mode = 2
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
 script = ExtResource("2_0sdgw")
-slot = 7
+slot = 14
 
 [node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
 layout_mode = 2
 text = "/min"
 
-[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
 [connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]

@@ -19,7 +19,7 @@ func show_search_panel() -> void:
 	search_panel.position_offset = get_global_mouse_position()
 	
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("right_click"):
 		show_search_panel()
 		
 func _on_add_building(recipe: Recipe) -> void:
@@ -43,4 +43,5 @@ func instantiate_building(path: String, recipe: Recipe) -> void:
 		var building_instance: GraphNode = building.instantiate()
 		add_child(building_instance)
 		building_instance.setup_building(recipe)
+		building_instance.set_slot_type()
 		building_instance.position_offset = search_panel.position_offset

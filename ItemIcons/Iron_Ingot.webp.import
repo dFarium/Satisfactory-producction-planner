@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgqtlr26bgir7"
-path="res://.godot/imported/Nitrogen_Gas.webp-17a11d77bef34022207a38c2c0316f7c.ctex"
+uid="uid://dr5re2eq8uf3"
+path="res://.godot/imported/Iron_Ingot.webp-e2d1d2bc291dc71fa9df945efb680a04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Icons/Nitrogen_Gas.webp"
-dest_files=["res://.godot/imported/Nitrogen_Gas.webp-17a11d77bef34022207a38c2c0316f7c.ctex"]
+source_file="res://ItemIcons/Iron_Ingot.webp"
+dest_files=["res://.godot/imported/Iron_Ingot.webp-e2d1d2bc291dc71fa9df945efb680a04.ctex"]
 
 [params]
 
