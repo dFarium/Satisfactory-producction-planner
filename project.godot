@@ -43,5 +43,4 @@ right_click={
 
 [rendering]
 
-renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0.239216, 0.270588, 0.298039, 1)
