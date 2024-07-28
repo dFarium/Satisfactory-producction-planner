@@ -14,6 +14,7 @@ var output_values: Array[LineEdit] = []
 
 var current_recipe: Recipe
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_close_button()
@@ -48,6 +49,8 @@ func setup_building(recipe: Recipe) -> void:
 		output_nodes[i][1].texture = recipe.outputs[i].item.icon
 
 		output_values.append(output_nodes[i][2].get_node("LineEdit"))
+
+	set_slot_type()
 	
 func _on_slot_value_updated(slot: int, value: float) -> void:
 	#value = items per minute
@@ -86,6 +89,8 @@ func set_slot_type() -> void:
 	
 	for i in range(o_count):
 		set_slot_type_right(i+1,current_recipe.outputs[i].item.id)
+
+	print("set_slot_type ", get_input_port_type(0)," ", get_input_port_type(1)," / output ", get_output_port_type(0)," ", get_output_port_type(1))
 		
 func set_close_button() -> void:
 	#Close button
@@ -129,3 +134,6 @@ func get_building_name(building: int) -> String:
 			return "Well Extractor"
 		_:
 			return "Unknown Building"
+
+func deselect_building() -> void:
+	selected = false

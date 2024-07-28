@@ -1,26 +1,31 @@
 extends GraphEdit
 
-var menu_resource: PackedScene = load("res://Scenes/search_recipe.tscn")
-@onready var search_panel: GraphNode = $SearchPanel
+var search_panel_res: PackedScene = load("res://Scenes/search_recipe.tscn")
+@onready var search_panel: SearchRecipe = $SearchPanel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	search_panel.visible = false
-	search_panel.add_building.connect(_on_add_building)
+	#search_panel.hide_search_panel()
+	#search_panel.add_building.connect(_on_add_building)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
-func show_search_panel() -> void:
-	if not search_panel.visible:
-		search_panel.visible = true
-		search_panel.selected = true
-	search_panel.position_offset = get_global_mouse_position()
+func instance_search_panel() -> void:
+	if not search_panel:
+		for child in get_children():
+			if child.has_method("deselect_building"):
+				child.deselect_building()
+		search_panel = search_panel_res.instantiate()
+		add_child(search_panel)
+		search_panel.add_building.connect(_on_add_building)
+	search_panel.set_position_offset((get_local_mouse_position() + scroll_offset) / zoom)
 	
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("right_click"):
-		show_search_panel()
+		instance_search_panel()
 		
 func _on_add_building(recipe: Recipe) -> void:
 	match [recipe.inputs.size(), recipe.outputs.size()]:
@@ -43,5 +48,4 @@ func instantiate_building(path: String, recipe: Recipe) -> void:
 		var building_instance: GraphNode = building.instantiate()
 		add_child(building_instance)
 		building_instance.setup_building(recipe)
-		building_instance.set_slot_type()
 		building_instance.position_offset = search_panel.position_offset

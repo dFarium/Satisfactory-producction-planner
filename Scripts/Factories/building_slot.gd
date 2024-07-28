@@ -53,6 +53,7 @@ func _on_text_submitted(_new_text:String) -> void:
 	if BuildingSlot.OnlyOutput != slot:
 		slot_value_updated.emit(slot, text.to_float())
 
+
 func evaluate_math_expression(new_text: String) -> void:
 	var rounded:float = snapped(expr.evalute(new_text),0.01)
 	var result:String = str(rounded)

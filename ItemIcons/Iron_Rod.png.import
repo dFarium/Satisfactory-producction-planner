@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxr1n721dd6qc"
-path="res://.godot/imported/Iron_Plate.png-65c04b96411602a247959f7edc5ff863.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://b1bkcw6c5aq8d"
+valid=false
 
 [deps]
 
-source_file="res://ItemIcons/Iron_Plate.png"
-dest_files=["res://.godot/imported/Iron_Plate.png-65c04b96411602a247959f7edc5ff863.ctex"]
+source_file="res://ItemIcons/Iron_Rod.png"
 
 [params]
 

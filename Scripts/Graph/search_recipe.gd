@@ -1,8 +1,9 @@
-extends Control
+extends GraphNode
 class_name SearchRecipe
 
 # Variables de nodos de la escena
 @onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
+@onready var search_field: LineEdit = $LineEdit
 
 # Constante para la escena del botón de opción
 const BUTTON_OPTION = preload ("res://Scenes/button_option.tscn")
@@ -64,8 +65,21 @@ func initialize_buttons() -> void:
 		recipe_option.set_recipe_display(recipe)
 
 func _on_recipe_pressed(recipe: Recipe) -> void:
-	visible = false
+	hide_search_panel()
 	add_building.emit(recipe)
 
 func _on_node_deselected() -> void:
+	queue_free()
+	pass
+
+func hide_search_panel() -> void:
 	visible = false
+	selected = false
+	search_field.editable = false
+	search_field.context_menu_enabled = false
+
+func show_search_panel() -> void:
+	visible = true
+	selected = true
+	search_field.editable = true
+	search_field.context_menu_enabled = true

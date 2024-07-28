@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://3dvhrf54wmqh"]
+
+[ext_resource type="Texture2D" uid="uid://dxcv6sht2ctlp" path="res://ItemIcons/Iron_Rod.webp" id="1_8eba7"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_xk36p"]
+
+[resource]
+script = ExtResource("2_xk36p")
+name = "Iron Rod"
+description = "One of the most basic parts"
+icon = ExtResource("1_8eba7")
