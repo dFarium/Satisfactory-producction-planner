@@ -67,7 +67,7 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 		building_count = value
 	elif slot == 14:
 		return
-	else:	
+	else:
 		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot].quantity
 		building_count = value / items_per_min_per_building
 		building_count_text.text = str(building_count)
@@ -81,16 +81,20 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 		output_values[i].text = str(items_per_min)
 	
 func set_slot_type() -> void:
-	var i_count:int = get_input_port_count()
-	var o_count:int = get_output_port_count()
+	var i_count: int = get_input_port_count()
+	var o_count: int = get_output_port_count()
+	print("count ", i_count, " ", o_count)
 
 	for i in range(i_count):
-		set_slot_type_left(i+1,current_recipe.inputs[i].item.id)
+		set_slot_color_left(i + 1, Color(1, 1, 1))
+		set_slot_type_left(i + 1, current_recipe.inputs[i].item.id)
 	
 	for i in range(o_count):
-		set_slot_type_right(i+1,current_recipe.outputs[i].item.id)
+		set_slot_color_right(i + 1, Color(1, 1, 1))
+		set_slot_type_right(i + 1, current_recipe.outputs[i].item.id)
 
-	print("set_slot_type ", get_input_port_type(0)," ", get_input_port_type(1)," / output ", get_output_port_type(0)," ", get_output_port_type(1))
+	#print("set_slot_type ", get_input_port_type(0), " ", get_input_port_type(1), " / output ", get_output_port_type(0), " ", get_output_port_type(1))
+
 		
 func set_close_button() -> void:
 	#Close button

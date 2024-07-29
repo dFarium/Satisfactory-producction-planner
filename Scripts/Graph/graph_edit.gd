@@ -6,8 +6,7 @@ var search_panel: SearchRecipe
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	recipe_list = load_recipes()
-	pass
+	load_recipes()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -52,24 +51,23 @@ func instantiate_building(path: String, recipe: Recipe) -> void:
 		building_instance.setup_building(recipe)
 		building_instance.position_offset = search_panel.position_offset
 
-func load_recipes() -> Array[Recipe]:
-	var recipe_files := DirAccess.get_files_at("res://Recipes/")
+func load_recipes() -> void:
+	var recipe_files: PackedStringArray = DirAccess.get_files_at("res://Recipes/")
 	for recipe_file in recipe_files:
 		var recipe: Recipe = ResourceLoader.load("res://Recipes/" + recipe_file)
 		recipe_list.append(recipe)
 	set_item_ids()
-	return recipe_list
 
 func set_item_ids() -> void:
 	var id_count: int = 0
 	var item_list: Array[SatisfactoryItem] = []
-	for recipe in recipe_list:
-		for item_amount:ItemAmount in recipe.inputs:
+	for recipe: Recipe in recipe_list:
+		for item_amount: ItemAmount in recipe.inputs:
 			if item_amount.item not in item_list:
 				item_amount.item.id = id_count
 				id_count += 1
 				item_list.append(item_amount.item)
-		for item_amount in recipe.outputs:
+		for item_amount: ItemAmount in recipe.outputs:
 			if item_amount.item not in item_list:
 				item_amount.item.id = id_count
 				id_count += 1
