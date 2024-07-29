@@ -55,7 +55,7 @@ func _on_text_submitted(_new_text:String) -> void:
 
 
 func evaluate_math_expression(new_text: String) -> void:
-	var rounded:float = snapped(expr.evalute(new_text),0.01)
+	var rounded:float = snapped(expr.evalute(new_text),0.001)
 	var result:String = str(rounded)
 	text = check_input(str(result))
 

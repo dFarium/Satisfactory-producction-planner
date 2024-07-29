@@ -50,6 +50,7 @@ func instantiate_building(path: String, recipe: Recipe) -> void:
 		add_child(building_instance)
 		building_instance.setup_building(recipe)
 		building_instance.position_offset = search_panel.position_offset
+		building_instance.slot_value_updated.connect(_on_slot_value_updated)
 
 func load_recipes() -> void:
 	var recipe_files: PackedStringArray = DirAccess.get_files_at("res://Recipes/")
@@ -75,3 +76,6 @@ func set_item_ids() -> void:
 	
 	for item in item_list:
 		print(item.name + " ID: " + str(item.id))
+
+func _on_slot_value_updated(name: StringName, slot: int, value: float) -> void:
+	pass

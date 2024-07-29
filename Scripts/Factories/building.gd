@@ -6,11 +6,17 @@ class_name GraphBuilding
 @onready var building_name: Label = $Buildings/BuildingName
 @onready var building_count_text: LineEdit = $Buildings/LineEdit
 
+signal slot_value_updated(node: StringName, slot: int, value: float)
+
+
 var input_nodes: Array[Array]
 var output_nodes: Array[Array]
 
 var input_values: Array[LineEdit] = []
 var output_values: Array[LineEdit] = []
+
+var input_items: Array[ItemAmount]
+var output_items: Array[ItemAmount]
 
 var current_recipe: Recipe
 
@@ -59,10 +65,10 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 	var cycles_per_minute: float = 60 / current_recipe.manufacturing_cycle
 	#si slot es un input
 	if slot >= 0 and slot <= 6:
-		items_per_min_per_building = cycles_per_minute * current_recipe.inputs[slot-1].quantity
+		items_per_min_per_building = cycles_per_minute * current_recipe.inputs[slot - 1].quantity
 	#si es un output
 	elif slot >= 7 and slot <= 12:
-		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot-7].quantity
+		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot - 7].quantity
 
 	#si es el slot de cantidad de edificios
 	if slot == 13:
@@ -72,15 +78,17 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 		return
 	else:
 		building_count = value / items_per_min_per_building
-		building_count_text.text = str(building_count)
+		building_count_text.text = str(snapped(building_count, 0.001))
 
 	for i in input_values.size():
 		var items_per_min: float = building_count * float(current_recipe.inputs[i].quantity) * cycles_per_minute
-		input_values[i].text = str(items_per_min)
+		input_values[i].text = str(snapped(items_per_min, 0.001))
 	
 	for i in output_values.size():
 		var items_per_min: float = building_count * float(current_recipe.outputs[i].quantity) * cycles_per_minute
-		output_values[i].text = str(items_per_min)
+		output_values[i].text = str(snapped(items_per_min, 0.001))
+	
+	slot_value_updated.emit(self.name, slot, value)
 	
 func set_slot_type() -> void:
 	var i_count: int = get_input_port_count()

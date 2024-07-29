@@ -13,8 +13,9 @@ func _process(_delta: float) -> void:
 func _on_graph_edit_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
 	graph_edit.connect_node(from_node, from_port, to_node, to_port)
 	print(graph_edit.get_connection_list())
-	
 	pass # Replace with function body.
+
+
 
 func _on_add_building(scene: PackedScene) -> void:
 	var new_building: GraphNode = scene.instantiate()
