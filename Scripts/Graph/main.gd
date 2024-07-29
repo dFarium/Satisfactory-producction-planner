@@ -2,11 +2,10 @@ extends Control
 
 @onready var graph_edit: GraphEdit = $GraphEdit
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_items()
 	pass
-	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -26,12 +25,3 @@ func _on_add_building(scene: PackedScene) -> void:
 func _on_graph_edit_disconnection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
 	graph_edit.disconnect_node(from_node, from_port, to_node, to_port)
 	pass # Replace with function body.
-
-
-func load_items() -> void:
-	var id_count:int = 0
-	var recipe_files := DirAccess.get_files_at("res://Items/")
-	for recipe_file in recipe_files:
-		var item: SatisfactoryItem = ResourceLoader.load("res://Items/" + recipe_file)
-		item.id = id_count
-		id_count += 1
