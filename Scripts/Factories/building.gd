@@ -58,17 +58,19 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 	var items_per_min_per_building: float = 0
 	var cycles_per_minute: float = 60 / current_recipe.manufacturing_cycle
 	#si slot es un input
-	if slot >= 0 and slot <= 5:
-		slot -= 1
-	elif slot >= 6 and slot <= 11:
-		slot -= 7
+	if slot >= 0 and slot <= 6:
+		items_per_min_per_building = cycles_per_minute * current_recipe.inputs[slot-1].quantity
+	#si es un output
+	elif slot >= 7 and slot <= 12:
+		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot-7].quantity
 
+	#si es el slot de cantidad de edificios
 	if slot == 13:
 		building_count = value
+	#si es solo output
 	elif slot == 14:
 		return
 	else:
-		items_per_min_per_building = cycles_per_minute * current_recipe.outputs[slot].quantity
 		building_count = value / items_per_min_per_building
 		building_count_text.text = str(building_count)
 
