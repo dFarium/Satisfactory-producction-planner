@@ -149,11 +149,11 @@ func get_building_name(building: int) -> String:
 		_:
 			return "Unknown Building"
 
-func set_input_value_from_connection(slot: int, value: float, bottleneck: Dictionary) -> void:
+func set_input_value_from_connection(bottleneck: Dictionary) -> void:
 	#el valor viene desde un output hacia un input
 	#input_values[slot].text = str(value)
-	slot = bottleneck.port
-	value = bottleneck.value
+	var slot: int = bottleneck.port
+	var value: float = bottleneck.value
 	var building_count: float = 0
 	var items_per_min_per_building: float = 0
 	var cycles_per_minute: float = 60 / current_recipe.manufacturing_cycle
