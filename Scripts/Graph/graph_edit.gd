@@ -77,5 +77,35 @@ func set_item_ids() -> void:
 	for item in item_list:
 		print(item.name + " ID: " + str(item.id))
 
-func _on_slot_value_updated(name: StringName, slot: int, value: float) -> void:
+func get_graphbuilding(path: String) -> GraphBuilding:
+	return get_node(path)
+
+func get_input_nodes_values(node: String) -> Array[Dictionary]:
+	var input_values: Array[Dictionary] = []
+	var connections: Array[Dictionary] = get_connection_list()
+	for i in range(connections.size()):
+		if connections[i].to_node == node:
+			input_values.append({"port": connections[i].to_port, "value": get_graphbuilding(connections[i].from_node).get_output_value(connections[i].from_port)})
+	return input_values
+
+func _on_slot_value_updated(node: StringName, _slot: int, value: float) -> void:
+	for connection in get_connection_list():
+		if connection.from_node == node:
+			var graph_building: GraphBuilding = get_graphbuilding(connection.to_node)
+			graph_building.set_input_value_from_connection(connection.to_port, value,graph_building.find_bottleneck(get_input_nodes_values(connection.to_node)))
 	pass
+
+func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+	connect_node(from_node, from_port, to_node, to_port)
+
+	var array: Array[Dictionary] = get_connection_list()
+	for connection: Dictionary in array:
+		var outvalue: float = get_graphbuilding(connection.from_node).get_output_value(connection.from_port)
+		var graph_building: GraphBuilding = get_graphbuilding(connection.to_node)
+		graph_building.set_input_value_from_connection(connection.to_port, outvalue,graph_building.find_bottleneck(get_input_nodes_values(connection.to_node)))
+	pass # Replace with function body.
+
+
+func _on_disconnection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+	disconnect_node(from_node, from_port, to_node, to_port)
+	pass # Replace with function body.
