@@ -17,6 +17,7 @@ enum Building {
 	Splitter,
 	WaterExtractor,
 	WellExtractor,
+	Foundry,
 }
 
 @export var building:Building

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dvy48ybt7w38v"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_paetb"]
-[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="2_h51g7"]
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="2_vwn45"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_sack5"]
 
 [sub_resource type="Resource" id="Resource_wlaqv"]
 script = ExtResource("1_paetb")
-item = ExtResource("2_h51g7")
+item = ExtResource("2_vwn45")
 quantity = 2
 
 [resource]

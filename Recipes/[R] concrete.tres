@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://6qw4n3gboxqo"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_djrel"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="2_b13vb"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_2dinm"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_e35od"]
+
+[sub_resource type="Resource" id="Resource_ltfj1"]
+script = ExtResource("1_djrel")
+item = ExtResource("2_b13vb")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_wlaqv"]
+script = ExtResource("1_djrel")
+item = ExtResource("3_2dinm")
+quantity = 1
+
+[resource]
+script = ExtResource("4_e35od")
+building = 2
+name = "Cable"
+inputs = Array[ExtResource("1_djrel")]([SubResource("Resource_ltfj1")])
+outputs = Array[ExtResource("1_djrel")]([SubResource("Resource_wlaqv")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = false

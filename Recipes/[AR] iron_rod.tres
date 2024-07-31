@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cg4i1trfxsl6j"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_d4f8g"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="2_d6h63"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="3_6ehot"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_rcyk8"]
+
+[sub_resource type="Resource" id="Resource_0m7pe"]
+script = ExtResource("1_d4f8g")
+item = ExtResource("2_d6h63")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_otckf"]
+script = ExtResource("1_d4f8g")
+item = ExtResource("3_6ehot")
+quantity = 4
+
+[resource]
+script = ExtResource("4_rcyk8")
+building = 2
+name = "Steel Rod"
+inputs = Array[ExtResource("1_d4f8g")]([SubResource("Resource_0m7pe")])
+outputs = Array[ExtResource("1_d4f8g")]([SubResource("Resource_otckf")])
+manufacturing_cycle = 5.0
+is_alternate_recipe = true

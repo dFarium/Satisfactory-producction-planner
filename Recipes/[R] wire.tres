@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dm8yfdg1isygp"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_0x8sj"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_fm3p0"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="2_voyjc"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_1xyyi"]
+
+[sub_resource type="Resource" id="Resource_r7xgx"]
+script = ExtResource("1_0x8sj")
+item = ExtResource("2_voyjc")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_56ncc"]
+script = ExtResource("1_0x8sj")
+item = ExtResource("3_1xyyi")
+quantity = 2
+
+[resource]
+script = ExtResource("2_fm3p0")
+building = 2
+name = "Wire"
+inputs = Array[ExtResource("1_0x8sj")]([SubResource("Resource_r7xgx")])
+outputs = Array[ExtResource("1_0x8sj")]([SubResource("Resource_56ncc")])
+manufacturing_cycle = 4.0
+is_alternate_recipe = false

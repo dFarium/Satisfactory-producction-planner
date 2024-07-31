@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://xtksr030knni"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_48gl4"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="2_38jag"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_cfln0"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_0jmoc"]
+
+[sub_resource type="Resource" id="Resource_r7xgx"]
+script = ExtResource("1_48gl4")
+item = ExtResource("2_38jag")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_56ncc"]
+script = ExtResource("1_48gl4")
+item = ExtResource("3_cfln0")
+quantity = 9
+
+[resource]
+script = ExtResource("4_0jmoc")
+building = 2
+name = "Iron Wire"
+inputs = Array[ExtResource("1_48gl4")]([SubResource("Resource_r7xgx")])
+outputs = Array[ExtResource("1_48gl4")]([SubResource("Resource_56ncc")])
+manufacturing_cycle = 24.0
+is_alternate_recipe = true

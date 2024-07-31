@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bhw7eeeinbe7l"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_jotv3"]
+[ext_resource type="Resource" uid="uid://ongr047x2t7" path="res://Items/wood.tres" id="2_2t5ta"]
+[ext_resource type="Resource" uid="uid://bhd3duvummhss" path="res://Items/biomass.tres" id="3_f1sfs"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_f6y0w"]
+
+[sub_resource type="Resource" id="Resource_ltfj1"]
+script = ExtResource("1_jotv3")
+item = ExtResource("2_2t5ta")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_wlaqv"]
+script = ExtResource("1_jotv3")
+item = ExtResource("3_f1sfs")
+quantity = 20
+
+[resource]
+script = ExtResource("4_f6y0w")
+building = 2
+name = "Biomass (Leaves)"
+inputs = Array[ExtResource("1_jotv3")]([SubResource("Resource_ltfj1")])
+outputs = Array[ExtResource("1_jotv3")]([SubResource("Resource_wlaqv")])
+manufacturing_cycle = 4.0
+is_alternate_recipe = false

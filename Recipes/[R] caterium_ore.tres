@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://s7abbmkn3pqm"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_kc1gu"]
-[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="2_qy5vl"]
+[ext_resource type="Resource" uid="uid://djbyvsblqligv" path="res://Items/caterium_ore.tres" id="2_jvqkl"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_4w5ci"]
 
 [sub_resource type="Resource" id="Resource_wlaqv"]
 script = ExtResource("1_kc1gu")
-item = ExtResource("2_qy5vl")
+item = ExtResource("2_jvqkl")
 quantity = 2
 
 [resource]
 script = ExtResource("3_4w5ci")
 building = 5
-name = "Iron Ore"
+name = "Caterium Ore"
 inputs = Array[ExtResource("1_kc1gu")]([])
 outputs = Array[ExtResource("1_kc1gu")]([SubResource("Resource_wlaqv")])
 manufacturing_cycle = 2.0

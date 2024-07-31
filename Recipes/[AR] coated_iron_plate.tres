@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bd8mdgl67qkly"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_lf7l7"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="2_nj8lb"]
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="3_2sid4"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="3_kq240"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_6vnk6"]
+
+[sub_resource type="Resource" id="Resource_jouc5"]
+script = ExtResource("1_lf7l7")
+item = ExtResource("2_nj8lb")
+quantity = 10
+
+[sub_resource type="Resource" id="Resource_l5kuu"]
+script = ExtResource("1_lf7l7")
+item = ExtResource("3_kq240")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_0faiq"]
+script = ExtResource("1_lf7l7")
+item = ExtResource("3_2sid4")
+quantity = 15
+
+[resource]
+script = ExtResource("4_6vnk6")
+building = 0
+name = "Coated Iron Plate"
+inputs = Array[ExtResource("1_lf7l7")]([SubResource("Resource_jouc5"), SubResource("Resource_l5kuu")])
+outputs = Array[ExtResource("1_lf7l7")]([SubResource("Resource_0faiq")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = true

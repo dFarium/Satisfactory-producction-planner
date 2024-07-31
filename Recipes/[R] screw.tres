@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bri3xmunky0xe"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_1sl2d"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="2_dr60s"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_wbraa"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_55tlr"]
+
+[sub_resource type="Resource" id="Resource_o2ojr"]
+script = ExtResource("1_1sl2d")
+item = ExtResource("2_dr60s")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_6a0oy"]
+script = ExtResource("1_1sl2d")
+item = ExtResource("3_55tlr")
+quantity = 4
+
+[resource]
+script = ExtResource("2_wbraa")
+building = 2
+name = "Screw"
+inputs = Array[ExtResource("1_1sl2d")]([SubResource("Resource_o2ojr")])
+outputs = Array[ExtResource("1_1sl2d")]([SubResource("Resource_6a0oy")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false
