@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ye75v4rrwtid"]
 
-[ext_resource type="Texture2D" uid="uid://c04jp0d3b2xda" path="res://ItemIcons/Color_Cartridge.webp" id="1_ggir5"]
+[ext_resource type="Texture2D" uid="uid://cqe4hflfuuvuq" path="res://ItemIcons/Compacted_Coal.webp" id="1_6fidf"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_4lto4"]
 
 [resource]
 script = ExtResource("2_4lto4")
-name = "Color Cardtridge"
-description = "Used for applying Patterns to structures with the Customizer."
-icon = ExtResource("1_ggir5")
+name = "Compacted Coal"
+icon = ExtResource("1_6fidf")

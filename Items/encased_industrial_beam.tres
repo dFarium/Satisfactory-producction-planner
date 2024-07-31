@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bgtc0vpo8850s"]
 
-[ext_resource type="Texture2D" uid="uid://d1s1hlenrohx4" path="res://ItemIcons/Empty_Canister.webp" id="1_wrbj1"]
+[ext_resource type="Texture2D" uid="uid://65go2u06kf2x" path="res://ItemIcons/Encased_Industrial_Beam.webp" id="1_njucl"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8msc1"]
 
 [resource]
 script = ExtResource("2_8msc1")
-name = "Empty Fluid Tank"
-description = "Used to package gases and volatile liquids for transportation."
-icon = ExtResource("1_wrbj1")
+name = "Encased Industrial Beam"
+icon = ExtResource("1_njucl")

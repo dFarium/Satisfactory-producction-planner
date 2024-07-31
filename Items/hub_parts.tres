@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://be4l4m2rb3jwn"]
 
-[ext_resource type="Texture2D" uid="uid://dr5re2eq8uf3" path="res://ItemIcons/Iron_Ingot.webp" id="1_gnatm"]
+[ext_resource type="Texture2D" uid="uid://bn2c8l3ekey54" path="res://ItemIcons/HUB_Parts.png" id="1_3wthk"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_0tbxr"]
 
 [resource]
 script = ExtResource("2_0tbxr")
 name = "HUB Parts"
-icon = ExtResource("1_gnatm")
+icon = ExtResource("1_3wthk")

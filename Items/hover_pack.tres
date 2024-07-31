@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxstlebnt1eb8"]
 
-[ext_resource type="Texture2D" uid="uid://bt2eyndeng78p" path="res://ItemIcons/Homing_Rifle_Ammo.webp" id="1_p4u3b"]
+[ext_resource type="Texture2D" uid="uid://bimlcqhg2xb78" path="res://ItemIcons/Hover_Pack.webp" id="1_lvy6v"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_jxohr"]
 
 [resource]
 script = ExtResource("2_jxohr")
-name = "Homing Rifle Ammo"
-icon = ExtResource("1_p4u3b")
+name = "Hover Pack"
+icon = ExtResource("1_lvy6v")

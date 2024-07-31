@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://d1gmp3poi3jeg"]
 
-[ext_resource type="Texture2D" uid="uid://1oc6qwuxmnvl" path="res://ItemIcons/Copper_Sheet.webp" id="1_po8dt"]
+[ext_resource type="Texture2D" uid="uid://bami10pqcr8ma" path="res://ItemIcons/Crude_Oil.webp" id="1_tvh6b"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_xaf0y"]
 
 [resource]
 script = ExtResource("2_xaf0y")
-name = "Copper Sheet"
-description = "Primarily used for pipelines due to its high corrosion resistance."
-icon = ExtResource("1_po8dt")
+name = "Crude Oil"
+icon = ExtResource("1_tvh6b")

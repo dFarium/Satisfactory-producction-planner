@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ucdaknlgott"]
 
-[ext_resource type="Texture2D" uid="uid://dpvvbisp62kox" path="res://ItemIcons/Copper_Powder.webp" id="1_sqsd6"]
+[ext_resource type="Texture2D" uid="uid://1oc6qwuxmnvl" path="res://ItemIcons/Copper_Sheet.webp" id="1_eipsk"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_my6yq"]
 
 [resource]
 script = ExtResource("2_my6yq")
-name = "Copper Powder"
-description = "The high natural density of Copper, combined with the granularity of the powder, makes this part fit for producing Nuclear Pasta in the Particle Accelerator."
-icon = ExtResource("1_sqsd6")
+name = "Copper Sheet"
+icon = ExtResource("1_eipsk")

@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b8iam5twj7cfd"]
 
-[ext_resource type="Texture2D" uid="uid://cqe4hflfuuvuq" path="res://ItemIcons/Compacted_Coal.webp" id="1_34oaw"]
+[ext_resource type="Texture2D" uid="uid://bvjl2cuaib3l8" path="res://ItemIcons/Computer.webp" id="1_38hnm"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_p2a8h"]
 
 [resource]
 script = ExtResource("2_p2a8h")
-name = "Compacted Coal"
-description = "A much more efficient alternative to Coal. "
-icon = ExtResource("1_34oaw")
+name = "Computer"
+icon = ExtResource("1_38hnm")

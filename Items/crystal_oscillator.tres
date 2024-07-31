@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://nsnnbmxpqmn5"]
 
-[ext_resource type="Texture2D" uid="uid://bami10pqcr8ma" path="res://ItemIcons/Crude_Oil.webp" id="1_wa5hr"]
+[ext_resource type="Texture2D" uid="uid://dw4qlvpdcmr1w" path="res://ItemIcons/Crystal_Oscillator.webp" id="1_gbunw"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_gw4j6"]
 
 [resource]
 script = ExtResource("2_gw4j6")
-name = "Crude Oil"
-description = "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic."
-icon = ExtResource("1_wa5hr")
+name = "Crystal Oscillator"
+icon = ExtResource("1_gbunw")

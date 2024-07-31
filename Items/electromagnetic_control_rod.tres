@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://j383o7khxumv"]
 
-[ext_resource type="Texture2D" uid="uid://b8j8v1aegrh7d" path="res://ItemIcons/Cup.webp" id="1_1usrk"]
+[ext_resource type="Texture2D" uid="uid://bgnhglrbwchay" path="res://ItemIcons/Electromagnetic_Control_Rod.webp" id="1_fvams"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ql8ao"]
 
 [resource]
 script = ExtResource("2_ql8ao")
-name = "Cup"
-description = "Standard issue Cup for melee range."
-icon = ExtResource("1_1usrk")
+name = "Electromagnetic Control Rod"
+icon = ExtResource("1_fvams")

@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bxckbwiyulx8b"]
 
-[ext_resource type="Texture2D" uid="uid://bgnhglrbwchay" path="res://ItemIcons/Electromagnetic_Control_Rod.webp" id="1_165og"]
+[ext_resource type="Texture2D" uid="uid://d1s1hlenrohx4" path="res://ItemIcons/Empty_Canister.webp" id="1_pfx3e"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3whac"]
 
 [resource]
 script = ExtResource("2_3whac")
-name = "Electomagnetic Control Rod"
-description = "Control Rods regulate power output via electromagnetism."
-icon = ExtResource("1_165og")
+name = "Empty Canister"
+icon = ExtResource("1_pfx3e")
