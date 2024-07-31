@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=2 format=3 uid="uid://bdxdhe3xf1y7x"]
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bdxdhe3xf1y7x"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_ke5y2"]
+[ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://ItemIcons/Aluminum_Casing.webp" id="1_whbkf"]
 
 [resource]
 script = ExtResource("1_ke5y2")
-name = "NAME"
-description = "DESCRIPTION"
+name = "Aluminum Casing"
+icon = ExtResource("1_whbkf")

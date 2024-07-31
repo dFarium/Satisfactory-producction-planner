@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b5ytctnnhh61p"]
 
-[ext_resource type="Texture2D" uid="uid://dhpvyg7bd1okb" path="res://ItemIcons/Automated_Wiring.webp" id="1_ttd1p"]
+[ext_resource type="Texture2D" uid="uid://dj76dw4gy4oba" path="res://ItemIcons/Bacon_Agaric.webp" id="1_sd2jk"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_s1x86"]
 
 [resource]
 script = ExtResource("2_s1x86")
-name = "Automated Wiring"
-description = "Project Part #3. Ship with the Space Elevator to complete phases of Project Assembly."
-icon = ExtResource("1_ttd1p")
+name = "Bacon Agaric"
+icon = ExtResource("1_sd2jk")

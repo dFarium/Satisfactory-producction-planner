@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxri5fyhcy374"]
 
-[ext_resource type="Texture2D" uid="uid://bcl1ca8j6drym" path="res://ItemIcons/Assembly_Director_System.webp" id="1_mn725"]
+[ext_resource type="Texture2D" uid="uid://dhpvyg7bd1okb" path="res://ItemIcons/Automated_Wiring.webp" id="1_lo1kb"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_7u77i"]
 
 [resource]
 script = ExtResource("2_7u77i")
-name = "Assembly Director System"
-description = "Project Part #6. Ship with the Space Elevator to complete phases of Project Assembly.This extremely fast and precise computing system is specifically designed to direct the Project Assembly: Assembly Phase."
-icon = ExtResource("1_mn725")
+name = "Autmated Wiring"
+icon = ExtResource("1_lo1kb")

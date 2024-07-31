@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://chedsnk556mb2"]
 
-[ext_resource type="Texture2D" uid="uid://bgkjudtn34tdp" path="res://ItemIcons/Blade_Runners.webp" id="1_p77gx"]
+[ext_resource type="Texture2D" uid="uid://gdn2at75yh34" path="res://ItemIcons/Boom_Box.webp" id="1_bywib"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_gyp5r"]
 
 [resource]
 script = ExtResource("2_gyp5r")
-name = "Blade Runners"
-description = "An exoskeleton for the lower legs that assists movement, allowing Pioneers to sprint faster and jump higher."
-icon = ExtResource("1_p77gx")
+name = "Boom Box"
+icon = ExtResource("1_bywib")

@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://d2jn64cwhb8fl"]
 
-[ext_resource type="Texture2D" uid="uid://dqttqla0vxs1s" path="res://ItemIcons/Aluminum_Ingot.webp" id="1_pfwdm"]
+[ext_resource type="Texture2D" uid="uid://d0hwrkfk0sc63" path="res://ItemIcons/Aluminum_Scrap.webp" id="1_kokq4"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ga4xk"]
 
 [resource]
 script = ExtResource("2_ga4xk")
-name = "Aluminum Ingot"
-description = "Aluminum Ingots are made from Aluminum Scrap, which is refined from Alumina Solution."
-icon = ExtResource("1_pfwdm")
+name = "Aluminum Scrap"
+icon = ExtResource("1_kokq4")

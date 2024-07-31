@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b0uc67ug7chv8"]
 
-[ext_resource type="Texture2D" uid="uid://d0hwrkfk0sc63" path="res://ItemIcons/Aluminum_Scrap.webp" id="1_tth5n"]
+[ext_resource type="Texture2D" uid="uid://bcl1ca8j6drym" path="res://ItemIcons/Assembly_Director_System.webp" id="1_eoqu0"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_n84hm"]
 
 [resource]
 script = ExtResource("2_n84hm")
-name = "Aluminum Scrap"
-description = "Aluminum Scrap is pure aluminum refined from Alumina."
-icon = ExtResource("1_tth5n")
+name = "Assembly Director System"
+icon = ExtResource("1_eoqu0")

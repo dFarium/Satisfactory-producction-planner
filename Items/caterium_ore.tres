@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://djbyvsblqligv"]
 
-[ext_resource type="Texture2D" uid="uid://ckj5xhm5umspa" path="res://ItemIcons/Caterium_Ingot.webp" id="1_mvid5"]
+[ext_resource type="Texture2D" uid="uid://bky5fq8uc43pw" path="res://ItemIcons/Caterium_Ore.webp" id="1_rcv7i"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_mkkb7"]
 
 [resource]
 script = ExtResource("2_mkkb7")
-name = "Caterium Ingot"
-description = "Caterium Ingots are mostly used for advanced electronics."
-icon = ExtResource("1_mvid5")
+name = "Caterium Ore"
+icon = ExtResource("1_rcv7i")
