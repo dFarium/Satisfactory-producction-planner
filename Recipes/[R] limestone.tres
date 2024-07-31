@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dnhd20poxm1hu"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_6oqxm"]
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="2_5y3xw"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_e3qf2"]
+
+[sub_resource type="Resource" id="Resource_wlaqv"]
+script = ExtResource("1_6oqxm")
+item = ExtResource("2_5y3xw")
+quantity = 2
+
+[resource]
+script = ExtResource("3_e3qf2")
+building = 5
+name = "Iron Ore"
+inputs = Array[ExtResource("1_6oqxm")]([])
+outputs = Array[ExtResource("1_6oqxm")]([SubResource("Resource_wlaqv")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = false
