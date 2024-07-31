@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://lk3goyvvpxdh"]
 
-[ext_resource type="Texture2D" uid="uid://bb44c4jvj42x3" path="res://ItemIcons/Somersloop.webp" id="1_23trq"]
+[ext_resource type="Texture2D" uid="uid://byfectgpisa70" path="res://ItemIcons/Stator.webp" id="1_ukc5c"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_m32ml"]
 
 [resource]
 script = ExtResource("2_m32ml")
-name = "Somersloop"
-icon = ExtResource("1_23trq")
+name = "Stator"
+icon = ExtResource("1_ukc5c")

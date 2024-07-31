@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://pfjch56a1i4r"]
 
-[ext_resource type="Texture2D" uid="uid://bfd7po2iyk1tm" path="res://ItemIcons/Magnetic_Field_Generator.webp" id="1_rgy5q"]
+[ext_resource type="Texture2D" uid="uid://hmpf88ugg2ft" path="res://ItemIcons/Medicinal_Inhaler.webp" id="1_mwqi1"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_chxew"]
 
 [resource]
 script = ExtResource("2_chxew")
-name = "Magnetic Field Generator"
-icon = ExtResource("1_rgy5q")
+name = "Medicinal Inhaler"
+icon = ExtResource("1_mwqi1")

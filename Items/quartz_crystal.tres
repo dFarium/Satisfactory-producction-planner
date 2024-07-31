@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://d3e7a874j3dcc"]
 
-[ext_resource type="Texture2D" uid="uid://bk4w07qsfskfi" path="res://ItemIcons/Quantum_Computer.webp" id="1_2ipco"]
+[ext_resource type="Texture2D" uid="uid://dr2jqe2ulx12f" path="res://ItemIcons/Quartz_Crystal.webp" id="1_ukllj"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_6p1b7"]
 
 [resource]
 script = ExtResource("2_6p1b7")
-name = "Quantum Computer"
-icon = ExtResource("1_2ipco")
+name = "Quartz Crystal"
+icon = ExtResource("1_ukllj")

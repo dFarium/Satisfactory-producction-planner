@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ddenftndwkym8"]
 
-[ext_resource type="Texture2D" uid="uid://baap8ammsj8b4" path="res://ItemIcons/Jetpack.webp" id="1_cq4ow"]
+[ext_resource type="Texture2D" uid="uid://b6l1mh2kb05n1" path="res://ItemIcons/Leaves.webp" id="1_j6iwn"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_0mtuc"]
 
 [resource]
 script = ExtResource("2_0mtuc")
-name = "Jetpack"
-icon = ExtResource("1_cq4ow")
+name = "Leaves"
+icon = ExtResource("1_j6iwn")

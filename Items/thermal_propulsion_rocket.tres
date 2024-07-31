@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bav3blu45jmr4"]
 
-[ext_resource type="Texture2D" uid="uid://bh12tipf65u1g" path="res://ItemIcons/Superposition_Oscillator.webp" id="1_btd2l"]
+[ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://ItemIcons/Thermal_Propulsion_Rocket.webp" id="1_olwu4"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_5lwlf"]
 
 [resource]
 script = ExtResource("2_5lwlf")
-name = "Superposition Oscillator"
-icon = ExtResource("1_btd2l")
+name = "Thermal Propulsion Rocket"
+icon = ExtResource("1_olwu4")

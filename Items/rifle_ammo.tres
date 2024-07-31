@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dfvl0mki48oh1"]
 
-[ext_resource type="Texture2D" uid="uid://bgq5mjwxjg5hu" path="res://ItemIcons/Rifle.webp" id="1_s3e1i"]
+[ext_resource type="Texture2D" uid="uid://c16mfyuxwhjhk" path="res://ItemIcons/Rifle_Ammo.webp" id="1_p0xaj"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ctb85"]
 
 [resource]
 script = ExtResource("2_ctb85")
-name = "Rifle"
-icon = ExtResource("1_s3e1i")
+name = "Rifle Ammo"
+icon = ExtResource("1_p0xaj")

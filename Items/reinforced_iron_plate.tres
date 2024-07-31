@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cpsanu74v801i"]
 
-[ext_resource type="Texture2D" uid="uid://c8h5noq888try" path="res://ItemIcons/Rebar_Gun.png" id="1_uh7hw"]
+[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://ItemIcons/Reinforced_Iron_Plate.webp" id="1_i3yrk"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_16k36"]
 
 [resource]
 script = ExtResource("2_16k36")
-name = "Rebar Gun"
-icon = ExtResource("1_uh7hw")
+name = "Reinforced Iron Plate"
+icon = ExtResource("1_i3yrk")

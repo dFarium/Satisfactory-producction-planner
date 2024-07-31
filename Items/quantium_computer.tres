@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://c0ai730bkvbf6"]
 
-[ext_resource type="Texture2D" uid="uid://dh6nuq181xu2d" path="res://ItemIcons/Pulse_Nobelisk.png" id="1_c5ghs"]
+[ext_resource type="Texture2D" uid="uid://bk4w07qsfskfi" path="res://ItemIcons/Quantum_Computer.webp" id="1_5aya8"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_khjhn"]
 
 [resource]
 script = ExtResource("2_khjhn")
-name = "Pulse Nobelisk"
-icon = ExtResource("1_c5ghs")
+name = "Quantum Computer"
+icon = ExtResource("1_5aya8")

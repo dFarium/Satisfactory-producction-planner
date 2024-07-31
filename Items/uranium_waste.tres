@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b8ydcn8gn2wf1"]
 
-[ext_resource type="Texture2D" uid="uid://cq4i7n2xj1cde" path="res://ItemIcons/Uranium_Fuel_Rod.webp" id="1_1q6ju"]
+[ext_resource type="Texture2D" uid="uid://dy8dvod16m8ts" path="res://ItemIcons/Uranium_Waste.webp" id="1_1x3y1"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_axtpm"]
 
 [resource]
 script = ExtResource("2_axtpm")
-name = "Uranium Fuel Rod"
-icon = ExtResource("1_1q6ju")
+name = "Uranium Waste"
+icon = ExtResource("1_1x3y1")

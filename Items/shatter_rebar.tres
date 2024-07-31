@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://c7rljjcj3mr6o"]
 
-[ext_resource type="Texture2D" uid="uid://b240dfe034wcb" path="res://ItemIcons/Silica.webp" id="1_k5afd"]
+[ext_resource type="Texture2D" uid="uid://dvpoxp2tryr15" path="res://ItemIcons/Shatter_Rebar.png" id="1_neqj1"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_1pt8k"]
 
 [resource]
 script = ExtResource("2_1pt8k")
-name = "Silica"
-icon = ExtResource("1_k5afd")
+name = "Shatter Rebar"
+icon = ExtResource("1_neqj1")
