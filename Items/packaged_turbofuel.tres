@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cgx5q4na0rnv3"]
 
-[ext_resource type="Texture2D" uid="uid://cmbsivtdfk0sf" path="res://ItemIcons/Packaged_Sulfuric_Acid.webp" id="1_ilus0"]
+[ext_resource type="Texture2D" uid="uid://5pemc2loapnq" path="res://ItemIcons/Packaged_Turbofuel.webp" id="1_y8cmg"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_4bv1t"]
 
 [resource]
 script = ExtResource("2_4bv1t")
-name = "Packaged Sulfuric Acid"
-icon = ExtResource("1_ilus0")
+name = "Packaged Turbofuel"
+icon = ExtResource("1_y8cmg")

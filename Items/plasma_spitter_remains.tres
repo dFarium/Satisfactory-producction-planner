@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxfgc48p0ghkv"]
 
-[ext_resource type="Texture2D" uid="uid://dt2y6fu2fsgpv" path="res://ItemIcons/Petroleum_Coke.webp" id="1_ypjyu"]
+[ext_resource type="Texture2D" uid="uid://bjhg0ukkx8x2b" path="res://ItemIcons/Plasma_Spitter_Remains.webp" id="1_jxj1l"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_0vtsf"]
 
 [resource]
 script = ExtResource("2_0vtsf")
-name = "Petroleum Coke"
-icon = ExtResource("1_ypjyu")
+name = "Plasma Spitter Remains"
+icon = ExtResource("1_jxj1l")

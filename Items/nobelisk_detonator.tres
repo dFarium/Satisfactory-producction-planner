@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bdo2xmt2ulj6t"]
 
-[ext_resource type="Texture2D" uid="uid://dc7vxbjpoipr8" path="res://ItemIcons/Nobelisk.webp" id="1_c4tk2"]
+[ext_resource type="Texture2D" uid="uid://dgkfr58b5fo6b" path="res://ItemIcons/Nobelisk_Detonator.webp" id="1_lfao2"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3egaa"]
 
 [resource]
 script = ExtResource("2_3egaa")
-name = "Nobelisk"
-icon = ExtResource("1_c4tk2")
+name = "Nobelisk Detonator"
+icon = ExtResource("1_lfao2")

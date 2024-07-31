@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://s3es7pu32jox"]
 
-[ext_resource type="Texture2D" uid="uid://kdpk1xfxfy0t" path="res://ItemIcons/Plutonium_Waste.webp" id="1_0lmyn"]
+[ext_resource type="Texture2D" uid="uid://g2wo67i2cy7m" path="res://ItemIcons/Polymer_Resin.webp" id="1_vy5ss"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_62mr5"]
 
 [resource]
 script = ExtResource("2_62mr5")
-name = "Plutonium Waste"
-icon = ExtResource("1_0lmyn")
+name = "Polymer Resin"
+icon = ExtResource("1_vy5ss")

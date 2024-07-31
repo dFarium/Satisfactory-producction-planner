@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cn6ng6taomfke"]
 
-[ext_resource type="Texture2D" uid="uid://qm5r3eg8c3ge" path="res://ItemIcons/Plutonium_Fuel_Rod.webp" id="1_2fell"]
+[ext_resource type="Texture2D" uid="uid://cd00qjffb8k7r" path="res://ItemIcons/Plutonium_Pellet.webp" id="1_3mcap"]
 [ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3fh5e"]
 
 [resource]
 script = ExtResource("2_3fh5e")
-name = "Plutonium Fuel Rod"
-icon = ExtResource("1_2fell")
+name = "Plutonium Pellet"
+icon = ExtResource("1_3mcap")
