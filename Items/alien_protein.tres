@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://xunigr6ppy63"]
+
+[ext_resource type="Texture2D" uid="uid://3yhfwlhvd6ls" path="res://ItemIcons/Alien_Protein.webp" id="1_elpjy"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_w1ncr"]
+
+[resource]
+script = ExtResource("1_w1ncr")
+name = "Alien Protein"
+description = "Ground down Alien Remains in a neat little package. Used for medical purposes and to research alien organisms."
+icon = ExtResource("1_elpjy")

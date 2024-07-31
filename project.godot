@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Satisfactory Producction Planner"
 run/main_scene="res://Scenes/graph_edit.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [debug]
@@ -22,6 +22,7 @@ gdscript/warnings/untyped_declaration=1
 [file_customization]
 
 folder_colors={
+"res://ItemIcons/": "yellow",
 "res://Items/": "green",
 "res://Recipes/": "purple",
 "res://Scenes/": "red",
@@ -43,5 +44,4 @@ right_click={
 
 [rendering]
 
-renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0.239216, 0.270588, 0.298039, 1)

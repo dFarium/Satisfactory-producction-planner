@@ -1,11 +1,12 @@
-extends Control
+extends GraphNode
 class_name SearchRecipe
 
 # Variables de nodos de la escena
 @onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
+@onready var search_field: LineEdit = $LineEdit
 
 # Constante para la escena del botón de opción
-const BUTTON_OPTION = preload ("res://Scenes/button_option.tscn")
+const BUTTON_OPTION = preload("res://Scenes/button_option.tscn")
 
 # Lista de recetas cargadas
 var recipe_list: Array[Recipe] = []
@@ -15,10 +16,8 @@ signal add_building(recipe: Recipe)
 
 # Función llamada cuando el nodo entra en el árbol de la escena por primera vez
 func _ready() -> void:
-	load_recipes()
 	initialize_buttons()
-	show_recipes(recipe_list)
-
+	pass
 # Función llamada cuando el texto en el campo de búsqueda cambia
 func _on_text_edit_text_changed(new_text: String) -> void:
 	hide_buttons(recipe_container)
@@ -28,17 +27,13 @@ func _on_text_edit_text_changed(new_text: String) -> void:
 		show_recipes(recipe_list)
 
 # Cargar las recetas desde la carpeta 'Recipes'
-func load_recipes() -> void:
-	var recipe_files := DirAccess.get_files_at("res://Recipes/")
-	for recipe_file in recipe_files:
-		var recipe := ResourceLoader.load("res://Recipes/" + recipe_file)
-		recipe_list.append(recipe)
 
+		
 # Buscar recetas que coincidan parcial o completamente con la entrada
 func search_recipes(input: String) -> Array:
 	var results: Array = []
 	for recipe in recipe_list:
-		if input.length() > 0 and recipe.name.to_lower().find(input) != - 1:
+		if input.length() > 0 and recipe.name.to_lower().find(input) != -1:
 			results.append(recipe)
 		elif input == recipe.name:
 			results.append(recipe)
@@ -64,8 +59,21 @@ func initialize_buttons() -> void:
 		recipe_option.set_recipe_display(recipe)
 
 func _on_recipe_pressed(recipe: Recipe) -> void:
-	visible = false
+	hide_search_panel()
 	add_building.emit(recipe)
 
 func _on_node_deselected() -> void:
+	queue_free()
+	pass
+
+func hide_search_panel() -> void:
 	visible = false
+	selected = false
+	search_field.editable = false
+	search_field.context_menu_enabled = false
+
+func show_search_panel() -> void:
+	visible = true
+	selected = true
+	search_field.editable = true
+	search_field.context_menu_enabled = true

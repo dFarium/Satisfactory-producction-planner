@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cvkewkk2ospfm"]
+
+[ext_resource type="Texture2D" uid="uid://dvvdl8t4i3km7" path="res://ItemIcons/Hog_Remains.webp" id="1_fnyns"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_431rd"]
+
+[resource]
+script = ExtResource("2_431rd")
+name = "Hog Remains"
+icon = ExtResource("1_fnyns")

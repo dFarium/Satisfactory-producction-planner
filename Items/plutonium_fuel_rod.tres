@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dlvn642optjqs"]
+
+[ext_resource type="Texture2D" uid="uid://cm8mk633sghnf" path="res://ItemIcons/Plastic.webp" id="1_n3sun"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_6241o"]
+
+[resource]
+script = ExtResource("2_6241o")
+name = "Plastic"
+icon = ExtResource("1_n3sun")

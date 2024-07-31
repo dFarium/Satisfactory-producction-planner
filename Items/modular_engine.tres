@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dcn7y4m5w4m8b"]
+
+[ext_resource type="Texture2D" uid="uid://d0h4k60o3ehp7" path="res://ItemIcons/Mercer_Sphere.webp" id="1_1b2jd"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ubxep"]
+
+[resource]
+script = ExtResource("2_ubxep")
+name = "Mercer Sphere"
+icon = ExtResource("1_1b2jd")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bydgneeqob3bd"]
+
+[ext_resource type="Texture2D" uid="uid://co5e0a2r8pemy" path="res://ItemIcons/Zipline.webp" id="1_3utch"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_akk8v"]
+
+[resource]
+script = ExtResource("2_akk8v")
+name = "Zipline"
+icon = ExtResource("1_3utch")

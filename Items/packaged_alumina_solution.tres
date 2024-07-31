@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ckusf7675uaog"]
+
+[ext_resource type="Texture2D" uid="uid://b7dc0g22qkla6" path="res://ItemIcons/Object_Scanner.webp" id="1_shwk3"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3e8rn"]
+
+[resource]
+script = ExtResource("2_3e8rn")
+name = "Object Scanner"
+icon = ExtResource("1_shwk3")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bv0okmqw8rcc2"]
+
+[ext_resource type="Texture2D" uid="uid://vc0a2s3xofho" path="res://ItemIcons/Circuit_Board.webp" id="1_6gpn1"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_e4vbu"]
+
+[resource]
+script = ExtResource("2_e4vbu")
+name = "Circuit Board"
+description = "Circuit Boards are advanced electronics that are used in a plethora of different ways."
+icon = ExtResource("1_6gpn1")

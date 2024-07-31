@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcwvi3ipv6fet"]
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_wklas"]
-[ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://Items/Icons/Modular_Engine.webp" id="2_653yv"]
+[ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://ItemIcons/Modular_Engine.webp" id="2_653yv"]
 [ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_pyps8"]
-[ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://Items/Icons/Thermal_Propulsion_Rocket.webp" id="3_t8rh7"]
-[ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://Items/Icons/Turbo_Motor.webp" id="4_8gww7"]
-[ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://Items/Icons/Cooling_System.webp" id="5_ctndu"]
-[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="6_gppjd"]
+[ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://ItemIcons/Thermal_Propulsion_Rocket.webp" id="3_t8rh7"]
+[ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://ItemIcons/Turbo_Motor.webp" id="4_8gww7"]
+[ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://ItemIcons/Cooling_System.webp" id="5_ctndu"]
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://ItemIcons/Fused_Modular_Frame.webp" id="6_gppjd"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)

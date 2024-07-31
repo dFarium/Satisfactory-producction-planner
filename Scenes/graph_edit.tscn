@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c73h38vsyw36o"]
+[gd_scene load_steps=3 format=3 uid="uid://c73h38vsyw36o"]
 
 [ext_resource type="Script" path="res://Scripts/Graph/main.gd" id="1_13a51"]
 [ext_resource type="Script" path="res://Scripts/Graph/graph_edit.gd" id="2_6f8bu"]
-[ext_resource type="PackedScene" uid="uid://bjgeegoath202" path="res://Scenes/search_recipe.tscn" id="3_o5aji"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -21,17 +20,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+right_disconnects = true
+show_zoom_label = true
 script = ExtResource("2_6f8bu")
 metadata/_edit_use_anchors_ = true
 
-[node name="SearchPanel" parent="GraphEdit" instance=ExtResource("3_o5aji")]
-layout_mode = 0
-offset_left = 303.0
-offset_top = 172.0
-offset_right = 839.0
-offset_bottom = 510.0
-mouse_filter = 1
-position_offset = Vector2(303, 172)
-
-[connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
-[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
+[connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_disconnection_request"]

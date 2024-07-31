@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_l0ux5"]
 [ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_hmphi"]
-[ext_resource type="Texture2D" uid="uid://dsftpcc65ruwb" path="res://Items/Icons/Screw.png" id="3_d81xq"]
-[ext_resource type="Texture2D" uid="uid://c8i708o2mlncx" path="res://Items/Icons/Iron_Plate.png" id="4_6jmtf"]
-[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://Items/Icons/Reinforced_Iron_Plate.webp" id="5_hjlb2"]
+[ext_resource type="Texture2D" uid="uid://dsftpcc65ruwb" path="res://ItemIcons/Screw.png" id="3_d81xq"]
+[ext_resource type="Texture2D" uid="uid://dxr1n721dd6qc" path="res://ItemIcons/Iron_Plate.png" id="4_6jmtf"]
+[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://ItemIcons/Reinforced_Iron_Plate.webp" id="5_hjlb2"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)

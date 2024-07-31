@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bp2268mghlrux"]
+
+[ext_resource type="Texture2D" uid="uid://byf253vg1utt5" path="res://ItemIcons/Biomass.webp" id="1_334tt"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_04suo"]
+
+[resource]
+script = ExtResource("2_04suo")
+name = "Biomass"
+description = "Biomass burners and vehicles can use it for power."
+icon = ExtResource("1_334tt")

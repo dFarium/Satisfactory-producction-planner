@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dhyfjldnhn82l"]
+
+[ext_resource type="Texture2D" uid="uid://csdv6exsn2dm0" path="res://ItemIcons/Smokeless_Powder.webp" id="1_ojwip"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_w64tr"]
+
+[resource]
+script = ExtResource("2_w64tr")
+name = "Smokeless Powder"
+icon = ExtResource("1_ojwip")

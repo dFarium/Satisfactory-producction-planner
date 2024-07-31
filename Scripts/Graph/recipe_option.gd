@@ -10,7 +10,7 @@ var recipe_icons:Array[TextureRect] = []
 @onready var option_icon_5:TextureRect = $HBoxContainer/option_icon5
 @onready var option_icon_6:TextureRect = $HBoxContainer/option_icon6
 @onready var option_icon_7:TextureRect = $HBoxContainer/option_icon7
-var arrow_icon:Resource = load("res://Items/Icons/arrowRight.png")
+var arrow_icon:Resource = load("res://ItemIcons/arrowRight.png")
 var recipe_data:Recipe
 
 signal recipe_pressed(recipe:Recipe)

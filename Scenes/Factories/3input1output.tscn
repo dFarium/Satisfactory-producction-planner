@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_mtgy5"]
 [ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_4o0pe"]
-[ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://Items/Icons/Heavy_Modular_Frame.webp" id="2_tc34l"]
-[ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://Items/Icons/Aluminum_Casing.webp" id="4_vgd7w"]
-[ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://Items/Icons/Nitrogen_Gas.webp" id="5_m8vbu"]
-[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://Items/Icons/Fused_Modular_Frame.webp" id="6_gppjd"]
+[ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://ItemIcons/Heavy_Modular_Frame.webp" id="2_tc34l"]
+[ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://ItemIcons/Aluminum_Casing.webp" id="4_vgd7w"]
+[ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://ItemIcons/Nitrogen_Gas.webp" id="5_m8vbu"]
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://ItemIcons/Fused_Modular_Frame.webp" id="6_gppjd"]
 
 [node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
 custom_minimum_size = Vector2(50, 50)

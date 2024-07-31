@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://be42jpctj18x7"]
+
+[ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://ItemIcons/Modular_Engine.webp" id="1_4nvmm"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8iap4"]
+
+[resource]
+script = ExtResource("2_8iap4")
+name = "Modular Engine"
+icon = ExtResource("1_4nvmm")

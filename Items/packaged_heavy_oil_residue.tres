@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bqqnaptqb3gu6"]
+
+[ext_resource type="Texture2D" uid="uid://bqpki7mhijdx3" path="res://ItemIcons/Packaged_Heavy_Oil_Residue.webp" id="1_s73bp"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_72t15"]
+
+[resource]
+script = ExtResource("2_72t15")
+name = "Packaged Heavy Oil Residue"
+icon = ExtResource("1_s73bp")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bhd3duvummhss"]
+
+[ext_resource type="Texture2D" uid="uid://po54yh48qo5b" path="res://ItemIcons/Beryl_Nut.webp" id="1_e0w26"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_jatjm"]
+
+[resource]
+script = ExtResource("2_jatjm")
+name = "Beryl Nut"
+description = "Can be eaten to restore half a health segment."
+icon = ExtResource("1_e0w26")

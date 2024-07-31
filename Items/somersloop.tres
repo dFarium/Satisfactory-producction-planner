@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cpc1inwhqgkp3"]
+
+[ext_resource type="Texture2D" uid="uid://cf7i8wretbwwx" path="res://ItemIcons/Solid_Biofuel.webp" id="1_pqdp7"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_w847c"]
+
+[resource]
+script = ExtResource("2_w847c")
+name = "Solid Biofuel"
+icon = ExtResource("1_pqdp7")

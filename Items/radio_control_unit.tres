@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://i73cktfxw8yc"]
+
+[ext_resource type="Texture2D" uid="uid://w467x5qo228f" path="res://ItemIcons/Quickwire.webp" id="1_32uai"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8cig6"]
+
+[resource]
+script = ExtResource("2_8cig6")
+name = "Quickwire"
+icon = ExtResource("1_32uai")

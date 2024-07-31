@@ -23,7 +23,8 @@ enum BuildingSlot {
 	Output5,
 	Output6,
 	#Factory
-	Building
+	Building,
+	OnlyOutput,
 }
 
 signal slot_value_updated(slot: BuildingSlot, value: float)
@@ -47,12 +48,13 @@ func _on_focus_exited() -> void:
 	slot_value_updated.emit(slot, text.to_float())
 
 func _on_text_submitted(_new_text:String) -> void:
-	print("text submitted")
+	print("Submitted")
 	evaluate_math_expression(text)
 	slot_value_updated.emit(slot, text.to_float())
 
+
 func evaluate_math_expression(new_text: String) -> void:
-	var rounded:float = snapped(expr.evalute(new_text),0.01)
+	var rounded:float = snapped(expr.evalute(new_text),0.001)
 	var result:String = str(rounded)
 	text = check_input(str(result))
 

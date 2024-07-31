@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cc3w815egtf08"]
+
+[ext_resource type="Texture2D" uid="uid://dr6p13kkfp74o" path="res://ItemIcons/Parachute.webp" id="1_3t6yv"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_fpx8h"]
+
+[resource]
+script = ExtResource("2_fpx8h")
+name = "Parachute"
+icon = ExtResource("1_3t6yv")

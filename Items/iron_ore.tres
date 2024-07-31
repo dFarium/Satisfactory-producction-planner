@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://4mr0f8n86ml1"]
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b3jodrx7i84vx"]
 
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_jwtq5"]
-[ext_resource type="Texture2D" uid="uid://fqxgvbyuanvl" path="res://Items/Icons/Iron_Ore.webp" id="1_p4ffj"]
+[ext_resource type="Texture2D" uid="uid://dr5re2eq8uf3" path="res://ItemIcons/Iron_Ingot.webp" id="1_6t41l"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_m4xtu"]
 
 [resource]
-script = ExtResource("1_jwtq5")
-name = "Iron Ore"
-description = "Used for crafting. The most essential basic resource."
-icon = ExtResource("1_p4ffj")
+script = ExtResource("2_m4xtu")
+name = "Iron Ingot"
+icon = ExtResource("1_6t41l")
