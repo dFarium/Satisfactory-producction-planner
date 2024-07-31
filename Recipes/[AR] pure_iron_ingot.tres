@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c5uk1t7q4an1t"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cyo2buv1lnvpt"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_4jkng"]
 [ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="2_xyipt"]
@@ -14,7 +14,7 @@ quantity = 7
 [sub_resource type="Resource" id="Resource_pyhco"]
 script = ExtResource("1_4jkng")
 item = ExtResource("3_kk4x3")
-quantity = 7
+quantity = 4
 
 [sub_resource type="Resource" id="Resource_wlaqv"]
 script = ExtResource("1_4jkng")

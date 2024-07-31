@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dvy48ybt7w38v"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bibe2oiq1lafs"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_paetb"]
 [ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="2_vwn45"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bgpt0fga1xwkv"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://v0lbsiu3kuv3"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_y3nn7"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_8y8mf"]

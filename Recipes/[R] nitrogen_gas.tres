@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://w20d60oe1cri"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://diod7y2o5jeqx"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_cwd0q"]
 [ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="2_skhvv"]

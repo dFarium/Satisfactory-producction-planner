@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ddgqiae4uu6dc"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cx8rwuylo8utm"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_hec5k"]
 [ext_resource type="Resource" uid="uid://bysowtme8qlop" path="res://Items/copper_ore.tres" id="2_apbtv"]
@@ -24,7 +24,7 @@ quantity = 15
 [resource]
 script = ExtResource("4_uhjw5")
 building = 10
-name = "Copper Alloy Ingot"
+name = "Pure Copper Ingot"
 inputs = Array[ExtResource("1_hec5k")]([SubResource("Resource_ltfj1"), SubResource("Resource_l62yw")])
 outputs = Array[ExtResource("1_hec5k")]([SubResource("Resource_wlaqv")])
 manufacturing_cycle = 24.0
