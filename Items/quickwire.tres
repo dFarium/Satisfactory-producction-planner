@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://pmxuen3kxtxh"]
+
+[ext_resource type="Texture2D" uid="uid://dr2jqe2ulx12f" path="res://ItemIcons/Quartz_Crystal.webp" id="1_jyi0y"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_gakl7"]
+
+[resource]
+script = ExtResource("2_gakl7")
+name = "Quartz Crystal"
+icon = ExtResource("1_jyi0y")

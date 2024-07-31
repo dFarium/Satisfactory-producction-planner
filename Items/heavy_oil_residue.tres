@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://hha01xlcy0vs"]
+
+[ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://ItemIcons/Heavy_Modular_Frame.webp" id="1_po6y5"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_6a8gv"]
+
+[resource]
+script = ExtResource("2_6a8gv")
+name = "Heavy Modular Frame"
+icon = ExtResource("1_po6y5")

@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://c62j3x73veagt"]
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://210ek7kyxyhi"]
 
-[ext_resource type="Texture2D" uid="uid://dr5re2eq8uf3" path="res://ItemIcons/Iron_Ingot.webp" id="1_aq023"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_if47x"]
+[ext_resource type="Texture2D" uid="uid://bn2c8l3ekey54" path="res://ItemIcons/HUB_Parts.png" id="1_l34cx"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_rtmi5"]
 
 [resource]
-script = ExtResource("1_if47x")
-name = "Iron Ingot"
-description = "Crafted into the most basic parts."
-icon = ExtResource("1_aq023")
+script = ExtResource("2_rtmi5")
+name = "HUB Parts"
+icon = ExtResource("1_l34cx")

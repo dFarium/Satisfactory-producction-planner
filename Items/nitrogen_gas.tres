@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://15opoabqkmsg"]
+
+[ext_resource type="Texture2D" uid="uid://jk0qnhmkgkru" path="res://ItemIcons/Nitric_Acid.webp" id="1_mrcth"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_jfbyj"]
+
+[resource]
+script = ExtResource("2_jfbyj")
+name = "Nitric Acid"
+icon = ExtResource("1_mrcth")

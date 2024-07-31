@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cjypxkrv7d0gm"]
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bjvn3dtoe33d2"]
 
-[ext_resource type="Texture2D" uid="uid://bk65m517ysetc" path="res://ItemIcons/Water.webp" id="1_4hel2"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_71ufr"]
+[ext_resource type="Texture2D" uid="uid://cfaxjncafsvhr" path="res://ItemIcons/Versatile_Framework.webp" id="1_iq4c1"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_7bq4n"]
 
 [resource]
-script = ExtResource("1_71ufr")
-name = "Water"
-description = "It's water."
-icon = ExtResource("1_4hel2")
+script = ExtResource("2_7bq4n")
+name = "Versatile Framework"
+icon = ExtResource("1_iq4c1")

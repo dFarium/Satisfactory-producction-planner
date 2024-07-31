@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ck4osfttu3x56"]
+
+[ext_resource type="Texture2D" uid="uid://oyplal7867ap" path="res://ItemIcons/FICSIT_Coupon.webp" id="1_hqoy7"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_nafow"]
+
+[resource]
+script = ExtResource("2_nafow")
+name = "FICSIT Coupon"
+icon = ExtResource("1_hqoy7")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bya0eclj8nkjx"]
+
+[ext_resource type="Texture2D" uid="uid://dde3oy7af1n4o" path="res://ItemIcons/Packaged_Water.webp" id="1_m3san"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_scxp6"]
+
+[resource]
+script = ExtResource("2_scxp6")
+name = "Packaged Water"
+icon = ExtResource("1_m3san")

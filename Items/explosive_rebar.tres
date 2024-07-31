@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b3basojq61m4a"]
+
+[ext_resource type="Texture2D" uid="uid://iuk5ob1wdyq7" path="res://ItemIcons/Explosive_Rebar.webp" id="1_ebkst"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_bqgdb"]
+
+[resource]
+script = ExtResource("2_bqgdb")
+name = "Explosive Rebar"
+icon = ExtResource("1_ebkst")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://0tesf0nwto3n"]
+
+[ext_resource type="Texture2D" uid="uid://c7qk67mftfgms" path="res://ItemIcons/Rubber.webp" id="1_0nuq8"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_xhmpc"]
+
+[resource]
+script = ExtResource("2_xhmpc")
+name = "Rubber"
+icon = ExtResource("1_0nuq8")

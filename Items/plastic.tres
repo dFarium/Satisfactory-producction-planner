@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dww0blj55t6ko"]
+
+[ext_resource type="Texture2D" uid="uid://bjhg0ukkx8x2b" path="res://ItemIcons/Plasma_Spitter_Remains.webp" id="1_e50km"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_6v0rd"]
+
+[resource]
+script = ExtResource("2_6v0rd")
+name = "Plasma Spitter Remains"
+icon = ExtResource("1_e50km")

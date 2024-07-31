@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b33sr4iks1ptb"]
+
+[ext_resource type="Texture2D" uid="uid://dj76dw4gy4oba" path="res://ItemIcons/Bacon_Agaric.webp" id="1_p72wn"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_te634"]
+
+[resource]
+script = ExtResource("2_te634")
+name = "Bacon Agaric"
+description = "Can be eaten to restore two health segments."
+icon = ExtResource("1_p72wn")

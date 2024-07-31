@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cgifmstbsuafe"]
+
+[ext_resource type="Texture2D" uid="uid://cdsnkmlvl51u8" path="res://ItemIcons/Raw_Quartz.webp" id="1_1gqpi"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8nfgg"]
+
+[resource]
+script = ExtResource("2_8nfgg")
+name = "Raw Quartz"
+icon = ExtResource("1_1gqpi")

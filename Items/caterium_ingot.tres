@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://pa7cqrcnpe8w"]
+
+[ext_resource type="Texture2D" uid="uid://dc2wpp0dkyrf4" path="res://ItemIcons/Cable.webp" id="1_yeb71"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ngk1o"]
+
+[resource]
+script = ExtResource("2_ngk1o")
+name = "Cable"
+description = "Primarily used to build power lines."
+icon = ExtResource("1_yeb71")

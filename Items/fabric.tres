@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://d2kugd8cvw00f"]
+
+[ext_resource type="Texture2D" uid="uid://dvvfk5tns33yy" path="res://ItemIcons/Encased_Uranium_Cell.webp" id="1_7hadq"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_nl0cu"]
+
+[resource]
+script = ExtResource("2_nl0cu")
+name = "Encased Uranium Cell"
+description = "Plutonium Cells are concrete encased Plutonium Pellets."
+icon = ExtResource("1_7hadq")

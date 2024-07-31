@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b4jhakhhfhm3"]
+
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://ItemIcons/Fused_Modular_Frame.webp" id="1_a1rra"]
+[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_0gxjc"]
+
+[resource]
+script = ExtResource("2_0gxjc")
+name = "Fused Modular Frame"
+icon = ExtResource("1_a1rra")
