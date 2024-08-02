@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ck0ccqknn2q47"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_cjfol"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="2_4nvli"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_36uns"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="4_0c04e"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_p0aya"]
+
+[sub_resource type="Resource" id="Resource_7tqgr"]
+script = ExtResource("1_cjfol")
+item = ExtResource("2_4nvli")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_jow41"]
+script = ExtResource("1_cjfol")
+item = ExtResource("3_36uns")
+quantity = 15
+
+[sub_resource type="Resource" id="Resource_sx6ev"]
+script = ExtResource("1_cjfol")
+item = ExtResource("4_0c04e")
+quantity = 2
+
+[resource]
+script = ExtResource("5_p0aya")
+building = 0
+name = "Quickwire Stator"
+inputs = Array[ExtResource("1_cjfol")]([SubResource("Resource_7tqgr"), SubResource("Resource_jow41")])
+outputs = Array[ExtResource("1_cjfol")]([SubResource("Resource_sx6ev")])
+manufacturing_cycle = 15.0
+is_alternate_recipe = true
