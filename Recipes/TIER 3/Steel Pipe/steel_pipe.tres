@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://qf3hg6ho7n52"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_3oo37"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_32fq8"]
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="2_seyp6"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_qpvw1"]
+
+[sub_resource type="Resource" id="Resource_w75am"]
+script = ExtResource("1_3oo37")
+item = ExtResource("2_seyp6")
+quantity = 3
+
+[sub_resource type="Resource" id="Resource_72tao"]
+script = ExtResource("1_3oo37")
+item = ExtResource("3_qpvw1")
+quantity = 2
+
+[resource]
+script = ExtResource("2_32fq8")
+building = 2
+name = "Steel Pipe"
+inputs = Array[ExtResource("1_3oo37")]([SubResource("Resource_w75am")])
+outputs = Array[ExtResource("1_3oo37")]([SubResource("Resource_72tao")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false

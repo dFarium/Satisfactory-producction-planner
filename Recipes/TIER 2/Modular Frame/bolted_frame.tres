@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ctexf0l6nvvhx"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_02gtn"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="2_lxch3"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_e7urt"]
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="4_cju1e"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_5h4jl"]
+
+[sub_resource type="Resource" id="Resource_7abq6"]
+script = ExtResource("1_02gtn")
+item = ExtResource("2_lxch3")
+quantity = 3
+
+[sub_resource type="Resource" id="Resource_t12vw"]
+script = ExtResource("1_02gtn")
+item = ExtResource("3_e7urt")
+quantity = 56
+
+[sub_resource type="Resource" id="Resource_0dwr7"]
+script = ExtResource("1_02gtn")
+item = ExtResource("4_cju1e")
+quantity = 2
+
+[resource]
+script = ExtResource("5_5h4jl")
+building = 0
+name = "Bolted Frame"
+inputs = Array[ExtResource("1_02gtn")]([SubResource("Resource_7abq6"), SubResource("Resource_t12vw")])
+outputs = Array[ExtResource("1_02gtn")]([SubResource("Resource_0dwr7")])
+manufacturing_cycle = 24.0
+is_alternate_recipe = true

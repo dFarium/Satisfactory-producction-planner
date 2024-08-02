@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://gobdg2asx742"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_sttcc"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="2_4uugc"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="3_cx12d"]
+[ext_resource type="Resource" uid="uid://cxd317xdow8fv" path="res://Items/smart_plating.tres" id="4_7kdvv"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="4_32aly"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_gk03h"]
+
+[sub_resource type="Resource" id="Resource_gxxcd"]
+script = ExtResource("1_sttcc")
+item = ExtResource("2_4uugc")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_ywedh"]
+script = ExtResource("1_sttcc")
+item = ExtResource("3_cx12d")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_m3dio"]
+script = ExtResource("1_sttcc")
+item = ExtResource("4_32aly")
+quantity = 3
+
+[sub_resource type="Resource" id="Resource_jfi1c"]
+script = ExtResource("1_sttcc")
+item = ExtResource("4_7kdvv")
+quantity = 2
+
+[resource]
+script = ExtResource("5_gk03h")
+building = 3
+name = "Plastic Smart Plating"
+inputs = Array[ExtResource("1_sttcc")]([SubResource("Resource_gxxcd"), SubResource("Resource_ywedh"), SubResource("Resource_m3dio")])
+outputs = Array[ExtResource("1_sttcc")]([SubResource("Resource_jfi1c")])
+manufacturing_cycle = 24.0
+is_alternate_recipe = true
