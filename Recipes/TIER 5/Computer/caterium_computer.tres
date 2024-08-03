@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dq0bcd1k50n5v"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_femve"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="2_hv74y"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_s171o"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="4_wrtji"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="6_g80s1"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="7_qcr66"]
+
+[sub_resource type="Resource" id="Resource_v4mlr"]
+script = ExtResource("1_femve")
+item = ExtResource("2_hv74y")
+quantity = 7
+
+[sub_resource type="Resource" id="Resource_ac3l0"]
+script = ExtResource("1_femve")
+item = ExtResource("3_s171o")
+quantity = 28
+
+[sub_resource type="Resource" id="Resource_uy18w"]
+script = ExtResource("1_femve")
+item = ExtResource("4_wrtji")
+quantity = 12
+
+[sub_resource type="Resource" id="Resource_dygkp"]
+script = ExtResource("1_femve")
+item = ExtResource("6_g80s1")
+quantity = 1
+
+[resource]
+script = ExtResource("7_qcr66")
+building = 3
+name = "Caterium Computer"
+inputs = Array[ExtResource("1_femve")]([SubResource("Resource_v4mlr"), SubResource("Resource_ac3l0"), SubResource("Resource_uy18w")])
+outputs = Array[ExtResource("1_femve")]([SubResource("Resource_dygkp")])
+manufacturing_cycle = 16.0
+is_alternate_recipe = true

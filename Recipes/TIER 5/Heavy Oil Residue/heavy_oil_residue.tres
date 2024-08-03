@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cms4fafifv8kj"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_k1i5o"]
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="2_rcg2d"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="3_t4cm5"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="4_57c2k"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_te1i1"]
+
+[sub_resource type="Resource" id="Resource_aymlk"]
+script = ExtResource("1_k1i5o")
+item = ExtResource("2_rcg2d")
+quantity = 3
+
+[sub_resource type="Resource" id="Resource_bd4u6"]
+script = ExtResource("1_k1i5o")
+item = ExtResource("3_t4cm5")
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_g4k3v"]
+script = ExtResource("1_k1i5o")
+item = ExtResource("4_57c2k")
+quantity = 2
+
+[resource]
+script = ExtResource("5_te1i1")
+building = 10
+name = "Heavy Oil Residue"
+inputs = Array[ExtResource("1_k1i5o")]([SubResource("Resource_aymlk")])
+outputs = Array[ExtResource("1_k1i5o")]([SubResource("Resource_bd4u6"), SubResource("Resource_g4k3v")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = true

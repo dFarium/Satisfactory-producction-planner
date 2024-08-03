@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bamnjiubjd225"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_sonp4"]
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="2_ji8f1"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_4io3c"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="3_y0w6u"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_cgoxp"]
+
+[sub_resource type="Resource" id="Resource_avtvm"]
+script = ExtResource("1_sonp4")
+item = ExtResource("2_ji8f1")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_qlavj"]
+script = ExtResource("1_sonp4")
+item = ExtResource("3_y0w6u")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_tk5rc"]
+script = ExtResource("1_sonp4")
+item = ExtResource("3_4io3c")
+quantity = 4
+
+[resource]
+script = ExtResource("4_cgoxp")
+building = 0
+name = "Coater Iron Canister"
+inputs = Array[ExtResource("1_sonp4")]([SubResource("Resource_avtvm"), SubResource("Resource_qlavj")])
+outputs = Array[ExtResource("1_sonp4")]([SubResource("Resource_tk5rc")])
+manufacturing_cycle = 4.0
+is_alternate_recipe = true

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://7td22swbq6wt"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_2pbdu"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="2_y8pn4"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="3_e4vw0"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_0drob"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_ibpo4"]
+
+[sub_resource type="Resource" id="Resource_swgiu"]
+script = ExtResource("1_2pbdu")
+item = ExtResource("2_y8pn4")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_3usl2"]
+script = ExtResource("1_2pbdu")
+item = ExtResource("3_e4vw0")
+quantity = 9
+
+[sub_resource type="Resource" id="Resource_12vth"]
+script = ExtResource("1_2pbdu")
+item = ExtResource("4_0drob")
+quantity = 1
+
+[resource]
+script = ExtResource("5_ibpo4")
+building = 0
+name = "Electrode Circuit Board"
+inputs = Array[ExtResource("1_2pbdu")]([SubResource("Resource_swgiu"), SubResource("Resource_3usl2")])
+outputs = Array[ExtResource("1_2pbdu")]([SubResource("Resource_12vth")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = true

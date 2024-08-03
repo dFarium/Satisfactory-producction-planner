@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ctgrpfxlwvwp6"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_6tisb"]
+[ext_resource type="Resource" uid="uid://d10tduafrayxn" path="res://Items/packaged_liquid_biofuel.tres" id="2_nx01j"]
+[ext_resource type="Resource" uid="uid://qnba4b0ruyuw" path="res://Items/liquid_biofuel.tres" id="4_r4j2n"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_uaovo"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_h41x6"]
+
+[sub_resource type="Resource" id="Resource_0xtg7"]
+script = ExtResource("1_6tisb")
+item = ExtResource("2_nx01j")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_wo86h"]
+script = ExtResource("1_6tisb")
+item = ExtResource("4_r4j2n")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_5opje"]
+script = ExtResource("1_6tisb")
+item = ExtResource("4_uaovo")
+quantity = 2
+
+[resource]
+script = ExtResource("5_h41x6")
+building = 8
+name = "Liquid Biofuel"
+inputs = Array[ExtResource("1_6tisb")]([SubResource("Resource_0xtg7")])
+outputs = Array[ExtResource("1_6tisb")]([SubResource("Resource_wo86h"), SubResource("Resource_5opje")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = false

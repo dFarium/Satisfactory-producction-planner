@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dfqgh5l0vcbk3"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_vw0ri"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_cht6i"]
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="2_msx8i"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="3_e5yfl"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="4_3d71o"]
+
+[sub_resource type="Resource" id="Resource_v7dbg"]
+script = ExtResource("1_vw0ri")
+item = ExtResource("2_msx8i")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_4ipai"]
+script = ExtResource("1_vw0ri")
+item = ExtResource("3_e5yfl")
+quantity = 13
+
+[sub_resource type="Resource" id="Resource_1bqqg"]
+script = ExtResource("1_vw0ri")
+item = ExtResource("4_3d71o")
+quantity = 2
+
+[resource]
+script = ExtResource("2_cht6i")
+building = 10
+name = "Polymer Resin"
+inputs = Array[ExtResource("1_vw0ri")]([SubResource("Resource_v7dbg")])
+outputs = Array[ExtResource("1_vw0ri")]([SubResource("Resource_4ipai"), SubResource("Resource_1bqqg")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = true

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b57jkvjr77udc"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_asrfn"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="2_xj3d6"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_c7uey"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="3_ql6u4"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_pxvmq"]
+
+[sub_resource type="Resource" id="Resource_5uygw"]
+script = ExtResource("1_asrfn")
+item = ExtResource("2_xj3d6")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_qvxb4"]
+script = ExtResource("1_asrfn")
+item = ExtResource("3_ql6u4")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_8j01t"]
+script = ExtResource("1_asrfn")
+item = ExtResource("3_c7uey")
+quantity = 12
+
+[resource]
+script = ExtResource("5_pxvmq")
+building = 10
+name = "Rubber"
+inputs = Array[ExtResource("1_asrfn")]([SubResource("Resource_5uygw"), SubResource("Resource_qvxb4")])
+outputs = Array[ExtResource("1_asrfn")]([SubResource("Resource_8j01t")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = true

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dwlnbni7igc67"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_jrttn"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_e8t1u"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="3_neh4q"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_2qfbo"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_g5nv2"]
+
+[sub_resource type="Resource" id="Resource_swgiu"]
+script = ExtResource("1_jrttn")
+item = ExtResource("3_neh4q")
+quantity = 10
+
+[sub_resource type="Resource" id="Resource_3usl2"]
+script = ExtResource("1_jrttn")
+item = ExtResource("3_e8t1u")
+quantity = 30
+
+[sub_resource type="Resource" id="Resource_12vth"]
+script = ExtResource("1_jrttn")
+item = ExtResource("4_2qfbo")
+quantity = 7
+
+[resource]
+script = ExtResource("5_g5nv2")
+building = 0
+name = "Caterium Circuit Board"
+inputs = Array[ExtResource("1_jrttn")]([SubResource("Resource_swgiu"), SubResource("Resource_3usl2")])
+outputs = Array[ExtResource("1_jrttn")]([SubResource("Resource_12vth")])
+manufacturing_cycle = 48.0
+is_alternate_recipe = true

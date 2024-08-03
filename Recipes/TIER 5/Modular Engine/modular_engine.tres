@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dg0nkhcote127"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_v8r5y"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="2_606nu"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_pk83o"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_lo51i"]
+[ext_resource type="Resource" uid="uid://cxd317xdow8fv" path="res://Items/smart_plating.tres" id="4_4gb4g"]
+[ext_resource type="Resource" uid="uid://dcn7y4m5w4m8b" path="res://Items/modular_engine.tres" id="5_ncwl3"]
+
+[sub_resource type="Resource" id="Resource_bm2m6"]
+script = ExtResource("1_v8r5y")
+item = ExtResource("2_606nu")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_lqgyn"]
+script = ExtResource("1_v8r5y")
+item = ExtResource("3_lo51i")
+quantity = 15
+
+[sub_resource type="Resource" id="Resource_pqoom"]
+script = ExtResource("1_v8r5y")
+item = ExtResource("4_4gb4g")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_o14nu"]
+script = ExtResource("1_v8r5y")
+item = ExtResource("5_ncwl3")
+quantity = 1
+
+[resource]
+script = ExtResource("2_pk83o")
+building = 3
+name = "Modular Engine"
+inputs = Array[ExtResource("1_v8r5y")]([SubResource("Resource_bm2m6"), SubResource("Resource_lqgyn"), SubResource("Resource_pqoom")])
+outputs = Array[ExtResource("1_v8r5y")]([SubResource("Resource_o14nu")])
+manufacturing_cycle = 60.0
+is_alternate_recipe = false
