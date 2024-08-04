@@ -1,6 +1,15 @@
 extends GraphEdit
 
-var search_panel_res: PackedScene = load("res://Scenes/search_recipe.tscn")
+var search_panel_res: PackedScene = preload("res://Scenes/search_recipe.tscn")
+
+var one_input_one_output: PackedScene = preload("res://Scenes/Factories/1input1output.tscn")
+var two_input_one_output: PackedScene = preload("res://Scenes/Factories/2input1output.tscn")
+var three_input_one_output: PackedScene = preload("res://Scenes/Factories/3input1output.tscn")
+var four_input_one_output: PackedScene = preload("res://Scenes/Factories/4input1output.tscn")
+var one_output: PackedScene = preload("res://Scenes/Factories/1output.tscn")
+var two_input_two_output: PackedScene = preload("res://Scenes/Factories/2input2output.tscn")
+var four_input_two_output: PackedScene = preload("res://Scenes/Factories/4input2output.tscn")
+
 var recipe_list: Array[Recipe] = []
 var search_panel: SearchRecipe
 
@@ -32,20 +41,23 @@ func _input(_event: InputEvent) -> void:
 func _on_add_building(recipe: Recipe) -> void:
 	match [recipe.inputs.size(), recipe.outputs.size()]:
 		[0, 1]:
-			instantiate_building("res://Scenes/Factories/1output.tscn", recipe)
+			instantiate_building(one_output, recipe)
 		[1, 1]:
-			instantiate_building("res://Scenes/Factories/1input1output.tscn", recipe)
+			instantiate_building(one_input_one_output, recipe)
 		[2, 1]:
-			instantiate_building("res://Scenes/Factories/2input1output.tscn", recipe)
+			instantiate_building(two_input_one_output, recipe)
 		[3, 1]:
-			instantiate_building("res://Scenes/Factories/3input1output.tscn", recipe)
+			instantiate_building(three_input_one_output, recipe)
 		[4, 1]:
-			instantiate_building("res://Scenes/Factories/4input1output.tscn", recipe)
+			instantiate_building(four_input_one_output, recipe)
+		[2, 2]:
+			instantiate_building(two_input_two_output, recipe)
+		[4, 2]:
+			instantiate_building(four_input_two_output, recipe)
 		_:
 			print("BUILDING NOT FOUND")
 
-func instantiate_building(path: String, recipe: Recipe) -> void:
-	var building: PackedScene = load(path)
+func instantiate_building(building: PackedScene, recipe: Recipe) -> void:
 	if building:
 		var building_instance: GraphNode = building.instantiate()
 		add_child(building_instance)

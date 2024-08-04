@@ -36,7 +36,7 @@ quantity = 3.0
 [resource]
 script = ExtResource("6_lalrm")
 building = 3
-name = "Radio Control System"
+name = "Radio Control Unit"
 inputs = Array[ExtResource("1_yikrr")]([SubResource("Resource_rfrhl"), SubResource("Resource_fyiog"), SubResource("Resource_lhne2"), SubResource("Resource_1kvth")])
 outputs = Array[ExtResource("1_yikrr")]([SubResource("Resource_0ulqc")])
 manufacturing_cycle = 40.0

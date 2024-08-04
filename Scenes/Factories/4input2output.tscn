@@ -1,0 +1,296 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddpyftt24661f"]
+
+[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_t8i58"]
+[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_4jcml"]
+[ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://ItemIcons/Modular_Engine.webp" id="3_tpfat"]
+[ext_resource type="Texture2D" uid="uid://bjymudpyrjf6h" path="res://ItemIcons/Thermal_Propulsion_Rocket.webp" id="4_f4x4n"]
+[ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://ItemIcons/Turbo_Motor.webp" id="5_pd6gl"]
+[ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://ItemIcons/Cooling_System.webp" id="6_fvuyw"]
+[ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://ItemIcons/Fused_Modular_Frame.webp" id="7_4wbri"]
+
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 300.0
+offset_bottom = 675.0
+resizable = true
+title = "Thermal Propulsion Rocket"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 0, 0, 0.996078)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 0, 0, 0.996078)
+slot/0/right_icon = null
+slot/0/draw_stylebox = false
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 0, 0, 0.996078)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 0, 0, 0.996078)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = true
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 0, 0, 0.996078)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = true
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 0, 0, 0.996078)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+slot/4/left_enabled = true
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 0, 0, 0.996078)
+slot/4/left_icon = null
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
+script = ExtResource("1_t8i58")
+inputs = [NodePath("HBoxContainer/Input1"), NodePath("HBoxContainer2/Input2"), NodePath("HBoxContainer3/Input3"), NodePath("HBoxContainer4/Input4")]
+outputs = [NodePath("HBoxContainer/Output1"), NodePath("HBoxContainer2/Output2")]
+
+[node name="Buildings" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 13
+
+[node name="BuildingName" type="Label" parent="Buildings"]
+layout_mode = 2
+text = "Manufaturer(s)
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input1" type="VBoxContainer" parent="HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Modular Engine"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_tpfat")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Thermal Propulsion Rocket
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_f4x4n")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 7
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input2" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer2/Input2"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Turbo Motor"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/Input2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("5_pd6gl")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/Input2"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2/Input2/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="Output2" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer2/Output2"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Thermal Propulsion Rocket
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/Output2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_f4x4n")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/Output2"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Output2/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 8
+
+[node name="Label" type="Label" parent="HBoxContainer2/Output2/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input3" type="VBoxContainer" parent="HBoxContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer3/Input3"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Cooling System"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer3/Input3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("6_fvuyw")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer3/Input3"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 3
+
+[node name="Label" type="Label" parent="HBoxContainer3/Input3/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input4" type="VBoxContainer" parent="HBoxContainer4"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer4/Input4"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Fused Modular Frame"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer4/Input4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("7_4wbri")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer4/Input4"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer4/Input4/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_4jcml")
+slot = 4
+
+[node name="Label" type="Label" parent="HBoxContainer4/Input4/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer2/Input2/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer2/Output2/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer3/Input3/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer4/Input4/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]

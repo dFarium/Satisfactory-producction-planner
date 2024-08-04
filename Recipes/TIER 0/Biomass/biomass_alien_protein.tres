@@ -18,7 +18,7 @@ quantity = 100
 [resource]
 script = ExtResource("4_allsu")
 building = 2
-name = "Biomass (Alien Protein)"
+name = "Biomass (Leaves)"
 inputs = Array[ExtResource("1_8m3pl")]([SubResource("Resource_ltfj1")])
 outputs = Array[ExtResource("1_8m3pl")]([SubResource("Resource_wlaqv")])
 manufacturing_cycle = 4.0

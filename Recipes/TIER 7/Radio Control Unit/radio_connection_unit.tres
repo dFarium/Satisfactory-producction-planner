@@ -30,7 +30,7 @@ quantity = 1.0
 [resource]
 script = ExtResource("6_jgy4q")
 building = 3
-name = "Radio Connection Unit"
+name = "Radio Control Unit"
 inputs = Array[ExtResource("1_h5ob6")]([SubResource("Resource_rfrhl"), SubResource("Resource_fyiog"), SubResource("Resource_lhne2")])
 outputs = Array[ExtResource("1_h5ob6")]([SubResource("Resource_0ulqc")])
 manufacturing_cycle = 16.0
