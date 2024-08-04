@@ -7,7 +7,7 @@ var search_panel: SearchRecipe
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#load_recipes()
-	load_recipes_testing()
+	load_recipes()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -52,67 +52,94 @@ func instantiate_building(path: String, recipe: Recipe) -> void:
 		building_instance.setup_building(recipe)
 		building_instance.position_offset = search_panel.position_offset
 		building_instance.slot_value_updated.connect(_on_slot_value_updated)
-
-func load_recipes() -> void:
-	var recipe_files: PackedStringArray = DirAccess.get_files_at("res://Recipes/")
-	for recipe_file in recipe_files:
-		var recipe: Recipe = ResourceLoader.load("res://Recipes/" + recipe_file)
-		recipe_list.append(recipe)
-	set_item_ids()
 		
-func load_recipes_testing() -> void:
+func load_recipes() -> void:
 	recipe_list = []
 	var dir: DirAccess = DirAccess.open("res://Recipes/")
-	#Check if recipes directory exists
+	
+	# Verifica si el directorio "Recipes" se pudo abrir
 	if not dir:
 		return
 	
 	dir.list_dir_begin()
-	var tier_dir_name: String = dir.get_next()
-	#Iterate through all tier directories
-	while tier_dir_name != "":
+	var sub_dir_name: String = dir.get_next()
+	
+	# Recorre cada subcarpeta dentro de "Recipes"
+	while sub_dir_name != "":
+		# Si no es un directorio, pasa al siguiente elemento
 		if not dir.current_is_dir():
-			tier_dir_name = dir.get_next()
-			continue
-		#Open tier directory
-		var tier_dir: DirAccess = DirAccess.open("res://Recipes/" + tier_dir_name)
-		if not tier_dir:
-			tier_dir_name = dir.get_next()
+			sub_dir_name = dir.get_next()
 			continue
 
-		tier_dir.list_dir_begin()
-		var output_dir_name: String = tier_dir.get_next()
+		var sub_dir_path: String = "res://Recipes/" + sub_dir_name
 
-		#Iterate through all output directories
-		while output_dir_name != "":
-			if not tier_dir.current_is_dir():
-				output_dir_name = tier_dir.get_next()
-				continue
-			#Open output directory
-			var output_dir: DirAccess = DirAccess.open("res://Recipes/" + tier_dir_name + "/" + output_dir_name)
-			if not output_dir:
-				output_dir_name = tier_dir.get_next()
+		# Si la carpeta es "Resources," carga las recetas directamente
+		if sub_dir_name == "Resources":
+			var resources_dir: DirAccess = DirAccess.open(sub_dir_path)
+			if not resources_dir:
+				sub_dir_name = dir.get_next()
 				continue
 
-			output_dir.list_dir_begin()
-			var recipe_file: String = output_dir.get_next()
-			#Iterate through all recipe files
+			resources_dir.list_dir_begin()
+			var recipe_file: String = resources_dir.get_next()
 			while recipe_file != "":
-				if output_dir.current_is_dir():
-					recipe_file = output_dir.get_next()
+				if resources_dir.current_is_dir():
+					recipe_file = resources_dir.get_next()
 					continue
-				#Load recipe
-				var recipe: Recipe = ResourceLoader.load("res://Recipes/" + tier_dir_name + "/" + output_dir_name + "/" + recipe_file)
-				recipe_list.append(recipe)
-				recipe_file = output_dir.get_next()
-			output_dir.list_dir_end()
 
-			output_dir_name = tier_dir.get_next()
-		tier_dir.list_dir_end()
+				# Carga el recurso de receta y lo añade a la lista de recetas
+				var recipe: Recipe = ResourceLoader.load(sub_dir_path + "/" + recipe_file)
+				recipe_list.append(recipe)
+
+				recipe_file = resources_dir.get_next()
+			resources_dir.list_dir_end()
+		else:
+			# Caso para las carpetas de "tiers" y "output"
+			var tier_dir: DirAccess = DirAccess.open(sub_dir_path)
+			if not tier_dir:
+				sub_dir_name = dir.get_next()
+				continue
+
+			tier_dir.list_dir_begin()
+			var output_dir_name: String = tier_dir.get_next()
+			
+			# Recorre cada subcarpeta de "output" dentro del tier actual
+			while output_dir_name != "":
+				if not tier_dir.current_is_dir():
+					output_dir_name = tier_dir.get_next()
+					continue
+
+				var output_dir_path: String = sub_dir_path + "/" + output_dir_name
+				var output_dir: DirAccess = DirAccess.open(output_dir_path)
+				if not output_dir:
+					output_dir_name = tier_dir.get_next()
+					continue
+
+				output_dir.list_dir_begin()
+				var recipe_file: String = output_dir.get_next()
+				
+				# Recorre cada archivo de receta dentro del tipo de output actual
+				while recipe_file != "":
+					if output_dir.current_is_dir():
+						recipe_file = output_dir.get_next()
+						continue
+
+					# Carga el recurso de receta y lo añade a la lista de recetas
+					var recipe: Recipe = ResourceLoader.load(output_dir_path + "/" + recipe_file)
+					recipe_list.append(recipe)
+					
+					recipe_file = output_dir.get_next()
+				output_dir.list_dir_end()
+
+				output_dir_name = tier_dir.get_next()
+			tier_dir.list_dir_end()
 		
-		tier_dir_name = dir.get_next()
+		sub_dir_name = dir.get_next()
 	dir.list_dir_end()
+	
+	# Llama a una función para establecer identificadores de ítems, si es necesario
 	set_item_ids()
+
 	
 func set_item_ids() -> void:
 	var id_count: int = 0
