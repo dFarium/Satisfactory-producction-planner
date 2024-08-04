@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=12 format=3 uid="uid://mk1mbdvlc2c3"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_i4u7n"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_j3p5a"]
+[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="2_lwqte"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="3_fw12b"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="4_a1l68"]
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="5_giiqs"]
+
+[sub_resource type="Resource" id="Resource_g1dy5"]
+script = ExtResource("1_i4u7n")
+item = ExtResource("2_lwqte")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_rhtn8"]
+script = ExtResource("1_i4u7n")
+item = ExtResource("3_fw12b")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_yxmjt"]
+script = ExtResource("1_i4u7n")
+item = ExtResource("4_a1l68")
+quantity = 8.0
+
+[sub_resource type="Resource" id="Resource_nxvqt"]
+script = ExtResource("1_i4u7n")
+item = ExtResource("5_giiqs")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_6urhe"]
+script = ExtResource("1_i4u7n")
+item = ExtResource("4_a1l68")
+quantity = 2.0
+
+[resource]
+script = ExtResource("2_j3p5a")
+building = 1
+name = "Encased Uranium Cell"
+inputs = Array[ExtResource("1_i4u7n")]([SubResource("Resource_g1dy5"), SubResource("Resource_rhtn8"), SubResource("Resource_yxmjt")])
+outputs = Array[ExtResource("1_i4u7n")]([SubResource("Resource_nxvqt"), SubResource("Resource_6urhe")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = false

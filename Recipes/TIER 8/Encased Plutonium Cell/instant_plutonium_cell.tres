@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://i3sca6hoas3k"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_nxiuy"]
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="2_t2oq5"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="3_eo853"]
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="4_67poa"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_h4rfb"]
+
+[sub_resource type="Resource" id="Resource_w2cjs"]
+script = ExtResource("1_nxiuy")
+item = ExtResource("2_t2oq5")
+quantity = 150.0
+
+[sub_resource type="Resource" id="Resource_wo1g5"]
+script = ExtResource("1_nxiuy")
+item = ExtResource("3_eo853")
+quantity = 20.0
+
+[sub_resource type="Resource" id="Resource_28cn1"]
+script = ExtResource("1_nxiuy")
+item = ExtResource("4_67poa")
+quantity = 20.0
+
+[resource]
+script = ExtResource("5_h4rfb")
+building = 9
+name = "Instant Plutonium Cell"
+inputs = Array[ExtResource("1_nxiuy")]([SubResource("Resource_w2cjs"), SubResource("Resource_wo1g5")])
+outputs = Array[ExtResource("1_nxiuy")]([SubResource("Resource_28cn1")])
+manufacturing_cycle = 120.0
+is_alternate_recipe = true

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ceon53rbncd6j"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_qdu6m"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="2_3qr1y"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_xj8pi"]
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="4_guvqn"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_et17h"]
+
+[sub_resource type="Resource" id="Resource_7fydl"]
+script = ExtResource("1_qdu6m")
+item = ExtResource("2_3qr1y")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_x7bty"]
+script = ExtResource("1_qdu6m")
+item = ExtResource("3_xj8pi")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_dlr0w"]
+script = ExtResource("1_qdu6m")
+item = ExtResource("4_guvqn")
+quantity = 1.0
+
+[resource]
+script = ExtResource("5_et17h")
+building = 0
+name = "Heat Exanger"
+inputs = Array[ExtResource("1_qdu6m")]([SubResource("Resource_7fydl"), SubResource("Resource_x7bty")])
+outputs = Array[ExtResource("1_qdu6m")]([SubResource("Resource_dlr0w")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = true

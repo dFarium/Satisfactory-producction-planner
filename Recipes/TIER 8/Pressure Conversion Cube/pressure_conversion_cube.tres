@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cqohc8rd4qfoc"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_i1qbn"]
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="2_m22be"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_yllhm"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="3_ixbrs"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="4_3xcbs"]
+
+[sub_resource type="Resource" id="Resource_vu68m"]
+script = ExtResource("1_i1qbn")
+item = ExtResource("2_m22be")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_t1nd6"]
+script = ExtResource("1_i1qbn")
+item = ExtResource("3_ixbrs")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_mxy2b"]
+script = ExtResource("1_i1qbn")
+item = ExtResource("4_3xcbs")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_yllhm")
+building = 0
+name = "Pressure Conversion Cube"
+inputs = Array[ExtResource("1_i1qbn")]([SubResource("Resource_vu68m"), SubResource("Resource_t1nd6")])
+outputs = Array[ExtResource("1_i1qbn")]([SubResource("Resource_mxy2b")])
+manufacturing_cycle = 60.0
+is_alternate_recipe = false

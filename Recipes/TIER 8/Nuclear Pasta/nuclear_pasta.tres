@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://50o2eiffb6jp"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_7qobs"]
+[ext_resource type="Resource" uid="uid://c1dy2s0u1mmwn" path="res://Items/copper_powder.tres" id="2_3augn"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_ttkmd"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="3_rhqrq"]
+[ext_resource type="Resource" uid="uid://8pomsgf5mmwf" path="res://Items/nuclear_pasta.tres" id="4_04acf"]
+
+[sub_resource type="Resource" id="Resource_aebhf"]
+script = ExtResource("1_7qobs")
+item = ExtResource("2_3augn")
+quantity = 200.0
+
+[sub_resource type="Resource" id="Resource_3thse"]
+script = ExtResource("1_7qobs")
+item = ExtResource("3_rhqrq")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_ovnmh"]
+script = ExtResource("1_7qobs")
+item = ExtResource("4_04acf")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_ttkmd")
+building = 9
+name = "Nuclear Pasta"
+inputs = Array[ExtResource("1_7qobs")]([SubResource("Resource_aebhf"), SubResource("Resource_3thse")])
+outputs = Array[ExtResource("1_7qobs")]([SubResource("Resource_ovnmh")])
+manufacturing_cycle = 120.0
+is_alternate_recipe = false

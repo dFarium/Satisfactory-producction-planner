@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://da7hf0wsslq5k"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_yj5u1"]
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="2_rtnei"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_01wia"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="4_kjpbh"]
+[ext_resource type="Resource" uid="uid://bldf68b58copu" path="res://Items/uranium_fuel_rod.tres" id="5_pk5fu"]
+[ext_resource type="Resource" uid="uid://bqnf11sr5sfe4" path="res://Items/beacon.tres" id="5_x210y"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="6_pjovr"]
+
+[sub_resource type="Resource" id="Resource_xsphb"]
+script = ExtResource("1_yj5u1")
+item = ExtResource("2_rtnei")
+quantity = 100.0
+
+[sub_resource type="Resource" id="Resource_6owq1"]
+script = ExtResource("1_yj5u1")
+item = ExtResource("4_01wia")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_se735"]
+script = ExtResource("1_yj5u1")
+item = ExtResource("4_kjpbh")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_kxd6s"]
+script = ExtResource("1_yj5u1")
+item = ExtResource("5_x210y")
+quantity = 6.0
+
+[sub_resource type="Resource" id="Resource_77ae2"]
+script = ExtResource("1_yj5u1")
+item = ExtResource("5_pk5fu")
+quantity = 3.0
+
+[resource]
+script = ExtResource("6_pjovr")
+building = 3
+name = "Uranium Fuel Unit"
+inputs = Array[ExtResource("1_yj5u1")]([SubResource("Resource_xsphb"), SubResource("Resource_6owq1"), SubResource("Resource_se735"), SubResource("Resource_kxd6s")])
+outputs = Array[ExtResource("1_yj5u1")]([SubResource("Resource_77ae2")])
+manufacturing_cycle = 300.0
+is_alternate_recipe = true

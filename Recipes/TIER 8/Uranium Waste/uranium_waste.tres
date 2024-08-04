@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dym3ji8llqhhv"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_bqxp5"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_5bfee"]
+[ext_resource type="Resource" uid="uid://bldf68b58copu" path="res://Items/uranium_fuel_rod.tres" id="2_xmqau"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_0ujm7"]
+[ext_resource type="Resource" uid="uid://b8ydcn8gn2wf1" path="res://Items/uranium_waste.tres" id="4_321kr"]
+
+[sub_resource type="Resource" id="Resource_500ab"]
+script = ExtResource("1_bqxp5")
+item = ExtResource("2_xmqau")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_jpb68"]
+script = ExtResource("1_bqxp5")
+item = ExtResource("3_0ujm7")
+quantity = 1200.0
+
+[sub_resource type="Resource" id="Resource_e0hq2"]
+script = ExtResource("1_bqxp5")
+item = ExtResource("4_321kr")
+quantity = 50.0
+
+[resource]
+script = ExtResource("2_5bfee")
+building = 0
+name = "Uranium Waste"
+inputs = Array[ExtResource("1_bqxp5")]([SubResource("Resource_500ab"), SubResource("Resource_jpb68")])
+outputs = Array[ExtResource("1_bqxp5")]([SubResource("Resource_e0hq2")])
+manufacturing_cycle = 300.0
+is_alternate_recipe = false

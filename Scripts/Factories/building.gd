@@ -187,7 +187,6 @@ func find_bottleneck(input_array: Array[Dictionary]) -> Dictionary:
 	for i in range(0, input_array.size()):
 		production_potencial.append(input_array[i].value / current_recipe.inputs[i].quantity)
 	#return the smallest production potential
-
 	return input_array[find_min_index(production_potencial)]
 
 

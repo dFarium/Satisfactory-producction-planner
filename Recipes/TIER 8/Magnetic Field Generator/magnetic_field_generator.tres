@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dmixl47pmcp4o"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_d5myc"]
+[ext_resource type="Resource" uid="uid://cnmsv5td0ybc4" path="res://Items/versatile_framework.tres" id="2_hb4nc"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_p840n"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="3_eurgf"]
+[ext_resource type="Resource" uid="uid://b33sr4iks1ptb" path="res://Items/battery.tres" id="4_floxl"]
+[ext_resource type="Resource" uid="uid://desiwxk0let2j" path="res://Items/magnetic_field_generator.tres" id="5_qcaf1"]
+
+[sub_resource type="Resource" id="Resource_7f28j"]
+script = ExtResource("1_d5myc")
+item = ExtResource("2_hb4nc")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_pouum"]
+script = ExtResource("1_d5myc")
+item = ExtResource("3_eurgf")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_65by3"]
+script = ExtResource("1_d5myc")
+item = ExtResource("4_floxl")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_4brus"]
+script = ExtResource("1_d5myc")
+item = ExtResource("5_qcaf1")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_p840n")
+building = 3
+name = "Magnetic Field Generator"
+inputs = Array[ExtResource("1_d5myc")]([SubResource("Resource_7f28j"), SubResource("Resource_pouum"), SubResource("Resource_65by3")])
+outputs = Array[ExtResource("1_d5myc")]([SubResource("Resource_4brus")])
+manufacturing_cycle = 120.0
+is_alternate_recipe = false

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bp16fplp5eaqw"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_ot3v4"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_a04j4"]
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="2_bsifs"]
+[ext_resource type="Resource" uid="uid://b8ydcn8gn2wf1" path="res://Items/uranium_waste.tres" id="3_5eq5y"]
+[ext_resource type="Resource" uid="uid://cn6ng6taomfke" path="res://Items/plutonium_pellet.tres" id="4_74rhc"]
+
+[sub_resource type="Resource" id="Resource_slkfq"]
+script = ExtResource("1_ot3v4")
+item = ExtResource("2_bsifs")
+quantity = 100.0
+
+[sub_resource type="Resource" id="Resource_c7lhi"]
+script = ExtResource("1_ot3v4")
+item = ExtResource("3_5eq5y")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_aw573"]
+script = ExtResource("1_ot3v4")
+item = ExtResource("4_74rhc")
+quantity = 30.0
+
+[resource]
+script = ExtResource("2_a04j4")
+building = 9
+name = "Plutonium Pellet"
+inputs = Array[ExtResource("1_ot3v4")]([SubResource("Resource_slkfq"), SubResource("Resource_c7lhi")])
+outputs = Array[ExtResource("1_ot3v4")]([SubResource("Resource_aw573")])
+manufacturing_cycle = 60.0
+is_alternate_recipe = false

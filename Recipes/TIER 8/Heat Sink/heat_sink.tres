@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dmtj13jj06k05"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_d0rka"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_35ooe"]
+[ext_resource type="Resource" uid="uid://fmtrhn6gl1k" path="res://Items/alclad_aluminum_sheet.tres" id="2_ipe2o"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="3_y58sl"]
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="4_udbm7"]
+
+[sub_resource type="Resource" id="Resource_7fydl"]
+script = ExtResource("1_d0rka")
+item = ExtResource("2_ipe2o")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_x7bty"]
+script = ExtResource("1_d0rka")
+item = ExtResource("3_y58sl")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_dlr0w"]
+script = ExtResource("1_d0rka")
+item = ExtResource("4_udbm7")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_35ooe")
+building = 0
+name = "Heat Sink"
+inputs = Array[ExtResource("1_d0rka")]([SubResource("Resource_7fydl"), SubResource("Resource_x7bty")])
+outputs = Array[ExtResource("1_d0rka")]([SubResource("Resource_dlr0w")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = false

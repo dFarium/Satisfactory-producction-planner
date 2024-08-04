@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://w6el3goxc7g8"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_f2ot4"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="2_ksjbv"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="3_tmspj"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_7i3vv"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_bro3c"]
+
+[sub_resource type="Resource" id="Resource_r5d8c"]
+script = ExtResource("1_f2ot4")
+item = ExtResource("2_ksjbv")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_3vaig"]
+script = ExtResource("1_f2ot4")
+item = ExtResource("3_tmspj")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_obixn"]
+script = ExtResource("1_f2ot4")
+item = ExtResource("4_7i3vv")
+quantity = 2.0
+
+[resource]
+script = ExtResource("5_bro3c")
+building = 0
+name = "Electromagnetic Connection Rod"
+inputs = Array[ExtResource("1_f2ot4")]([SubResource("Resource_r5d8c"), SubResource("Resource_3vaig")])
+outputs = Array[ExtResource("1_f2ot4")]([SubResource("Resource_obixn")])
+manufacturing_cycle = 30.0
+is_alternate_recipe = false

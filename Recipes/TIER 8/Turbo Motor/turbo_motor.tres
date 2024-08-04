@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://b20iinvaqybsi"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_eqs8e"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_73q34"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="2_wj65x"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="3_yr6k5"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="4_8j0v7"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="5_a11sf"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="6_2h3w5"]
+
+[sub_resource type="Resource" id="Resource_od75f"]
+script = ExtResource("1_eqs8e")
+item = ExtResource("2_wj65x")
+quantity = 4.0
+
+[sub_resource type="Resource" id="Resource_a02on"]
+script = ExtResource("1_eqs8e")
+item = ExtResource("3_yr6k5")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_ar4mh"]
+script = ExtResource("1_eqs8e")
+item = ExtResource("4_8j0v7")
+quantity = 4.0
+
+[sub_resource type="Resource" id="Resource_4pdc2"]
+script = ExtResource("1_eqs8e")
+item = ExtResource("5_a11sf")
+quantity = 24.0
+
+[sub_resource type="Resource" id="Resource_1npc8"]
+script = ExtResource("1_eqs8e")
+item = ExtResource("6_2h3w5")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_73q34")
+building = 3
+name = "Turbo Motor"
+inputs = Array[ExtResource("1_eqs8e")]([SubResource("Resource_od75f"), SubResource("Resource_a02on"), SubResource("Resource_ar4mh"), SubResource("Resource_4pdc2")])
+outputs = Array[ExtResource("1_eqs8e")]([SubResource("Resource_1npc8")])
+manufacturing_cycle = 0.0
+is_alternate_recipe = false
