@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://ddhpc8qu1j21s"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_xgmd0"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="2_i1hi5"]
+[ext_resource type="Resource" uid="uid://bh740pt57rovw" path="res://Items/aluminum_ingot.tres" id="4_wwe6x"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_y5h21"]
+
+[sub_resource type="Resource" id="Resource_7v1qt"]
+script = ExtResource("1_xgmd0")
+item = ExtResource("2_i1hi5")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_rh13b"]
+script = ExtResource("1_xgmd0")
+item = ExtResource("4_wwe6x")
+quantity = 1.0
+
+[resource]
+script = ExtResource("5_y5h21")
+building = 11
+name = "Pure Aluminum Ingot"
+inputs = Array[ExtResource("1_xgmd0")]([SubResource("Resource_7v1qt")])
+outputs = Array[ExtResource("1_xgmd0")]([SubResource("Resource_rh13b")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = true

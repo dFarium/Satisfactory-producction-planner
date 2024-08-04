@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bly3j2wr7nfcv"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_qhymn"]
+[ext_resource type="Resource" uid="uid://bh740pt57rovw" path="res://Items/aluminum_ingot.tres" id="2_fi8uv"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="3_cfv7k"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="3_uu7ay"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_cilxd"]
+
+[sub_resource type="Resource" id="Resource_5w2f2"]
+script = ExtResource("1_qhymn")
+item = ExtResource("2_fi8uv")
+quantity = 20.0
+
+[sub_resource type="Resource" id="Resource_qn5e6"]
+script = ExtResource("1_qhymn")
+item = ExtResource("3_uu7ay")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_o3yvh"]
+script = ExtResource("1_qhymn")
+item = ExtResource("3_cfv7k")
+quantity = 15.0
+
+[resource]
+script = ExtResource("4_cilxd")
+building = 0
+name = "Alclad Casing"
+inputs = Array[ExtResource("1_qhymn")]([SubResource("Resource_5w2f2"), SubResource("Resource_qn5e6")])
+outputs = Array[ExtResource("1_qhymn")]([SubResource("Resource_o3yvh")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = true

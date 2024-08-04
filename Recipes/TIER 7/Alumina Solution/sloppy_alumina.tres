@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cmxgbjljvwyfs"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_ho7tc"]
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="2_ychyl"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_ge60q"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="4_d80cw"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="6_dvqv5"]
+
+[sub_resource type="Resource" id="Resource_638r4"]
+script = ExtResource("1_ho7tc")
+item = ExtResource("2_ychyl")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_t0ia5"]
+script = ExtResource("1_ho7tc")
+item = ExtResource("3_ge60q")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_n361w"]
+script = ExtResource("1_ho7tc")
+item = ExtResource("4_d80cw")
+quantity = 12.0
+
+[resource]
+script = ExtResource("6_dvqv5")
+building = 10
+name = "Alumina Solution"
+inputs = Array[ExtResource("1_ho7tc")]([SubResource("Resource_638r4"), SubResource("Resource_t0ia5")])
+outputs = Array[ExtResource("1_ho7tc")]([SubResource("Resource_n361w")])
+manufacturing_cycle = 3.0
+is_alternate_recipe = true

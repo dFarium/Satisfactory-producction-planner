@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cv2gc7wm83qor"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_e87t0"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_fcht5"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="2_gof8c"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_srqa5"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="4_v61fr"]
+
+[sub_resource type="Resource" id="Resource_batew"]
+script = ExtResource("1_e87t0")
+item = ExtResource("2_gof8c")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_he7c7"]
+script = ExtResource("1_e87t0")
+item = ExtResource("3_srqa5")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_pctqb"]
+script = ExtResource("1_e87t0")
+item = ExtResource("4_v61fr")
+quantity = 5.0
+
+[resource]
+script = ExtResource("2_fcht5")
+building = 10
+name = "Sulfuric Acid"
+inputs = Array[ExtResource("1_e87t0")]([SubResource("Resource_batew"), SubResource("Resource_he7c7")])
+outputs = Array[ExtResource("1_e87t0")]([SubResource("Resource_pctqb")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false

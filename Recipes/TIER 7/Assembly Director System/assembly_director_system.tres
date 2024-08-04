@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://btuuc1wwt5tfp"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_w0ag1"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_027lv"]
+[ext_resource type="Resource" uid="uid://cymv47w84e1xd" path="res://Items/adaptative_control_unit.tres" id="2_naiqs"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="3_1j38h"]
+[ext_resource type="Resource" uid="uid://b0uc67ug7chv8" path="res://Items/assembly_director_system.tres" id="4_b7j1b"]
+
+[sub_resource type="Resource" id="Resource_0ah7b"]
+script = ExtResource("1_w0ag1")
+item = ExtResource("2_naiqs")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_uwqa3"]
+script = ExtResource("1_w0ag1")
+item = ExtResource("3_1j38h")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_t2y0r"]
+script = ExtResource("1_w0ag1")
+item = ExtResource("4_b7j1b")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_027lv")
+building = 0
+name = "Assembly Director System"
+inputs = Array[ExtResource("1_w0ag1")]([SubResource("Resource_0ah7b"), SubResource("Resource_uwqa3")])
+outputs = Array[ExtResource("1_w0ag1")]([SubResource("Resource_t2y0r")])
+manufacturing_cycle = 80.0
+is_alternate_recipe = false
