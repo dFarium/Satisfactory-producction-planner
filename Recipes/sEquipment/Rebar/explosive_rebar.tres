@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://b7g0er3i014n0"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_tadym"]
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="3_j3u2y"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="3_xye4p"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="4_1dqml"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_t37y8"]
+[ext_resource type="Resource" uid="uid://b3basojq61m4a" path="res://Items/explosive_rebar.tres" id="5_qwvy8"]
+
+[sub_resource type="Resource" id="Resource_xd1v4"]
+script = ExtResource("1_tadym")
+item = ExtResource("3_j3u2y")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_g0y2j"]
+script = ExtResource("1_tadym")
+item = ExtResource("3_xye4p")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_xpkmr"]
+script = ExtResource("1_tadym")
+item = ExtResource("4_1dqml")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_6rjbp"]
+script = ExtResource("1_tadym")
+item = ExtResource("5_qwvy8")
+quantity = 1.0
+
+[resource]
+script = ExtResource("4_t37y8")
+building = 3
+name = "Explosive Rebar"
+inputs = Array[ExtResource("1_tadym")]([SubResource("Resource_xd1v4"), SubResource("Resource_g0y2j"), SubResource("Resource_xpkmr")])
+outputs = Array[ExtResource("1_tadym")]([SubResource("Resource_6rjbp")])
+manufacturing_cycle = 12.0
+is_alternate_recipe = false

@@ -1,25 +1,31 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dyj2xwb2ns0x0"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dyj2xwb2ns0x0"]
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_ppfvn"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="2_3o3fx"]
 [ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="2_5m8gh"]
 [ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="3_4pdci"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_a134d"]
 
+[sub_resource type="Resource" id="Resource_0duwc"]
+script = ExtResource("1_ppfvn")
+item = ExtResource("2_3o3fx")
+quantity = 3.0
+
 [sub_resource type="Resource" id="Resource_ltfj1"]
 script = ExtResource("1_ppfvn")
 item = ExtResource("2_5m8gh")
-quantity = 3
+quantity = 12.0
 
 [sub_resource type="Resource" id="Resource_wlaqv"]
 script = ExtResource("1_ppfvn")
 item = ExtResource("3_4pdci")
-quantity = 1
+quantity = 10.0
 
 [resource]
 script = ExtResource("4_a134d")
 building = 2
-name = "Concrete"
-inputs = Array[ExtResource("1_ppfvn")]([SubResource("Resource_ltfj1")])
+name = "Fine Concrete"
+inputs = Array[ExtResource("1_ppfvn")]([SubResource("Resource_0duwc"), SubResource("Resource_ltfj1")])
 outputs = Array[ExtResource("1_ppfvn")]([SubResource("Resource_wlaqv")])
-manufacturing_cycle = 4.0
-is_alternate_recipe = false
+manufacturing_cycle = 24.0
+is_alternate_recipe = true

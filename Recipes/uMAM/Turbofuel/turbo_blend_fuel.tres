@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://bp8qxs1hsipas"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_rxuxn"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="2_8brwf"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_qfwo3"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="3_701ml"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="4_dlw76"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="5_78evs"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="6_gyjj5"]
+
+[sub_resource type="Resource" id="Resource_iutd0"]
+script = ExtResource("1_rxuxn")
+item = ExtResource("2_8brwf")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_exa5i"]
+script = ExtResource("1_rxuxn")
+item = ExtResource("3_701ml")
+quantity = 4.0
+
+[sub_resource type="Resource" id="Resource_uo3er"]
+script = ExtResource("1_rxuxn")
+item = ExtResource("4_dlw76")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_xbyey"]
+script = ExtResource("1_rxuxn")
+item = ExtResource("5_78evs")
+quantity = 3.0
+
+[sub_resource type="Resource" id="Resource_fhvx0"]
+script = ExtResource("1_rxuxn")
+item = ExtResource("6_gyjj5")
+quantity = 6.0
+
+[resource]
+script = ExtResource("2_qfwo3")
+building = 1
+name = "Turbo Blend Fuel"
+inputs = Array[ExtResource("1_rxuxn")]([SubResource("Resource_iutd0"), SubResource("Resource_exa5i"), SubResource("Resource_uo3er"), SubResource("Resource_xbyey")])
+outputs = Array[ExtResource("1_rxuxn")]([SubResource("Resource_fhvx0")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = true

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cthhel8doirnc"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_ni1o8"]
+[ext_resource type="Resource" uid="uid://djbyvsblqligv" path="res://Items/caterium_ore.tres" id="2_1lnri"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_47qir"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="3_i5ixa"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_ydvbq"]
+
+[sub_resource type="Resource" id="Resource_mdc3q"]
+script = ExtResource("1_ni1o8")
+item = ExtResource("2_1lnri")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_mgu6w"]
+script = ExtResource("1_ni1o8")
+item = ExtResource("3_47qir")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_yvgrv"]
+script = ExtResource("1_ni1o8")
+item = ExtResource("3_i5ixa")
+quantity = 1.0
+
+[resource]
+script = ExtResource("4_ydvbq")
+building = 10
+name = "Pure Caterium Ingot"
+inputs = Array[ExtResource("1_ni1o8")]([SubResource("Resource_mdc3q"), SubResource("Resource_mgu6w")])
+outputs = Array[ExtResource("1_ni1o8")]([SubResource("Resource_yvgrv")])
+manufacturing_cycle = 5.0
+is_alternate_recipe = true

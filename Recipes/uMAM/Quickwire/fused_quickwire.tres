@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c02ulfic5f764"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_y5l0g"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="2_3cqk1"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="3_aq0ub"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_nfle0"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_fwpb5"]
+
+[sub_resource type="Resource" id="Resource_nsf3f"]
+script = ExtResource("1_y5l0g")
+item = ExtResource("2_3cqk1")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_fxvyq"]
+script = ExtResource("1_y5l0g")
+item = ExtResource("3_aq0ub")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_wfdaf"]
+script = ExtResource("1_y5l0g")
+item = ExtResource("3_nfle0")
+quantity = 12.0
+
+[resource]
+script = ExtResource("4_fwpb5")
+building = 0
+name = "Fused Quickwire"
+inputs = Array[ExtResource("1_y5l0g")]([SubResource("Resource_nsf3f"), SubResource("Resource_fxvyq")])
+outputs = Array[ExtResource("1_y5l0g")]([SubResource("Resource_wfdaf")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = true

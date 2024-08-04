@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://b2y1vvfqutj6h"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_wlvwj"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_ebrpk"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="2_x6jor"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_ni1lw"]
+
+[sub_resource type="Resource" id="Resource_nsf3f"]
+script = ExtResource("1_wlvwj")
+item = ExtResource("2_x6jor")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_wfdaf"]
+script = ExtResource("1_wlvwj")
+item = ExtResource("3_ni1lw")
+quantity = 5.0
+
+[resource]
+script = ExtResource("2_ebrpk")
+building = 2
+name = "Quickwire"
+inputs = Array[ExtResource("1_wlvwj")]([SubResource("Resource_nsf3f")])
+outputs = Array[ExtResource("1_wlvwj")]([SubResource("Resource_wfdaf")])
+manufacturing_cycle = 5.0
+is_alternate_recipe = false

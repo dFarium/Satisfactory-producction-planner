@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://e0ropm74t5cs"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_h664x"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="2_q33io"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_nhmuj"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="4_xwl1h"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="5_vaw7e"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="6_3id5e"]
+
+[sub_resource type="Resource" id="Resource_m8173"]
+script = ExtResource("1_h664x")
+item = ExtResource("2_q33io")
+quantity = 10.0
+
+[sub_resource type="Resource" id="Resource_euwgi"]
+script = ExtResource("1_h664x")
+item = ExtResource("3_nhmuj")
+quantity = 7.0
+
+[sub_resource type="Resource" id="Resource_falxr"]
+script = ExtResource("1_h664x")
+item = ExtResource("4_xwl1h")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_qqnfd"]
+script = ExtResource("1_h664x")
+item = ExtResource("5_vaw7e")
+quantity = 1.0
+
+[resource]
+script = ExtResource("6_3id5e")
+building = 3
+name = "Insulated Crystal Oscillator"
+inputs = Array[ExtResource("1_h664x")]([SubResource("Resource_m8173"), SubResource("Resource_euwgi"), SubResource("Resource_falxr")])
+outputs = Array[ExtResource("1_h664x")]([SubResource("Resource_qqnfd")])
+manufacturing_cycle = 32.0
+is_alternate_recipe = true

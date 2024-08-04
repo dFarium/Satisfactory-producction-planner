@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://c77kxn717upi4"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_ny31u"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_c1afd"]
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="2_cqncy"]
+[ext_resource type="Resource" uid="uid://dfkysslf2jnee" path="res://Items/alien_dna_capsule.tres" id="3_kys7b"]
+
+[sub_resource type="Resource" id="Resource_b7h1m"]
+script = ExtResource("1_ny31u")
+item = ExtResource("2_cqncy")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_4xndo"]
+script = ExtResource("1_ny31u")
+item = ExtResource("3_kys7b")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_c1afd")
+building = 2
+name = "Alien DNA Capsule"
+inputs = Array[ExtResource("1_ny31u")]([SubResource("Resource_b7h1m")])
+outputs = Array[ExtResource("1_ny31u")]([SubResource("Resource_4xndo")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false

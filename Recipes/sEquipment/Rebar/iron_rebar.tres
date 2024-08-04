@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bfr47u5bsjykh"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_4g2uc"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="2_5cse3"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_nc7ag"]
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="3_vpa43"]
+
+[sub_resource type="Resource" id="Resource_xd1v4"]
+script = ExtResource("1_4g2uc")
+item = ExtResource("2_5cse3")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_6rjbp"]
+script = ExtResource("1_4g2uc")
+item = ExtResource("3_vpa43")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_nc7ag")
+building = 2
+name = "Iron Rebar"
+inputs = Array[ExtResource("1_4g2uc")]([SubResource("Resource_xd1v4")])
+outputs = Array[ExtResource("1_4g2uc")]([SubResource("Resource_6rjbp")])
+manufacturing_cycle = 4.0
+is_alternate_recipe = false

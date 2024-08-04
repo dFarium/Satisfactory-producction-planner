@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c62am1e7w0dx7"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_yf31d"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="3_3im4d"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="3_klin7"]
+[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="4_4jdl1"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_qspee"]
+
+[sub_resource type="Resource" id="Resource_h1m3b"]
+script = ExtResource("1_yf31d")
+item = ExtResource("3_3im4d")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_mr8jf"]
+script = ExtResource("1_yf31d")
+item = ExtResource("3_klin7")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_ix63e"]
+script = ExtResource("1_yf31d")
+item = ExtResource("4_4jdl1")
+quantity = 4.0
+
+[resource]
+script = ExtResource("5_qspee")
+building = 0
+name = "Fine Black Powder"
+inputs = Array[ExtResource("1_yf31d")]([SubResource("Resource_h1m3b"), SubResource("Resource_mr8jf")])
+outputs = Array[ExtResource("1_yf31d")]([SubResource("Resource_ix63e")])
+manufacturing_cycle = 16.0
+is_alternate_recipe = true

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://5a6su7mwt5n8"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_6fugd"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="2_nm35k"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_psumx"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_qv5h4"]
+[ext_resource type="Resource" uid="uid://d2kugd8cvw00f" path="res://Items/fabric.tres" id="4_yklil"]
+[ext_resource type="Resource" uid="uid://baymv17s7qxc1" path="res://Items/gas_filter.tres" id="5_dknfd"]
+
+[sub_resource type="Resource" id="Resource_mvy3i"]
+script = ExtResource("1_6fugd")
+item = ExtResource("2_nm35k")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_2cobd"]
+script = ExtResource("1_6fugd")
+item = ExtResource("3_qv5h4")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_8d2xu"]
+script = ExtResource("1_6fugd")
+item = ExtResource("4_yklil")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_ino73"]
+script = ExtResource("1_6fugd")
+item = ExtResource("5_dknfd")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_psumx")
+building = 3
+name = "Gas Filter"
+inputs = Array[ExtResource("1_6fugd")]([SubResource("Resource_mvy3i"), SubResource("Resource_2cobd"), SubResource("Resource_8d2xu")])
+outputs = Array[ExtResource("1_6fugd")]([SubResource("Resource_ino73")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = false

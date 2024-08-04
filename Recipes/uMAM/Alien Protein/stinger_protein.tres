@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://b2a6l014hmmc1"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_a80u7"]
+[ext_resource type="Resource" uid="uid://c4dgajctbabgd" path="res://Items/stringer_remains.tres" id="2_hyafd"]
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="3_1b5mx"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_eycet"]
+
+[sub_resource type="Resource" id="Resource_qkwdf"]
+script = ExtResource("1_a80u7")
+item = ExtResource("2_hyafd")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_njkfn"]
+script = ExtResource("1_a80u7")
+item = ExtResource("3_1b5mx")
+quantity = 1.0
+
+[resource]
+script = ExtResource("4_eycet")
+building = 2
+name = "Stinger Protein"
+inputs = Array[ExtResource("1_a80u7")]([SubResource("Resource_qkwdf")])
+outputs = Array[ExtResource("1_a80u7")]([SubResource("Resource_njkfn")])
+manufacturing_cycle = 3.0
+is_alternate_recipe = false

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ssy8qpmaraxu"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_uv16o"]
+[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="2_6qrly"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="3_h5b07"]
+[ext_resource type="Resource" uid="uid://damumgto3v86j" path="res://Items/pulse_nobelisk.tres" id="4_115sn"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_dmphl"]
+
+[sub_resource type="Resource" id="Resource_5fwla"]
+script = ExtResource("1_uv16o")
+item = ExtResource("2_6qrly")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_cslpf"]
+script = ExtResource("1_uv16o")
+item = ExtResource("3_h5b07")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_b4ruf"]
+script = ExtResource("1_uv16o")
+item = ExtResource("4_115sn")
+quantity = 5.0
+
+[resource]
+script = ExtResource("5_dmphl")
+building = 0
+name = "Pulse Nobelisk"
+inputs = Array[ExtResource("1_uv16o")]([SubResource("Resource_5fwla"), SubResource("Resource_cslpf")])
+outputs = Array[ExtResource("1_uv16o")]([SubResource("Resource_b4ruf")])
+manufacturing_cycle = 60.0
+is_alternate_recipe = false

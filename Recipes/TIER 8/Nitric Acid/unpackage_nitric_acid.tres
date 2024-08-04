@@ -24,7 +24,7 @@ quantity = 1.0
 [resource]
 script = ExtResource("6_7511q")
 building = 8
-name = "Nitric Acid"
+name = "Unpackage Nitric Acid"
 inputs = Array[ExtResource("1_1bttp")]([SubResource("Resource_ts83p")])
 outputs = Array[ExtResource("1_1bttp")]([SubResource("Resource_cn7ss"), SubResource("Resource_v2ycp")])
 manufacturing_cycle = 3.0

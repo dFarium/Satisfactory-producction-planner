@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://e52afqkrsosa"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_2gl8c"]
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="2_mc8wx"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_6b380"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="3_704rd"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_negkg"]
+
+[sub_resource type="Resource" id="Resource_jdt2c"]
+script = ExtResource("1_2gl8c")
+item = ExtResource("2_mc8wx")
+quantity = 9.0
+
+[sub_resource type="Resource" id="Resource_aihlo"]
+script = ExtResource("1_2gl8c")
+item = ExtResource("3_6b380")
+quantity = 5.0
+
+[sub_resource type="Resource" id="Resource_36lkk"]
+script = ExtResource("1_2gl8c")
+item = ExtResource("3_704rd")
+quantity = 7.0
+
+[resource]
+script = ExtResource("4_negkg")
+building = 10
+name = "Pure Quartz Crystal"
+inputs = Array[ExtResource("1_2gl8c")]([SubResource("Resource_jdt2c"), SubResource("Resource_aihlo")])
+outputs = Array[ExtResource("1_2gl8c")]([SubResource("Resource_36lkk")])
+manufacturing_cycle = 8.0
+is_alternate_recipe = true

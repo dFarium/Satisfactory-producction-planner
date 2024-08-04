@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://diyptfrdx6erg"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_sk6yn"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="2_2i4fi"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_216jq"]
+[ext_resource type="Resource" uid="uid://d2kugd8cvw00f" path="res://Items/fabric.tres" id="4_qckhh"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_xrm0d"]
+
+[sub_resource type="Resource" id="Resource_h3ixq"]
+script = ExtResource("1_sk6yn")
+item = ExtResource("2_2i4fi")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_cf3xd"]
+script = ExtResource("1_sk6yn")
+item = ExtResource("3_216jq")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_op8yy"]
+script = ExtResource("1_sk6yn")
+item = ExtResource("4_qckhh")
+quantity = 1.0
+
+[resource]
+script = ExtResource("5_xrm0d")
+building = 10
+name = "Polyester Fabric"
+inputs = Array[ExtResource("1_sk6yn")]([SubResource("Resource_h3ixq"), SubResource("Resource_cf3xd")])
+outputs = Array[ExtResource("1_sk6yn")]([SubResource("Resource_op8yy")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = true

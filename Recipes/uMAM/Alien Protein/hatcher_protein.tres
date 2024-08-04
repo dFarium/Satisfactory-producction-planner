@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cy6es2faqbtxe"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_cfr2m"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_u3k7h"]
+[ext_resource type="Resource" uid="uid://opd4gr42qd7b" path="res://Items/hatcher_remains.tres" id="2_uw38w"]
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="3_frhmc"]
+
+[sub_resource type="Resource" id="Resource_qkwdf"]
+script = ExtResource("1_cfr2m")
+item = ExtResource("2_uw38w")
+quantity = 1.0
+
+[sub_resource type="Resource" id="Resource_njkfn"]
+script = ExtResource("1_cfr2m")
+item = ExtResource("3_frhmc")
+quantity = 1.0
+
+[resource]
+script = ExtResource("2_u3k7h")
+building = 2
+name = "Hatcher Protein"
+inputs = Array[ExtResource("1_cfr2m")]([SubResource("Resource_qkwdf")])
+outputs = Array[ExtResource("1_cfr2m")]([SubResource("Resource_njkfn")])
+manufacturing_cycle = 3.0
+is_alternate_recipe = false
