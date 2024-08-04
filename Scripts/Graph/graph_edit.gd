@@ -6,7 +6,8 @@ var search_panel: SearchRecipe
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_recipes()
+	#load_recipes()
+	load_recipes_testing()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -58,7 +59,61 @@ func load_recipes() -> void:
 		var recipe: Recipe = ResourceLoader.load("res://Recipes/" + recipe_file)
 		recipe_list.append(recipe)
 	set_item_ids()
+		
+func load_recipes_testing() -> void:
+	recipe_list = []
+	var dir: DirAccess = DirAccess.open("res://Recipes/")
+	#Check if recipes directory exists
+	if not dir:
+		return
+	
+	dir.list_dir_begin()
+	var tier_dir_name: String = dir.get_next()
+	#Iterate through all tier directories
+	while tier_dir_name != "":
+		if not dir.current_is_dir():
+			tier_dir_name = dir.get_next()
+			continue
+		#Open tier directory
+		var tier_dir: DirAccess = DirAccess.open("res://Recipes/" + tier_dir_name)
+		if not tier_dir:
+			tier_dir_name = dir.get_next()
+			continue
 
+		tier_dir.list_dir_begin()
+		var output_dir_name: String = tier_dir.get_next()
+
+		#Iterate through all output directories
+		while output_dir_name != "":
+			if not tier_dir.current_is_dir():
+				output_dir_name = tier_dir.get_next()
+				continue
+			#Open output directory
+			var output_dir: DirAccess = DirAccess.open("res://Recipes/" + tier_dir_name + "/" + output_dir_name)
+			if not output_dir:
+				output_dir_name = tier_dir.get_next()
+				continue
+
+			output_dir.list_dir_begin()
+			var recipe_file: String = output_dir.get_next()
+			#Iterate through all recipe files
+			while recipe_file != "":
+				if output_dir.current_is_dir():
+					recipe_file = output_dir.get_next()
+					continue
+				#Load recipe
+				var recipe: Recipe = ResourceLoader.load("res://Recipes/" + tier_dir_name + "/" + output_dir_name + "/" + recipe_file)
+				recipe_list.append(recipe)
+				recipe_file = output_dir.get_next()
+			output_dir.list_dir_end()
+
+			output_dir_name = tier_dir.get_next()
+		tier_dir.list_dir_end()
+		
+		tier_dir_name = dir.get_next()
+	dir.list_dir_end()
+	set_item_ids()
+	
 func set_item_ids() -> void:
 	var id_count: int = 0
 	var item_list: Array[SatisfactoryItem] = []

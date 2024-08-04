@@ -22,7 +22,8 @@ func _ready() -> void:
 func _on_text_edit_text_changed(new_text: String) -> void:
 	hide_buttons(recipe_container)
 	if new_text.length() > 0:
-		show_recipes(search_recipes(new_text.to_lower()))
+		#show_recipes(search_recipes(new_text.to_lower()))
+		show_recipes(search_recipes_testing(new_text.to_lower()))
 	else:
 		show_recipes(recipe_list)
 
@@ -38,6 +39,21 @@ func search_recipes(input: String) -> Array:
 		elif input == recipe.name:
 			results.append(recipe)
 	return results
+
+func search_recipes_testing(input: String) -> Array:
+	var results: Array = []
+	
+	for recipe in recipe_list:
+		for output in recipe.outputs:
+			if input.length() > 0 and output.item.name.to_lower().find(input.to_lower()) != -1:
+				results.append(recipe)
+				break  # Evita agregar la misma receta varias veces
+			elif input == output.item.name:
+				results.append(recipe)
+				break  # Evita agregar la misma receta varias veces
+	
+	return results
+
 
 # Eliminar todos los hijos de un nodo
 func hide_buttons(node: Control) -> void:
