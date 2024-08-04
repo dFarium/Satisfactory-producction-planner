@@ -24,7 +24,6 @@ var current_recipe: Recipe
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_close_button()
-	#Label,TextureRect,HBoxContainer(LineEdit,Label)
 	for input in inputs:
 		input_nodes.append(input.get_children())
 		
@@ -57,7 +56,9 @@ func setup_building(recipe: Recipe) -> void:
 		output_values.append(output_nodes[i][2].get_node("LineEdit"))
 
 	set_slot_type()
-	
+	#set building count to 1 by default
+	_on_slot_value_updated(13, 1)
+
 func _on_slot_value_updated(slot: int, value: float) -> void:
 	#value = items per minute
 	var building_count: float = 0
@@ -72,6 +73,8 @@ func _on_slot_value_updated(slot: int, value: float) -> void:
 
 	#si es el slot de cantidad de edificios
 	if slot == 13:
+		if building_count_text:
+			building_count_text.text = str(snapped(value, 0.001))
 		building_count = value
 	#si es solo output
 	elif slot == 14:
@@ -146,6 +149,8 @@ func get_building_name(building: int) -> String:
 			return "Water Extractor"
 		Recipe.Building.WellExtractor:
 			return "Well Extractor"
+		Recipe.Building.Foundry:
+			return "Foundry"
 		_:
 			return "Unknown Building"
 
