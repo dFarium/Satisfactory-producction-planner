@@ -27,9 +27,7 @@ func _on_text_edit_text_changed(new_text: String) -> void:
 	else:
 		show_recipes(recipe_list)
 
-# Cargar las recetas desde la carpeta 'Recipes'
 
-		
 # Buscar recetas que coincidan parcial o completamente con la entrada
 func search_recipes(input: String) -> Array:
 	var results: Array = []
