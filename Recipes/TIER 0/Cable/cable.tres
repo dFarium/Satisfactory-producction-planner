@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_4e7um"]
 [ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="2_1xxc8"]
-[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="3_3cyne"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_iau7e"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="4_33s0p"]
 
 [sub_resource type="Resource" id="Resource_ltfj1"]
@@ -12,7 +12,7 @@ quantity = 2
 
 [sub_resource type="Resource" id="Resource_wlaqv"]
 script = ExtResource("1_4e7um")
-item = ExtResource("3_3cyne")
+item = ExtResource("3_iau7e")
 quantity = 1
 
 [resource]
