@@ -130,6 +130,7 @@ func load_recipes() -> void:
 				output_dir.list_dir_begin()
 				var recipe_file: String = output_dir.get_next()
 				
+				var recipe_group: Array[Recipe] = []
 				# Recorre cada archivo de receta dentro del tipo de output actual
 				while recipe_file != "":
 					if output_dir.current_is_dir():
@@ -138,9 +139,12 @@ func load_recipes() -> void:
 
 					# Carga el recurso de receta y lo añade a la lista de recetas
 					var recipe: Recipe = ResourceLoader.load(output_dir_path + "/" + recipe_file)
-					recipe_list.append(recipe)
+					#recipe_list.append(recipe)
+					recipe_group.append(recipe)
 					
 					recipe_file = output_dir.get_next()
+				recipe_group.sort_custom(sort_by_regular_recipe)
+				recipe_list.append_array(recipe_group)
 				output_dir.list_dir_end()
 
 				output_dir_name = tier_dir.get_next()
@@ -151,6 +155,9 @@ func load_recipes() -> void:
 	
 	# Llama a una función para establecer identificadores de ítems, si es necesario
 	set_item_ids()
+
+func sort_by_regular_recipe(a: Recipe, b: Recipe) -> bool:
+	return int(a.is_alternate_recipe) < int(b.is_alternate_recipe)
 
 	
 func set_item_ids() -> void:
