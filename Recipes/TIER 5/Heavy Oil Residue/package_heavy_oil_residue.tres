@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b2ug6xuqd2led"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_7t0vp"]
+[ext_resource type="Resource" uid="uid://bqqnaptqb3gu6" path="res://Items/packaged_heavy_oil_residue.tres" id="2_hkuui"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="3_uffv1"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_1eq6d"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_ojot6"]
+
+[sub_resource type="Resource" id="Resource_bd4u6"]
+script = ExtResource("1_7t0vp")
+item = ExtResource("3_uffv1")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_g4k3v"]
+script = ExtResource("1_7t0vp")
+item = ExtResource("4_1eq6d")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_aymlk"]
+script = ExtResource("1_7t0vp")
+item = ExtResource("2_hkuui")
+quantity = 2
+
+[resource]
+script = ExtResource("5_ojot6")
+building = 8
+name = "Package Heavy Oil Residue"
+inputs = Array[ExtResource("1_7t0vp")]([SubResource("Resource_bd4u6"), SubResource("Resource_g4k3v")])
+outputs = Array[ExtResource("1_7t0vp")]([SubResource("Resource_aymlk")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dg576qjlkjf1u"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_84nwl"]
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="2_dvu1x"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_ij8go"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_thqf1"]
+[ext_resource type="Resource" uid="uid://055gg6i3dm5p" path="res://Items/packaged_oil.tres" id="4_ka01u"]
+
+[sub_resource type="Resource" id="Resource_of32q"]
+script = ExtResource("1_84nwl")
+item = ExtResource("2_dvu1x")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_o2kbi"]
+script = ExtResource("1_84nwl")
+item = ExtResource("3_ij8go")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_wlaqv"]
+script = ExtResource("1_84nwl")
+item = ExtResource("4_ka01u")
+quantity = 2
+
+[resource]
+script = ExtResource("3_thqf1")
+building = 8
+name = "Package Crude Oil"
+inputs = Array[ExtResource("1_84nwl")]([SubResource("Resource_of32q"), SubResource("Resource_o2kbi")])
+outputs = Array[ExtResource("1_84nwl")]([SubResource("Resource_wlaqv")])
+manufacturing_cycle = 2.0
+is_alternate_recipe = false

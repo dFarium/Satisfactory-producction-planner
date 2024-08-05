@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c017x1500m5wh"]
+
+[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_e1pyx"]
+[ext_resource type="Resource" uid="uid://cgx5q4na0rnv3" path="res://Items/packaged_turbofuel.tres" id="2_3n3au"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="3_p7efg"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_8pfw7"]
+[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_f3133"]
+
+[sub_resource type="Resource" id="Resource_fkyo2"]
+script = ExtResource("1_e1pyx")
+item = ExtResource("3_p7efg")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_3o5sk"]
+script = ExtResource("1_e1pyx")
+item = ExtResource("4_8pfw7")
+quantity = 2.0
+
+[sub_resource type="Resource" id="Resource_mi4r5"]
+script = ExtResource("1_e1pyx")
+item = ExtResource("2_3n3au")
+quantity = 2.0
+
+[resource]
+script = ExtResource("5_f3133")
+building = 8
+name = "Package Turbofuel"
+inputs = Array[ExtResource("1_e1pyx")]([SubResource("Resource_fkyo2"), SubResource("Resource_3o5sk")])
+outputs = Array[ExtResource("1_e1pyx")]([SubResource("Resource_mi4r5")])
+manufacturing_cycle = 6.0
+is_alternate_recipe = false

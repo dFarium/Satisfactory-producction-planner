@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="4_wp22n"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_ukwt5"]
 
-[sub_resource type="Resource" id="Resource_batew"]
+[sub_resource type="Resource" id="Resource_qvfu4"]
 script = ExtResource("1_x7e6s")
 item = ExtResource("2_g1s2d")
 quantity = 1.0
@@ -24,8 +24,8 @@ quantity = 1.0
 [resource]
 script = ExtResource("5_ukwt5")
 building = 8
-name = "Sulfuric Acid"
-inputs = Array[ExtResource("1_x7e6s")]([SubResource("Resource_batew")])
+name = "Unpackage Sulfuric Acid"
+inputs = Array[ExtResource("1_x7e6s")]([SubResource("Resource_qvfu4")])
 outputs = Array[ExtResource("1_x7e6s")]([SubResource("Resource_pctqb"), SubResource("Resource_xi1ah")])
 manufacturing_cycle = 1.0
 is_alternate_recipe = false

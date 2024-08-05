@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_uaovo"]
 [ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="5_h41x6"]
 
-[sub_resource type="Resource" id="Resource_0xtg7"]
+[sub_resource type="Resource" id="Resource_i1j4g"]
 script = ExtResource("1_6tisb")
 item = ExtResource("2_nx01j")
 quantity = 2
@@ -24,8 +24,8 @@ quantity = 2
 [resource]
 script = ExtResource("5_h41x6")
 building = 8
-name = "Liquid Biofuel"
-inputs = Array[ExtResource("1_6tisb")]([SubResource("Resource_0xtg7")])
+name = "Unpackage Liquid Biofuel"
+inputs = Array[ExtResource("1_6tisb")]([SubResource("Resource_i1j4g")])
 outputs = Array[ExtResource("1_6tisb")]([SubResource("Resource_wo86h"), SubResource("Resource_5opje")])
 manufacturing_cycle = 2.0
 is_alternate_recipe = false
