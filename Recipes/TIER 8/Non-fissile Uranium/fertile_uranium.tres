@@ -42,7 +42,7 @@ quantity = 8.0
 [resource]
 script = ExtResource("8_dbao8")
 building = 1
-name = "Non-fissile Uranium"
+name = "Fertile Uranium"
 inputs = Array[ExtResource("1_w1euh")]([SubResource("Resource_4s7pn"), SubResource("Resource_ileea"), SubResource("Resource_dehfd"), SubResource("Resource_jfih7")])
 outputs = Array[ExtResource("1_w1euh")]([SubResource("Resource_ix2e1"), SubResource("Resource_6np4v")])
 manufacturing_cycle = 12.0
