@@ -2,8 +2,10 @@ extends GraphNode
 class_name SearchRecipe
 
 # Variables de nodos de la escena
-@onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
 @onready var search_field: LineEdit = $LineEdit
+@onready var scroll_container: ScrollContainer = $ScrollContainer
+@onready var recipe_container: VBoxContainer = $ScrollContainer/VBoxContainer
+var enabled: bool = true
 
 # Constante para la escena del botón de opción
 const BUTTON_OPTION = preload("res://Scenes/button_option.tscn")
@@ -13,6 +15,7 @@ var recipe_list: Array[Recipe] = []
 var recipe_buttons: Array[Button] = []
 
 signal add_building(recipe: Recipe)
+signal panel_disabled()
 
 # Función llamada cuando el nodo entra en el árbol de la escena por primera vez
 func _ready() -> void:
@@ -64,21 +67,35 @@ func initialize_buttons() -> void:
 		recipe_option.set_recipe_display(recipe)
 
 func _on_recipe_pressed(recipe: Recipe) -> void:
-	hide_search_panel()
 	add_building.emit(recipe)
+	disable_panel()
 
 func _on_node_deselected() -> void:
-	queue_free()
+	disable_panel()
 	pass
 
-func hide_search_panel() -> void:
+func disable_panel() -> void:
+	enabled = false
 	visible = false
 	selected = false
-	search_field.editable = false
-	search_field.context_menu_enabled = false
+	panel_disabled.emit()
+	set_process(false)
+	set_physics_process(false)
+	set_process_input(false)
+	set_block_signals(true)
 
-func show_search_panel() -> void:
+
+func enable_panel() -> void:
+	enabled = true
 	visible = true
 	selected = true
-	search_field.editable = true
-	search_field.context_menu_enabled = true
+	set_process(true)
+	set_physics_process(true)
+	set_process_input(true)
+	set_block_signals(false)
+	reset_panel()
+
+func reset_panel() -> void:
+	search_field.text = ""
+	scroll_container.scroll_vertical = 0
+	show_recipes(recipe_list)

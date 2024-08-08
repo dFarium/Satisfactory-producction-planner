@@ -1,0 +1,171 @@
+[gd_scene load_steps=5 format=3 uid="uid://cttm4o88aast8"]
+
+[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_4pty5"]
+[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_onpyh"]
+[ext_resource type="Texture2D" uid="uid://dxr1n721dd6qc" path="res://ItemIcons/Iron_Plate.png" id="3_t7byx"]
+[ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://ItemIcons/Reinforced_Iron_Plate.webp" id="4_a8uk6"]
+
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 300.0
+offset_bottom = 368.0
+resizable = true
+title = "Reinforced Iron Plate"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 0, 0, 0.996078)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 0, 0, 0.996078)
+slot/0/right_icon = null
+slot/0/draw_stylebox = false
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 0, 0, 0.996078)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 0, 0, 0.996078)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 0, 0, 0.996078)
+slot/2/left_icon = null
+slot/2/right_enabled = true
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+script = ExtResource("1_4pty5")
+inputs = [NodePath("HBoxContainer/Input1")]
+outputs = [NodePath("HBoxContainer/Output1"), NodePath("HBoxContainer2/Output2")]
+
+[node name="Buildings" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Buildings"]
+layout_mode = 2
+script = ExtResource("2_onpyh")
+slot = 13
+
+[node name="BuildingName" type="Label" parent="Buildings"]
+layout_mode = 2
+text = "Assembler(s)
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Input1" type="VBoxContainer" parent="HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Iron Ingot"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Input1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_t7byx")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Input1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_onpyh")
+slot = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="Output1" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Reinforced Iron Plate
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Output1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_a8uk6")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Output1"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_onpyh")
+slot = 7
+
+[node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
+
+[node name="Output2" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer2/Output2"]
+custom_minimum_size = Vector2(130, 50)
+layout_mode = 2
+text = "Reinforced Iron Plate
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2/Output2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("4_a8uk6")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/Output2"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Output2/HBoxContainer"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+script = ExtResource("2_onpyh")
+slot = 8
+
+[node name="Label" type="Label" parent="HBoxContainer2/Output2/HBoxContainer"]
+layout_mode = 2
+text = "/min"
+
+[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="slot_value_updated" from="HBoxContainer2/Output2/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]

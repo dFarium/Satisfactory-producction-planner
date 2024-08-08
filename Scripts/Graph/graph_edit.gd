@@ -3,12 +3,14 @@ extends GraphEdit
 var search_panel_res: PackedScene = preload("res://Scenes/search_recipe.tscn")
 
 var one_input_one_output: PackedScene = preload("res://Scenes/Factories/1input1output.tscn")
+var one_input_two_output: PackedScene = preload("res://Scenes/Factories/1input2output.tscn")
 var two_input_one_output: PackedScene = preload("res://Scenes/Factories/2input1output.tscn")
 var three_input_one_output: PackedScene = preload("res://Scenes/Factories/3input1output.tscn")
 var four_input_one_output: PackedScene = preload("res://Scenes/Factories/4input1output.tscn")
 var one_output: PackedScene = preload("res://Scenes/Factories/1output.tscn")
 var two_input_two_output: PackedScene = preload("res://Scenes/Factories/2input2output.tscn")
 var four_input_two_output: PackedScene = preload("res://Scenes/Factories/4input2output.tscn")
+var three_input_two_output: PackedScene = preload("res://Scenes/Factories/3input2output.tscn")
 
 var recipe_list: Array[Recipe] = []
 var search_panel: SearchRecipe
@@ -30,10 +32,17 @@ func instantiate_search_panel() -> void:
 
 		search_panel = search_panel_res.instantiate()
 		search_panel.recipe_list = recipe_list
+		search_panel.panel_disabled.connect(_on_panel_disabled)
 		search_panel.add_building.connect(_on_add_building)
 		add_child(search_panel)
+	elif not search_panel.enabled:
+		add_child(search_panel)
+		search_panel.enable_panel()
 	search_panel.set_position_offset((get_local_mouse_position() + scroll_offset) / zoom)
 	
+func _on_panel_disabled() -> void:
+	remove_child(search_panel)
+
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("right_click"):
 		instantiate_search_panel()
@@ -44,6 +53,8 @@ func _on_add_building(recipe: Recipe) -> void:
 			instantiate_building(one_output, recipe)
 		[1, 1]:
 			instantiate_building(one_input_one_output, recipe)
+		[1, 2]:
+			instantiate_building(one_input_two_output, recipe)
 		[2, 1]:
 			instantiate_building(two_input_one_output, recipe)
 		[3, 1]:
@@ -54,6 +65,8 @@ func _on_add_building(recipe: Recipe) -> void:
 			instantiate_building(two_input_two_output, recipe)
 		[4, 2]:
 			instantiate_building(four_input_two_output, recipe)
+		[3, 2]:
+			instantiate_building(three_input_two_output, recipe)
 		_:
 			print("BUILDING NOT FOUND")
 
@@ -100,7 +113,7 @@ func load_recipes() -> void:
 					continue
 
 				# Carga el recurso de receta y lo añade a la lista de recetas
-				var recipe: Recipe = ResourceLoader.load(sub_dir_path + "/" + recipe_file)
+				var recipe: Recipe = load(sub_dir_path + "/" + recipe_file)
 				recipe_list.append(recipe)
 
 				recipe_file = resources_dir.get_next()

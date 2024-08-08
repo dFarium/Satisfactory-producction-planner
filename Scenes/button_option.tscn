@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnodskb5t767u"]
+[gd_scene load_steps=10 format=3 uid="uid://dnodskb5t767u"]
 
 [ext_resource type="Script" path="res://Scripts/Graph/recipe_option.gd" id="1_1mb04"]
 [ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://ItemIcons/Aluminum_Casing.webp" id="2_a7r63"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://badlij1l5cppy" path="res://ItemIcons/arrowRight.png" id="6_g1vmf"]
 [ext_resource type="Texture2D" uid="uid://dxr1n721dd6qc" path="res://ItemIcons/Iron_Plate.png" id="7_lds2c"]
 [ext_resource type="Texture2D" uid="uid://4aogobcpaec" path="res://ItemIcons/Modular_Engine.webp" id="8_in0kp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wnpu7"]
 
 [node name="option" type="Button" groups=["recipe_option"]]
 custom_minimum_size = Vector2(500, 50)
@@ -32,6 +34,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "Non-fissile Uranium"
+label_settings = SubResource("LabelSettings_wnpu7")
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
