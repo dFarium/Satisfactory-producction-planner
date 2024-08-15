@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dsuc143ta07ys"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dsuc143ta07ys"]
 
 [ext_resource type="Texture2D" uid="uid://bcouyxgxkmnir" path="res://ItemIcons/Stun_Rebar.webp" id="1_0datx"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_7mfbg"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_7mfbg"]
 
 [resource]
 script = ExtResource("2_7mfbg")
-name = "Stun Rebar"
-icon = ExtResource("1_0datx")
+Name = "Stun Rebar"
+Icon = ExtResource("1_0datx")
+Amount = 0.0

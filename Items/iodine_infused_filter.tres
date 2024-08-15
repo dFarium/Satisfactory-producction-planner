@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bejju08yno1wt"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bejju08yno1wt"]
 
 [ext_resource type="Texture2D" uid="uid://bes4ew1swerci" path="res://ItemIcons/Iodine_Infused_Filter.webp" id="1_v0wsv"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_nt78e"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_nt78e"]
 
 [resource]
 script = ExtResource("2_nt78e")
-name = "Iodine Infused Filter"
-icon = ExtResource("1_v0wsv")
+Name = "Iodine Infused Filter"
+Icon = ExtResource("1_v0wsv")
+Amount = 0.0

@@ -10,14 +10,18 @@ config_version=5
 
 [application]
 
-config/name="Satisfactory Producction Planner"
+config/name="Satisfactory Production Planner"
 run/main_scene="res://Scenes/graph_edit.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.3", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [debug]
 
 gdscript/warnings/untyped_declaration=1
+
+[dotnet]
+
+project/assembly_name="Satisfactory Producction Planner"
 
 [editor]
 
@@ -28,6 +32,7 @@ export/convert_text_resources_to_binary=false
 folder_colors={
 "res://ItemIcons/": "yellow",
 "res://Items/": "green",
+"res://NeoRecipes/": "teal",
 "res://Recipes/": "purple",
 "res://Scenes/": "red",
 "res://Scripts/": "orange"

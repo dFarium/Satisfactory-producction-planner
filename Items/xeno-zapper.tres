@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dfy8st6put28t"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dfy8st6put28t"]
 
 [ext_resource type="Texture2D" uid="uid://bn55kr5jdoewd" path="res://ItemIcons/Xeno-Zapper.webp" id="1_u2n1w"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_i4426"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_i4426"]
 
 [resource]
 script = ExtResource("2_i4426")
-name = "Xeno-Zapper"
-icon = ExtResource("1_u2n1w")
+Name = "Xeno-Zapper"
+Icon = ExtResource("1_u2n1w")
+Amount = 0.0

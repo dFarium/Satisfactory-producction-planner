@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dyyrkvja1ko02"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dyyrkvja1ko02"]
 
 [ext_resource type="Texture2D" uid="uid://dkw86sqpuqihs" path="res://ItemIcons/Packaged_Nitric_Acid.webp" id="1_kvdqu"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_heuu5"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_heuu5"]
 
 [resource]
 script = ExtResource("2_heuu5")
-name = "Packaged Nitric Acid"
-icon = ExtResource("1_kvdqu")
+Name = "Packaged Nitric Acid"
+Icon = ExtResource("1_kvdqu")
+Amount = 0.0

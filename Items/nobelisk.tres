@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://di61hs1rvpcmw"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://di61hs1rvpcmw"]
 
 [ext_resource type="Texture2D" uid="uid://dc7vxbjpoipr8" path="res://ItemIcons/Nobelisk.webp" id="1_mypiy"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_er2va"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_er2va"]
 
 [resource]
 script = ExtResource("2_er2va")
-name = "Nobelisk"
-icon = ExtResource("1_mypiy")
+Name = "Nobelisk"
+Icon = ExtResource("1_mypiy")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxri5fyhcy374"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxri5fyhcy374"]
 
 [ext_resource type="Texture2D" uid="uid://dhpvyg7bd1okb" path="res://ItemIcons/Automated_Wiring.webp" id="1_lo1kb"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_7u77i"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_7u77i"]
 
 [resource]
 script = ExtResource("2_7u77i")
-name = "Autmated Wiring"
-icon = ExtResource("1_lo1kb")
+Name = "Autmated Wiring"
+Icon = ExtResource("1_lo1kb")
+Amount = 0.0

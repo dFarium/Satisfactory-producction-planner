@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bm24t0e7o1uj2"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bm24t0e7o1uj2"]
 
 [ext_resource type="Texture2D" uid="uid://vc0a2s3xofho" path="res://ItemIcons/Circuit_Board.webp" id="1_beo8v"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_wco2f"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_wco2f"]
 
 [resource]
 script = ExtResource("2_wco2f")
-name = "Circuit Board"
-icon = ExtResource("1_beo8v")
+Name = "Circuit Board"
+Icon = ExtResource("1_beo8v")
+Amount = 0.0

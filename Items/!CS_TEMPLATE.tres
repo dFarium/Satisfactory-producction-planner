@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cn4aswxit6qs"]
+
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="1_dc1e6"]
+[ext_resource type="Texture2D" uid="uid://dr5re2eq8uf3" path="res://ItemIcons/Iron_Ingot.webp" id="1_m8xlr"]
+
+[resource]
+script = ExtResource("1_dc1e6")
+Name = "TEMPLATE"
+Icon = ExtResource("1_m8xlr")
+Amount = 999.0

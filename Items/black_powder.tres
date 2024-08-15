@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bp2268mghlrux"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bp2268mghlrux"]
 
 [ext_resource type="Texture2D" uid="uid://c25lx583pn5lu" path="res://ItemIcons/Black_Powder.webp" id="1_uaa73"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_04suo"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_04suo"]
 
 [resource]
 script = ExtResource("2_04suo")
-name = "Black Powder"
-icon = ExtResource("1_uaa73")
+Name = "Black Powder"
+Icon = ExtResource("1_uaa73")
+Amount = 0.0

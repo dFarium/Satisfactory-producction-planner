@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://nub3wyf1b7hc"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://nub3wyf1b7hc"]
 
 [ext_resource type="Texture2D" uid="uid://dxcv6sht2ctlp" path="res://ItemIcons/Iron_Rod.webp" id="1_4232n"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_cx5t3"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_cx5t3"]
 
 [resource]
 script = ExtResource("2_cx5t3")
-name = "Iron Rod"
-icon = ExtResource("1_4232n")
+Name = "Iron Rod"
+Icon = ExtResource("1_4232n")
+Amount = 0.0

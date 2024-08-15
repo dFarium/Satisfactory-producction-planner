@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://baymv17s7qxc1"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://baymv17s7qxc1"]
 
 [ext_resource type="Texture2D" uid="uid://ccdbilngxruiy" path="res://ItemIcons/Gas_Filter.webp" id="1_jkeg7"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_qcxlk"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_qcxlk"]
 
 [resource]
 script = ExtResource("2_qcxlk")
-name = "Gas Filter"
-icon = ExtResource("1_jkeg7")
+Name = "Gas Filter"
+Icon = ExtResource("1_jkeg7")
+Amount = 0.0

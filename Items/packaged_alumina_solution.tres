@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ckusf7675uaog"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ckusf7675uaog"]
 
 [ext_resource type="Texture2D" uid="uid://n5p33ttx76sf" path="res://ItemIcons/Packaged_Alumina_Solution.webp" id="1_k1083"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3e8rn"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_3e8rn"]
 
 [resource]
 script = ExtResource("2_3e8rn")
-name = "Packaged Alumina Solution"
-icon = ExtResource("1_k1083")
+Name = "Packaged Alumina Solution"
+Icon = ExtResource("1_k1083")
+Amount = 0.0

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://fmtrhn6gl1k"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://fmtrhn6gl1k"]
 
 [ext_resource type="Texture2D" uid="uid://uerv4x860k7" path="res://ItemIcons/Alclad_Aluminum_Sheet.webp" id="1_6pj5l"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="1_cnexx"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="1_cnexx"]
 
 [resource]
 script = ExtResource("1_cnexx")
-name = "Alclad Aluminum Sheet"
-description = "Thin, lightweight, and highly durable sheets mainly used for products that require high heat conduction or a high specific strength."
-icon = ExtResource("1_6pj5l")
+Name = "Alclad Aluminum Sheet"
+Icon = ExtResource("1_6pj5l")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bjcdyuwdkewp8"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bjcdyuwdkewp8"]
 
 [ext_resource type="Texture2D" uid="uid://b334xjaf4ipc1" path="res://ItemIcons/Power_Shard.webp" id="1_i8mli"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_4efxh"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_4efxh"]
 
 [resource]
 script = ExtResource("2_4efxh")
-name = "Power Shard"
-icon = ExtResource("1_i8mli")
+Name = "Power Shard"
+Icon = ExtResource("1_i8mli")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dnhm6h1jfrtdy"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dnhm6h1jfrtdy"]
 
 [ext_resource type="Texture2D" uid="uid://baap8ammsj8b4" path="res://ItemIcons/Jetpack.webp" id="1_ds1w8"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_xs20i"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_xs20i"]
 
 [resource]
 script = ExtResource("2_xs20i")
-name = "Jetpack"
-icon = ExtResource("1_ds1w8")
+Name = "Jetpack"
+Icon = ExtResource("1_ds1w8")
+Amount = 0.0

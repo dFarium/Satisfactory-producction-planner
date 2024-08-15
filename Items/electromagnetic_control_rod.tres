@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://j383o7khxumv"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://j383o7khxumv"]
 
 [ext_resource type="Texture2D" uid="uid://bgnhglrbwchay" path="res://ItemIcons/Electromagnetic_Control_Rod.webp" id="1_fvams"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ql8ao"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_ql8ao"]
 
 [resource]
 script = ExtResource("2_ql8ao")
-name = "Electromagnetic Control Rod"
-icon = ExtResource("1_fvams")
+Name = "Electromagnetic Control Rod"
+Icon = ExtResource("1_fvams")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b5ytctnnhh61p"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b5ytctnnhh61p"]
 
 [ext_resource type="Texture2D" uid="uid://dj76dw4gy4oba" path="res://ItemIcons/Bacon_Agaric.webp" id="1_sd2jk"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_s1x86"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_s1x86"]
 
 [resource]
 script = ExtResource("2_s1x86")
-name = "Bacon Agaric"
-icon = ExtResource("1_sd2jk")
+Name = "Bacon Agaric"
+Icon = ExtResource("1_sd2jk")
+Amount = 2.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxstlebnt1eb8"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxstlebnt1eb8"]
 
 [ext_resource type="Texture2D" uid="uid://bimlcqhg2xb78" path="res://ItemIcons/Hover_Pack.webp" id="1_lvy6v"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_jxohr"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_jxohr"]
 
 [resource]
 script = ExtResource("2_jxohr")
-name = "Hover Pack"
-icon = ExtResource("1_lvy6v")
+Name = "Hover Pack"
+Icon = ExtResource("1_lvy6v")
+Amount = 0.0

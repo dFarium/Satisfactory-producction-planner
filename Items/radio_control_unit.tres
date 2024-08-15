@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://i73cktfxw8yc"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://i73cktfxw8yc"]
 
 [ext_resource type="Texture2D" uid="uid://dsba00tnxuipn" path="res://ItemIcons/Radio_Control_Unit.webp" id="1_yhrvu"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8cig6"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_8cig6"]
 
 [resource]
 script = ExtResource("2_8cig6")
-name = "Radio Control Unit"
-icon = ExtResource("1_yhrvu")
+Name = "Radio Control Unit"
+Icon = ExtResource("1_yhrvu")
+Amount = 0.0

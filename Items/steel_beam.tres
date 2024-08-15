@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://c2rakpd1rmusm"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c2rakpd1rmusm"]
 
 [ext_resource type="Texture2D" uid="uid://cgqf5iuqaa46g" path="res://ItemIcons/Steel_Beam.png" id="1_cqv1s"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_2xo6d"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_2xo6d"]
 
 [resource]
 script = ExtResource("2_2xo6d")
-name = "Steel Beam"
-icon = ExtResource("1_cqv1s")
+Name = "Steel Beam"
+Icon = ExtResource("1_cqv1s")
+Amount = 0.0

@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cymv47w84e1xd"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cymv47w84e1xd"]
 
 [ext_resource type="Texture2D" uid="uid://bkait24i863v0" path="res://ItemIcons/Adaptive_Control_Unit.webp" id="1_lsiko"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_6aqqa"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_6aqqa"]
 
 [resource]
 script = ExtResource("2_6aqqa")
-name = "Adaptative Control Unit"
-description = "Project Part #5. Ship with the Space Elevator to complete phases of Project Assembly."
-icon = ExtResource("1_lsiko")
+Name = "Adaptative Control Unit"
+Icon = ExtResource("1_lsiko")

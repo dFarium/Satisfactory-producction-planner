@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://burvrmcataabx"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://burvrmcataabx"]
 
 [ext_resource type="Texture2D" uid="uid://drvb82u6hx28h" path="res://ItemIcons/Uranium.webp" id="1_ikoir"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_sqlw2"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_sqlw2"]
 
 [resource]
 script = ExtResource("2_sqlw2")
-name = "Uranium"
-icon = ExtResource("1_ikoir")
+Name = "Uranium"
+Icon = ExtResource("1_ikoir")
+Amount = 0.0

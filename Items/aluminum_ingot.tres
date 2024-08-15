@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bh740pt57rovw"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bh740pt57rovw"]
 
 [ext_resource type="Texture2D" uid="uid://dqttqla0vxs1s" path="res://ItemIcons/Aluminum_Ingot.webp" id="1_fobil"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_hrtsp"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_hrtsp"]
 
 [resource]
 script = ExtResource("2_hrtsp")
-name = "Aluminum Ingot"
-icon = ExtResource("1_fobil")
+Name = "Aluminum Ingot"
+Icon = ExtResource("1_fobil")
+Amount = 0.0

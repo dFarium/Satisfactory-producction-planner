@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://hjbf2wqisaii"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://hjbf2wqisaii"]
 
 [ext_resource type="Texture2D" uid="uid://po54yh48qo5b" path="res://ItemIcons/Beryl_Nut.webp" id="1_b5yp8"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_vp4we"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_vp4we"]
 
 [resource]
 script = ExtResource("2_vp4we")
-name = "Beryl Nut"
-icon = ExtResource("1_b5yp8")
+Name = "Beryl Nut"
+Icon = ExtResource("1_b5yp8")
+Amount = 0.0

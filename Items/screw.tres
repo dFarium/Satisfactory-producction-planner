@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cwanslgg38lxv"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cwanslgg38lxv"]
 
 [ext_resource type="Texture2D" uid="uid://dsftpcc65ruwb" path="res://ItemIcons/Screw.png" id="1_8esws"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_xyv2f"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_xyv2f"]
 
 [resource]
 script = ExtResource("2_xyv2f")
-name = "Screw"
-icon = ExtResource("1_8esws")
+Name = "Screw"
+Icon = ExtResource("1_8esws")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://brr406b6ghoc2"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://brr406b6ghoc2"]
 
 [ext_resource type="Texture2D" uid="uid://s5m7muloxiy8" path="res://ItemIcons/Turbofuel.webp" id="1_mh1e7"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_rj84a"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_rj84a"]
 
 [resource]
 script = ExtResource("2_rj84a")
-name = "Turbofuel"
-icon = ExtResource("1_mh1e7")
+Name = "Turbofuel"
+Icon = ExtResource("1_mh1e7")
+Amount = 0.0

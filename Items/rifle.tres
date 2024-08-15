@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cn1tfiay06d4p"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cn1tfiay06d4p"]
 
 [ext_resource type="Texture2D" uid="uid://bgq5mjwxjg5hu" path="res://ItemIcons/Rifle.webp" id="1_cttvh"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_1pklq"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_1pklq"]
 
 [resource]
 script = ExtResource("2_1pklq")
-name = "Rifle"
-icon = ExtResource("1_cttvh")
+Name = "Rifle"
+Icon = ExtResource("1_cttvh")
+Amount = 0.0

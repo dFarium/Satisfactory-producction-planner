@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dwcegba123wbd"]
+
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="1_5nxa0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="1_qypgy"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_opegf"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="3_nc4h1"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="4_ghbjq"]
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="5_3mh8i"]
+
+[sub_resource type="Resource" id="Resource_yiv5n"]
+script = ExtResource("2_opegf")
+Item = ExtResource("1_5nxa0")
+Amount = 30
+
+[sub_resource type="Resource" id="Resource_oxp0t"]
+script = ExtResource("2_opegf")
+Item = ExtResource("3_nc4h1")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_umw7x"]
+script = ExtResource("2_opegf")
+Item = ExtResource("4_ghbjq")
+Amount = 343
+
+[sub_resource type="Resource" id="Resource_3b7x2"]
+script = ExtResource("2_opegf")
+Item = ExtResource("5_3mh8i")
+Amount = 3
+
+[resource]
+script = ExtResource("1_qypgy")
+Name = "TEST"
+Inputs = [SubResource("Resource_yiv5n"), SubResource("Resource_oxp0t")]
+Outputs = [SubResource("Resource_umw7x"), SubResource("Resource_3b7x2")]
+ProcessingTime = 30.0
+IsAlternative = true

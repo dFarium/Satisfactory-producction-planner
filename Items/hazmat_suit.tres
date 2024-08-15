@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://damkvng1igrbo"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://damkvng1igrbo"]
 
 [ext_resource type="Texture2D" uid="uid://dqlwjxty8pjwk" path="res://ItemIcons/Hazmat_Suit.webp" id="1_gyrc6"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_vhqsr"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_vhqsr"]
 
 [resource]
 script = ExtResource("2_vhqsr")
-name = "Hazmat Suit"
-icon = ExtResource("1_gyrc6")
+Name = "Hazmat Suit"
+Icon = ExtResource("1_gyrc6")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bupwghadth5lf"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bupwghadth5lf"]
 
 [ext_resource type="Texture2D" uid="uid://csdv6exsn2dm0" path="res://ItemIcons/Smokeless_Powder.webp" id="1_00371"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_b4ged"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_b4ged"]
 
 [resource]
 script = ExtResource("2_b4ged")
-name = "Smokeless Powder"
-icon = ExtResource("1_00371")
+Name = "Smokeless Powder"
+Icon = ExtResource("1_00371")
+Amount = 0.0

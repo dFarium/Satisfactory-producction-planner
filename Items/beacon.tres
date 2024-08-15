@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bqnf11sr5sfe4"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bqnf11sr5sfe4"]
 
 [ext_resource type="Texture2D" uid="uid://bqwsw0fpaffqf" path="res://ItemIcons/300px-Beacon.webp" id="1_ss3c7"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_232vv"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_232vv"]
 
 [resource]
 script = ExtResource("2_232vv")
-name = "Beacon"
-icon = ExtResource("1_ss3c7")
+Name = "Beacon"
+Icon = ExtResource("1_ss3c7")
+Amount = 0.0

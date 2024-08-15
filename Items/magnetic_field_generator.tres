@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://desiwxk0let2j"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://desiwxk0let2j"]
 
 [ext_resource type="Texture2D" uid="uid://bfd7po2iyk1tm" path="res://ItemIcons/Magnetic_Field_Generator.webp" id="1_kv8mh"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_y33ek"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_y33ek"]
 
 [resource]
 script = ExtResource("2_y33ek")
-name = "Magnetic Field Generator"
-icon = ExtResource("1_kv8mh")
+Name = "Magnetic Field Generator"
+Icon = ExtResource("1_kv8mh")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://brsx3nv2xj26q"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://brsx3nv2xj26q"]
 
 [ext_resource type="Texture2D" uid="uid://ctscjeotmbtty" path="res://ItemIcons/Hard_Drive.webp" id="1_xs1hm"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_wct3n"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_wct3n"]
 
 [resource]
 script = ExtResource("2_wct3n")
-name = "Hard Drive"
-icon = ExtResource("1_xs1hm")
+Name = "Hard Drive"
+Icon = ExtResource("1_xs1hm")
+Amount = 0.0

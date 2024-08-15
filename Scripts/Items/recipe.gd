@@ -1,5 +1,5 @@
 extends Resource
-class_name Recipe
+class_name Recipez
 
 enum Building {
 	Assembler,

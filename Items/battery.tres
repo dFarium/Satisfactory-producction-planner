@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://b33sr4iks1ptb"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b33sr4iks1ptb"]
 
 [ext_resource type="Texture2D" uid="uid://d3pnbbnamugkk" path="res://ItemIcons/Battery.png" id="1_eng2e"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_te634"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_te634"]
 
 [resource]
 script = ExtResource("2_te634")
-name = "Battery"
-icon = ExtResource("1_eng2e")
+Name = "Battery"
+Icon = ExtResource("1_eng2e")
+Amount = 0.0

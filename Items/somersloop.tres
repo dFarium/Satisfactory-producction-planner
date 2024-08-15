@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cpc1inwhqgkp3"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpc1inwhqgkp3"]
 
 [ext_resource type="Texture2D" uid="uid://bb44c4jvj42x3" path="res://ItemIcons/Somersloop.webp" id="1_0nfls"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_w847c"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_w847c"]
 
 [resource]
 script = ExtResource("2_w847c")
-name = "Somersloop"
-icon = ExtResource("1_0nfls")
+Name = "Somersloop"
+Icon = ExtResource("1_0nfls")
+Amount = 0.0

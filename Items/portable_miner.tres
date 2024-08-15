@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://biepvmafaaang"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://biepvmafaaang"]
 
 [ext_resource type="Texture2D" uid="uid://bodc1mo66vjhb" path="res://ItemIcons/Portable_Miner.png" id="1_yixi0"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_gacsu"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_gacsu"]
 
 [resource]
 script = ExtResource("2_gacsu")
-name = "Portable Miner"
-icon = ExtResource("1_yixi0")
+Name = "Portable Miner"
+Icon = ExtResource("1_yixi0")
+Amount = 0.0

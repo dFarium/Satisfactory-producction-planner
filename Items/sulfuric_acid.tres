@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bertl2ck5ff3y"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bertl2ck5ff3y"]
 
 [ext_resource type="Texture2D" uid="uid://yxprkng06b08" path="res://ItemIcons/Sulfuric_Acid.webp" id="1_uuyh5"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_mqfsn"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_mqfsn"]
 
 [resource]
 script = ExtResource("2_mqfsn")
-name = "Sulfuric Acid"
-icon = ExtResource("1_uuyh5")
+Name = "Sulfuric Acid"
+Icon = ExtResource("1_uuyh5")
+Amount = 0.0

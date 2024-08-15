@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://de1x4nfb06uq7"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://de1x4nfb06uq7"]
 
 [ext_resource type="Texture2D" uid="uid://ddict7gyf8dl4" path="res://ItemIcons/Bauxite.webp" id="1_iipsu"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_0a6il"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_0a6il"]
 
 [resource]
 script = ExtResource("2_0a6il")
-name = "Bauxite"
-icon = ExtResource("1_iipsu")
+Name = "Bauxite"
+Icon = ExtResource("1_iipsu")
+Amount = 0.0

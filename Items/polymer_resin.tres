@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://s3es7pu32jox"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://s3es7pu32jox"]
 
 [ext_resource type="Texture2D" uid="uid://g2wo67i2cy7m" path="res://ItemIcons/Polymer_Resin.webp" id="1_vy5ss"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_62mr5"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_62mr5"]
 
 [resource]
 script = ExtResource("2_62mr5")
-name = "Polymer Resin"
-icon = ExtResource("1_vy5ss")
+Name = "Polymer Resin"
+Icon = ExtResource("1_vy5ss")
+Amount = 0.0

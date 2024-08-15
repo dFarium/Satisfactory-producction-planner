@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cgifmstbsuafe"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cgifmstbsuafe"]
 
 [ext_resource type="Texture2D" uid="uid://c8h5noq888try" path="res://ItemIcons/Rebar_Gun.png" id="1_oxcbu"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_8nfgg"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_8nfgg"]
 
 [resource]
 script = ExtResource("2_8nfgg")
-name = "Rebar Gun"
-icon = ExtResource("1_oxcbu")
+Name = "Rebar Gun"
+Icon = ExtResource("1_oxcbu")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://c8qlw64vgo7l4"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c8qlw64vgo7l4"]
 
 [ext_resource type="Texture2D" uid="uid://8lm3ay7o7qts" path="res://ItemIcons/Chainsaw.webp" id="1_0pxte"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_hj1sb"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_hj1sb"]
 
 [resource]
 script = ExtResource("2_hj1sb")
-name = "Chainsaw"
-icon = ExtResource("1_0pxte")
+Name = "Chainsaw"
+Icon = ExtResource("1_0pxte")
+Amount = 0.0

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cn6ng6taomfke"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cn6ng6taomfke"]
 
 [ext_resource type="Texture2D" uid="uid://cd00qjffb8k7r" path="res://ItemIcons/Plutonium_Pellet.webp" id="1_3mcap"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3fh5e"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_3fh5e"]
 
 [resource]
 script = ExtResource("2_3fh5e")
-name = "Plutonium Pellet"
-icon = ExtResource("1_3mcap")
+Name = "Plutonium Pellet"
+Icon = ExtResource("1_3mcap")
+Amount = 0.0

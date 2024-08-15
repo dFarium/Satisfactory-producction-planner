@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ljypb0i84t11"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ljypb0i84t11"]
 
 [ext_resource type="Texture2D" uid="uid://bh12tipf65u1g" path="res://ItemIcons/Superposition_Oscillator.webp" id="1_sey6p"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_yqfin"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_yqfin"]
 
 [resource]
 script = ExtResource("2_yqfin")
-name = "Super Position Oscillator"
-icon = ExtResource("1_sey6p")
+Name = "Super Position Oscillator"
+Icon = ExtResource("1_sey6p")
+Amount = 0.0

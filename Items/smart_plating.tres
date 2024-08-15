@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cxd317xdow8fv"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxd317xdow8fv"]
 
 [ext_resource type="Texture2D" uid="uid://ukyhcyj6vrv8" path="res://ItemIcons/Smart_Plating.webp" id="1_tgrvh"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_ndidt"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_ndidt"]
 
 [resource]
 script = ExtResource("2_ndidt")
-name = "Smart Plating"
-icon = ExtResource("1_tgrvh")
+Name = "Smart Plating"
+Icon = ExtResource("1_tgrvh")
+Amount = 0.0

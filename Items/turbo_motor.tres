@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://bknddh55j7hca"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bknddh55j7hca"]
 
 [ext_resource type="Texture2D" uid="uid://bjwf3dh7yiqto" path="res://ItemIcons/Turbo_Motor.webp" id="1_rgnap"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_3lmpc"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_3lmpc"]
 
 [resource]
 script = ExtResource("2_3lmpc")
-name = "Turbo Motor"
-icon = ExtResource("1_rgnap")
+Name = "Turbo Motor"
+Icon = ExtResource("1_rgnap")
+Amount = 0.0

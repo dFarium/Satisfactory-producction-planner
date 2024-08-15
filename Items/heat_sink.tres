@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://csa8q0o6q53ux"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://csa8q0o6q53ux"]
 
 [ext_resource type="Texture2D" uid="uid://dly3jl2imgjqi" path="res://ItemIcons/Heat_Sink.webp" id="1_ups58"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_gegl2"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_gegl2"]
 
 [resource]
 script = ExtResource("2_gegl2")
-name = "Heat Sink"
-icon = ExtResource("1_ups58")
+Name = "Heat Sink"
+Icon = ExtResource("1_ups58")
+Amount = 0.0

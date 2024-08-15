@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://dqymlc5nad7xw"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dqymlc5nad7xw"]
 
 [ext_resource type="Texture2D" uid="uid://seuak1210tf5" path="res://ItemIcons/Non-fissile_Uranium.webp" id="1_tnwpf"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_h1nmb"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_h1nmb"]
 
 [resource]
 script = ExtResource("2_h1nmb")
-name = "Non-fissile Uranium"
-icon = ExtResource("1_tnwpf")
+Name = "Non-fissile Uranium"
+Icon = ExtResource("1_tnwpf")
+Amount = 0.0

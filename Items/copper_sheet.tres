@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://ucdaknlgott"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ucdaknlgott"]
 
 [ext_resource type="Texture2D" uid="uid://1oc6qwuxmnvl" path="res://ItemIcons/Copper_Sheet.webp" id="1_eipsk"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_my6yq"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_my6yq"]
 
 [resource]
 script = ExtResource("2_my6yq")
-name = "Copper Sheet"
-icon = ExtResource("1_eipsk")
+Name = "Copper Sheet"
+Icon = ExtResource("1_eipsk")
+Amount = 0.0

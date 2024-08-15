@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="SatisfactoryItem" load_steps=3 format=3 uid="uid://cvkewkk2ospfm"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cvkewkk2ospfm"]
 
 [ext_resource type="Texture2D" uid="uid://bt2eyndeng78p" path="res://ItemIcons/Homing_Rifle_Ammo.webp" id="1_3ii43"]
-[ext_resource type="Script" path="res://Scripts/Items/item.gd" id="2_431rd"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_431rd"]
 
 [resource]
 script = ExtResource("2_431rd")
-name = "Homing Rifle Ammo"
-icon = ExtResource("1_3ii43")
+Name = "Homing Rifle Ammo"
+Icon = ExtResource("1_3ii43")
+Amount = 0.0
