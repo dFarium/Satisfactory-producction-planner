@@ -118,41 +118,7 @@ func set_close_button() -> void:
 	hbox.add_child(btn)
 	
 func get_building_name(building: int) -> String:
-	match building:
-		Recipe.Building.Assembler:
-			return "Assembler"
-		Recipe.Building.Blender:
-			return "Blender"
-		Recipe.Building.Constructor:
-			return "Constructor"
-		Recipe.Building.Manufacturer:
-			return "Manufacturer"
-		Recipe.Building.Merger:
-			return "Merger"
-		Recipe.Building.Miner:
-			return "Miner"
-		Recipe.Building.NuclearPowerPlant:
-			return "Nuclear Power Plant"
-		Recipe.Building.OilExtractor:
-			return "Oil Extractor"
-		Recipe.Building.Packager:
-			return "Packager"
-		Recipe.Building.ParticleAccelerator:
-			return "Particle Accelerator"
-		Recipe.Building.Refinery:
-			return "Refinery"
-		Recipe.Building.Smelter:
-			return "Smelter"
-		Recipe.Building.Splitter:
-			return "Splitter"
-		Recipe.Building.WaterExtractor:
-			return "Water Extractor"
-		Recipe.Building.WellExtractor:
-			return "Well Extractor"
-		Recipe.Building.Foundry:
-			return "Foundry"
-		_:
-			return "Unknown Building"
+	return current_recipe.GetBuildingType()
 
 func set_input_value_from_connection(bottleneck: Dictionary) -> void:
 	#el valor viene desde un output hacia un input

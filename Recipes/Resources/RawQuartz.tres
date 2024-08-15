@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://jvug8famsiam"]
+
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="1_yvvgi"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_gddk3"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_20ya6"]
+
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_gddk3")
+Item = ExtResource("1_yvvgi")
+Amount = 2
+
+[resource]
+script = ExtResource("3_20ya6")
+Building = 0
+Name = "Raw Quartz"
+Inputs = Array[Object]([])
+Outputs = Array[Object]([SubResource("Resource_muswe")])
+ProcessingTime = 2.0
+IsAlternative = false

@@ -1,31 +1,31 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://clfptug0i63ct"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dt27xww41g8ay"]
 
-[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_v331p"]
-[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="2_4b7yy"]
-[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="2_78l3p"]
-[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_jy1bv"]
-[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="4_d3gwf"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="1_3gviy"]
+[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="1_wajeu"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_rpkfl"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_k0rgv"]
+[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="4_m30mx"]
 
-[sub_resource type="Resource" id="Resource_5fwla"]
-script = ExtResource("1_v331p")
-item = ExtResource("2_4b7yy")
-quantity = 2.0
+[sub_resource type="Resource" id="Resource_gc16t"]
+script = ExtResource("2_rpkfl")
+Item = ExtResource("1_wajeu")
+Amount = 2
 
-[sub_resource type="Resource" id="Resource_cslpf"]
-script = ExtResource("1_v331p")
-item = ExtResource("3_jy1bv")
-quantity = 2.0
+[sub_resource type="Resource" id="Resource_troca"]
+script = ExtResource("2_rpkfl")
+Item = ExtResource("3_k0rgv")
+Amount = 2
 
-[sub_resource type="Resource" id="Resource_b4ruf"]
-script = ExtResource("1_v331p")
-item = ExtResource("4_d3gwf")
-quantity = 1.0
+[sub_resource type="Resource" id="Resource_c3n4q"]
+script = ExtResource("2_rpkfl")
+Item = ExtResource("4_m30mx")
+Amount = 1
 
 [resource]
-script = ExtResource("2_78l3p")
-building = 0
-name = "Nobelisk"
-inputs = Array[ExtResource("1_v331p")]([SubResource("Resource_5fwla"), SubResource("Resource_cslpf")])
-outputs = Array[ExtResource("1_v331p")]([SubResource("Resource_b4ruf")])
-manufacturing_cycle = 6.0
-is_alternate_recipe = false
+script = ExtResource("1_3gviy")
+Building = 7
+Name = "Nobelisk"
+Inputs = Array[Object]([SubResource("Resource_gc16t"), SubResource("Resource_troca")])
+Outputs = Array[Object]([SubResource("Resource_c3n4q")])
+ProcessingTime = 6.0
+IsAlternative = false

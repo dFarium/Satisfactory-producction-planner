@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_leytv"]
 [ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://ItemIcons/Reinforced_Iron_Plate.webp" id="3_f8c8e"]
 
-[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
+[node name="Building" type="GraphNode"]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
 offset_bottom = 227.0
@@ -29,8 +29,6 @@ slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = false
 script = ExtResource("1_a7dxp")
-inputs = [NodePath("HBoxContainer/Input1")]
-outputs = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2

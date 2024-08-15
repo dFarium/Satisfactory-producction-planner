@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://25ln41tm7hu4"]
+
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="1_ga21t"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="1_hy41f"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_xrtyo"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="3_ceg27"]
+[ext_resource type="Resource" uid="uid://dfvl0mki48oh1" path="res://Items/rifle_ammo.tres" id="4_l5whe"]
+
+[sub_resource type="Resource" id="Resource_dtxxj"]
+script = ExtResource("2_xrtyo")
+Item = ExtResource("1_ga21t")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_mn8im"]
+script = ExtResource("2_xrtyo")
+Item = ExtResource("3_ceg27")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_isd10"]
+script = ExtResource("2_xrtyo")
+Item = ExtResource("4_l5whe")
+Amount = 15
+
+[resource]
+script = ExtResource("1_hy41f")
+Building = 7
+Name = "Rifle Ammo"
+Inputs = Array[Object]([SubResource("Resource_dtxxj"), SubResource("Resource_mn8im")])
+Outputs = Array[Object]([SubResource("Resource_isd10")])
+ProcessingTime = 12.0
+IsAlternative = false

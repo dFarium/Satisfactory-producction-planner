@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://camlpdtdhe054"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="1_2eb6q"]
+[ext_resource type="Resource" uid="uid://c2rakpd1rmusm" path="res://Items/steel_beam.tres" id="1_kpf3x"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_txylo"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="4_880gg"]
+[ext_resource type="Resource" uid="uid://bqnf11sr5sfe4" path="res://Items/beacon.tres" id="5_x65kp"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_cwwoc"]
+
+[sub_resource type="Resource" id="Resource_uult6"]
+script = ExtResource("1_2eb6q")
+Item = ExtResource("1_kpf3x")
+Amount = 4
+
+[sub_resource type="Resource" id="Resource_awme6"]
+script = ExtResource("1_2eb6q")
+Item = ExtResource("3_txylo")
+Amount = 16
+
+[sub_resource type="Resource" id="Resource_itoew"]
+script = ExtResource("1_2eb6q")
+Item = ExtResource("4_880gg")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_n80eg"]
+script = ExtResource("1_2eb6q")
+Item = ExtResource("5_x65kp")
+Amount = 20
+
+[resource]
+script = ExtResource("6_cwwoc")
+Building = 8
+Name = "Crystal Beacon"
+Inputs = Array[Object]([SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew")])
+Outputs = Array[Object]([SubResource("Resource_n80eg")])
+ProcessingTime = 120.0
+IsAlternative = true

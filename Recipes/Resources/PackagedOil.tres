@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://oqhxtcs84g0s"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_ssdeo"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_w51sr"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_rq87l"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_xllrk"]
+[ext_resource type="Resource" uid="uid://055gg6i3dm5p" path="res://Items/packaged_oil.tres" id="4_snuw4"]
+
+[sub_resource type="Resource" id="Resource_ls1j0"]
+script = ExtResource("2_w51sr")
+Item = ExtResource("1_ssdeo")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_1v3w1"]
+script = ExtResource("2_w51sr")
+Item = ExtResource("3_xllrk")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_w51sr")
+Item = ExtResource("4_snuw4")
+Amount = 2
+
+[resource]
+script = ExtResource("3_rq87l")
+Building = 9
+Name = "Packaged Crude Oil"
+Inputs = Array[Object]([SubResource("Resource_ls1j0"), SubResource("Resource_1v3w1")])
+Outputs = Array[Object]([SubResource("Resource_muswe")])
+ProcessingTime = 2.0
+IsAlternative = false

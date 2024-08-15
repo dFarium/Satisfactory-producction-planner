@@ -1,19 +1,19 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b30vbd6mpaeld"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://7lksvsr8p0oo"]
 
-[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_5yjlv"]
-[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="2_y0hn2"]
-[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_mh02h"]
+[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="1_lttyi"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_qesid"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_6y4jp"]
 
-[sub_resource type="Resource" id="Resource_wlaqv"]
-script = ExtResource("1_5yjlv")
-item = ExtResource("2_y0hn2")
-quantity = 2
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_qesid")
+Item = ExtResource("1_lttyi")
+Amount = 2
 
 [resource]
-script = ExtResource("3_mh02h")
-building = 5
-name = "Uranium"
-inputs = Array[ExtResource("1_5yjlv")]([])
-outputs = Array[ExtResource("1_5yjlv")]([SubResource("Resource_wlaqv")])
-manufacturing_cycle = 2.0
-is_alternate_recipe = false
+script = ExtResource("3_6y4jp")
+Building = 0
+Name = "Uranium"
+Inputs = Array[Object]([])
+Outputs = Array[Object]([SubResource("Resource_muswe")])
+ProcessingTime = 2.0
+IsAlternative = false

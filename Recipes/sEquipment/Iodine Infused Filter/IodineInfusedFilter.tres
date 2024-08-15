@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b06sxtkt1nne2"]
+
+[ext_resource type="Resource" uid="uid://baymv17s7qxc1" path="res://Items/gas_filter.tres" id="1_k5l13"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ftg42"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_o28cn"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="4_bh7mu"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_hyqfp"]
+
+[sub_resource type="Resource" id="Resource_1uogt"]
+script = ExtResource("2_ftg42")
+Item = ExtResource("1_k5l13")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_3kf5y"]
+script = ExtResource("2_ftg42")
+Item = ExtResource("3_o28cn")
+Amount = 8
+
+[sub_resource type="Resource" id="Resource_wdlgp"]
+script = ExtResource("2_ftg42")
+Item = ExtResource("4_bh7mu")
+Amount = 1
+
+[resource]
+script = ExtResource("5_hyqfp")
+Building = 8
+Name = "Iodine Infused Filter"
+Inputs = Array[Object]([SubResource("Resource_1uogt"), SubResource("Resource_3kf5y"), SubResource("Resource_wdlgp")])
+Outputs = Array[Object]([])
+ProcessingTime = 16.0
+IsAlternative = false

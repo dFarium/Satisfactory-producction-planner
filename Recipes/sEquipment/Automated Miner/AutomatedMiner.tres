@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://cr0hnajo8tufk"]
+
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="1_3tc8u"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="1_uilgb"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_jgohy"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="4_qnm21"]
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="5_0lsk7"]
+[ext_resource type="Resource" uid="uid://biepvmafaaang" path="res://Items/portable_miner.tres" id="6_mn6ic"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_dp4sh"]
+
+[sub_resource type="Resource" id="Resource_mw7nk"]
+script = ExtResource("1_uilgb")
+Item = ExtResource("1_3tc8u")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_0dt83"]
+script = ExtResource("1_uilgb")
+Item = ExtResource("3_jgohy")
+Amount = 4
+
+[sub_resource type="Resource" id="Resource_200uf"]
+script = ExtResource("1_uilgb")
+Item = ExtResource("4_qnm21")
+Amount = 4
+
+[sub_resource type="Resource" id="Resource_uo1o4"]
+script = ExtResource("1_uilgb")
+Item = ExtResource("5_0lsk7")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_ty7w4"]
+script = ExtResource("1_uilgb")
+Item = ExtResource("6_mn6ic")
+Amount = 1
+
+[resource]
+script = ExtResource("7_dp4sh")
+Building = 8
+Name = "Automated Miner"
+Inputs = Array[Object]([SubResource("Resource_mw7nk"), SubResource("Resource_0dt83"), SubResource("Resource_200uf"), SubResource("Resource_uo1o4")])
+Outputs = Array[Object]([SubResource("Resource_ty7w4")])
+ProcessingTime = 60.0
+IsAlternative = true

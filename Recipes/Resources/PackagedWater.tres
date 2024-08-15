@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bvwa52ktrwt6a"]
+
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="1_4lmmi"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_gkhyp"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_11nda"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_sso5p"]
+[ext_resource type="Resource" uid="uid://dykvk88e3uxl8" path="res://Items/packaged_water.tres" id="4_2fsd4"]
+
+[sub_resource type="Resource" id="Resource_xymdo"]
+script = ExtResource("2_gkhyp")
+Item = ExtResource("1_4lmmi")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_p4jh2"]
+script = ExtResource("2_gkhyp")
+Item = ExtResource("3_sso5p")
+Amount = 0
+
+[sub_resource type="Resource" id="Resource_8hfco"]
+script = ExtResource("2_gkhyp")
+Item = ExtResource("4_2fsd4")
+Amount = 2
+
+[resource]
+script = ExtResource("3_11nda")
+Building = 9
+Name = "Packaged Water"
+Inputs = Array[Object]([SubResource("Resource_xymdo"), SubResource("Resource_p4jh2")])
+Outputs = Array[Object]([SubResource("Resource_8hfco")])
+ProcessingTime = 2.0
+IsAlternative = false

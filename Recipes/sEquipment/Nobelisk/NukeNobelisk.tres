@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://c2cp3th8d14ha"]
+
+[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="1_iaiqx"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_r7x8r"]
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="3_vw8jf"]
+[ext_resource type="Resource" uid="uid://damumgto3v86j" path="res://Items/pulse_nobelisk.tres" id="4_777db"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="4_tnokh"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="5_5cesv"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_6gdih"]
+
+[sub_resource type="Resource" id="Resource_gc16t"]
+script = ExtResource("2_r7x8r")
+Item = ExtResource("1_iaiqx")
+Amount = 5
+
+[sub_resource type="Resource" id="Resource_troca"]
+script = ExtResource("2_r7x8r")
+Item = ExtResource("3_vw8jf")
+Amount = 20
+
+[sub_resource type="Resource" id="Resource_we1ar"]
+script = ExtResource("2_r7x8r")
+Item = ExtResource("4_tnokh")
+Amount = 10
+
+[sub_resource type="Resource" id="Resource_yphe4"]
+script = ExtResource("2_r7x8r")
+Item = ExtResource("5_5cesv")
+Amount = 6
+
+[sub_resource type="Resource" id="Resource_c3n4q"]
+script = ExtResource("2_r7x8r")
+Item = ExtResource("4_777db")
+Amount = 5
+
+[resource]
+script = ExtResource("5_6gdih")
+Building = 8
+Name = "Nuke Nobelisk"
+Inputs = Array[Object]([SubResource("Resource_gc16t"), SubResource("Resource_troca"), SubResource("Resource_we1ar"), SubResource("Resource_yphe4")])
+Outputs = Array[Object]([SubResource("Resource_c3n4q")])
+ProcessingTime = 120.0
+IsAlternative = false

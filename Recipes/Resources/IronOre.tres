@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=2 format=3 uid="uid://cpprdos6xlrq8"]
+
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="1_sudju"]
+
+[resource]
+script = ExtResource("1_sudju")
+Name = ""
+Inputs = null
+Outputs = null
+ProcessingTime = 0.0
+IsAlternative = false

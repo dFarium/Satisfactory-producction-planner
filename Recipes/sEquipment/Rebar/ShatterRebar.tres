@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://de8ggi4vtduql"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_k7d7k"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="3_3fc66"]
+[ext_resource type="Resource" uid="uid://c7rljjcj3mr6o" path="res://Items/shatter_rebar.tres" id="3_qf0bp"]
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="3_uuqdo"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_b7711"]
+
+[sub_resource type="Resource" id="Resource_hxff0"]
+script = ExtResource("2_k7d7k")
+Item = ExtResource("3_uuqdo")
+Amount = 2
+
+[sub_resource type="Resource" id="Resource_tpc6q"]
+script = ExtResource("2_k7d7k")
+Item = ExtResource("3_3fc66")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_lpej2"]
+script = ExtResource("2_k7d7k")
+Item = ExtResource("3_qf0bp")
+Amount = 1
+
+[resource]
+script = ExtResource("4_b7711")
+Building = 7
+Name = "Shatter Rebar"
+Inputs = Array[Object]([SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")])
+Outputs = Array[Object]([SubResource("Resource_lpej2")])
+ProcessingTime = 12.0
+IsAlternative = false

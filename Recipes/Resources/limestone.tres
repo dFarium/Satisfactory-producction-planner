@@ -1,19 +1,19 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://dekj80vhyswnh"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://d1wjs8n7t0b27"]
 
-[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_6oqxm"]
-[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="2_tburx"]
-[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_e3qf2"]
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="1_4t4ko"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_gs2ga"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_8u2il"]
 
-[sub_resource type="Resource" id="Resource_wlaqv"]
-script = ExtResource("1_6oqxm")
-item = ExtResource("2_tburx")
-quantity = 2
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_gs2ga")
+Item = ExtResource("1_4t4ko")
+Amount = 2
 
 [resource]
-script = ExtResource("3_e3qf2")
-building = 5
-name = "Limestone"
-inputs = Array[ExtResource("1_6oqxm")]([])
-outputs = Array[ExtResource("1_6oqxm")]([SubResource("Resource_wlaqv")])
-manufacturing_cycle = 2.0
-is_alternate_recipe = false
+script = ExtResource("3_8u2il")
+Building = 0
+Name = "Limestone Ore"
+Inputs = Array[Object]([])
+Outputs = Array[Object]([SubResource("Resource_muswe")])
+ProcessingTime = 2.0
+IsAlternative = false

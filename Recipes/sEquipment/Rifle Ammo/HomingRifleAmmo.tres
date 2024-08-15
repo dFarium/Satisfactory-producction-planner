@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cy3ikjdf2g2ct"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_2u7ug"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="3_v4e86"]
+[ext_resource type="Resource" uid="uid://cvkewkk2ospfm" path="res://Items/homing_rifle_ammo.tres" id="4_ubjkx"]
+[ext_resource type="Resource" uid="uid://dfvl0mki48oh1" path="res://Items/rifle_ammo.tres" id="4_ujjwu"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_p3oaa"]
+
+[sub_resource type="Resource" id="Resource_dtxxj"]
+script = ExtResource("2_2u7ug")
+Item = ExtResource("4_ujjwu")
+Amount = 20
+
+[sub_resource type="Resource" id="Resource_mn8im"]
+script = ExtResource("2_2u7ug")
+Item = ExtResource("3_v4e86")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_isd10"]
+script = ExtResource("2_2u7ug")
+Item = ExtResource("4_ubjkx")
+Amount = 10
+
+[resource]
+script = ExtResource("5_p3oaa")
+Building = 7
+Name = "Homing Rifle Ammo"
+Inputs = Array[Object]([SubResource("Resource_dtxxj"), SubResource("Resource_mn8im")])
+Outputs = Array[Object]([SubResource("Resource_isd10")])
+ProcessingTime = 24.0
+IsAlternative = false

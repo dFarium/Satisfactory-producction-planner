@@ -1,19 +1,19 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://bs5ov57epi278"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ck6wlh4mc4cu"]
 
-[ext_resource type="Script" path="res://Scripts/Items/item_amount.gd" id="1_chlcj"]
-[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="2_ape0l"]
-[ext_resource type="Script" path="res://Scripts/Items/recipe.gd" id="3_wtpju"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="1_pfk00"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="1_sfg3d"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ao2ya"]
 
-[sub_resource type="Resource" id="Resource_wlaqv"]
-script = ExtResource("1_chlcj")
-item = ExtResource("2_ape0l")
-quantity = 2
+[sub_resource type="Resource" id="Resource_8hfco"]
+script = ExtResource("2_ao2ya")
+Item = ExtResource("1_pfk00")
+Amount = 2
 
 [resource]
-script = ExtResource("3_wtpju")
-building = 5
-name = "Water"
-inputs = Array[ExtResource("1_chlcj")]([])
-outputs = Array[ExtResource("1_chlcj")]([SubResource("Resource_wlaqv")])
-manufacturing_cycle = 2.0
-is_alternate_recipe = false
+script = ExtResource("1_sfg3d")
+Building = 1
+Name = "Water"
+Inputs = Array[Object]([])
+Outputs = Array[Object]([SubResource("Resource_8hfco")])
+ProcessingTime = 0.0
+IsAlternative = false

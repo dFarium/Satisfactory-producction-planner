@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://v1y2ghh65x36"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_4l8ox"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="3_6jgv1"]
+[ext_resource type="Resource" uid="uid://deu2j2cy0o4i7" path="res://Items/cluster_nobelisk.tres" id="4_ce6ym"]
+[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="4_p1s28"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_ej1pa"]
+
+[sub_resource type="Resource" id="Resource_gc16t"]
+script = ExtResource("2_4l8ox")
+Item = ExtResource("4_p1s28")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_troca"]
+script = ExtResource("2_4l8ox")
+Item = ExtResource("3_6jgv1")
+Amount = 4
+
+[sub_resource type="Resource" id="Resource_c3n4q"]
+script = ExtResource("2_4l8ox")
+Item = ExtResource("4_ce6ym")
+Amount = 1
+
+[resource]
+script = ExtResource("5_ej1pa")
+Building = 7
+Name = "Cluster Nobelisk"
+Inputs = Array[Object]([SubResource("Resource_gc16t"), SubResource("Resource_troca")])
+Outputs = Array[Object]([SubResource("Resource_c3n4q")])
+ProcessingTime = 24.0
+IsAlternative = false

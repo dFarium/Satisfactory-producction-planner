@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://ddfkrcb4ilo4m"]
+
+[ext_resource type="Resource" uid="uid://dfvl0mki48oh1" path="res://Items/rifle_ammo.tres" id="1_ndgkt"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_hm3b1"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="3_im5hn"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="4_0mnwh"]
+[ext_resource type="Resource" uid="uid://btu2jpr03ig2c" path="res://Items/turbo_rifle_ammo.tres" id="5_vassj"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_why16"]
+
+[sub_resource type="Resource" id="Resource_dtxxj"]
+script = ExtResource("2_hm3b1")
+Item = ExtResource("1_ndgkt")
+Amount = 25
+
+[sub_resource type="Resource" id="Resource_mn8im"]
+script = ExtResource("2_hm3b1")
+Item = ExtResource("3_im5hn")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_ungqd"]
+script = ExtResource("2_hm3b1")
+Item = ExtResource("4_0mnwh")
+Amount = 3
+
+[sub_resource type="Resource" id="Resource_isd10"]
+script = ExtResource("2_hm3b1")
+Item = ExtResource("5_vassj")
+Amount = 50
+
+[resource]
+script = ExtResource("5_why16")
+Building = 11
+Name = "Turbo Rifle Ammo (Fluid)"
+Inputs = Array[Object]([SubResource("Resource_dtxxj"), SubResource("Resource_mn8im"), SubResource("Resource_ungqd")])
+Outputs = Array[Object]([SubResource("Resource_isd10")])
+ProcessingTime = 12.0
+IsAlternative = false

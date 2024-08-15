@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dy3uqcnm2iejv"]
+
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="1_8e3vi"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_omrgj"]
+[ext_resource type="Resource" uid="uid://xvcecodj5ali" path="res://Items/empty_fluid_tank.tres" id="3_cit3i"]
+[ext_resource type="Resource" uid="uid://m507fth7f238" path="res://Items/packaged_nitrogen_gas.tres" id="4_wxwaw"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_v68gm"]
+
+[sub_resource type="Resource" id="Resource_o5p1q"]
+script = ExtResource("2_omrgj")
+Item = ExtResource("1_8e3vi")
+Amount = 4
+
+[sub_resource type="Resource" id="Resource_jjy4o"]
+script = ExtResource("2_omrgj")
+Item = ExtResource("3_cit3i")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_omrgj")
+Item = ExtResource("4_wxwaw")
+Amount = 1
+
+[resource]
+script = ExtResource("5_v68gm")
+Building = 9
+Name = "Packaged Nitrogen Gas"
+Inputs = Array[Object]([SubResource("Resource_o5p1q"), SubResource("Resource_jjy4o")])
+Outputs = Array[Object]([SubResource("Resource_muswe")])
+ProcessingTime = 1.0
+IsAlternative = false

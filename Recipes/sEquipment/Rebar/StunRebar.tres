@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cyj2eicgaas4v"]
+
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="1_gbxwd"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_urcou"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_xepn1"]
+[ext_resource type="Resource" uid="uid://dsuc143ta07ys" path="res://Items/stun_rebar.tres" id="4_tlgsn"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_3xjlo"]
+
+[sub_resource type="Resource" id="Resource_hxff0"]
+script = ExtResource("2_urcou")
+Item = ExtResource("1_gbxwd")
+Amount = 1
+
+[sub_resource type="Resource" id="Resource_tpc6q"]
+script = ExtResource("2_urcou")
+Item = ExtResource("3_xepn1")
+Amount = 5
+
+[sub_resource type="Resource" id="Resource_lpej2"]
+script = ExtResource("2_urcou")
+Item = ExtResource("4_tlgsn")
+Amount = 1
+
+[resource]
+script = ExtResource("5_3xjlo")
+Building = 7
+Name = "Stun Rebar"
+Inputs = Array[Object]([SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")])
+Outputs = Array[Object]([SubResource("Resource_lpej2")])
+ProcessingTime = 6.0
+IsAlternative = false
