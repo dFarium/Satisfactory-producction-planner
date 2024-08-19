@@ -171,7 +171,6 @@ func load_recipes() -> void:
 
 func sort_by_regular_recipe(a: Recipe, b: Recipe) -> bool:
 	return int(a.is_alternate_recipe) < int(b.is_alternate_recipe)
-
 	
 func set_item_ids() -> void:
 	var id_count: int = 0

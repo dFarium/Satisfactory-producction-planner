@@ -1,8 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Godot;
 
 [GlobalClass]
 public partial class Recipe : Resource
 {
+    public int Id { get; set; }
     [Export] public BuildingType Building { get; set; }
     [Export] public string Name { get; set; }
     [Export] public ItemAmount[] Inputs { get; set; }
@@ -30,12 +34,13 @@ public partial class Recipe : Resource
         NuclearPowerPlant,
         AwesomeSink,
     }
-    public Recipe() : this("", null, null, 0, false)
+    public Recipe() : this(0,"", null, null, 0, false)
     {
     }
 
-    public Recipe(string name, ItemAmount[] inputs, ItemAmount[] outputs, float processingTime, bool isAlternative)
+    public Recipe(int id,string name, ItemAmount[] inputs, ItemAmount[] outputs, float processingTime, bool isAlternative)
     {
+        Id = id;
         Name = name;
         Inputs = inputs;
         Outputs = outputs;
@@ -67,5 +72,28 @@ public partial class Recipe : Resource
             BuildingType.AwesomeSink => "Awesome Sink",
             _ => "Unknown Building"
         };
+    }
+    
+    public float GetCyclePerMin()
+    {
+        return 60 / ProcessingTime;
+    }
+    
+    public Item FindBottleNeck(ItemAmount[] inputs)
+    {
+        var ratios = new List<float>();
+        
+        if (inputs.Length != Inputs.Length)
+        {
+            GD.PrintErr("Not enough inputs to find bottleneck");
+            return null;
+        }
+        
+        for (int i = 0; i < inputs.Length; i++)
+        {
+            ratios.Add(inputs[i].Amount / Inputs[i].Amount);
+        }
+        //return the smallest ratio
+        return Inputs[ratios.IndexOf(ratios.Min())].Item;
     }
 }

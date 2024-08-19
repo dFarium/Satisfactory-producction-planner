@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dnodskb5t767u"]
 
-[ext_resource type="Script" path="res://Scripts/Graph/recipe_option.gd" id="1_1mb04"]
+[ext_resource type="Script" path="res://Scripts/Graph/RecipeButton.cs" id="1_jglm1"]
 [ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://ItemIcons/Aluminum_Casing.webp" id="2_a7r63"]
 [ext_resource type="Texture2D" uid="uid://c1hupf5soyik3" path="res://ItemIcons/Copper_Ingot.webp" id="3_deuk6"]
 [ext_resource type="Texture2D" uid="uid://b51odr06ctb7a" path="res://ItemIcons/Cooling_System.webp" id="4_ax6xl"]
@@ -18,7 +18,7 @@ offset_bottom = 50.0
 alignment = 0
 icon_alignment = 2
 text_direction = 1
-script = ExtResource("1_1mb04")
+script = ExtResource("1_jglm1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -39,7 +39,7 @@ label_settings = SubResource("LabelSettings_wnpu7")
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="option_icon" type="TextureRect" parent="HBoxContainer"]
+[node name="option_icon1" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_a7r63")
 expand_mode = 2
