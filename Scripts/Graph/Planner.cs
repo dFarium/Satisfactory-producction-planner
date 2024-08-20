@@ -70,8 +70,14 @@ public partial class Planner : GraphEdit
             AddChild(_searchPanelInstance);
             _searchPanelInstance.EnablePanel();
         }
-
-        _searchPanelInstance.SetPositionOffset((GetGlobalMousePosition() + ScrollOffset) / Zoom);
+        
+        Vector2 mousePosition = (GetGlobalMousePosition() + ScrollOffset) / Zoom;
+        //Snap the panel to the grid
+        Vector2 snapPosition = new(
+            Mathf.Round(mousePosition.X/ SnapDistance) * SnappingDistance,
+            Mathf.Round(mousePosition.Y/ SnapDistance) * SnappingDistance
+        );
+        _searchPanelInstance.PositionOffset = snapPosition;
     }
 
     private void OnAddBuilding(Recipe recipe)
@@ -94,7 +100,7 @@ public partial class Planner : GraphEdit
             case (4, 1):
                 InstantiateBuilding(_fourInputOneOutput, recipe);
                 break;
-            case (1, 0):
+            case (0, 1):
                 InstantiateBuilding(_oneOutput, recipe);
                 break;
             case (2, 2):

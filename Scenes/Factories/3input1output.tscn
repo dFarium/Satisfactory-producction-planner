@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://dnck544yvr326"]
 
-[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_mtgy5"]
-[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_4o0pe"]
+[ext_resource type="Script" path="res://Scripts/Factories/Building.cs" id="1_jq0y5"]
 [ext_resource type="Texture2D" uid="uid://dpmf6qlw1yfkb" path="res://ItemIcons/Heavy_Modular_Frame.webp" id="2_tc34l"]
+[ext_resource type="Script" path="res://Scripts/Factories/BuildingSlot.cs" id="2_xb2k2"]
 [ext_resource type="Texture2D" uid="uid://b4xg0570ba2t3" path="res://ItemIcons/Aluminum_Casing.webp" id="4_vgd7w"]
 [ext_resource type="Texture2D" uid="uid://cgqtlr26bgir7" path="res://ItemIcons/Nitrogen_Gas.webp" id="5_m8vbu"]
 [ext_resource type="Texture2D" uid="uid://bp07ncxgheyo4" path="res://ItemIcons/Fused_Modular_Frame.webp" id="6_gppjd"]
 
-[node name="Building" type="GraphNode" node_paths=PackedStringArray("inputs", "outputs")]
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("_inputContainers", "_outputContainers")]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
 offset_bottom = 509.0
@@ -49,9 +49,9 @@ slot/3/right_type = 0
 slot/3/right_color = Color(1, 1, 1, 1)
 slot/3/right_icon = null
 slot/3/draw_stylebox = true
-script = ExtResource("1_mtgy5")
-inputs = [NodePath("HBoxContainer/Input1"), NodePath("HBoxContainer2/Input2"), NodePath("HBoxContainer3/Input3")]
-outputs = [NodePath("HBoxContainer/Output1")]
+script = ExtResource("1_jq0y5")
+_inputContainers = [NodePath("HBoxContainer/Input1"), NodePath("HBoxContainer2/Input2"), NodePath("HBoxContainer3/Input3")]
+_outputContainers = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -59,8 +59,8 @@ alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
-script = ExtResource("2_4o0pe")
-slot = 13
+script = ExtResource("2_xb2k2")
+_slotType = 1
 
 [node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
@@ -99,8 +99,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_4o0pe")
-slot = 1
+script = ExtResource("2_xb2k2")
+_slotType = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
 layout_mode = 2
@@ -132,8 +132,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_4o0pe")
-slot = 7
+script = ExtResource("2_xb2k2")
+_slotType = 10
 
 [node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
 layout_mode = 2
@@ -167,8 +167,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer2/Input2/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_4o0pe")
-slot = 2
+script = ExtResource("2_xb2k2")
+_slotType = 5
 
 [node name="Label" type="Label" parent="HBoxContainer2/Input2/HBoxContainer"]
 layout_mode = 2
@@ -202,15 +202,9 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer3/Input3/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_4o0pe")
-slot = 3
+script = ExtResource("2_xb2k2")
+_slotType = 6
 
 [node name="Label" type="Label" parent="HBoxContainer3/Input3/HBoxContainer"]
 layout_mode = 2
 text = "/min"
-
-[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer2/Input2/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer3/Input3/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]

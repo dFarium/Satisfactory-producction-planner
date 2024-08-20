@@ -31,6 +31,9 @@ script = ExtResource("1_3n76o")
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 placeholder_text = "Search Something..."
+context_menu_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(200, 250)
