@@ -74,7 +74,7 @@ public partial class Recipe : Resource
         };
     }
     
-    public float GetCyclePerMin()
+    public float GetCyclesPerMin()
     {
         return 60 / ProcessingTime;
     }
@@ -95,5 +95,27 @@ public partial class Recipe : Resource
         }
         //return the smallest ratio
         return Inputs[ratios.IndexOf(ratios.Min())].Item;
+    }
+    
+    public Item GetInputItem(int index)
+    {
+        return Inputs[index].Item;
+    }
+    
+    public Item GetOutputItem(int index)
+    {
+        return Outputs[index].Item;
+    }
+    
+    public float GetItemsPerMin(Item item)
+    {
+        for (int i = 0; i < Outputs.Length; i++)
+        {
+            if (Outputs[i].Item == item)
+            {
+                return Outputs[i].Amount / ProcessingTime * 60;
+            }
+        }
+        return 0;
     }
 }

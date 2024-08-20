@@ -206,7 +206,6 @@ func _on_slot_value_updated(node: StringName, _slot: int, _value: float) -> void
 		if connection.from_node == node:
 			var graph_building: GraphBuilding = get_graphbuilding(connection.to_node)
 			graph_building.set_input_value_from_connection(graph_building.find_bottleneck(get_input_nodes_values(connection.to_node)))
-	pass
 
 func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
 	connect_node(from_node, from_port, to_node, to_port)

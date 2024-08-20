@@ -72,7 +72,7 @@ public partial class SearchPanel : GraphNode
         {
             foreach (ItemAmount output in recipe.Outputs)
             {
-                if (output.Item.Name.ToLower().Contains(query.ToLower()))
+                if (output.Item.Name.Contains(query, StringComparison.OrdinalIgnoreCase))
                 {
                     recipes.Add(recipe);
                     break;

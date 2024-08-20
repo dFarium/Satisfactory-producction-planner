@@ -175,3 +175,7 @@ func get_output_value(slot: int) -> float:
 
 func deselect_building() -> void:
 	selected = false
+
+
+func OnSlotValueUpdated(slot:int, value:float) -> void:
+	pass # Replace with function body.

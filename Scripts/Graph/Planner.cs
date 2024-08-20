@@ -5,7 +5,6 @@ using System.Linq;
 
 public partial class Planner : GraphEdit
 {
-    
     private PackedScene _oneInputOneOutput;
     private PackedScene _oneInputTwoOutput;
     private PackedScene _twoInputOneOutput;
@@ -59,7 +58,8 @@ public partial class Planner : GraphEdit
 
         if (_searchPanelInstance == null)
         {
-            _searchPanelInstance = (SearchPanel)ResourceLoader.Load<PackedScene>("res://Scenes/search_recipe.tscn").Instantiate();
+            _searchPanelInstance =
+                (SearchPanel)ResourceLoader.Load<PackedScene>("res://Scenes/search_recipe.tscn").Instantiate();
             _searchPanelInstance.RecipeList = _recipes;
             _searchPanelInstance.PanelDisabled += OnPanelDisabled;
             _searchPanelInstance.AddBuilding += OnAddBuilding;
@@ -71,52 +71,58 @@ public partial class Planner : GraphEdit
             _searchPanelInstance.EnablePanel();
         }
 
-        _searchPanelInstance.SetPositionOffset(GetLocalMousePosition() + ScrollOffset / Zoom);
+        _searchPanelInstance.SetPositionOffset((GetGlobalMousePosition() + ScrollOffset) / Zoom);
     }
 
     private void OnAddBuilding(Recipe recipe)
     {
-        int[] portCount = new int[] {recipe.Inputs.Length, recipe.Outputs.Length};
+        int[] portCount = { recipe.Inputs.Length, recipe.Outputs.Length };
         switch (portCount[0], portCount[1])
         {
             case (1, 1):
-                InstantiateBuilding(_oneInputOneOutput,recipe);
+                InstantiateBuilding(_oneInputOneOutput, recipe);
                 break;
             case (1, 2):
-                InstantiateBuilding(_oneInputTwoOutput,recipe);
+                InstantiateBuilding(_oneInputTwoOutput, recipe);
                 break;
             case (2, 1):
-                InstantiateBuilding(_twoInputOneOutput,recipe);
+                InstantiateBuilding(_twoInputOneOutput, recipe);
                 break;
             case (3, 1):
-                InstantiateBuilding(_threeInputOneOutput,recipe);
+                InstantiateBuilding(_threeInputOneOutput, recipe);
                 break;
             case (4, 1):
-                InstantiateBuilding(_fourInputOneOutput,recipe);
+                InstantiateBuilding(_fourInputOneOutput, recipe);
                 break;
             case (1, 0):
-                InstantiateBuilding(_oneOutput,recipe);
+                InstantiateBuilding(_oneOutput, recipe);
                 break;
             case (2, 2):
-                InstantiateBuilding(_twoInputTwoOutput,recipe);
+                InstantiateBuilding(_twoInputTwoOutput, recipe);
                 break;
             case (4, 2):
-                InstantiateBuilding(_fourInputTwoOutput,recipe);
+                InstantiateBuilding(_fourInputTwoOutput, recipe);
                 break;
             case (3, 2):
-                InstantiateBuilding(_threeInputTwoOutput,recipe);
+                InstantiateBuilding(_threeInputTwoOutput, recipe);
                 break;
         }
-        
     }
-    
-    private void InstantiateBuilding(PackedScene building,Recipe recipe)
+
+    private void InstantiateBuilding(PackedScene building, Recipe recipe)
     {
-        if(building == null) return;
+        if (building == null) return;
         Building buildingInstance = (Building)building.Instantiate();
         AddChild(buildingInstance);
         buildingInstance.SetupBuilding(recipe);
-        
+        buildingInstance.PositionOffset = _searchPanelInstance.PositionOffset;
+        buildingInstance.BuildingValuesUpdated += OnBuildingValuesUpdated;
+        _searchPanelInstance.Selected = false;
+    }
+
+    private void OnBuildingValuesUpdated(StringName buildingname, int slot, float value)
+    {
+        throw new NotImplementedException();
     }
 
     private void OnPanelDisabled()

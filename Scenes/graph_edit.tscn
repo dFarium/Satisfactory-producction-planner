@@ -2,28 +2,17 @@
 
 [ext_resource type="Script" path="res://Scripts/Graph/Planner.cs" id="1_1nhtb"]
 
-[node name="Main" type="Control"]
-layout_mode = 3
+[node name="GraphEdit" type="GraphEdit"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GraphEdit" type="GraphEdit" parent="."]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+grid_pattern = 1
 right_disconnects = true
 show_zoom_label = true
 script = ExtResource("1_1nhtb")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_connection_request"]
-[connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_disconnection_request"]
+[connection signal="connection_request" from="." to="." method="_on_connection_request"]
+[connection signal="disconnection_request" from="." to="." method="_on_disconnection_request"]

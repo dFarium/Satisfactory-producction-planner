@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://cf87kopctjjm"]
 
-[ext_resource type="Script" path="res://Scripts/Factories/building.gd" id="1_a7dxp"]
+[ext_resource type="Script" path="res://Scripts/Factories/Building.cs" id="1_3e2n5"]
+[ext_resource type="Script" path="res://Scripts/Factories/BuildingSlot.cs" id="2_dkbil"]
 [ext_resource type="Texture2D" uid="uid://dxr1n721dd6qc" path="res://ItemIcons/Iron_Plate.png" id="2_fwej2"]
-[ext_resource type="Script" path="res://Scripts/Factories/building_slot.gd" id="2_leytv"]
 [ext_resource type="Texture2D" uid="uid://d0xne8qx21yr" path="res://ItemIcons/Reinforced_Iron_Plate.webp" id="3_f8c8e"]
 
-[node name="Building" type="GraphNode"]
+[node name="Building" type="GraphNode" node_paths=PackedStringArray("_inputContainers", "_outputContainers")]
 custom_minimum_size = Vector2(50, 50)
 offset_right = 300.0
 offset_bottom = 227.0
@@ -28,7 +28,9 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = false
-script = ExtResource("1_a7dxp")
+script = ExtResource("1_3e2n5")
+_inputContainers = [NodePath("HBoxContainer/Input1")]
+_outputContainers = [NodePath("HBoxContainer/Output1")]
 
 [node name="Buildings" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -36,8 +38,8 @@ alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="Buildings"]
 layout_mode = 2
-script = ExtResource("2_leytv")
-slot = 13
+script = ExtResource("2_dkbil")
+_slotType = 1
 
 [node name="BuildingName" type="Label" parent="Buildings"]
 layout_mode = 2
@@ -76,8 +78,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/Input1/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_leytv")
-slot = 1
+script = ExtResource("2_dkbil")
+_slotType = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/Input1/HBoxContainer"]
 layout_mode = 2
@@ -109,13 +111,13 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/Output1/HBoxContainer"]
 custom_minimum_size = Vector2(85, 0)
 layout_mode = 2
-script = ExtResource("2_leytv")
-slot = 7
+script = ExtResource("2_dkbil")
+_slotType = 10
 
 [node name="Label" type="Label" parent="HBoxContainer/Output1/HBoxContainer"]
 layout_mode = 2
 text = "/min"
 
-[connection signal="slot_value_updated" from="Buildings/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
-[connection signal="slot_value_updated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="_on_slot_value_updated"]
+[connection signal="SlotValueUpdated" from="Buildings/LineEdit" to="." method="OnSlotValueUpdated"]
+[connection signal="SlotValueUpdated" from="HBoxContainer/Input1/HBoxContainer/LineEdit" to="." method="OnSlotValueUpdated"]
+[connection signal="SlotValueUpdated" from="HBoxContainer/Output1/HBoxContainer/LineEdit" to="." method="OnSlotValueUpdated"]
