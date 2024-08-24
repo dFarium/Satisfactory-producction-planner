@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://jr154yk8fctv"]
+
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="1_b847g"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_n4rm4"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="3_gwuck"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="4_oayk0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_aac0p"]
+
+[sub_resource type="Resource" id="Resource_6hwcs"]
+script = ExtResource("2_n4rm4")
+Item = ExtResource("1_b847g")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_g5hxe"]
+script = ExtResource("2_n4rm4")
+Item = ExtResource("3_gwuck")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_pyjkq"]
+script = ExtResource("2_n4rm4")
+Item = ExtResource("4_oayk0")
+Amount = 5.0
+
+[resource]
+script = ExtResource("5_aac0p")
+Id = 47
+Building = 0
+Name = "Compacted Coal"
+Inputs = [SubResource("Resource_6hwcs"), SubResource("Resource_g5hxe")]
+Outputs = [SubResource("Resource_pyjkq")]
+ProcessingTime = 12.0
+IsAlternative = true

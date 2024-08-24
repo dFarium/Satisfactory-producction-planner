@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://dd2xbby4lbdfx"]
+
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="1_x5iwk"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_31e8q"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_r1k3g"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="4_5a7sl"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="5_lg775"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="6_1t0qu"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_n5obq"]
+
+[sub_resource type="Resource" id="Resource_irh7e"]
+script = ExtResource("2_31e8q")
+Item = ExtResource("1_x5iwk")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_haq61"]
+script = ExtResource("2_31e8q")
+Item = ExtResource("3_r1k3g")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_qg44g"]
+script = ExtResource("2_31e8q")
+Item = ExtResource("4_5a7sl")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_55cyc"]
+script = ExtResource("2_31e8q")
+Item = ExtResource("5_lg775")
+Amount = 52.0
+
+[sub_resource type="Resource" id="Resource_6he4s"]
+script = ExtResource("2_31e8q")
+Item = ExtResource("6_1t0qu")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_n5obq")
+Id = 150
+Building = 0
+Name = "Computer"
+Inputs = [SubResource("Resource_irh7e"), SubResource("Resource_haq61"), SubResource("Resource_qg44g"), SubResource("Resource_55cyc")]
+Outputs = [SubResource("Resource_6he4s")]
+ProcessingTime = 24.0
+IsAlternative = false

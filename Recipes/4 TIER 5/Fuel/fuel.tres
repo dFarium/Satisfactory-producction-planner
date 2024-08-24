@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b1rwalic0egv3"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_juqlp"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_cq5dj"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="3_frui8"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="4_0n3a7"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_wydj6"]
+
+[sub_resource type="Resource" id="Resource_mj15g"]
+script = ExtResource("2_cq5dj")
+Item = ExtResource("1_juqlp")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_l2uih"]
+script = ExtResource("2_cq5dj")
+Item = ExtResource("3_frui8")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_w2bcu"]
+script = ExtResource("2_cq5dj")
+Item = ExtResource("4_0n3a7")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_wydj6")
+Id = 157
+Building = 0
+Name = "Fuel"
+Inputs = [SubResource("Resource_mj15g")]
+Outputs = [SubResource("Resource_l2uih"), SubResource("Resource_w2bcu")]
+ProcessingTime = 6.0
+IsAlternative = false

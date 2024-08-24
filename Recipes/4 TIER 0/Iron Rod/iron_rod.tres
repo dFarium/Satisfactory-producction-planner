@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cwegphmg5613r"]
+
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="1_li7vd"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ok38j"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="3_qsj85"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_2e24l"]
+
+[sub_resource type="Resource" id="Resource_kqpgu"]
+script = ExtResource("2_ok38j")
+Item = ExtResource("1_li7vd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_hoa36"]
+script = ExtResource("2_ok38j")
+Item = ExtResource("3_qsj85")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_2e24l")
+Id = 99
+Building = 0
+Name = "Iron Rod"
+Inputs = [SubResource("Resource_kqpgu")]
+Outputs = [SubResource("Resource_hoa36")]
+ProcessingTime = 4.0
+IsAlternative = false

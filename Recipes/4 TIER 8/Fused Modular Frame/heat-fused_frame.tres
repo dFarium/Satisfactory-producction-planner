@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://tfc4abmn5aor"]
+
+[ext_resource type="Resource" uid="uid://djljcfkbrf6gh" path="res://Items/heavy_modular_frame.tres" id="1_0kkov"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_fmbm6"]
+[ext_resource type="Resource" uid="uid://bh740pt57rovw" path="res://Items/aluminum_ingot.tres" id="3_4a7l3"]
+[ext_resource type="Resource" uid="uid://c0pafypp3ujmw" path="res://Items/nitric_acid.tres" id="4_io7x0"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="5_hdfcs"]
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="6_c1txj"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_myqvm"]
+
+[sub_resource type="Resource" id="Resource_7esjn"]
+script = ExtResource("2_fmbm6")
+Item = ExtResource("1_0kkov")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ramnn"]
+script = ExtResource("2_fmbm6")
+Item = ExtResource("3_4a7l3")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_srwib"]
+script = ExtResource("2_fmbm6")
+Item = ExtResource("4_io7x0")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_we7o7"]
+script = ExtResource("2_fmbm6")
+Item = ExtResource("5_hdfcs")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_g1g2n"]
+script = ExtResource("2_fmbm6")
+Item = ExtResource("6_c1txj")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_myqvm")
+Id = 208
+Building = 0
+Name = "Heat-Fused Frame"
+Inputs = [SubResource("Resource_7esjn"), SubResource("Resource_ramnn"), SubResource("Resource_srwib"), SubResource("Resource_we7o7")]
+Outputs = [SubResource("Resource_g1g2n")]
+ProcessingTime = 20.0
+IsAlternative = true

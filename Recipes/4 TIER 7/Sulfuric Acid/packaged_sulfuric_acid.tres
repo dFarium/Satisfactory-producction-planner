@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cmnv3quofyrix"]
+
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="1_8qvms"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_clh54"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_dy16d"]
+[ext_resource type="Resource" uid="uid://grevpjtkjku1" path="res://Items/packaged_sulfuric_acid.tres" id="4_bxctv"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_l0oge"]
+
+[sub_resource type="Resource" id="Resource_cdqbs"]
+script = ExtResource("2_clh54")
+Item = ExtResource("1_8qvms")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_nlagp"]
+script = ExtResource("2_clh54")
+Item = ExtResource("3_dy16d")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_gr58j"]
+script = ExtResource("2_clh54")
+Item = ExtResource("4_bxctv")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_l0oge")
+Id = 194
+Building = 0
+Name = "Packaged Sulfuric Acid"
+Inputs = [SubResource("Resource_cdqbs"), SubResource("Resource_nlagp")]
+Outputs = [SubResource("Resource_gr58j")]
+ProcessingTime = 3.0
+IsAlternative = false

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cve1a1gusccvm"]
+
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="1_dm5vp"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_5uu2y"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="3_kddyq"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_bjl0s"]
+
+[sub_resource type="Resource" id="Resource_epckc"]
+script = ExtResource("2_5uu2y")
+Item = ExtResource("1_dm5vp")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_bvj35"]
+script = ExtResource("2_5uu2y")
+Item = ExtResource("3_kddyq")
+Amount = 4.0
+
+[resource]
+script = ExtResource("4_bjl0s")
+Id = 159
+Building = 0
+Name = "Residual Fuel"
+Inputs = [SubResource("Resource_epckc")]
+Outputs = [SubResource("Resource_bvj35")]
+ProcessingTime = 6.0
+IsAlternative = false

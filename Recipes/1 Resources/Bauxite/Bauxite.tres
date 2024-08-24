@@ -7,13 +7,14 @@
 [sub_resource type="Resource" id="Resource_muswe"]
 script = ExtResource("2_k4lox")
 Item = ExtResource("1_rgvhv")
-Amount = 2
+Amount = 0.0
 
 [resource]
 script = ExtResource("3_8xmgd")
+Id = 0
 Building = 0
 Name = "Bauxite"
-Inputs = Array[Object]([])
-Outputs = Array[Object]([SubResource("Resource_muswe")])
+Inputs = []
+Outputs = [SubResource("Resource_muswe")]
 ProcessingTime = 2.0
 IsAlternative = false

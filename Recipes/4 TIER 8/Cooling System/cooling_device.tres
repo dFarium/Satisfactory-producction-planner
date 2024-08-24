@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://uhaoudraxmkt"]
+
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="1_mjow1"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_kmo3w"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="3_00xpf"]
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="4_d6pgf"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="5_scwdr"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_xtmvf"]
+
+[sub_resource type="Resource" id="Resource_o5137"]
+script = ExtResource("2_kmo3w")
+Item = ExtResource("1_mjow1")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_ynevt"]
+script = ExtResource("2_kmo3w")
+Item = ExtResource("3_00xpf")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_i6fke"]
+script = ExtResource("2_kmo3w")
+Item = ExtResource("4_d6pgf")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_jdhkw"]
+script = ExtResource("2_kmo3w")
+Item = ExtResource("5_scwdr")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_xtmvf")
+Id = 197
+Building = 0
+Name = "Cooling Device"
+Inputs = [SubResource("Resource_o5137"), SubResource("Resource_ynevt"), SubResource("Resource_i6fke")]
+Outputs = [SubResource("Resource_jdhkw")]
+ProcessingTime = 32.0
+IsAlternative = true

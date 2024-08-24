@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://rbftnsn0f2qu"]
+
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="1_7m167"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_vl6ob"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="3_h3q4i"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="4_m3tqo"]
+[ext_resource type="Resource" uid="uid://cxd317xdow8fv" path="res://Items/smart_plating.tres" id="5_tjdke"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_t6dyb"]
+
+[sub_resource type="Resource" id="Resource_jw4f3"]
+script = ExtResource("2_vl6ob")
+Item = ExtResource("1_7m167")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mvad7"]
+script = ExtResource("2_vl6ob")
+Item = ExtResource("3_h3q4i")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_wnmev"]
+script = ExtResource("2_vl6ob")
+Item = ExtResource("4_m3tqo")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_vedxl"]
+script = ExtResource("2_vl6ob")
+Item = ExtResource("5_tjdke")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_t6dyb")
+Id = 121
+Building = 0
+Name = "Plastic Smart Plating"
+Inputs = [SubResource("Resource_jw4f3"), SubResource("Resource_mvad7"), SubResource("Resource_wnmev")]
+Outputs = [SubResource("Resource_vedxl")]
+ProcessingTime = 24.0
+IsAlternative = true

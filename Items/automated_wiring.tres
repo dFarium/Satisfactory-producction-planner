@@ -5,6 +5,5 @@
 
 [resource]
 script = ExtResource("2_7u77i")
-Name = "Autmated Wiring"
+Name = "Automated Wiring"
 Icon = ExtResource("1_lo1kb")
-Amount = 0.0

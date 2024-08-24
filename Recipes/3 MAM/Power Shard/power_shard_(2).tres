@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://sik8nlng66qm"]
+
+[ext_resource type="Resource" uid="uid://yjrcko056ong" path="res://Items/yellow_power_slug.tres" id="1_bxxya"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_88sve"]
+[ext_resource type="Resource" uid="uid://bjcdyuwdkewp8" path="res://Items/power_shard.tres" id="3_l6xq2"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_qjm8e"]
+
+[sub_resource type="Resource" id="Resource_5kbuh"]
+script = ExtResource("2_88sve")
+Item = ExtResource("1_bxxya")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_4c7gd"]
+script = ExtResource("2_88sve")
+Item = ExtResource("3_l6xq2")
+Amount = 2.0
+
+[resource]
+script = ExtResource("4_qjm8e")
+Id = 57
+Building = 0
+Name = "Power Shard (2)"
+Inputs = [SubResource("Resource_5kbuh")]
+Outputs = [SubResource("Resource_4c7gd")]
+ProcessingTime = 12.0
+IsAlternative = false

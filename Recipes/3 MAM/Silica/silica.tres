@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cekikgv6j47ex"]
+
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="1_mcc72"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6q7iv"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="3_hykr6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_tsp3i"]
+
+[sub_resource type="Resource" id="Resource_olqb8"]
+script = ExtResource("2_6q7iv")
+Item = ExtResource("1_mcc72")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3i50p"]
+script = ExtResource("2_6q7iv")
+Item = ExtResource("3_hykr6")
+Amount = 5.0
+
+[resource]
+script = ExtResource("4_tsp3i")
+Id = 64
+Building = 0
+Name = "Silica"
+Inputs = [SubResource("Resource_olqb8")]
+Outputs = [SubResource("Resource_3i50p")]
+ProcessingTime = 8.0
+IsAlternative = false

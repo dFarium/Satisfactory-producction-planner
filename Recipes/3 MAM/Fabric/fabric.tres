@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://df6l5o54rv7gx"]
+
+[ext_resource type="Resource" uid="uid://cuv2yo5fo2og4" path="res://Items/mycelia.tres" id="1_84f2u"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ofo1j"]
+[ext_resource type="Resource" uid="uid://bhd3duvummhss" path="res://Items/biomass.tres" id="3_1fkgw"]
+[ext_resource type="Resource" uid="uid://d2kugd8cvw00f" path="res://Items/fabric.tres" id="4_uruge"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_lfmor"]
+
+[sub_resource type="Resource" id="Resource_ik48k"]
+script = ExtResource("2_ofo1j")
+Item = ExtResource("1_84f2u")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_n77u5"]
+script = ExtResource("2_ofo1j")
+Item = ExtResource("3_1fkgw")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6vj4q"]
+script = ExtResource("2_ofo1j")
+Item = ExtResource("4_uruge")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_lfmor")
+Id = 50
+Building = 0
+Name = "Fabric"
+Inputs = [SubResource("Resource_ik48k"), SubResource("Resource_n77u5")]
+Outputs = [SubResource("Resource_6vj4q")]
+ProcessingTime = 4.0
+IsAlternative = false

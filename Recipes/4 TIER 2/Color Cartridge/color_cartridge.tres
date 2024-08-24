@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://d2kdkuj0eifd3"]
+
+[ext_resource type="Resource" uid="uid://voo8fira7v7q" path="res://Items/flower_petals.tres" id="1_0b5wl"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_0gr6u"]
+[ext_resource type="Resource" uid="uid://bogx3xdska5g" path="res://Items/color_cartridge.tres" id="3_0euiv"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_6sc1d"]
+
+[sub_resource type="Resource" id="Resource_xpoyq"]
+script = ExtResource("2_0gr6u")
+Item = ExtResource("1_0b5wl")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_pt11e"]
+script = ExtResource("2_0gr6u")
+Item = ExtResource("3_0euiv")
+Amount = 10.0
+
+[resource]
+script = ExtResource("4_6sc1d")
+Id = 112
+Building = 0
+Name = "Color Cartridge"
+Inputs = [SubResource("Resource_xpoyq")]
+Outputs = [SubResource("Resource_pt11e")]
+ProcessingTime = 6.0
+IsAlternative = false

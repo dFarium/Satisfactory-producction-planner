@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://buduw5f5cu3"]
+
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="1_hcfs7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6321y"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="3_d2e4u"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_13p02"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_oam12"]
+
+[sub_resource type="Resource" id="Resource_wxtsk"]
+script = ExtResource("2_6321y")
+Item = ExtResource("1_hcfs7")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_i7um5"]
+script = ExtResource("2_6321y")
+Item = ExtResource("3_d2e4u")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_gpuat"]
+script = ExtResource("2_6321y")
+Item = ExtResource("4_13p02")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_oam12")
+Id = 147
+Building = 0
+Name = "Electrode Circuit Board"
+Inputs = [SubResource("Resource_wxtsk"), SubResource("Resource_i7um5")]
+Outputs = [SubResource("Resource_gpuat")]
+ProcessingTime = 12.0
+IsAlternative = true

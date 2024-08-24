@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c3g6e0q0s1yco"]
+
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="1_giru1"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_pp2x0"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="3_nkqkd"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="4_t2v4q"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_xax8j"]
+
+[sub_resource type="Resource" id="Resource_aumk6"]
+script = ExtResource("2_pp2x0")
+Item = ExtResource("1_giru1")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_t5hn2"]
+script = ExtResource("2_pp2x0")
+Item = ExtResource("3_nkqkd")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_f8vwq"]
+script = ExtResource("2_pp2x0")
+Item = ExtResource("4_t2v4q")
+Amount = 5.0
+
+[resource]
+script = ExtResource("5_xax8j")
+Id = 70
+Building = 0
+Name = "Turbofuel"
+Inputs = [SubResource("Resource_aumk6"), SubResource("Resource_t5hn2")]
+Outputs = [SubResource("Resource_f8vwq")]
+ProcessingTime = 16.0
+IsAlternative = false

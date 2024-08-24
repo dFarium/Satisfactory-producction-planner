@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://lbbumms7xcqc"]
+
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="1_jdb0x"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_1hh2j"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_3tms5"]
+[ext_resource type="Resource" uid="uid://ckusf7675uaog" path="res://Items/packaged_alumina_solution.tres" id="4_13xn3"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_28x03"]
+
+[sub_resource type="Resource" id="Resource_d02uh"]
+script = ExtResource("2_1hh2j")
+Item = ExtResource("1_jdb0x")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_b7vfs"]
+script = ExtResource("2_1hh2j")
+Item = ExtResource("3_3tms5")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_8k57b"]
+script = ExtResource("2_1hh2j")
+Item = ExtResource("4_13xn3")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_28x03")
+Id = 178
+Building = 0
+Name = "Packaged Alumina Solution"
+Inputs = [SubResource("Resource_d02uh"), SubResource("Resource_b7vfs")]
+Outputs = [SubResource("Resource_8k57b")]
+ProcessingTime = 1.0
+IsAlternative = false

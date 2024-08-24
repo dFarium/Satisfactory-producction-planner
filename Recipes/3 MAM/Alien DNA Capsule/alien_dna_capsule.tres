@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bghi4wlr1un4l"]
+
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="1_jusfh"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_h7gbq"]
+[ext_resource type="Resource" uid="uid://dfkysslf2jnee" path="res://Items/alien_dna_capsule.tres" id="3_8ynlb"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_48ycn"]
+
+[sub_resource type="Resource" id="Resource_vnm5c"]
+script = ExtResource("2_h7gbq")
+Item = ExtResource("1_jusfh")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_uw5rp"]
+script = ExtResource("2_h7gbq")
+Item = ExtResource("3_8ynlb")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_48ycn")
+Id = 40
+Building = 0
+Name = "Alien DNA Capsule"
+Inputs = [SubResource("Resource_vnm5c")]
+Outputs = [SubResource("Resource_uw5rp")]
+ProcessingTime = 6.0
+IsAlternative = false

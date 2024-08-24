@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bb516a7yrrvls"]
+
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="1_3pe4j"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ojyuk"]
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="3_m7bjp"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_srb1g"]
+
+[sub_resource type="Resource" id="Resource_bb8cj"]
+script = ExtResource("2_ojyuk")
+Item = ExtResource("1_3pe4j")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_vpg6t"]
+script = ExtResource("2_ojyuk")
+Item = ExtResource("3_m7bjp")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_srb1g")
+Id = 54
+Building = 0
+Name = "Iron Rebar"
+Inputs = [SubResource("Resource_bb8cj")]
+Outputs = [SubResource("Resource_vpg6t")]
+ProcessingTime = 4.0
+IsAlternative = false

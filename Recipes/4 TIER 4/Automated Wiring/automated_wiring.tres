@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dnyiyoxqgoerx"]
+
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="1_ufp50"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_32ghb"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_6kyte"]
+[ext_resource type="Resource" uid="uid://cxri5fyhcy374" path="res://Items/automated_wiring.tres" id="4_327yi"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_sly50"]
+
+[sub_resource type="Resource" id="Resource_p3iow"]
+script = ExtResource("2_32ghb")
+Item = ExtResource("1_ufp50")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dnd6w"]
+script = ExtResource("2_32ghb")
+Item = ExtResource("3_6kyte")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_ebwtf"]
+script = ExtResource("2_32ghb")
+Item = ExtResource("4_327yi")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_sly50")
+Id = 133
+Building = 0
+Name = "Automated Wiring"
+Inputs = [SubResource("Resource_p3iow"), SubResource("Resource_dnd6w")]
+Outputs = [SubResource("Resource_ebwtf")]
+ProcessingTime = 24.0
+IsAlternative = false

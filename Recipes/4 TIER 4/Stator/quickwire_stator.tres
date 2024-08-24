@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bhushmui4l3as"]
+
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="1_uhbl5"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_dow0q"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_q7gq1"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="4_obpeo"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_oel2q"]
+
+[sub_resource type="Resource" id="Resource_4hnak"]
+script = ExtResource("2_dow0q")
+Item = ExtResource("1_uhbl5")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_sqk3d"]
+script = ExtResource("2_dow0q")
+Item = ExtResource("3_q7gq1")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_slbvu"]
+script = ExtResource("2_dow0q")
+Item = ExtResource("4_obpeo")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_oel2q")
+Id = 142
+Building = 0
+Name = "Quickwire Stator"
+Inputs = [SubResource("Resource_4hnak"), SubResource("Resource_sqk3d")]
+Outputs = [SubResource("Resource_slbvu")]
+ProcessingTime = 15.0
+IsAlternative = true

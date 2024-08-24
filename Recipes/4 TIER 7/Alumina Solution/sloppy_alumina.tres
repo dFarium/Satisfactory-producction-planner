@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dwvbmg31t1olr"]
+
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="1_7ihvy"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_siawn"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_lifsd"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="4_qmruy"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_elb55"]
+
+[sub_resource type="Resource" id="Resource_r8ix6"]
+script = ExtResource("2_siawn")
+Item = ExtResource("1_7ihvy")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_e7lpt"]
+script = ExtResource("2_siawn")
+Item = ExtResource("3_lifsd")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_mbqlq"]
+script = ExtResource("2_siawn")
+Item = ExtResource("4_qmruy")
+Amount = 12.0
+
+[resource]
+script = ExtResource("5_elb55")
+Id = 179
+Building = 0
+Name = "Sloppy Alumina"
+Inputs = [SubResource("Resource_r8ix6"), SubResource("Resource_e7lpt")]
+Outputs = [SubResource("Resource_mbqlq")]
+ProcessingTime = 3.0
+IsAlternative = true

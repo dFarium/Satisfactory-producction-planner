@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ca4pxp144f2gx"]
+
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="1_mihek"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_57v4h"]
+[ext_resource type="Resource" uid="uid://b8ydcn8gn2wf1" path="res://Items/uranium_waste.tres" id="3_11b64"]
+[ext_resource type="Resource" uid="uid://cn6ng6taomfke" path="res://Items/plutonium_pellet.tres" id="4_y2w80"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_iwjfh"]
+
+[sub_resource type="Resource" id="Resource_tmfuj"]
+script = ExtResource("2_57v4h")
+Item = ExtResource("1_mihek")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_8xfow"]
+script = ExtResource("2_57v4h")
+Item = ExtResource("3_11b64")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_d74j1"]
+script = ExtResource("2_57v4h")
+Item = ExtResource("4_y2w80")
+Amount = 30.0
+
+[resource]
+script = ExtResource("5_iwjfh")
+Id = 220
+Building = 0
+Name = "Plutonium Pellet"
+Inputs = [SubResource("Resource_tmfuj"), SubResource("Resource_8xfow")]
+Outputs = [SubResource("Resource_d74j1")]
+ProcessingTime = 60.0
+IsAlternative = false

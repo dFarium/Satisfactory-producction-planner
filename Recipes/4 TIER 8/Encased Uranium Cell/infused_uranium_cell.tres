@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://doius2ian6n66"]
+
+[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="1_rc47p"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_66osu"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="3_7qojx"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="4_xo668"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="5_q3eu2"]
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="6_e34t1"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_55m8e"]
+
+[sub_resource type="Resource" id="Resource_4c48d"]
+script = ExtResource("2_66osu")
+Item = ExtResource("1_rc47p")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_vbf8t"]
+script = ExtResource("2_66osu")
+Item = ExtResource("3_7qojx")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wy4r0"]
+script = ExtResource("2_66osu")
+Item = ExtResource("4_xo668")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_sbr1d"]
+script = ExtResource("2_66osu")
+Item = ExtResource("5_q3eu2")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_tbeve"]
+script = ExtResource("2_66osu")
+Item = ExtResource("6_e34t1")
+Amount = 4.0
+
+[resource]
+script = ExtResource("7_55m8e")
+Id = 206
+Building = 0
+Name = "Infused Uranium Cell"
+Inputs = [SubResource("Resource_4c48d"), SubResource("Resource_vbf8t"), SubResource("Resource_wy4r0"), SubResource("Resource_sbr1d")]
+Outputs = [SubResource("Resource_tbeve")]
+ProcessingTime = 12.0
+IsAlternative = true

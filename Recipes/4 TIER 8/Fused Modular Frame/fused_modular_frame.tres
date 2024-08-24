@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://bs6xriwdvgfuj"]
+
+[ext_resource type="Resource" uid="uid://djljcfkbrf6gh" path="res://Items/heavy_modular_frame.tres" id="1_ae4cx"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_5yxeh"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="3_q1wmq"]
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="4_a74yd"]
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="5_65hhc"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_k2ji2"]
+
+[sub_resource type="Resource" id="Resource_8urgh"]
+script = ExtResource("2_5yxeh")
+Item = ExtResource("1_ae4cx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pm8ay"]
+script = ExtResource("2_5yxeh")
+Item = ExtResource("3_q1wmq")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_dnosx"]
+script = ExtResource("2_5yxeh")
+Item = ExtResource("4_a74yd")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_f8e3o"]
+script = ExtResource("2_5yxeh")
+Item = ExtResource("5_65hhc")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_k2ji2")
+Id = 207
+Building = 0
+Name = "Fused Modular Frame"
+Inputs = [SubResource("Resource_8urgh"), SubResource("Resource_pm8ay"), SubResource("Resource_dnosx")]
+Outputs = [SubResource("Resource_f8e3o")]
+ProcessingTime = 40.0
+IsAlternative = false

@@ -10,28 +10,29 @@
 [sub_resource type="Resource" id="Resource_uult6"]
 script = ExtResource("1_2eb6q")
 Item = ExtResource("1_kpf3x")
-Amount = 4
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_awme6"]
 script = ExtResource("1_2eb6q")
 Item = ExtResource("3_txylo")
-Amount = 16
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_itoew"]
 script = ExtResource("1_2eb6q")
 Item = ExtResource("4_880gg")
-Amount = 1
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_n80eg"]
 script = ExtResource("1_2eb6q")
 Item = ExtResource("5_x65kp")
-Amount = 20
+Amount = 0.0
 
 [resource]
 script = ExtResource("6_cwwoc")
+Id = 23
 Building = 8
 Name = "Crystal Beacon"
-Inputs = Array[Object]([SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew")])
-Outputs = Array[Object]([SubResource("Resource_n80eg")])
+Inputs = [SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew")]
+Outputs = [SubResource("Resource_n80eg")]
 ProcessingTime = 120.0
 IsAlternative = true

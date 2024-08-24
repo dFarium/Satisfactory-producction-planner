@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bk0rssd7msemk"]
+
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="1_4a2ro"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_t5nr5"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_t520b"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="4_sfhnk"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_1ana3"]
+
+[sub_resource type="Resource" id="Resource_vp8s6"]
+script = ExtResource("2_t5nr5")
+Item = ExtResource("1_4a2ro")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_5v1vv"]
+script = ExtResource("2_t5nr5")
+Item = ExtResource("3_t520b")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ywytj"]
+script = ExtResource("2_t5nr5")
+Item = ExtResource("4_sfhnk")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_1ana3")
+Id = 101
+Building = 0
+Name = "Adhered Iron Plate"
+Inputs = [SubResource("Resource_vp8s6"), SubResource("Resource_5v1vv")]
+Outputs = [SubResource("Resource_ywytj")]
+ProcessingTime = 16.0
+IsAlternative = true

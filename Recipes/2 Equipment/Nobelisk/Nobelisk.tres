@@ -9,23 +9,24 @@
 [sub_resource type="Resource" id="Resource_gc16t"]
 script = ExtResource("2_rpkfl")
 Item = ExtResource("1_wajeu")
-Amount = 2
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_troca"]
 script = ExtResource("2_rpkfl")
 Item = ExtResource("3_k0rgv")
-Amount = 2
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_c3n4q"]
 script = ExtResource("2_rpkfl")
 Item = ExtResource("4_m30mx")
-Amount = 1
+Amount = 0.0
 
 [resource]
 script = ExtResource("1_3gviy")
+Id = 28
 Building = 7
 Name = "Nobelisk"
-Inputs = Array[Object]([SubResource("Resource_gc16t"), SubResource("Resource_troca")])
-Outputs = Array[Object]([SubResource("Resource_c3n4q")])
+Inputs = [SubResource("Resource_gc16t"), SubResource("Resource_troca")]
+Outputs = [SubResource("Resource_c3n4q")]
 ProcessingTime = 6.0
 IsAlternative = false

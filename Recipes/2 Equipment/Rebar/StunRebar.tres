@@ -9,23 +9,24 @@
 [sub_resource type="Resource" id="Resource_hxff0"]
 script = ExtResource("2_urcou")
 Item = ExtResource("1_gbxwd")
-Amount = 1
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_tpc6q"]
 script = ExtResource("2_urcou")
 Item = ExtResource("3_xepn1")
-Amount = 5
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_lpej2"]
 script = ExtResource("2_urcou")
 Item = ExtResource("4_tlgsn")
-Amount = 1
+Amount = 0.0
 
 [resource]
 script = ExtResource("5_3xjlo")
+Id = 34
 Building = 7
 Name = "Stun Rebar"
-Inputs = Array[Object]([SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")])
-Outputs = Array[Object]([SubResource("Resource_lpej2")])
+Inputs = [SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")]
+Outputs = [SubResource("Resource_lpej2")]
 ProcessingTime = 6.0
 IsAlternative = false

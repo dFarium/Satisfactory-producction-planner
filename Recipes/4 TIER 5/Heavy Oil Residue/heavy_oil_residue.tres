@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dqh67sb0vvpln"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_5ti3n"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_qo2ro"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="3_8mqhu"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="4_8c6mx"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_jbmsn"]
+
+[sub_resource type="Resource" id="Resource_dxv6o"]
+script = ExtResource("2_qo2ro")
+Item = ExtResource("1_5ti3n")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_8q7in"]
+script = ExtResource("2_qo2ro")
+Item = ExtResource("3_8mqhu")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_msj7d"]
+script = ExtResource("2_qo2ro")
+Item = ExtResource("4_8c6mx")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_jbmsn")
+Id = 161
+Building = 0
+Name = "Heavy Oil Residue"
+Inputs = [SubResource("Resource_dxv6o")]
+Outputs = [SubResource("Resource_8q7in"), SubResource("Resource_msj7d")]
+ProcessingTime = 6.0
+IsAlternative = true

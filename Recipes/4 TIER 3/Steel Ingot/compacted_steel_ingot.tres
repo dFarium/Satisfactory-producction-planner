@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://4euirs2u167e"]
+
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="1_a8ki7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_xish6"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="3_3sxo5"]
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="4_ak7y0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_i1llf"]
+
+[sub_resource type="Resource" id="Resource_xblta"]
+script = ExtResource("2_xish6")
+Item = ExtResource("1_a8ki7")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_t8ekl"]
+script = ExtResource("2_xish6")
+Item = ExtResource("3_3sxo5")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_11ey3"]
+script = ExtResource("2_xish6")
+Item = ExtResource("4_ak7y0")
+Amount = 10.0
+
+[resource]
+script = ExtResource("5_i1llf")
+Id = 126
+Building = 0
+Name = "Compacted Steel Ingot"
+Inputs = [SubResource("Resource_xblta"), SubResource("Resource_t8ekl")]
+Outputs = [SubResource("Resource_11ey3")]
+ProcessingTime = 16.0
+IsAlternative = true

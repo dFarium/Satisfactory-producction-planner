@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://cv16kbw3ig0m8"]
+
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="1_8v3rw"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_dcxvo"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_ai4dq"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="4_ktdbr"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="5_ujdbu"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_j1xm7"]
+
+[sub_resource type="Resource" id="Resource_7yhq2"]
+script = ExtResource("2_dcxvo")
+Item = ExtResource("1_8v3rw")
+Amount = 36.0
+
+[sub_resource type="Resource" id="Resource_dt6nu"]
+script = ExtResource("2_dcxvo")
+Item = ExtResource("3_ai4dq")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_ow064"]
+script = ExtResource("2_dcxvo")
+Item = ExtResource("4_ktdbr")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_g4u4n"]
+script = ExtResource("2_dcxvo")
+Item = ExtResource("5_ujdbu")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_j1xm7")
+Id = 48
+Building = 0
+Name = "Crystal Oscillator"
+Inputs = [SubResource("Resource_7yhq2"), SubResource("Resource_dt6nu"), SubResource("Resource_ow064")]
+Outputs = [SubResource("Resource_g4u4n")]
+ProcessingTime = 120.0
+IsAlternative = false

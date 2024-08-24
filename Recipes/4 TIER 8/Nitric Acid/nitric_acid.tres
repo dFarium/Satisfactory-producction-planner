@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://crv6viqubwjgl"]
+
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="1_lyjrg"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ibd4h"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_mvkpt"]
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="4_rs5h3"]
+[ext_resource type="Resource" uid="uid://c0pafypp3ujmw" path="res://Items/nitric_acid.tres" id="5_xc1nv"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_lewn3"]
+
+[sub_resource type="Resource" id="Resource_g7r4r"]
+script = ExtResource("2_ibd4h")
+Item = ExtResource("1_lyjrg")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_ku5bc"]
+script = ExtResource("2_ibd4h")
+Item = ExtResource("3_mvkpt")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mum2m"]
+script = ExtResource("2_ibd4h")
+Item = ExtResource("4_rs5h3")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kmj5e"]
+script = ExtResource("2_ibd4h")
+Item = ExtResource("5_xc1nv")
+Amount = 3.0
+
+[resource]
+script = ExtResource("6_lewn3")
+Id = 212
+Building = 0
+Name = "Nitric Acid"
+Inputs = [SubResource("Resource_g7r4r"), SubResource("Resource_ku5bc"), SubResource("Resource_mum2m")]
+Outputs = [SubResource("Resource_kmj5e")]
+ProcessingTime = 6.0
+IsAlternative = false

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bfqwlw0a3becn"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_6koo3"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_o3t6k"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="3_24oao"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="4_umqfn"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_oln77"]
+
+[sub_resource type="Resource" id="Resource_7vpoi"]
+script = ExtResource("2_o3t6k")
+Item = ExtResource("1_6koo3")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_f3b3g"]
+script = ExtResource("2_o3t6k")
+Item = ExtResource("3_24oao")
+Amount = 13.0
+
+[sub_resource type="Resource" id="Resource_f7ffu"]
+script = ExtResource("2_o3t6k")
+Item = ExtResource("4_umqfn")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_oln77")
+Id = 172
+Building = 0
+Name = "Polymer Resin"
+Inputs = [SubResource("Resource_7vpoi")]
+Outputs = [SubResource("Resource_f3b3g"), SubResource("Resource_f7ffu")]
+ProcessingTime = 6.0
+IsAlternative = true

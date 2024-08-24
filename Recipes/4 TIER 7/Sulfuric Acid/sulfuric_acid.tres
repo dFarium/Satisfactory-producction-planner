@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cdlf7yixw6fbt"]
+
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="1_14rd6"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_mmryq"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_w6on2"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="4_jldqo"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_ydmcl"]
+
+[sub_resource type="Resource" id="Resource_76tog"]
+script = ExtResource("2_mmryq")
+Item = ExtResource("1_14rd6")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_as0iu"]
+script = ExtResource("2_mmryq")
+Item = ExtResource("3_w6on2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6s10i"]
+script = ExtResource("2_mmryq")
+Item = ExtResource("4_jldqo")
+Amount = 5.0
+
+[resource]
+script = ExtResource("5_ydmcl")
+Id = 195
+Building = 0
+Name = "Sulfuric Acid"
+Inputs = [SubResource("Resource_76tog"), SubResource("Resource_as0iu")]
+Outputs = [SubResource("Resource_6s10i")]
+ProcessingTime = 6.0
+IsAlternative = false

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://fvt1xjojxcvl"]
+
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="1_643q5"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_dnnal"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="3_kiuck"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="4_tu27w"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="5_5ecbx"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_68fgc"]
+
+[sub_resource type="Resource" id="Resource_h8q4t"]
+script = ExtResource("2_dnnal")
+Item = ExtResource("1_643q5")
+Amount = 32.0
+
+[sub_resource type="Resource" id="Resource_odqsb"]
+script = ExtResource("2_dnnal")
+Item = ExtResource("3_kiuck")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_5ff43"]
+script = ExtResource("2_dnnal")
+Item = ExtResource("4_tu27w")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_3i7tp"]
+script = ExtResource("2_dnnal")
+Item = ExtResource("5_5ecbx")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_68fgc")
+Id = 193
+Building = 0
+Name = "Radio Control Unit"
+Inputs = [SubResource("Resource_h8q4t"), SubResource("Resource_odqsb"), SubResource("Resource_5ff43")]
+Outputs = [SubResource("Resource_3i7tp")]
+ProcessingTime = 48.0
+IsAlternative = false

@@ -10,28 +10,29 @@
 [sub_resource type="Resource" id="Resource_dtxxj"]
 script = ExtResource("2_hm3b1")
 Item = ExtResource("1_ndgkt")
-Amount = 25
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_mn8im"]
 script = ExtResource("2_hm3b1")
 Item = ExtResource("3_im5hn")
-Amount = 3
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_ungqd"]
 script = ExtResource("2_hm3b1")
 Item = ExtResource("4_0mnwh")
-Amount = 3
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_isd10"]
 script = ExtResource("2_hm3b1")
 Item = ExtResource("5_vassj")
-Amount = 50
+Amount = 0.0
 
 [resource]
 script = ExtResource("5_why16")
+Id = 38
 Building = 11
 Name = "Turbo Rifle Ammo (Fluid)"
-Inputs = Array[Object]([SubResource("Resource_dtxxj"), SubResource("Resource_mn8im"), SubResource("Resource_ungqd")])
-Outputs = Array[Object]([SubResource("Resource_isd10")])
+Inputs = [SubResource("Resource_dtxxj"), SubResource("Resource_mn8im"), SubResource("Resource_ungqd")]
+Outputs = [SubResource("Resource_isd10")]
 ProcessingTime = 12.0
 IsAlternative = false

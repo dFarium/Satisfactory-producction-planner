@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://civfn5sgrbqkb"]
+
+[ext_resource type="Resource" uid="uid://dcn7y4m5w4m8b" path="res://Items/modular_engine.tres" id="1_q4x0a"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ivya5"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="3_cev7e"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="4_042yp"]
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="5_lms6y"]
+[ext_resource type="Resource" uid="uid://bav3blu45jmr4" path="res://Items/thermal_propulsion_rocket.tres" id="6_plyam"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_rlx6v"]
+
+[sub_resource type="Resource" id="Resource_o0c7h"]
+script = ExtResource("2_ivya5")
+Item = ExtResource("1_q4x0a")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_bgtcb"]
+script = ExtResource("2_ivya5")
+Item = ExtResource("3_cev7e")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_gyc6j"]
+script = ExtResource("2_ivya5")
+Item = ExtResource("4_042yp")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_x2yt5"]
+script = ExtResource("2_ivya5")
+Item = ExtResource("5_lms6y")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1qm5c"]
+script = ExtResource("2_ivya5")
+Item = ExtResource("6_plyam")
+Amount = 2.0
+
+[resource]
+script = ExtResource("7_rlx6v")
+Id = 222
+Building = 0
+Name = "Thermal Propulsion Rocket"
+Inputs = [SubResource("Resource_o0c7h"), SubResource("Resource_bgtcb"), SubResource("Resource_gyc6j"), SubResource("Resource_x2yt5")]
+Outputs = [SubResource("Resource_1qm5c")]
+ProcessingTime = 120.0
+IsAlternative = false

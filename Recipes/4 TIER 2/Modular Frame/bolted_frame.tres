@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://lcyrwsi0jdoo"]
+
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="1_l1aie"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_4myky"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_t5uqq"]
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="4_mpnig"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_wgbxf"]
+
+[sub_resource type="Resource" id="Resource_28xbn"]
+script = ExtResource("2_4myky")
+Item = ExtResource("1_l1aie")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_h0fms"]
+script = ExtResource("2_4myky")
+Item = ExtResource("3_t5uqq")
+Amount = 56.0
+
+[sub_resource type="Resource" id="Resource_0jy3t"]
+script = ExtResource("2_4myky")
+Item = ExtResource("4_mpnig")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_wgbxf")
+Id = 115
+Building = 0
+Name = "Bolted Frame"
+Inputs = [SubResource("Resource_28xbn"), SubResource("Resource_h0fms")]
+Outputs = [SubResource("Resource_0jy3t")]
+ProcessingTime = 24.0
+IsAlternative = true

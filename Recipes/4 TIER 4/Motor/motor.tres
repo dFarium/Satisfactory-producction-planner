@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://nhj5qn2a6052"]
+
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="1_gckdx"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_7kllc"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="3_xdn4v"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="4_ln75n"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_xmvj6"]
+
+[sub_resource type="Resource" id="Resource_iwrhc"]
+script = ExtResource("2_7kllc")
+Item = ExtResource("1_gckdx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_bbvii"]
+script = ExtResource("2_7kllc")
+Item = ExtResource("3_xdn4v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_cfarr"]
+script = ExtResource("2_7kllc")
+Item = ExtResource("4_ln75n")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_xmvj6")
+Id = 140
+Building = 0
+Name = "Motor"
+Inputs = [SubResource("Resource_iwrhc"), SubResource("Resource_bbvii")]
+Outputs = [SubResource("Resource_cfarr")]
+ProcessingTime = 12.0
+IsAlternative = false

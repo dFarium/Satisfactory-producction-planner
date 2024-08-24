@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b52aio5sr7j1m"]
+
+[ext_resource type="Resource" uid="uid://c0pafypp3ujmw" path="res://Items/nitric_acid.tres" id="1_u13pl"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_i1mo0"]
+[ext_resource type="Resource" uid="uid://xvcecodj5ali" path="res://Items/empty_fluid_tank.tres" id="3_ha4yj"]
+[ext_resource type="Resource" uid="uid://dyyrkvja1ko02" path="res://Items/packaged_nitric_acid.tres" id="4_ptamk"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_d66hk"]
+
+[sub_resource type="Resource" id="Resource_jjkjy"]
+script = ExtResource("2_i1mo0")
+Item = ExtResource("1_u13pl")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mutdu"]
+script = ExtResource("2_i1mo0")
+Item = ExtResource("3_ha4yj")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_eri5x"]
+script = ExtResource("2_i1mo0")
+Item = ExtResource("4_ptamk")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_d66hk")
+Id = 213
+Building = 0
+Name = "Packaged Nitric Acid"
+Inputs = [SubResource("Resource_jjkjy"), SubResource("Resource_mutdu")]
+Outputs = [SubResource("Resource_eri5x")]
+ProcessingTime = 2.0
+IsAlternative = false

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dvk3wejrv5dxx"]
+
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="1_01pf7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_see7v"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_jovha"]
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="4_0vp7v"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_bn4th"]
+
+[sub_resource type="Resource" id="Resource_6jsqs"]
+script = ExtResource("2_see7v")
+Item = ExtResource("1_01pf7")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_77hmp"]
+script = ExtResource("2_see7v")
+Item = ExtResource("3_jovha")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_mcnkw"]
+script = ExtResource("2_see7v")
+Item = ExtResource("4_0vp7v")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_bn4th")
+Id = 117
+Building = 0
+Name = "Steeled Frame"
+Inputs = [SubResource("Resource_6jsqs"), SubResource("Resource_77hmp")]
+Outputs = [SubResource("Resource_mcnkw")]
+ProcessingTime = 60.0
+IsAlternative = true

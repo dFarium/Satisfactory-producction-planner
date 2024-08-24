@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://cs8lyc3xj8h43"]
+
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="1_2jpyp"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_so88k"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="3_4td03"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="4_esx3f"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="5_1hnl4"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="6_mnuyd"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_785s2"]
+
+[sub_resource type="Resource" id="Resource_lb5up"]
+script = ExtResource("2_so88k")
+Item = ExtResource("1_2jpyp")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_3fuji"]
+script = ExtResource("2_so88k")
+Item = ExtResource("3_4td03")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_0jvuf"]
+script = ExtResource("2_so88k")
+Item = ExtResource("4_esx3f")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_1lhjc"]
+script = ExtResource("2_so88k")
+Item = ExtResource("5_1hnl4")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_ml2fa"]
+script = ExtResource("2_so88k")
+Item = ExtResource("6_mnuyd")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_785s2")
+Id = 224
+Building = 0
+Name = "Turbo Motor"
+Inputs = [SubResource("Resource_lb5up"), SubResource("Resource_3fuji"), SubResource("Resource_0jvuf"), SubResource("Resource_1lhjc")]
+Outputs = [SubResource("Resource_ml2fa")]
+ProcessingTime = 32.0
+IsAlternative = false

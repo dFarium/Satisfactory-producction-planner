@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bwr8hcqowyt1i"]
+
+[ext_resource type="Resource" uid="uid://cn6ng6taomfke" path="res://Items/plutonium_pellet.tres" id="1_jb453"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_skhci"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="3_rpiur"]
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="4_minhq"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_8jr62"]
+
+[sub_resource type="Resource" id="Resource_7ndxr"]
+script = ExtResource("2_skhci")
+Item = ExtResource("1_jb453")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_sfmoy"]
+script = ExtResource("2_skhci")
+Item = ExtResource("3_rpiur")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_vb2tr"]
+script = ExtResource("2_skhci")
+Item = ExtResource("4_minhq")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_8jr62")
+Id = 203
+Building = 0
+Name = "Encased Plutonium Cell"
+Inputs = [SubResource("Resource_7ndxr"), SubResource("Resource_sfmoy")]
+Outputs = [SubResource("Resource_vb2tr")]
+ProcessingTime = 12.0
+IsAlternative = false

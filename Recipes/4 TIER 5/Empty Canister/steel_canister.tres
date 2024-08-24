@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dfmritxros14r"]
+
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="1_aw526"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_p67g0"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_m2tp6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_hpjx3"]
+
+[sub_resource type="Resource" id="Resource_1yorv"]
+script = ExtResource("2_p67g0")
+Item = ExtResource("1_aw526")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_425m7"]
+script = ExtResource("2_p67g0")
+Item = ExtResource("3_m2tp6")
+Amount = 2.0
+
+[resource]
+script = ExtResource("4_hpjx3")
+Id = 154
+Building = 0
+Name = "Steel Canister"
+Inputs = [SubResource("Resource_1yorv")]
+Outputs = [SubResource("Resource_425m7")]
+ProcessingTime = 3.0
+IsAlternative = true

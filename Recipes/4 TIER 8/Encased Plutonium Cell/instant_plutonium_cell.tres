@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://g5fw6qxrnae3"]
+
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="1_ukhqt"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ioavn"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="3_lanks"]
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="4_ymdru"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_flvj0"]
+
+[sub_resource type="Resource" id="Resource_hajlo"]
+script = ExtResource("2_ioavn")
+Item = ExtResource("1_ukhqt")
+Amount = 150.0
+
+[sub_resource type="Resource" id="Resource_qfw06"]
+script = ExtResource("2_ioavn")
+Item = ExtResource("3_lanks")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_yjudg"]
+script = ExtResource("2_ioavn")
+Item = ExtResource("4_ymdru")
+Amount = 20.0
+
+[resource]
+script = ExtResource("5_flvj0")
+Id = 204
+Building = 0
+Name = "Instant Plutonium Cell"
+Inputs = [SubResource("Resource_hajlo"), SubResource("Resource_qfw06")]
+Outputs = [SubResource("Resource_yjudg")]
+ProcessingTime = 120.0
+IsAlternative = true

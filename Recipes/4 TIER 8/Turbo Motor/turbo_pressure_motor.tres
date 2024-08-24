@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://cjknxporh7k3v"]
+
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="1_u4tcm"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_qy0x8"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="3_yd74w"]
+[ext_resource type="Resource" uid="uid://m507fth7f238" path="res://Items/packaged_nitrogen_gas.tres" id="4_d4b28"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="5_o2p0o"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="6_8qy3d"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_xcck6"]
+
+[sub_resource type="Resource" id="Resource_cpcf1"]
+script = ExtResource("2_qy0x8")
+Item = ExtResource("1_u4tcm")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_hr0nc"]
+script = ExtResource("2_qy0x8")
+Item = ExtResource("3_yd74w")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dwxca"]
+script = ExtResource("2_qy0x8")
+Item = ExtResource("4_d4b28")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_nrvwe"]
+script = ExtResource("2_qy0x8")
+Item = ExtResource("5_o2p0o")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_7rmi7"]
+script = ExtResource("2_qy0x8")
+Item = ExtResource("6_8qy3d")
+Amount = 2.0
+
+[resource]
+script = ExtResource("7_xcck6")
+Id = 225
+Building = 0
+Name = "Turbo Pressure Motor"
+Inputs = [SubResource("Resource_cpcf1"), SubResource("Resource_hr0nc"), SubResource("Resource_dwxca"), SubResource("Resource_nrvwe")]
+Outputs = [SubResource("Resource_7rmi7")]
+ProcessingTime = 32.0
+IsAlternative = true

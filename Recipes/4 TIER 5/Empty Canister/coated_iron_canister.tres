@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://o1psdnqi644i"]
+
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="1_4phdg"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_wgbe1"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="3_s0l0q"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_4dous"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_0frs2"]
+
+[sub_resource type="Resource" id="Resource_frie2"]
+script = ExtResource("2_wgbe1")
+Item = ExtResource("1_4phdg")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_d4gsq"]
+script = ExtResource("2_wgbe1")
+Item = ExtResource("3_s0l0q")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_v0txl"]
+script = ExtResource("2_wgbe1")
+Item = ExtResource("4_4dous")
+Amount = 4.0
+
+[resource]
+script = ExtResource("5_0frs2")
+Id = 152
+Building = 0
+Name = "Coated Iron Canister"
+Inputs = [SubResource("Resource_frie2"), SubResource("Resource_d4gsq")]
+Outputs = [SubResource("Resource_v0txl")]
+ProcessingTime = 4.0
+IsAlternative = true

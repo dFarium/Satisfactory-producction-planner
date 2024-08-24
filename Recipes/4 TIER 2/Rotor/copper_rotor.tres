@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ct621h31e7j6y"]
+
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="1_vkh2v"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_y4bgn"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_fk5nw"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="4_ufqug"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_xmpfn"]
+
+[sub_resource type="Resource" id="Resource_nia2n"]
+script = ExtResource("2_y4bgn")
+Item = ExtResource("1_vkh2v")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_h6vrp"]
+script = ExtResource("2_y4bgn")
+Item = ExtResource("3_fk5nw")
+Amount = 52.0
+
+[sub_resource type="Resource" id="Resource_u8mgv"]
+script = ExtResource("2_y4bgn")
+Item = ExtResource("4_ufqug")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_xmpfn")
+Id = 118
+Building = 0
+Name = "Copper Rotor"
+Inputs = [SubResource("Resource_nia2n"), SubResource("Resource_h6vrp")]
+Outputs = [SubResource("Resource_u8mgv")]
+ProcessingTime = 16.0
+IsAlternative = true

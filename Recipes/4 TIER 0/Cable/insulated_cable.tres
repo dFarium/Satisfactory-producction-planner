@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ckxi6p02yw8dj"]
+
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="1_xcy1j"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_42ppi"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_y2sia"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="4_78uan"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_t2t5y"]
+
+[sub_resource type="Resource" id="Resource_x6i05"]
+script = ExtResource("2_42ppi")
+Item = ExtResource("1_xcy1j")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_l6nsb"]
+script = ExtResource("2_42ppi")
+Item = ExtResource("3_y2sia")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_63mg7"]
+script = ExtResource("2_42ppi")
+Item = ExtResource("4_78uan")
+Amount = 20.0
+
+[resource]
+script = ExtResource("5_t2t5y")
+Id = 84
+Building = 0
+Name = "Insulated Cable"
+Inputs = [SubResource("Resource_x6i05"), SubResource("Resource_l6nsb")]
+Outputs = [SubResource("Resource_63mg7")]
+ProcessingTime = 12.0
+IsAlternative = true

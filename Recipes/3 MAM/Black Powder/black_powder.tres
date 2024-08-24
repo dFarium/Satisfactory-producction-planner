@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://do3iiytm7cjof"]
+
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="1_c2vp7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_k3ydk"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="3_2nmv4"]
+[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="4_qwcrs"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_wmpbg"]
+
+[sub_resource type="Resource" id="Resource_dv3if"]
+script = ExtResource("2_k3ydk")
+Item = ExtResource("1_c2vp7")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_owusa"]
+script = ExtResource("2_k3ydk")
+Item = ExtResource("3_2nmv4")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_oxqxo"]
+script = ExtResource("2_k3ydk")
+Item = ExtResource("4_qwcrs")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_wmpbg")
+Id = 43
+Building = 0
+Name = "Black Powder"
+Inputs = [SubResource("Resource_dv3if"), SubResource("Resource_owusa")]
+Outputs = [SubResource("Resource_oxqxo")]
+ProcessingTime = 4.0
+IsAlternative = false

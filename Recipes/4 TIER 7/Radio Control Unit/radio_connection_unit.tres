@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://caiw52w4sisld"]
+
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="1_iyrq4"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_du37w"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="3_xdhfx"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="4_4vf7i"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="5_xaayh"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_f5di4"]
+
+[sub_resource type="Resource" id="Resource_lxa53"]
+script = ExtResource("2_du37w")
+Item = ExtResource("1_iyrq4")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_t8b8w"]
+script = ExtResource("2_du37w")
+Item = ExtResource("3_xdhfx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_xj7ha"]
+script = ExtResource("2_du37w")
+Item = ExtResource("4_4vf7i")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_6qnt8"]
+script = ExtResource("2_du37w")
+Item = ExtResource("5_xaayh")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_f5di4")
+Id = 191
+Building = 0
+Name = "Radio Connection Unit"
+Inputs = [SubResource("Resource_lxa53"), SubResource("Resource_t8b8w"), SubResource("Resource_xj7ha")]
+Outputs = [SubResource("Resource_6qnt8")]
+ProcessingTime = 16.0
+IsAlternative = true

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://p1ri7b6d4oy5"]
+
+[ext_resource type="Resource" uid="uid://d10tduafrayxn" path="res://Items/packaged_liquid_biofuel.tres" id="1_7vi4s"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_w7vk4"]
+[ext_resource type="Resource" uid="uid://qnba4b0ruyuw" path="res://Items/liquid_biofuel.tres" id="3_52jit"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_2w0rj"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_dbk1u"]
+
+[sub_resource type="Resource" id="Resource_cqa58"]
+script = ExtResource("2_w7vk4")
+Item = ExtResource("1_7vi4s")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_qtca1"]
+script = ExtResource("2_w7vk4")
+Item = ExtResource("3_52jit")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_8w3ou"]
+script = ExtResource("2_w7vk4")
+Item = ExtResource("4_2w0rj")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_dbk1u")
+Id = 166
+Building = 0
+Name = "Unpackage Liquid Biofuel"
+Inputs = [SubResource("Resource_cqa58")]
+Outputs = [SubResource("Resource_qtca1"), SubResource("Resource_8w3ou")]
+ProcessingTime = 2.0
+IsAlternative = false

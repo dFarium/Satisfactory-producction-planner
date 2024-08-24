@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bi0fx3rb4sm4r"]
+
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="1_2eqll"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_2ccbb"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_0ye75"]
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="4_1aco5"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_jgagc"]
+
+[sub_resource type="Resource" id="Resource_7gw56"]
+script = ExtResource("2_2ccbb")
+Item = ExtResource("1_2eqll")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mo37i"]
+script = ExtResource("2_2ccbb")
+Item = ExtResource("3_0ye75")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wvn65"]
+script = ExtResource("2_2ccbb")
+Item = ExtResource("4_1aco5")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_jgagc")
+Id = 128
+Building = 0
+Name = "Steel Ingot"
+Inputs = [SubResource("Resource_7gw56"), SubResource("Resource_mo37i")]
+Outputs = [SubResource("Resource_wvn65")]
+ProcessingTime = 4.0
+IsAlternative = false

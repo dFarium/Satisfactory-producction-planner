@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cwav6unxl3r44"]
+
+[ext_resource type="Resource" uid="uid://dhyfjldnhn82l" path="res://Items/solid_biofuel.tres" id="1_abc06"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_w4i3r"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_id3cx"]
+[ext_resource type="Resource" uid="uid://qnba4b0ruyuw" path="res://Items/liquid_biofuel.tres" id="4_ablcw"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_3fdow"]
+
+[sub_resource type="Resource" id="Resource_r0wfp"]
+script = ExtResource("2_w4i3r")
+Item = ExtResource("1_abc06")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_vxwjk"]
+script = ExtResource("2_w4i3r")
+Item = ExtResource("3_id3cx")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_5inkw"]
+script = ExtResource("2_w4i3r")
+Item = ExtResource("4_ablcw")
+Amount = 4.0
+
+[resource]
+script = ExtResource("5_3fdow")
+Id = 164
+Building = 0
+Name = "Liquid Biofuel"
+Inputs = [SubResource("Resource_r0wfp"), SubResource("Resource_vxwjk")]
+Outputs = [SubResource("Resource_5inkw")]
+ProcessingTime = 4.0
+IsAlternative = false

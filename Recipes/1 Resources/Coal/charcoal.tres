@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://byjdn1wr8l2b6"]
+
+[ext_resource type="Resource" uid="uid://ongr047x2t7" path="res://Items/wood.tres" id="1_mavdd"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6jj3c"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_p3j7j"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_koaek"]
+
+[sub_resource type="Resource" id="Resource_svu73"]
+script = ExtResource("2_6jj3c")
+Item = ExtResource("1_mavdd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ivtcu"]
+script = ExtResource("2_6jj3c")
+Item = ExtResource("3_p3j7j")
+Amount = 10.0
+
+[resource]
+script = ExtResource("4_koaek")
+Id = 3
+Building = 0
+Name = "Charcoal"
+Inputs = [SubResource("Resource_svu73")]
+Outputs = [SubResource("Resource_ivtcu")]
+ProcessingTime = 4.0
+IsAlternative = true

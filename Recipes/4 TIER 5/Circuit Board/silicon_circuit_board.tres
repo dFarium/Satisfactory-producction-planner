@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cvu0p71k3dg18"]
+
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="1_qtns7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_oe2q4"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="3_ti7eu"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_ovd6u"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_kgry7"]
+
+[sub_resource type="Resource" id="Resource_8mlev"]
+script = ExtResource("2_oe2q4")
+Item = ExtResource("1_qtns7")
+Amount = 11.0
+
+[sub_resource type="Resource" id="Resource_yjoqp"]
+script = ExtResource("2_oe2q4")
+Item = ExtResource("3_ti7eu")
+Amount = 11.0
+
+[sub_resource type="Resource" id="Resource_e3pvy"]
+script = ExtResource("2_oe2q4")
+Item = ExtResource("4_ovd6u")
+Amount = 5.0
+
+[resource]
+script = ExtResource("5_kgry7")
+Id = 148
+Building = 0
+Name = "Silicon Circuit Board"
+Inputs = [SubResource("Resource_8mlev"), SubResource("Resource_yjoqp")]
+Outputs = [SubResource("Resource_e3pvy")]
+ProcessingTime = 24.0
+IsAlternative = true

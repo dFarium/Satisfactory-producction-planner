@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dnt4fs5mxyd8c"]
+
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="1_h3kip"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_rm1jq"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_5i03y"]
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="4_gpivq"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_87oet"]
+
+[sub_resource type="Resource" id="Resource_pb6dh"]
+script = ExtResource("2_rm1jq")
+Item = ExtResource("1_h3kip")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_h8icm"]
+script = ExtResource("2_rm1jq")
+Item = ExtResource("3_5i03y")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_v1emm"]
+script = ExtResource("2_rm1jq")
+Item = ExtResource("4_gpivq")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_87oet")
+Id = 127
+Building = 0
+Name = "Solid Steel Ingot"
+Inputs = [SubResource("Resource_pb6dh"), SubResource("Resource_h8icm")]
+Outputs = [SubResource("Resource_v1emm")]
+ProcessingTime = 3.0
+IsAlternative = true

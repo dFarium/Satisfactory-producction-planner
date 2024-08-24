@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cqyy3py88s0tq"]
+
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="1_8o1hu"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_12se0"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_jf5gn"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="4_nrdbn"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_mac8x"]
+
+[sub_resource type="Resource" id="Resource_bwtxs"]
+script = ExtResource("2_12se0")
+Item = ExtResource("1_8o1hu")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mvkl1"]
+script = ExtResource("2_12se0")
+Item = ExtResource("3_jf5gn")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_5op86"]
+script = ExtResource("2_12se0")
+Item = ExtResource("4_nrdbn")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_mac8x")
+Id = 143
+Building = 0
+Name = "Stator"
+Inputs = [SubResource("Resource_bwtxs"), SubResource("Resource_mvkl1")]
+Outputs = [SubResource("Resource_5op86")]
+ProcessingTime = 12.0
+IsAlternative = false

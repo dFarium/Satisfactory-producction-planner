@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c7shie8ou2pec"]
+
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="1_ilyy4"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_1q0cy"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_y46j0"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="4_5gwwx"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_w18yl"]
+
+[sub_resource type="Resource" id="Resource_pblns"]
+script = ExtResource("2_1q0cy")
+Item = ExtResource("1_ilyy4")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mbw6i"]
+script = ExtResource("2_1q0cy")
+Item = ExtResource("3_y46j0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mffpd"]
+script = ExtResource("2_1q0cy")
+Item = ExtResource("4_5gwwx")
+Amount = 11.0
+
+[resource]
+script = ExtResource("5_w18yl")
+Id = 85
+Building = 0
+Name = "Quickwire Cable"
+Inputs = [SubResource("Resource_pblns"), SubResource("Resource_mbw6i")]
+Outputs = [SubResource("Resource_mffpd")]
+ProcessingTime = 24.0
+IsAlternative = true

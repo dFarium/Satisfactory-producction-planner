@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://bdc07d1xt00ae"]
+
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="1_poqcw"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_i402g"]
+[ext_resource type="Resource" uid="uid://bgtc0vpo8850s" path="res://Items/encased_industrial_beam.tres" id="3_amb3k"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_q4fhf"]
+[ext_resource type="Resource" uid="uid://bldf68b58copu" path="res://Items/uranium_fuel_rod.tres" id="5_328f2"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_4odg8"]
+
+[sub_resource type="Resource" id="Resource_vn7bk"]
+script = ExtResource("2_i402g")
+Item = ExtResource("1_poqcw")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_j1bxw"]
+script = ExtResource("2_i402g")
+Item = ExtResource("3_amb3k")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_52go6"]
+script = ExtResource("2_i402g")
+Item = ExtResource("4_q4fhf")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_idlbv"]
+script = ExtResource("2_i402g")
+Item = ExtResource("5_328f2")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_4odg8")
+Id = 226
+Building = 0
+Name = "Uranium Fuel Rod"
+Inputs = [SubResource("Resource_vn7bk"), SubResource("Resource_j1bxw"), SubResource("Resource_52go6")]
+Outputs = [SubResource("Resource_idlbv")]
+ProcessingTime = 150.0
+IsAlternative = false

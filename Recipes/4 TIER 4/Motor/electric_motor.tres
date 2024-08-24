@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cx48p5iqxd6fb"]
+
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="1_cucvu"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_yxcuy"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="3_5ayry"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="4_k5mj6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_dj4n1"]
+
+[sub_resource type="Resource" id="Resource_1xbag"]
+script = ExtResource("2_yxcuy")
+Item = ExtResource("1_cucvu")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jiy3b"]
+script = ExtResource("2_yxcuy")
+Item = ExtResource("3_5ayry")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_y6vtr"]
+script = ExtResource("2_yxcuy")
+Item = ExtResource("4_k5mj6")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_dj4n1")
+Id = 139
+Building = 0
+Name = "Electric Motor"
+Inputs = [SubResource("Resource_1xbag"), SubResource("Resource_jiy3b")]
+Outputs = [SubResource("Resource_y6vtr")]
+ProcessingTime = 16.0
+IsAlternative = true

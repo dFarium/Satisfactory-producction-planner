@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://s65oqripk2um"]
+
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="1_u1bay"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_1h6ib"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="3_swb43"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_tbln8"]
+
+[sub_resource type="Resource" id="Resource_7mxl0"]
+script = ExtResource("2_1h6ib")
+Item = ExtResource("1_u1bay")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ho2ii"]
+script = ExtResource("2_1h6ib")
+Item = ExtResource("3_swb43")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_tbln8")
+Id = 113
+Building = 0
+Name = "Copper Sheet"
+Inputs = [SubResource("Resource_7mxl0")]
+Outputs = [SubResource("Resource_ho2ii")]
+ProcessingTime = 6.0
+IsAlternative = false

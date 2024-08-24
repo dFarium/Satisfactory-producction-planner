@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dkl828sic5hbb"]
+
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="1_o7yok"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_82ls4"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_ss77t"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="4_eht61"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_hd4ep"]
+
+[sub_resource type="Resource" id="Resource_b38bs"]
+script = ExtResource("2_82ls4")
+Item = ExtResource("1_o7yok")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_6qnln"]
+script = ExtResource("2_82ls4")
+Item = ExtResource("3_ss77t")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_axy38"]
+script = ExtResource("2_82ls4")
+Item = ExtResource("4_eht61")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_hd4ep")
+Id = 114
+Building = 0
+Name = "Steamed Copper Sheet"
+Inputs = [SubResource("Resource_b38bs"), SubResource("Resource_6qnln")]
+Outputs = [SubResource("Resource_axy38")]
+ProcessingTime = 8.0
+IsAlternative = true

@@ -9,23 +9,24 @@
 [sub_resource type="Resource" id="Resource_o5p1q"]
 script = ExtResource("2_omrgj")
 Item = ExtResource("1_8e3vi")
-Amount = 4
+Amount = 4.0
 
 [sub_resource type="Resource" id="Resource_jjy4o"]
 script = ExtResource("2_omrgj")
 Item = ExtResource("3_cit3i")
-Amount = 1
+Amount = 1.0
 
 [sub_resource type="Resource" id="Resource_muswe"]
 script = ExtResource("2_omrgj")
 Item = ExtResource("4_wxwaw")
-Amount = 1
+Amount = 1.0
 
 [resource]
 script = ExtResource("5_v68gm")
+Id = 12
 Building = 9
 Name = "Packaged Nitrogen Gas"
-Inputs = Array[Object]([SubResource("Resource_o5p1q"), SubResource("Resource_jjy4o")])
-Outputs = Array[Object]([SubResource("Resource_muswe")])
+Inputs = [SubResource("Resource_o5p1q"), SubResource("Resource_jjy4o")]
+Outputs = [SubResource("Resource_muswe")]
 ProcessingTime = 1.0
 IsAlternative = false

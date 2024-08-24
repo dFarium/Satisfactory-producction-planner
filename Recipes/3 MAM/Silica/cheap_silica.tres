@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bsc5lkyj6od38"]
+
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="1_ad7mk"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_vnc0r"]
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="3_jqmtk"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="4_okfab"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_efsk0"]
+
+[sub_resource type="Resource" id="Resource_w7stl"]
+script = ExtResource("2_vnc0r")
+Item = ExtResource("1_ad7mk")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_fyhkl"]
+script = ExtResource("2_vnc0r")
+Item = ExtResource("3_jqmtk")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_v84y3"]
+script = ExtResource("2_vnc0r")
+Item = ExtResource("4_okfab")
+Amount = 7.0
+
+[resource]
+script = ExtResource("5_efsk0")
+Id = 63
+Building = 0
+Name = "Cheap Silica"
+Inputs = [SubResource("Resource_w7stl"), SubResource("Resource_fyhkl")]
+Outputs = [SubResource("Resource_v84y3")]
+ProcessingTime = 16.0
+IsAlternative = true

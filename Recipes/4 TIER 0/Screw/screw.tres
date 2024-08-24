@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://y0f276cuj5x8"]
+
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="1_dx4ha"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_2iu61"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_qyj2k"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_fes2y"]
+
+[sub_resource type="Resource" id="Resource_8fkmj"]
+script = ExtResource("2_2iu61")
+Item = ExtResource("1_dx4ha")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pheli"]
+script = ExtResource("2_2iu61")
+Item = ExtResource("3_qyj2k")
+Amount = 4.0
+
+[resource]
+script = ExtResource("4_fes2y")
+Id = 106
+Building = 0
+Name = "Screw"
+Inputs = [SubResource("Resource_8fkmj")]
+Outputs = [SubResource("Resource_pheli")]
+ProcessingTime = 6.0
+IsAlternative = false

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c42w2blmcy6ix"]
+
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="1_b7okw"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_lceri"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="3_d5tfj"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_ldkdn"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_xwv6y"]
+
+[sub_resource type="Resource" id="Resource_cpqd6"]
+script = ExtResource("2_lceri")
+Item = ExtResource("1_b7okw")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kypie"]
+script = ExtResource("2_lceri")
+Item = ExtResource("3_d5tfj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4kq6m"]
+script = ExtResource("2_lceri")
+Item = ExtResource("4_ldkdn")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_xwv6y")
+Id = 201
+Building = 0
+Name = "Electromagnetic Control Rod"
+Inputs = [SubResource("Resource_cpqd6"), SubResource("Resource_kypie")]
+Outputs = [SubResource("Resource_4kq6m")]
+ProcessingTime = 30.0
+IsAlternative = false

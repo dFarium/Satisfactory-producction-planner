@@ -10,23 +10,25 @@ public partial class Building : GraphNode
     [Signal]
     public delegate void BuildingValuesUpdatedEventHandler(StringName buildingName, int slot, float value);
 
+    public HashSet<Connection> Connections = new();
     private Recipe _recipe;
     private Label _buildingName;
     private BuildingSlot _buildingAmountText;
     [Export] private VBoxContainer[] _inputContainers;
     [Export] private VBoxContainer[] _outputContainers;
-    private List<List<Node>> _inputNodes = new List<List<Node>>();
-    private List<List<Node>> _outputNodes = new List<List<Node>>();
+    private List<List<Node>> _inputNodes = new();
+    private List<List<Node>> _outputNodes = new();
+    private List<BuildingSlot> _inputAmounts = new();
+    private List<BuildingSlot> _outputAmounts = new();
 
-    private List<BuildingSlot> _inputAmounts = new List<BuildingSlot>();
-    private List<BuildingSlot> _outputAmounts = new List<BuildingSlot>();
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         SetCloseButton();
         _buildingName = GetNode<Label>("Buildings/BuildingName");
-        _buildingAmountText = GetNode<BuildingSlot>("Buildings/LineEdit");
+        _buildingAmountText = GetNodeOrNull<BuildingSlot>("Buildings/LineEdit");
+
 
         foreach (VBoxContainer container in _inputContainers)
         {
@@ -161,5 +163,10 @@ public partial class Building : GraphNode
         closeButton.Text = " X ";
         closeButton.Pressed += QueueFree;
         titleBar.AddChild(closeButton);
+    }
+
+    public void DeselectBuilding()
+    {
+        Selected = false;
     }
 }

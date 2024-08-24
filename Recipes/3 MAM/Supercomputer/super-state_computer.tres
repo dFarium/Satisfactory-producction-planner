@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://ksnvydya52am"]
+
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="1_1y7sd"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_tnpqh"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="3_mahic"]
+[ext_resource type="Resource" uid="uid://b33sr4iks1ptb" path="res://Items/battery.tres" id="4_2dv4x"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="5_4lb6i"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="6_s13cm"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_lj3rf"]
+
+[sub_resource type="Resource" id="Resource_7m0dp"]
+script = ExtResource("2_tnpqh")
+Item = ExtResource("1_1y7sd")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kcpmo"]
+script = ExtResource("2_tnpqh")
+Item = ExtResource("3_mahic")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ltlvj"]
+script = ExtResource("2_tnpqh")
+Item = ExtResource("4_2dv4x")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_sbog8"]
+script = ExtResource("2_tnpqh")
+Item = ExtResource("5_4lb6i")
+Amount = 45.0
+
+[sub_resource type="Resource" id="Resource_qpr12"]
+script = ExtResource("2_tnpqh")
+Item = ExtResource("6_s13cm")
+Amount = 2.0
+
+[resource]
+script = ExtResource("7_lj3rf")
+Id = 67
+Building = 0
+Name = "Super-State Computer"
+Inputs = [SubResource("Resource_7m0dp"), SubResource("Resource_kcpmo"), SubResource("Resource_ltlvj"), SubResource("Resource_sbog8")]
+Outputs = [SubResource("Resource_qpr12")]
+ProcessingTime = 50.0
+IsAlternative = true

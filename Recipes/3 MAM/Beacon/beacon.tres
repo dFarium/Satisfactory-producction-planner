@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://bqamtb3redcsr"]
+
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="1_f4y7q"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_n6b7b"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="3_mgtcs"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="4_g2f0a"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="5_x5uhv"]
+[ext_resource type="Resource" uid="uid://bqnf11sr5sfe4" path="res://Items/beacon.tres" id="6_cq0l0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_so5af"]
+
+[sub_resource type="Resource" id="Resource_idvxi"]
+script = ExtResource("2_n6b7b")
+Item = ExtResource("1_f4y7q")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_umr0x"]
+script = ExtResource("2_n6b7b")
+Item = ExtResource("3_mgtcs")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jjdwp"]
+script = ExtResource("2_n6b7b")
+Item = ExtResource("4_g2f0a")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_jymxk"]
+script = ExtResource("2_n6b7b")
+Item = ExtResource("5_x5uhv")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_7qea7"]
+script = ExtResource("2_n6b7b")
+Item = ExtResource("6_cq0l0")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_so5af")
+Id = 41
+Building = 0
+Name = "Beacon"
+Inputs = [SubResource("Resource_idvxi"), SubResource("Resource_umr0x"), SubResource("Resource_jjdwp"), SubResource("Resource_jymxk")]
+Outputs = [SubResource("Resource_7qea7")]
+ProcessingTime = 8.0
+IsAlternative = false

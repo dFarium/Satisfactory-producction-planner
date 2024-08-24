@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c0uu4vmi54hjn"]
+
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="1_4f1qv"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_8emq3"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_f2lof"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_novcc"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_qajt3"]
+
+[sub_resource type="Resource" id="Resource_7abxu"]
+script = ExtResource("2_8emq3")
+Item = ExtResource("1_4f1qv")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_qmxob"]
+script = ExtResource("2_8emq3")
+Item = ExtResource("3_f2lof")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_jea4k"]
+script = ExtResource("2_8emq3")
+Item = ExtResource("4_novcc")
+Amount = 7.0
+
+[resource]
+script = ExtResource("5_qajt3")
+Id = 145
+Building = 0
+Name = "Caterium Circuit Board"
+Inputs = [SubResource("Resource_7abxu"), SubResource("Resource_qmxob")]
+Outputs = [SubResource("Resource_jea4k")]
+ProcessingTime = 48.0
+IsAlternative = true

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://nj3imy6fiyv3"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_5anyb"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_7c5vk"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_vjn36"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="4_wtitc"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_2gtjo"]
+
+[sub_resource type="Resource" id="Resource_dnaru"]
+script = ExtResource("2_7c5vk")
+Item = ExtResource("1_5anyb")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_ryco7"]
+script = ExtResource("2_7c5vk")
+Item = ExtResource("3_vjn36")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_3udum"]
+script = ExtResource("2_7c5vk")
+Item = ExtResource("4_wtitc")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_2gtjo")
+Id = 175
+Building = 0
+Name = "Rubber"
+Inputs = [SubResource("Resource_dnaru")]
+Outputs = [SubResource("Resource_ryco7"), SubResource("Resource_3udum")]
+ProcessingTime = 6.0
+IsAlternative = false

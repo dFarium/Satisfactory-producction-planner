@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://086h0ct1thpf"]
+
+[ext_resource type="Resource" uid="uid://djbyvsblqligv" path="res://Items/caterium_ore.tres" id="1_e348i"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_nw5ou"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="3_64ye4"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_phcfu"]
+
+[sub_resource type="Resource" id="Resource_qs7xr"]
+script = ExtResource("2_nw5ou")
+Item = ExtResource("1_e348i")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_780dx"]
+script = ExtResource("2_nw5ou")
+Item = ExtResource("3_64ye4")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_phcfu")
+Id = 45
+Building = 0
+Name = "Caterium Ingot"
+Inputs = [SubResource("Resource_qs7xr")]
+Outputs = [SubResource("Resource_780dx")]
+ProcessingTime = 4.0
+IsAlternative = false

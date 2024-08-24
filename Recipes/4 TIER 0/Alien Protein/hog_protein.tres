@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bx53iliwi7a1t"]
+
+[ext_resource type="Resource" uid="uid://cmaty12fklf4n" path="res://Items/hog_remains.tres" id="1_4hrvd"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_qkahe"]
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="3_nd732"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_w7j1k"]
+
+[sub_resource type="Resource" id="Resource_rif07"]
+script = ExtResource("2_qkahe")
+Item = ExtResource("1_4hrvd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_qhy0a"]
+script = ExtResource("2_qkahe")
+Item = ExtResource("3_nd732")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_w7j1k")
+Id = 75
+Building = 0
+Name = "Hog Protein"
+Inputs = [SubResource("Resource_rif07")]
+Outputs = [SubResource("Resource_qhy0a")]
+ProcessingTime = 3.0
+IsAlternative = false

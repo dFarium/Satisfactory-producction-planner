@@ -1,0 +1,5908 @@
+[gd_resource type="Resource" load_steps=1059 format=3 uid="uid://y35ga86odtbd"]
+
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="1_gse07"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_grnui"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="3_4k5yx"]
+[ext_resource type="Resource" uid="uid://djbyvsblqligv" path="res://Items/caterium_ore.tres" id="4_nwho2"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="5_xd3d0"]
+[ext_resource type="Resource" uid="uid://bhd3duvummhss" path="res://Items/biomass.tres" id="6_2btvn"]
+[ext_resource type="Resource" uid="uid://ongr047x2t7" path="res://Items/wood.tres" id="7_wjbil"]
+[ext_resource type="Resource" uid="uid://bysowtme8qlop" path="res://Items/copper_ore.tres" id="8_wbesc"]
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="9_2e63a"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="10_aujto"]
+[ext_resource type="Resource" uid="uid://055gg6i3dm5p" path="res://Items/packaged_oil.tres" id="11_u68da"]
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="12_y2saw"]
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="13_lu73u"]
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="14_juf4s"]
+[ext_resource type="Resource" uid="uid://xvcecodj5ali" path="res://Items/empty_fluid_tank.tres" id="15_xtccd"]
+[ext_resource type="Resource" uid="uid://m507fth7f238" path="res://Items/packaged_nitrogen_gas.tres" id="16_h4n1o"]
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="17_btqhf"]
+[ext_resource type="Resource" uid="uid://0tesf0nwto3n" path="res://Items/sam_ore.tres" id="18_3k8kr"]
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="19_os4nj"]
+[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="20_hxryk"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="21_vh0h2"]
+[ext_resource type="Resource" uid="uid://dykvk88e3uxl8" path="res://Items/packaged_water.tres" id="22_3bkhg"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="23_4xh1k"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="24_w3cxb"]
+[ext_resource type="Resource" uid="uid://nub3wyf1b7hc" path="res://Items/iron_rod.tres" id="25_1ibki"]
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="26_lnskw"]
+[ext_resource type="Resource" uid="uid://biepvmafaaang" path="res://Items/portable_miner.tres" id="27_0pubb"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="28_t1l6p"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="29_36uoa"]
+[ext_resource type="Resource" uid="uid://bqnf11sr5sfe4" path="res://Items/beacon.tres" id="30_0vp41"]
+[ext_resource type="Resource" uid="uid://c2rakpd1rmusm" path="res://Items/steel_beam.tres" id="31_jqxhm"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="32_rpjq1"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="33_mo4ny"]
+[ext_resource type="Resource" uid="uid://d2kugd8cvw00f" path="res://Items/fabric.tres" id="34_757nm"]
+[ext_resource type="Resource" uid="uid://baymv17s7qxc1" path="res://Items/gas_filter.tres" id="35_h21fu"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="36_ji16g"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="37_bw63l"]
+[ext_resource type="Resource" uid="uid://di61hs1rvpcmw" path="res://Items/nobelisk.tres" id="38_gpktk"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="39_633jr"]
+[ext_resource type="Resource" uid="uid://deu2j2cy0o4i7" path="res://Items/cluster_nobelisk.tres" id="40_rglus"]
+[ext_resource type="Resource" uid="uid://d12ibkoyx3rjx" path="res://Items/gas_nobelisk.tres" id="41_gniso"]
+[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="42_6pk1s"]
+[ext_resource type="Resource" uid="uid://dk3w5b4lclavl" path="res://Items/encased_uranium_cell.tres" id="43_wld2r"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="44_5s833"]
+[ext_resource type="Resource" uid="uid://damumgto3v86j" path="res://Items/pulse_nobelisk.tres" id="45_y424h"]
+[ext_resource type="Resource" uid="uid://uomxru3acgew" path="res://Items/iron_rebar.tres" id="46_gtfd5"]
+[ext_resource type="Resource" uid="uid://b3basojq61m4a" path="res://Items/explosive_rebar.tres" id="47_wxfg4"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="48_bw5e7"]
+[ext_resource type="Resource" uid="uid://c7rljjcj3mr6o" path="res://Items/shatter_rebar.tres" id="49_73bdk"]
+[ext_resource type="Resource" uid="uid://dsuc143ta07ys" path="res://Items/stun_rebar.tres" id="50_1tag8"]
+[ext_resource type="Resource" uid="uid://dfvl0mki48oh1" path="res://Items/rifle_ammo.tres" id="51_r8y44"]
+[ext_resource type="Resource" uid="uid://cgx5q4na0rnv3" path="res://Items/packaged_turbofuel.tres" id="52_wp4v6"]
+[ext_resource type="Resource" uid="uid://btu2jpr03ig2c" path="res://Items/turbo_rifle_ammo.tres" id="53_70b3j"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="54_xlytm"]
+[ext_resource type="Resource" uid="uid://cvkewkk2ospfm" path="res://Items/homing_rifle_ammo.tres" id="55_p6jsa"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="56_nrovr"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="57_bvr4l"]
+[ext_resource type="Resource" uid="uid://xunigr6ppy63" path="res://Items/alien_protein.tres" id="58_1n7ke"]
+[ext_resource type="Resource" uid="uid://dfkysslf2jnee" path="res://Items/alien_dna_capsule.tres" id="59_dfh0b"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="60_oj5xm"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="61_00jf5"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="62_pbjt8"]
+[ext_resource type="Resource" uid="uid://cuv2yo5fo2og4" path="res://Items/mycelia.tres" id="63_4w50c"]
+[ext_resource type="Resource" uid="uid://s3es7pu32jox" path="res://Items/polymer_resin.tres" id="64_jbu3g"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="65_xsed2"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="66_2ct1o"]
+[ext_resource type="Resource" uid="uid://c82a6u0gnmiia" path="res://Items/blue_power_slug.tres" id="67_qdlsy"]
+[ext_resource type="Resource" uid="uid://bjcdyuwdkewp8" path="res://Items/power_shard.tres" id="68_gqch3"]
+[ext_resource type="Resource" uid="uid://yjrcko056ong" path="res://Items/yellow_power_slug.tres" id="69_j2m13"]
+[ext_resource type="Resource" uid="uid://08704vs2nx54" path="res://Items/purple_power_slug.tres" id="70_wylgq"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="71_m0wut"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="72_4855v"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="73_kgohx"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="74_spxbe"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="75_qaw2e"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="76_7aunj"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="77_lkhms"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="78_m4ii2"]
+[ext_resource type="Resource" uid="uid://b33sr4iks1ptb" path="res://Items/battery.tres" id="79_64vwf"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="80_cusam"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="81_o016e"]
+[ext_resource type="Resource" uid="uid://opd4gr42qd7b" path="res://Items/hatcher_remains.tres" id="82_udshb"]
+[ext_resource type="Resource" uid="uid://cmaty12fklf4n" path="res://Items/hog_remains.tres" id="83_5dc65"]
+[ext_resource type="Resource" uid="uid://cxfgc48p0ghkv" path="res://Items/plasma_spitter_remains.tres" id="84_4ga7y"]
+[ext_resource type="Resource" uid="uid://c4dgajctbabgd" path="res://Items/stringer_remains.tres" id="85_15oj7"]
+[ext_resource type="Resource" uid="uid://ddenftndwkym8" path="res://Items/leaves.tres" id="86_jfegr"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="87_3dm0h"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="88_po8jx"]
+[ext_resource type="Resource" uid="uid://dtcaiojqde0je" path="res://Items/steel_ingot.tres" id="89_ugsjj"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="90_yhlda"]
+[ext_resource type="Resource" uid="uid://voo8fira7v7q" path="res://Items/flower_petals.tres" id="91_mhbw5"]
+[ext_resource type="Resource" uid="uid://bogx3xdska5g" path="res://Items/color_cartridge.tres" id="92_iucy4"]
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="93_5x4xl"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="94_57okk"]
+[ext_resource type="Resource" uid="uid://cxd317xdow8fv" path="res://Items/smart_plating.tres" id="95_xng5r"]
+[ext_resource type="Resource" uid="uid://dhyfjldnhn82l" path="res://Items/solid_biofuel.tres" id="96_esogv"]
+[ext_resource type="Resource" uid="uid://cnmsv5td0ybc4" path="res://Items/versatile_framework.tres" id="97_tcqcj"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="98_6s566"]
+[ext_resource type="Resource" uid="uid://cxri5fyhcy374" path="res://Items/automated_wiring.tres" id="99_ite01"]
+[ext_resource type="Resource" uid="uid://bgtc0vpo8850s" path="res://Items/encased_industrial_beam.tres" id="100_hrt7b"]
+[ext_resource type="Resource" uid="uid://djljcfkbrf6gh" path="res://Items/heavy_modular_frame.tres" id="101_gxi2y"]
+[ext_resource type="Resource" uid="uid://cymv47w84e1xd" path="res://Items/adaptative_control_unit.tres" id="102_xtl5i"]
+[ext_resource type="Resource" uid="uid://nnitdr7yoiov" path="res://Items/packaged_fuel.tres" id="103_6mn6j"]
+[ext_resource type="Resource" uid="uid://bqqnaptqb3gu6" path="res://Items/packaged_heavy_oil_residue.tres" id="104_ji3ik"]
+[ext_resource type="Resource" uid="uid://qnba4b0ruyuw" path="res://Items/liquid_biofuel.tres" id="105_15xbo"]
+[ext_resource type="Resource" uid="uid://d10tduafrayxn" path="res://Items/packaged_liquid_biofuel.tres" id="106_o1cv3"]
+[ext_resource type="Resource" uid="uid://dcn7y4m5w4m8b" path="res://Items/modular_engine.tres" id="107_7mx7w"]
+[ext_resource type="Resource" uid="uid://bh740pt57rovw" path="res://Items/aluminum_ingot.tres" id="108_4u41n"]
+[ext_resource type="Resource" uid="uid://fmtrhn6gl1k" path="res://Items/alclad_aluminum_sheet.tres" id="109_qlxtu"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="110_6mwin"]
+[ext_resource type="Resource" uid="uid://ckusf7675uaog" path="res://Items/packaged_alumina_solution.tres" id="111_no7y0"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="112_ulwuk"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="113_s2g1c"]
+[ext_resource type="Resource" uid="uid://b0uc67ug7chv8" path="res://Items/assembly_director_system.tres" id="114_8cdcw"]
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="115_rtex1"]
+[ext_resource type="Resource" uid="uid://grevpjtkjku1" path="res://Items/packaged_sulfuric_acid.tres" id="116_6jl02"]
+[ext_resource type="Resource" uid="uid://c1dy2s0u1mmwn" path="res://Items/copper_powder.tres" id="117_6frg4"]
+[ext_resource type="Resource" uid="uid://cn6ng6taomfke" path="res://Items/plutonium_pellet.tres" id="118_qq43f"]
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="119_2oh48"]
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="120_ioteb"]
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="121_2hcft"]
+[ext_resource type="Resource" uid="uid://c0pafypp3ujmw" path="res://Items/nitric_acid.tres" id="122_g0a04"]
+[ext_resource type="Resource" uid="uid://desiwxk0let2j" path="res://Items/magnetic_field_generator.tres" id="123_k356u"]
+[ext_resource type="Resource" uid="uid://dyyrkvja1ko02" path="res://Items/packaged_nitric_acid.tres" id="124_ki167"]
+[ext_resource type="Resource" uid="uid://b8ydcn8gn2wf1" path="res://Items/uranium_waste.tres" id="125_pn1y1"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="126_xwsms"]
+[ext_resource type="Resource" uid="uid://8pomsgf5mmwf" path="res://Items/nuclear_pasta.tres" id="127_vfa7r"]
+[ext_resource type="Resource" uid="uid://dlvn642optjqs" path="res://Items/plutonium_fuel_rod.tres" id="128_5cmju"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="129_n0r8b"]
+[ext_resource type="Resource" uid="uid://bav3blu45jmr4" path="res://Items/thermal_propulsion_rocket.tres" id="130_q36yy"]
+[ext_resource type="Resource" uid="uid://bldf68b58copu" path="res://Items/uranium_fuel_rod.tres" id="131_dar1o"]
+[ext_resource type="Script" path="res://Scripts/Items/RecipeList.cs" id="132_ggnhb"]
+
+[sub_resource type="Resource" id="Resource_muswe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("1_gse07")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_oxc7q"]
+script = ExtResource("3_4k5yx")
+Id = 0
+Building = 0
+Name = "Bauxite"
+Inputs = []
+Outputs = [SubResource("Resource_muswe")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_41yrf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("4_nwho2")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_u2kv7"]
+script = ExtResource("3_4k5yx")
+Id = 1
+Building = 0
+Name = "Caterium Ore"
+Inputs = []
+Outputs = [SubResource("Resource_41yrf")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_cetma"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_chqqh"]
+script = ExtResource("3_4k5yx")
+Id = 2
+Building = 0
+Name = "Coal"
+Inputs = []
+Outputs = [SubResource("Resource_cetma")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_r4bjt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_e7ch1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_qosjs"]
+script = ExtResource("3_4k5yx")
+Id = 3
+Building = 0
+Name = "Biocoal"
+Inputs = [SubResource("Resource_r4bjt")]
+Outputs = [SubResource("Resource_e7ch1")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_svu73"]
+script = ExtResource("2_grnui")
+Item = ExtResource("7_wjbil")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ivtcu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_vvf14"]
+script = ExtResource("3_4k5yx")
+Id = 4
+Building = 0
+Name = "Charcoal"
+Inputs = [SubResource("Resource_svu73")]
+Outputs = [SubResource("Resource_ivtcu")]
+ProcessingTime = 4.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_20r70"]
+script = ExtResource("2_grnui")
+Item = ExtResource("8_wbesc")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ieg6b"]
+script = ExtResource("3_4k5yx")
+Id = 5
+Building = 0
+Name = "Copper Ore"
+Inputs = []
+Outputs = [SubResource("Resource_20r70")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_n7vm5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_fw68d"]
+script = ExtResource("3_4k5yx")
+Id = 6
+Building = 0
+Name = "Crude Oil"
+Inputs = []
+Outputs = [SubResource("Resource_n7vm5")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_ls1j0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_1v3w1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_o8cpn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("11_u68da")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_eas4m"]
+script = ExtResource("3_4k5yx")
+Id = 7
+Building = 0
+Name = "Packaged Crude Oil"
+Inputs = [SubResource("Resource_ls1j0"), SubResource("Resource_1v3w1")]
+Outputs = [SubResource("Resource_o8cpn")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_8htwp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_2osid"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_oy337"]
+script = ExtResource("3_4k5yx")
+Id = 8
+Building = 0
+Name = "Unpackage Oil"
+Inputs = [SubResource("Resource_8htwp")]
+Outputs = [SubResource("Resource_8htwp"), SubResource("Resource_2osid")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_fdesk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_n81pc"]
+script = ExtResource("3_4k5yx")
+Id = 9
+Building = 0
+Name = "Iron Ore"
+Inputs = []
+Outputs = [SubResource("Resource_fdesk")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_6oubk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_7s7jo"]
+script = ExtResource("3_4k5yx")
+Id = 10
+Building = 0
+Name = "Limestone Ore"
+Inputs = []
+Outputs = [SubResource("Resource_6oubk")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dm33e"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_vgvlf"]
+script = ExtResource("3_4k5yx")
+Id = 11
+Building = 0
+Name = "Nitrogen Gas"
+Inputs = []
+Outputs = [SubResource("Resource_dm33e")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_o5p1q"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_jjy4o"]
+script = ExtResource("2_grnui")
+Item = ExtResource("15_xtccd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_0sxip"]
+script = ExtResource("2_grnui")
+Item = ExtResource("16_h4n1o")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_wayfc"]
+script = ExtResource("3_4k5yx")
+Id = 12
+Building = 0
+Name = "Packaged Nitrogen Gas"
+Inputs = [SubResource("Resource_o5p1q"), SubResource("Resource_jjy4o")]
+Outputs = [SubResource("Resource_0sxip")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_jshef"]
+script = ExtResource("2_grnui")
+Item = ExtResource("16_h4n1o")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_4d858"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_q3ruc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("15_xtccd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_0hmmo"]
+script = ExtResource("3_4k5yx")
+Id = 13
+Building = 0
+Name = "Unpackage Nitrogen Gas"
+Inputs = [SubResource("Resource_jshef")]
+Outputs = [SubResource("Resource_4d858"), SubResource("Resource_q3ruc")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lm6wj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("17_btqhf")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_i2rx4"]
+script = ExtResource("3_4k5yx")
+Id = 14
+Building = 0
+Name = "Raw Quartz"
+Inputs = []
+Outputs = [SubResource("Resource_lm6wj")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4vwbx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("18_3k8kr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_shkbg"]
+script = ExtResource("3_4k5yx")
+Id = 15
+Building = 0
+Name = "SAM Ore"
+Inputs = []
+Outputs = [SubResource("Resource_4vwbx")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_wecs1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_k5r7e"]
+script = ExtResource("3_4k5yx")
+Id = 16
+Building = 0
+Name = "Sulfur"
+Inputs = []
+Outputs = [SubResource("Resource_wecs1")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_bjbat"]
+script = ExtResource("2_grnui")
+Item = ExtResource("20_hxryk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_hpwnh"]
+script = ExtResource("3_4k5yx")
+Id = 17
+Building = 0
+Name = "Uranium"
+Inputs = []
+Outputs = [SubResource("Resource_bjbat")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_xymdo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_p4jh2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_8hfco"]
+script = ExtResource("2_grnui")
+Item = ExtResource("22_3bkhg")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_yv031"]
+script = ExtResource("3_4k5yx")
+Id = 18
+Building = 0
+Name = "Packaged Water"
+Inputs = [SubResource("Resource_xymdo"), SubResource("Resource_p4jh2")]
+Outputs = [SubResource("Resource_8hfco")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_8ytam"]
+script = ExtResource("2_grnui")
+Item = ExtResource("22_3bkhg")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ff8gd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_363cv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_g3gm5"]
+script = ExtResource("3_4k5yx")
+Id = 19
+Building = 0
+Name = "Unpackage Water"
+Inputs = [SubResource("Resource_8ytam")]
+Outputs = [SubResource("Resource_ff8gd"), SubResource("Resource_363cv")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_a44vh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ra2v6"]
+script = ExtResource("3_4k5yx")
+Id = 20
+Building = 0
+Name = "Water"
+Inputs = []
+Outputs = [SubResource("Resource_a44vh")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_mw7nk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_0dt83"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_200uf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_uo1o4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ty7w4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("27_0pubb")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_21i8g"]
+script = ExtResource("3_4k5yx")
+Id = 21
+Building = 0
+Name = "Automated Miner"
+Inputs = [SubResource("Resource_mw7nk"), SubResource("Resource_0dt83"), SubResource("Resource_200uf"), SubResource("Resource_uo1o4")]
+Outputs = [SubResource("Resource_ty7w4")]
+ProcessingTime = 60.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_uult6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_awme6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_itoew"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_u5py8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_n80eg"]
+script = ExtResource("2_grnui")
+Item = ExtResource("30_0vp41")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_6vke4"]
+script = ExtResource("3_4k5yx")
+Id = 22
+Building = 0
+Name = "Beacon"
+Inputs = [SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew"), SubResource("Resource_u5py8")]
+Outputs = [SubResource("Resource_n80eg")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_27h5u"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_57ots"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_j4mjh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_fs1it"]
+script = ExtResource("2_grnui")
+Item = ExtResource("30_0vp41")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_lelgi"]
+script = ExtResource("3_4k5yx")
+Id = 23
+Building = 0
+Name = "Crystal Beacon"
+Inputs = [SubResource("Resource_27h5u"), SubResource("Resource_57ots"), SubResource("Resource_j4mjh")]
+Outputs = [SubResource("Resource_fs1it")]
+ProcessingTime = 120.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_3a8h7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_rveft"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_lks27"]
+script = ExtResource("2_grnui")
+Item = ExtResource("34_757nm")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_edhpm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("35_h21fu")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_305cl"]
+script = ExtResource("3_4k5yx")
+Id = 24
+Building = 0
+Name = "Gas Filter"
+Inputs = [SubResource("Resource_3a8h7"), SubResource("Resource_rveft"), SubResource("Resource_lks27")]
+Outputs = [SubResource("Resource_edhpm")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_1uogt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("35_h21fu")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_3kf5y"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_wdlgp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_m6cdw"]
+script = ExtResource("3_4k5yx")
+Id = 25
+Building = 0
+Name = "Iodine Infused Filter"
+Inputs = [SubResource("Resource_1uogt"), SubResource("Resource_3kf5y"), SubResource("Resource_wdlgp")]
+Outputs = []
+ProcessingTime = 16.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_gc16t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("38_gpktk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_troca"]
+script = ExtResource("2_grnui")
+Item = ExtResource("39_633jr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_c3n4q"]
+script = ExtResource("2_grnui")
+Item = ExtResource("40_rglus")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_i3bji"]
+script = ExtResource("3_4k5yx")
+Id = 26
+Building = 0
+Name = "Cluster Nobelisk"
+Inputs = [SubResource("Resource_gc16t"), SubResource("Resource_troca")]
+Outputs = [SubResource("Resource_c3n4q")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_3guwx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("38_gpktk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_kv8xq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_28f58"]
+script = ExtResource("2_grnui")
+Item = ExtResource("41_gniso")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_1fvh2"]
+script = ExtResource("3_4k5yx")
+Id = 27
+Building = 0
+Name = "Gas Nobelisk"
+Inputs = [SubResource("Resource_3guwx"), SubResource("Resource_kv8xq")]
+Outputs = [SubResource("Resource_28f58")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_cd3af"]
+script = ExtResource("2_grnui")
+Item = ExtResource("42_6pk1s")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_oyi6b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_320p6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("38_gpktk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ig4yl"]
+script = ExtResource("3_4k5yx")
+Id = 28
+Building = 0
+Name = "Nobelisk"
+Inputs = [SubResource("Resource_cd3af"), SubResource("Resource_oyi6b")]
+Outputs = [SubResource("Resource_320p6")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_n2ygx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("38_gpktk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_rc1ny"]
+script = ExtResource("2_grnui")
+Item = ExtResource("43_wld2r")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_we1ar"]
+script = ExtResource("2_grnui")
+Item = ExtResource("39_633jr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_yphe4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("44_5s833")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_mec2l"]
+script = ExtResource("2_grnui")
+Item = ExtResource("45_y424h")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ccesy"]
+script = ExtResource("3_4k5yx")
+Id = 29
+Building = 0
+Name = "Nuke Nobelisk"
+Inputs = [SubResource("Resource_n2ygx"), SubResource("Resource_rc1ny"), SubResource("Resource_we1ar"), SubResource("Resource_yphe4")]
+Outputs = [SubResource("Resource_mec2l")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_165xr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("38_gpktk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_icp2s"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_kik07"]
+script = ExtResource("2_grnui")
+Item = ExtResource("45_y424h")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_4xy1s"]
+script = ExtResource("3_4k5yx")
+Id = 30
+Building = 0
+Name = "Pulse Nobelisk"
+Inputs = [SubResource("Resource_165xr"), SubResource("Resource_icp2s")]
+Outputs = [SubResource("Resource_kik07")]
+ProcessingTime = 60.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_hxff0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("46_gtfd5")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_tpc6q"]
+script = ExtResource("2_grnui")
+Item = ExtResource("39_633jr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_wpbfd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_lpej2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("47_wxfg4")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_kys6t"]
+script = ExtResource("3_4k5yx")
+Id = 31
+Building = 0
+Name = "Explosive Rebar"
+Inputs = [SubResource("Resource_hxff0"), SubResource("Resource_tpc6q"), SubResource("Resource_wpbfd")]
+Outputs = [SubResource("Resource_lpej2")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_15yy3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_y0ucv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("46_gtfd5")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_xv5ro"]
+script = ExtResource("3_4k5yx")
+Id = 32
+Building = 0
+Name = "Iron Rebar"
+Inputs = [SubResource("Resource_15yy3")]
+Outputs = [SubResource("Resource_y0ucv")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_g6dw5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("46_gtfd5")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_85ljc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_wudvj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("49_73bdk")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_urs1m"]
+script = ExtResource("3_4k5yx")
+Id = 33
+Building = 0
+Name = "Shatter Rebar"
+Inputs = [SubResource("Resource_g6dw5"), SubResource("Resource_85ljc")]
+Outputs = [SubResource("Resource_wudvj")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_sgubc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("46_gtfd5")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_vjx22"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_c3kw4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("50_1tag8")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_6w1eo"]
+script = ExtResource("3_4k5yx")
+Id = 34
+Building = 0
+Name = "Stun Rebar"
+Inputs = [SubResource("Resource_sgubc"), SubResource("Resource_vjx22")]
+Outputs = [SubResource("Resource_c3kw4")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dtxxj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("51_r8y44")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_mn8im"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ungqd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("52_wp4v6")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_isd10"]
+script = ExtResource("2_grnui")
+Item = ExtResource("53_70b3j")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_d08gp"]
+script = ExtResource("3_4k5yx")
+Id = 35
+Building = 0
+Name = "Turbo Rifle Ammo"
+Inputs = [SubResource("Resource_dtxxj"), SubResource("Resource_mn8im"), SubResource("Resource_ungqd")]
+Outputs = [SubResource("Resource_isd10")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_2i3rh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("51_r8y44")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ycb1b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_h3r3g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("55_p6jsa")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_q03er"]
+script = ExtResource("3_4k5yx")
+Id = 36
+Building = 0
+Name = "Homing Rifle Ammo"
+Inputs = [SubResource("Resource_2i3rh"), SubResource("Resource_ycb1b")]
+Outputs = [SubResource("Resource_h3r3g")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_whlj4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ss3rt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("39_633jr")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_s8bes"]
+script = ExtResource("2_grnui")
+Item = ExtResource("51_r8y44")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_oiwo6"]
+script = ExtResource("3_4k5yx")
+Id = 37
+Building = 0
+Name = "Rifle Ammo"
+Inputs = [SubResource("Resource_whlj4"), SubResource("Resource_ss3rt")]
+Outputs = [SubResource("Resource_s8bes")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4xidi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("51_r8y44")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_ffbi7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_iv717"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_6yl0j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("53_70b3j")
+Amount = 0.0
+
+[sub_resource type="Resource" id="Resource_3yuoo"]
+script = ExtResource("3_4k5yx")
+Id = 38
+Building = 0
+Name = "Turbo Rifle Ammo (Fluid)"
+Inputs = [SubResource("Resource_4xidi"), SubResource("Resource_ffbi7"), SubResource("Resource_iv717")]
+Outputs = [SubResource("Resource_6yl0j")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_g6kjt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_cucir"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_kbbjc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("44_5s833")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_evv2q"]
+script = ExtResource("3_4k5yx")
+Id = 39
+Building = 0
+Name = "AI Limiter"
+Inputs = [SubResource("Resource_g6kjt"), SubResource("Resource_cucir")]
+Outputs = [SubResource("Resource_kbbjc")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_vnm5c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_uw5rp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("59_dfh0b")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_bsv4i"]
+script = ExtResource("3_4k5yx")
+Id = 40
+Building = 0
+Name = "Alien DNA Capsule"
+Inputs = [SubResource("Resource_vnm5c")]
+Outputs = [SubResource("Resource_uw5rp")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_idvxi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_umr0x"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jjdwp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_jymxk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_7qea7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("30_0vp41")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_d51s4"]
+script = ExtResource("3_4k5yx")
+Id = 41
+Building = 0
+Name = "Beacon"
+Inputs = [SubResource("Resource_idvxi"), SubResource("Resource_umr0x"), SubResource("Resource_jjdwp"), SubResource("Resource_jymxk")]
+Outputs = [SubResource("Resource_7qea7")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_0wvvl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_p6ihb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 16.0
+
+[sub_resource type="Resource" id="Resource_43pdh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_lxqx0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("30_0vp41")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_bkyt6"]
+script = ExtResource("3_4k5yx")
+Id = 42
+Building = 0
+Name = "Crystal Beacon"
+Inputs = [SubResource("Resource_0wvvl"), SubResource("Resource_p6ihb"), SubResource("Resource_43pdh")]
+Outputs = [SubResource("Resource_lxqx0")]
+ProcessingTime = 120.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_dv3if"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_owusa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_oxqxo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("42_6pk1s")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_kuyfe"]
+script = ExtResource("3_4k5yx")
+Id = 43
+Building = 0
+Name = "Black Powder"
+Inputs = [SubResource("Resource_dv3if"), SubResource("Resource_owusa")]
+Outputs = [SubResource("Resource_oxqxo")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_btsul"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_a8mx1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("60_oj5xm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_xd1eq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("42_6pk1s")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_r7i3w"]
+script = ExtResource("3_4k5yx")
+Id = 44
+Building = 0
+Name = "Fine Black Powder"
+Inputs = [SubResource("Resource_btsul"), SubResource("Resource_a8mx1")]
+Outputs = [SubResource("Resource_xd1eq")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_qs7xr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("4_nwho2")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_780dx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_abiud"]
+script = ExtResource("3_4k5yx")
+Id = 45
+Building = 0
+Name = "Caterium Ingot"
+Inputs = [SubResource("Resource_qs7xr")]
+Outputs = [SubResource("Resource_780dx")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_0xcuk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("4_nwho2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_lorvn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_q411r"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_uy7mi"]
+script = ExtResource("3_4k5yx")
+Id = 46
+Building = 0
+Name = "Pure Caterium Ingot"
+Inputs = [SubResource("Resource_0xcuk"), SubResource("Resource_lorvn")]
+Outputs = [SubResource("Resource_q411r")]
+ProcessingTime = 5.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_6hwcs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_g5hxe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_pyjkq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("60_oj5xm")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_5wadd"]
+script = ExtResource("3_4k5yx")
+Id = 47
+Building = 0
+Name = "Compacted Coal"
+Inputs = [SubResource("Resource_6hwcs"), SubResource("Resource_g5hxe")]
+Outputs = [SubResource("Resource_pyjkq")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_7yhq2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 36.0
+
+[sub_resource type="Resource" id="Resource_dt6nu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_ow064"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_g4u4n"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1hvnt"]
+script = ExtResource("3_4k5yx")
+Id = 48
+Building = 0
+Name = "Crystal Oscillator"
+Inputs = [SubResource("Resource_7yhq2"), SubResource("Resource_dt6nu"), SubResource("Resource_ow064")]
+Outputs = [SubResource("Resource_g4u4n")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_8pmo8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_woh38"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_3hscd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("44_5s833")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_1ctwn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_woyao"]
+script = ExtResource("3_4k5yx")
+Id = 49
+Building = 0
+Name = "Insulated Crystal Oscillator"
+Inputs = [SubResource("Resource_8pmo8"), SubResource("Resource_woh38"), SubResource("Resource_3hscd")]
+Outputs = [SubResource("Resource_1ctwn")]
+ProcessingTime = 32.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ik48k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("63_4w50c")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_n77u5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6vj4q"]
+script = ExtResource("2_grnui")
+Item = ExtResource("34_757nm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_63vu3"]
+script = ExtResource("3_4k5yx")
+Id = 50
+Building = 0
+Name = "Fabric"
+Inputs = [SubResource("Resource_ik48k"), SubResource("Resource_n77u5")]
+Outputs = [SubResource("Resource_6vj4q")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_qd1mj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_qhhfy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_r525l"]
+script = ExtResource("2_grnui")
+Item = ExtResource("34_757nm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_urlsp"]
+script = ExtResource("3_4k5yx")
+Id = 51
+Building = 0
+Name = "Polyester Fabric"
+Inputs = [SubResource("Resource_qd1mj"), SubResource("Resource_qhhfy")]
+Outputs = [SubResource("Resource_r525l")]
+ProcessingTime = 2.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ja5go"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 56.0
+
+[sub_resource type="Resource" id="Resource_xtgm2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_di2ll"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_01djn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_oook5"]
+script = ExtResource("3_4k5yx")
+Id = 52
+Building = 0
+Name = "High-Speed Connector"
+Inputs = [SubResource("Resource_ja5go"), SubResource("Resource_xtgm2"), SubResource("Resource_di2ll")]
+Outputs = [SubResource("Resource_01djn")]
+ProcessingTime = 16.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_2pggt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 60.0
+
+[sub_resource type="Resource" id="Resource_jjq3r"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_x4swu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4cju3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_p2c3q"]
+script = ExtResource("3_4k5yx")
+Id = 53
+Building = 0
+Name = "Silicon High-Speed Connector"
+Inputs = [SubResource("Resource_2pggt"), SubResource("Resource_jjq3r"), SubResource("Resource_x4swu")]
+Outputs = [SubResource("Resource_4cju3")]
+ProcessingTime = 40.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_bb8cj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_vpg6t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("46_gtfd5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ox2ua"]
+script = ExtResource("3_4k5yx")
+Id = 54
+Building = 0
+Name = "Iron Rebar"
+Inputs = [SubResource("Resource_bb8cj")]
+Outputs = [SubResource("Resource_vpg6t")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_vusqg"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_j88qo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_q83up"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_hs55i"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_6oys1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("27_0pubb")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_03yix"]
+script = ExtResource("3_4k5yx")
+Id = 55
+Building = 0
+Name = "Automated Miner"
+Inputs = [SubResource("Resource_vusqg"), SubResource("Resource_j88qo"), SubResource("Resource_q83up"), SubResource("Resource_hs55i")]
+Outputs = [SubResource("Resource_6oys1")]
+ProcessingTime = 60.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xq2de"]
+script = ExtResource("2_grnui")
+Item = ExtResource("67_qdlsy")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kvof8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("68_gqch3")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dhjca"]
+script = ExtResource("3_4k5yx")
+Id = 56
+Building = 0
+Name = "Power Shard (1)"
+Inputs = [SubResource("Resource_xq2de")]
+Outputs = [SubResource("Resource_kvof8")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_5kbuh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("69_j2m13")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_4c7gd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("68_gqch3")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_lj64p"]
+script = ExtResource("3_4k5yx")
+Id = 57
+Building = 0
+Name = "Power Shard (2)"
+Inputs = [SubResource("Resource_5kbuh")]
+Outputs = [SubResource("Resource_4c7gd")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_r70mu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("70_wylgq")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_glu02"]
+script = ExtResource("2_grnui")
+Item = ExtResource("68_gqch3")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6ligp"]
+script = ExtResource("3_4k5yx")
+Id = 58
+Building = 0
+Name = "Power Shard (5)"
+Inputs = [SubResource("Resource_r70mu")]
+Outputs = [SubResource("Resource_glu02")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_mmfs5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("17_btqhf")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_qns0t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_i61js"]
+script = ExtResource("3_4k5yx")
+Id = 59
+Building = 0
+Name = "Quartz Crystal"
+Inputs = [SubResource("Resource_mmfs5")]
+Outputs = [SubResource("Resource_qns0t")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_pessh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("17_btqhf")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_sjdgd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_7jair"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_6vigy"]
+script = ExtResource("3_4k5yx")
+Id = 60
+Building = 0
+Name = "Pure Quartz Crystal"
+Inputs = [SubResource("Resource_pessh"), SubResource("Resource_sjdgd")]
+Outputs = [SubResource("Resource_7jair")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_tlc31"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_f4xlm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6e1j2"]
+script = ExtResource("3_4k5yx")
+Id = 61
+Building = 0
+Name = "Quickwire"
+Inputs = [SubResource("Resource_tlc31")]
+Outputs = [SubResource("Resource_f4xlm")]
+ProcessingTime = 5.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_6f4ma"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_vnyvj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_f1ssb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_qnuh2"]
+script = ExtResource("3_4k5yx")
+Id = 62
+Building = 0
+Name = "Fused Quickwire"
+Inputs = [SubResource("Resource_6f4ma"), SubResource("Resource_vnyvj")]
+Outputs = [SubResource("Resource_f1ssb")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_olqb8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("17_btqhf")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3i50p"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_vpjrn"]
+script = ExtResource("3_4k5yx")
+Id = 63
+Building = 0
+Name = "Silica"
+Inputs = [SubResource("Resource_olqb8")]
+Outputs = [SubResource("Resource_3i50p")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_w7stl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("17_btqhf")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_fyhkl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_v84y3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_6euuq"]
+script = ExtResource("3_4k5yx")
+Id = 64
+Building = 0
+Name = "Cheap Silica"
+Inputs = [SubResource("Resource_w7stl"), SubResource("Resource_fyhkl")]
+Outputs = [SubResource("Resource_v84y3")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_umf2b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("42_6pk1s")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_kn7ps"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_iyptb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("39_633jr")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_s64li"]
+script = ExtResource("3_4k5yx")
+Id = 65
+Building = 0
+Name = "Smokeless Powder"
+Inputs = [SubResource("Resource_umf2b"), SubResource("Resource_kn7ps")]
+Outputs = [SubResource("Resource_iyptb")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dpr7g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_rrj20"]
+script = ExtResource("2_grnui")
+Item = ExtResource("44_5s833")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_oglxf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_km7d2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_6cl30"]
+script = ExtResource("2_grnui")
+Item = ExtResource("75_qaw2e")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_d7dfx"]
+script = ExtResource("3_4k5yx")
+Id = 66
+Building = 0
+Name = "Supercomputer"
+Inputs = [SubResource("Resource_dpr7g"), SubResource("Resource_rrj20"), SubResource("Resource_oglxf"), SubResource("Resource_km7d2")]
+Outputs = [SubResource("Resource_6cl30")]
+ProcessingTime = 32.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lple5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_txbjq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("77_lkhms")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3404f"]
+script = ExtResource("2_grnui")
+Item = ExtResource("75_qaw2e")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_2qgct"]
+script = ExtResource("3_4k5yx")
+Id = 67
+Building = 0
+Name = "OC Supercomputer"
+Inputs = [SubResource("Resource_lple5"), SubResource("Resource_txbjq")]
+Outputs = [SubResource("Resource_3404f")]
+ProcessingTime = 20.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_7m0dp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kcpmo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ltlvj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("79_64vwf")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_sbog8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 45.0
+
+[sub_resource type="Resource" id="Resource_qpr12"]
+script = ExtResource("2_grnui")
+Item = ExtResource("75_qaw2e")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_jyu03"]
+script = ExtResource("3_4k5yx")
+Id = 68
+Building = 0
+Name = "Super-State Computer"
+Inputs = [SubResource("Resource_7m0dp"), SubResource("Resource_kcpmo"), SubResource("Resource_ltlvj"), SubResource("Resource_sbog8")]
+Outputs = [SubResource("Resource_qpr12")]
+ProcessingTime = 50.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_yq8cm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mncgx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_d6ydr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("52_wp4v6")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_vjc12"]
+script = ExtResource("3_4k5yx")
+Id = 69
+Building = 0
+Name = "Packaged Turbofuel"
+Inputs = [SubResource("Resource_yq8cm"), SubResource("Resource_mncgx")]
+Outputs = [SubResource("Resource_d6ydr")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_aumk6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_t5hn2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("60_oj5xm")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_f8vwq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_wvqja"]
+script = ExtResource("3_4k5yx")
+Id = 70
+Building = 0
+Name = "Turbofuel"
+Inputs = [SubResource("Resource_aumk6"), SubResource("Resource_t5hn2")]
+Outputs = [SubResource("Resource_f8vwq")]
+ProcessingTime = 16.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_g4lcm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("52_wp4v6")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_nhmby"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_xh423"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_inb2a"]
+script = ExtResource("3_4k5yx")
+Id = 71
+Building = 0
+Name = "Unpackage Turbofuel"
+Inputs = [SubResource("Resource_g4lcm")]
+Outputs = [SubResource("Resource_nhmby"), SubResource("Resource_xh423")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_v4rks"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_x4g3k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_i02em"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_1m3f0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("81_o016e")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_pgmv6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_vjnhh"]
+script = ExtResource("3_4k5yx")
+Id = 72
+Building = 0
+Name = "Turbo Blend Fuel"
+Inputs = [SubResource("Resource_v4rks"), SubResource("Resource_x4g3k"), SubResource("Resource_i02em"), SubResource("Resource_1m3f0")]
+Outputs = [SubResource("Resource_pgmv6")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_qxrxb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_uph26"]
+script = ExtResource("2_grnui")
+Item = ExtResource("60_oj5xm")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_l8grs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("57_bvr4l")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_d6qyv"]
+script = ExtResource("3_4k5yx")
+Id = 73
+Building = 0
+Name = "Turbo Heavy Fuel"
+Inputs = [SubResource("Resource_qxrxb"), SubResource("Resource_uph26")]
+Outputs = [SubResource("Resource_l8grs")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ryu80"]
+script = ExtResource("2_grnui")
+Item = ExtResource("82_udshb")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_6bcp6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_v4qgq"]
+script = ExtResource("3_4k5yx")
+Id = 74
+Building = 0
+Name = "Hatcher Protein"
+Inputs = [SubResource("Resource_ryu80")]
+Outputs = [SubResource("Resource_6bcp6")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_rif07"]
+script = ExtResource("2_grnui")
+Item = ExtResource("83_5dc65")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_qhy0a"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dnpfs"]
+script = ExtResource("3_4k5yx")
+Id = 75
+Building = 0
+Name = "Hog Protein"
+Inputs = [SubResource("Resource_rif07")]
+Outputs = [SubResource("Resource_qhy0a")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_h5qw8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("84_4ga7y")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_q4qqh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_lb2gp"]
+script = ExtResource("3_4k5yx")
+Id = 76
+Building = 0
+Name = "Spitter Protein"
+Inputs = [SubResource("Resource_h5qw8")]
+Outputs = [SubResource("Resource_q4qqh")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_bnhuh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("85_15oj7")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_c28y8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_5hkmw"]
+script = ExtResource("3_4k5yx")
+Id = 77
+Building = 0
+Name = "Stinger Protein"
+Inputs = [SubResource("Resource_bnhuh")]
+Outputs = [SubResource("Resource_c28y8")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4cdjp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("58_1n7ke")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_03pfh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_k3mcw"]
+script = ExtResource("3_4k5yx")
+Id = 78
+Building = 0
+Name = "Biomass (Alien Protein)"
+Inputs = [SubResource("Resource_4cdjp")]
+Outputs = [SubResource("Resource_03pfh")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_rgtm3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("86_jfegr")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_dyawj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_b117w"]
+script = ExtResource("3_4k5yx")
+Id = 79
+Building = 0
+Name = "Biomass (Leaves)"
+Inputs = [SubResource("Resource_rgtm3")]
+Outputs = [SubResource("Resource_dyawj")]
+ProcessingTime = 5.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_m5nxv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("63_4w50c")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ed85h"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_mf0b2"]
+script = ExtResource("3_4k5yx")
+Id = 80
+Building = 0
+Name = "Biomass (Mycelia)"
+Inputs = [SubResource("Resource_m5nxv")]
+Outputs = [SubResource("Resource_ed85h")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_p8qb1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("7_wjbil")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_q0mpn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_g36cq"]
+script = ExtResource("3_4k5yx")
+Id = 81
+Building = 0
+Name = "Biomass (Wood)"
+Inputs = [SubResource("Resource_p8qb1")]
+Outputs = [SubResource("Resource_q0mpn")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_bekbm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1maj0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_7dwx3"]
+script = ExtResource("3_4k5yx")
+Id = 82
+Building = 0
+Name = "Cable"
+Inputs = [SubResource("Resource_bekbm")]
+Outputs = [SubResource("Resource_1maj0")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_nitif"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_f0mif"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_g3n42"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_gaqyo"]
+script = ExtResource("3_4k5yx")
+Id = 83
+Building = 0
+Name = "Coated Cable"
+Inputs = [SubResource("Resource_nitif"), SubResource("Resource_f0mif")]
+Outputs = [SubResource("Resource_g3n42")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_x6i05"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_l6nsb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_63mg7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_1yt3d"]
+script = ExtResource("3_4k5yx")
+Id = 84
+Building = 0
+Name = "Insulated Cable"
+Inputs = [SubResource("Resource_x6i05"), SubResource("Resource_l6nsb")]
+Outputs = [SubResource("Resource_63mg7")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_pblns"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mbw6i"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mffpd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 11.0
+
+[sub_resource type="Resource" id="Resource_nsckt"]
+script = ExtResource("3_4k5yx")
+Id = 85
+Building = 0
+Name = "Quickwire Cable"
+Inputs = [SubResource("Resource_pblns"), SubResource("Resource_mbw6i")]
+Outputs = [SubResource("Resource_mffpd")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_y0da2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_pswkd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ckijq"]
+script = ExtResource("3_4k5yx")
+Id = 86
+Building = 0
+Name = "Concrete"
+Inputs = [SubResource("Resource_y0da2")]
+Outputs = [SubResource("Resource_pswkd")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_oefev"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_v73dl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_7j3mt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_wrb77"]
+script = ExtResource("3_4k5yx")
+Id = 87
+Building = 0
+Name = "Fine Concrete"
+Inputs = [SubResource("Resource_oefev"), SubResource("Resource_v73dl")]
+Outputs = [SubResource("Resource_7j3mt")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ugm1a"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_rkplh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_7iwa0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_b01ea"]
+script = ExtResource("3_4k5yx")
+Id = 88
+Building = 0
+Name = "Rubber Concrete"
+Inputs = [SubResource("Resource_ugm1a"), SubResource("Resource_rkplh")]
+Outputs = [SubResource("Resource_7iwa0")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_b2bus"]
+script = ExtResource("2_grnui")
+Item = ExtResource("13_lu73u")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_mxqqn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_r6wc7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_p4j4w"]
+script = ExtResource("3_4k5yx")
+Id = 89
+Building = 0
+Name = "Wet Concrete"
+Inputs = [SubResource("Resource_b2bus"), SubResource("Resource_mxqqn")]
+Outputs = [SubResource("Resource_r6wc7")]
+ProcessingTime = 3.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_fw1x7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("8_wbesc")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_uxcpq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ysx8d"]
+script = ExtResource("3_4k5yx")
+Id = 90
+Building = 0
+Name = "Copper Ingot"
+Inputs = [SubResource("Resource_fw1x7")]
+Outputs = [SubResource("Resource_uxcpq")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_vavfi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("8_wbesc")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_bch8r"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_itkc0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_2kqc8"]
+script = ExtResource("3_4k5yx")
+Id = 91
+Building = 0
+Name = "Copper Alloy Ingot"
+Inputs = [SubResource("Resource_vavfi"), SubResource("Resource_bch8r")]
+Outputs = [SubResource("Resource_itkc0")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_6l8qq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("8_wbesc")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_qohcs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_0ai4d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_6hyo4"]
+script = ExtResource("3_4k5yx")
+Id = 92
+Building = 0
+Name = "Pure Copper Ingot"
+Inputs = [SubResource("Resource_6l8qq"), SubResource("Resource_qohcs")]
+Outputs = [SubResource("Resource_0ai4d")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_i2jnn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_3f11l"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_iw23e"]
+script = ExtResource("3_4k5yx")
+Id = 93
+Building = 0
+Name = "Iron Ingot"
+Inputs = [SubResource("Resource_i2jnn")]
+Outputs = [SubResource("Resource_3f11l")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_r8o8o"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_by0w3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("8_wbesc")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ado10"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_tc4ol"]
+script = ExtResource("3_4k5yx")
+Id = 94
+Building = 0
+Name = "Iron Alloy Ingot"
+Inputs = [SubResource("Resource_r8o8o"), SubResource("Resource_by0w3")]
+Outputs = [SubResource("Resource_ado10")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_c3stn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_0yj25"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_0tgpo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 13.0
+
+[sub_resource type="Resource" id="Resource_hs1n1"]
+script = ExtResource("3_4k5yx")
+Id = 95
+Building = 0
+Name = "Pure Iron Ingot"
+Inputs = [SubResource("Resource_c3stn"), SubResource("Resource_0yj25")]
+Outputs = [SubResource("Resource_0tgpo")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xwjpp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_6cegn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ptt3t"]
+script = ExtResource("3_4k5yx")
+Id = 96
+Building = 0
+Name = "Iron Plate"
+Inputs = [SubResource("Resource_xwjpp")]
+Outputs = [SubResource("Resource_6cegn")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_n0ilb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_yeoir"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_g2lx0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_b3i6c"]
+script = ExtResource("3_4k5yx")
+Id = 97
+Building = 0
+Name = "Coated Iron Plate"
+Inputs = [SubResource("Resource_n0ilb"), SubResource("Resource_yeoir")]
+Outputs = [SubResource("Resource_g2lx0")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_5akgp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_8c2sf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mpgdd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_agjbs"]
+script = ExtResource("3_4k5yx")
+Id = 98
+Building = 0
+Name = "Steel Coated Plate"
+Inputs = [SubResource("Resource_5akgp"), SubResource("Resource_8c2sf")]
+Outputs = [SubResource("Resource_mpgdd")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_kqpgu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_hoa36"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_bycqy"]
+script = ExtResource("3_4k5yx")
+Id = 99
+Building = 0
+Name = "Iron Rod"
+Inputs = [SubResource("Resource_kqpgu")]
+Outputs = [SubResource("Resource_hoa36")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_l6atr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_yxduk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_q255e"]
+script = ExtResource("3_4k5yx")
+Id = 100
+Building = 0
+Name = "Steel Rod"
+Inputs = [SubResource("Resource_l6atr")]
+Outputs = [SubResource("Resource_yxduk")]
+ProcessingTime = 5.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_0mojh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_vbham"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_36dx6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_x3w3y"]
+script = ExtResource("3_4k5yx")
+Id = 101
+Building = 0
+Name = "Reinforced Iron Plate"
+Inputs = [SubResource("Resource_0mojh"), SubResource("Resource_vbham")]
+Outputs = [SubResource("Resource_36dx6")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_vp8s6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_5v1vv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ywytj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_us6l2"]
+script = ExtResource("3_4k5yx")
+Id = 102
+Building = 0
+Name = "Adhered Iron Plate"
+Inputs = [SubResource("Resource_vp8s6"), SubResource("Resource_5v1vv")]
+Outputs = [SubResource("Resource_ywytj")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_c2054"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_bb0ei"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_r85yw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_ger1m"]
+script = ExtResource("3_4k5yx")
+Id = 103
+Building = 0
+Name = "Bolted Iron Plate"
+Inputs = [SubResource("Resource_c2054"), SubResource("Resource_bb0ei")]
+Outputs = [SubResource("Resource_r85yw")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_gds3y"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_76m3w"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_c5ugf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_xx4vw"]
+script = ExtResource("3_4k5yx")
+Id = 104
+Building = 0
+Name = "Stitched Iron Plate"
+Inputs = [SubResource("Resource_gds3y"), SubResource("Resource_76m3w")]
+Outputs = [SubResource("Resource_c5ugf")]
+ProcessingTime = 32.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_8fkmj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pheli"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_v5fid"]
+script = ExtResource("3_4k5yx")
+Id = 105
+Building = 0
+Name = "Screw"
+Inputs = [SubResource("Resource_8fkmj")]
+Outputs = [SubResource("Resource_pheli")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lyfuc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_txy5k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_ouhuq"]
+script = ExtResource("3_4k5yx")
+Id = 106
+Building = 0
+Name = "Cast Screw"
+Inputs = [SubResource("Resource_lyfuc")]
+Outputs = [SubResource("Resource_txy5k")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ho65t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jkw5j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 52.0
+
+[sub_resource type="Resource" id="Resource_e2qcp"]
+script = ExtResource("3_4k5yx")
+Id = 107
+Building = 0
+Name = "Steel Screw"
+Inputs = [SubResource("Resource_ho65t")]
+Outputs = [SubResource("Resource_jkw5j")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_n6icq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kim0p"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_eqwoi"]
+script = ExtResource("3_4k5yx")
+Id = 108
+Building = 0
+Name = "Wire"
+Inputs = [SubResource("Resource_n6icq")]
+Outputs = [SubResource("Resource_kim0p")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_47smu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_fdk5p"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_u4a5m"]
+script = ExtResource("3_4k5yx")
+Id = 109
+Building = 0
+Name = "Caterium Wire"
+Inputs = [SubResource("Resource_47smu")]
+Outputs = [SubResource("Resource_fdk5p")]
+ProcessingTime = 4.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_864y0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_2oou0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("61_00jf5")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kojhp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_bpmsm"]
+script = ExtResource("3_4k5yx")
+Id = 110
+Building = 0
+Name = "Fused Wire"
+Inputs = [SubResource("Resource_864y0"), SubResource("Resource_2oou0")]
+Outputs = [SubResource("Resource_kojhp")]
+ProcessingTime = 20.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_dxn6h"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_4ds8j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_6jksp"]
+script = ExtResource("3_4k5yx")
+Id = 111
+Building = 0
+Name = "Iron Wire"
+Inputs = [SubResource("Resource_dxn6h")]
+Outputs = [SubResource("Resource_4ds8j")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xpoyq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("91_mhbw5")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_pt11e"]
+script = ExtResource("2_grnui")
+Item = ExtResource("92_iucy4")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_y672l"]
+script = ExtResource("3_4k5yx")
+Id = 112
+Building = 0
+Name = "Color Cartridge"
+Inputs = [SubResource("Resource_xpoyq")]
+Outputs = [SubResource("Resource_pt11e")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_7mxl0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ho2ii"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ckcoj"]
+script = ExtResource("3_4k5yx")
+Id = 113
+Building = 0
+Name = "Copper Sheet"
+Inputs = [SubResource("Resource_7mxl0")]
+Outputs = [SubResource("Resource_ho2ii")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_b38bs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_6qnln"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_axy38"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mnw2v"]
+script = ExtResource("3_4k5yx")
+Id = 114
+Building = 0
+Name = "Steamed Copper Sheet"
+Inputs = [SubResource("Resource_b38bs"), SubResource("Resource_6qnln")]
+Outputs = [SubResource("Resource_axy38")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_t1goc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_p765v"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_wkwvc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_uouqp"]
+script = ExtResource("3_4k5yx")
+Id = 115
+Building = 0
+Name = "Modular Frame"
+Inputs = [SubResource("Resource_t1goc"), SubResource("Resource_p765v")]
+Outputs = [SubResource("Resource_wkwvc")]
+ProcessingTime = 60.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_28xbn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_h0fms"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 56.0
+
+[sub_resource type="Resource" id="Resource_0jy3t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_nh0rd"]
+script = ExtResource("3_4k5yx")
+Id = 116
+Building = 0
+Name = "Bolted Frame"
+Inputs = [SubResource("Resource_28xbn"), SubResource("Resource_h0fms")]
+Outputs = [SubResource("Resource_0jy3t")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_6jsqs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_77hmp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_mcnkw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3gnt7"]
+script = ExtResource("3_4k5yx")
+Id = 117
+Building = 0
+Name = "Steeled Frame"
+Inputs = [SubResource("Resource_6jsqs"), SubResource("Resource_77hmp")]
+Outputs = [SubResource("Resource_mcnkw")]
+ProcessingTime = 60.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_upstw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("25_1ibki")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_pqh5h"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_0x706"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_raqk0"]
+script = ExtResource("3_4k5yx")
+Id = 118
+Building = 0
+Name = "Rotor"
+Inputs = [SubResource("Resource_upstw"), SubResource("Resource_pqh5h")]
+Outputs = [SubResource("Resource_0x706")]
+ProcessingTime = 15.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_nia2n"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_h6vrp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 52.0
+
+[sub_resource type="Resource" id="Resource_u8mgv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_tce6w"]
+script = ExtResource("3_4k5yx")
+Id = 119
+Building = 0
+Name = "Copper Rotor"
+Inputs = [SubResource("Resource_nia2n"), SubResource("Resource_h6vrp")]
+Outputs = [SubResource("Resource_u8mgv")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_smnqe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_le6my"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_y2lus"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_aa80j"]
+script = ExtResource("3_4k5yx")
+Id = 120
+Building = 0
+Name = "Steel Rotor"
+Inputs = [SubResource("Resource_smnqe"), SubResource("Resource_le6my")]
+Outputs = [SubResource("Resource_y2lus")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_otsph"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_80iig"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_r2o7m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("95_xng5r")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_g7sl2"]
+script = ExtResource("3_4k5yx")
+Id = 121
+Building = 0
+Name = "Smart Plating"
+Inputs = [SubResource("Resource_otsph"), SubResource("Resource_80iig")]
+Outputs = [SubResource("Resource_r2o7m")]
+ProcessingTime = 30.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_jw4f3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("62_pbjt8")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mvad7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_wnmev"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_vedxl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("95_xng5r")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ljors"]
+script = ExtResource("3_4k5yx")
+Id = 122
+Building = 0
+Name = "Plastic Smart Plating"
+Inputs = [SubResource("Resource_jw4f3"), SubResource("Resource_mvad7"), SubResource("Resource_wnmev")]
+Outputs = [SubResource("Resource_vedxl")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_02275"]
+script = ExtResource("2_grnui")
+Item = ExtResource("6_2btvn")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_xgnb7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("96_esogv")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_ol56j"]
+script = ExtResource("3_4k5yx")
+Id = 123
+Building = 0
+Name = "Solid Biofuel"
+Inputs = [SubResource("Resource_02275")]
+Outputs = [SubResource("Resource_xgnb7")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_ja0sg"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_sooge"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jb7og"]
+script = ExtResource("3_4k5yx")
+Id = 124
+Building = 0
+Name = "Steel Beam"
+Inputs = [SubResource("Resource_ja0sg")]
+Outputs = [SubResource("Resource_sooge")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_7gw56"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mo37i"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wvn65"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_1jhr8"]
+script = ExtResource("3_4k5yx")
+Id = 125
+Building = 0
+Name = "Steel Ingot"
+Inputs = [SubResource("Resource_7gw56"), SubResource("Resource_mo37i")]
+Outputs = [SubResource("Resource_wvn65")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dgtrp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_vy8ov"]
+script = ExtResource("2_grnui")
+Item = ExtResource("81_o016e")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_5ffv1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_ew2rj"]
+script = ExtResource("3_4k5yx")
+Id = 126
+Building = 0
+Name = "Coke Steel Ingot"
+Inputs = [SubResource("Resource_dgtrp"), SubResource("Resource_vy8ov")]
+Outputs = [SubResource("Resource_5ffv1")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xblta"]
+script = ExtResource("2_grnui")
+Item = ExtResource("12_y2saw")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_t8ekl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("60_oj5xm")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_11ey3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_l5b1v"]
+script = ExtResource("3_4k5yx")
+Id = 127
+Building = 0
+Name = "Compacted Steel Ingot"
+Inputs = [SubResource("Resource_xblta"), SubResource("Resource_t8ekl")]
+Outputs = [SubResource("Resource_11ey3")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_pb6dh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("88_po8jx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_h8icm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_v1emm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_2kwvq"]
+script = ExtResource("3_4k5yx")
+Id = 128
+Building = 0
+Name = "Solid Steel Ingot"
+Inputs = [SubResource("Resource_pb6dh"), SubResource("Resource_h8icm")]
+Outputs = [SubResource("Resource_v1emm")]
+ProcessingTime = 3.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_vlwap"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_t1ann"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_kdd2t"]
+script = ExtResource("3_4k5yx")
+Id = 129
+Building = 0
+Name = "Steel Pipe"
+Inputs = [SubResource("Resource_vlwap")]
+Outputs = [SubResource("Resource_t1ann")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_ukrxs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_udrmh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_013sq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("97_tcqcj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_55423"]
+script = ExtResource("3_4k5yx")
+Id = 130
+Building = 0
+Name = "Versatile Framework"
+Inputs = [SubResource("Resource_ukrxs"), SubResource("Resource_udrmh")]
+Outputs = [SubResource("Resource_013sq")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_k4mg7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_w4qv4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_nevwq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_nujxa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("97_tcqcj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_jejqh"]
+script = ExtResource("3_4k5yx")
+Id = 131
+Building = 0
+Name = "Flexible Framework"
+Inputs = [SubResource("Resource_k4mg7"), SubResource("Resource_w4qv4"), SubResource("Resource_nevwq")]
+Outputs = [SubResource("Resource_nujxa")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_p3iow"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dnd6w"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_ebwtf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("99_ite01")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_856ql"]
+script = ExtResource("3_4k5yx")
+Id = 132
+Building = 0
+Name = "Automated Wiring"
+Inputs = [SubResource("Resource_p3iow"), SubResource("Resource_dnd6w")]
+Outputs = [SubResource("Resource_ebwtf")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_bqbs1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_rg37t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 40.0
+
+[sub_resource type="Resource" id="Resource_c3pgr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_xgteu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("99_ite01")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_4r0tg"]
+script = ExtResource("3_4k5yx")
+Id = 133
+Building = 0
+Name = "Automated Speed Wiring"
+Inputs = [SubResource("Resource_bqbs1"), SubResource("Resource_rg37t"), SubResource("Resource_c3pgr")]
+Outputs = [SubResource("Resource_xgteu")]
+ProcessingTime = 32.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_w6uuf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_1dnu1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_346sm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_87kls"]
+script = ExtResource("3_4k5yx")
+Id = 134
+Building = 0
+Name = "Encased Industrial Beam"
+Inputs = [SubResource("Resource_w6uuf"), SubResource("Resource_1dnu1")]
+Outputs = [SubResource("Resource_346sm")]
+ProcessingTime = 10.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_kqkcg"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_ge0js"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_sjhmm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dpwjn"]
+script = ExtResource("3_4k5yx")
+Id = 135
+Building = 0
+Name = "Encased Industrial Pipe"
+Inputs = [SubResource("Resource_kqkcg"), SubResource("Resource_ge0js")]
+Outputs = [SubResource("Resource_sjhmm")]
+ProcessingTime = 15.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_beh08"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_asbtb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_pyyb0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_ytht8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_45gkm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_7y7ah"]
+script = ExtResource("3_4k5yx")
+Id = 136
+Building = 0
+Name = "Heavy Modular Frame"
+Inputs = [SubResource("Resource_beh08"), SubResource("Resource_asbtb"), SubResource("Resource_pyyb0"), SubResource("Resource_ytht8")]
+Outputs = [SubResource("Resource_45gkm")]
+ProcessingTime = 30.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_sklip"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_yktmj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_m5gk4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 36.0
+
+[sub_resource type="Resource" id="Resource_3ttdb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 22.0
+
+[sub_resource type="Resource" id="Resource_2i5bu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_axhlk"]
+script = ExtResource("3_4k5yx")
+Id = 137
+Building = 0
+Name = "Heavy Encased Frame"
+Inputs = [SubResource("Resource_sklip"), SubResource("Resource_yktmj"), SubResource("Resource_m5gk4"), SubResource("Resource_3ttdb")]
+Outputs = [SubResource("Resource_2i5bu")]
+ProcessingTime = 64.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_fny7x"]
+script = ExtResource("2_grnui")
+Item = ExtResource("93_5x4xl")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_yqtd8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_qxt7w"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_ctdcr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 104.0
+
+[sub_resource type="Resource" id="Resource_w64tj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_fxf7n"]
+script = ExtResource("3_4k5yx")
+Id = 138
+Building = 0
+Name = "Heavy Flexible Frame"
+Inputs = [SubResource("Resource_fny7x"), SubResource("Resource_yqtd8"), SubResource("Resource_qxt7w"), SubResource("Resource_ctdcr")]
+Outputs = [SubResource("Resource_w64tj")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_iwrhc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_bbvii"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_cfarr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_uina2"]
+script = ExtResource("3_4k5yx")
+Id = 139
+Building = 0
+Name = "Motor"
+Inputs = [SubResource("Resource_iwrhc"), SubResource("Resource_bbvii")]
+Outputs = [SubResource("Resource_cfarr")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_1xbag"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_jiy3b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_y6vtr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_uxb01"]
+script = ExtResource("3_4k5yx")
+Id = 140
+Building = 0
+Name = "Electric Motor"
+Inputs = [SubResource("Resource_1xbag"), SubResource("Resource_jiy3b")]
+Outputs = [SubResource("Resource_y6vtr")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_u1ucu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wme6c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_yediu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_i4pwe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_xg31r"]
+script = ExtResource("3_4k5yx")
+Id = 141
+Building = 0
+Name = "Rigour Motor"
+Inputs = [SubResource("Resource_u1ucu"), SubResource("Resource_wme6c"), SubResource("Resource_yediu")]
+Outputs = [SubResource("Resource_i4pwe")]
+ProcessingTime = 48.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_bwtxs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mvkl1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_5op86"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_smbgv"]
+script = ExtResource("3_4k5yx")
+Id = 142
+Building = 0
+Name = "Stator"
+Inputs = [SubResource("Resource_bwtxs"), SubResource("Resource_mvkl1")]
+Outputs = [SubResource("Resource_5op86")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4hnak"]
+script = ExtResource("2_grnui")
+Item = ExtResource("24_w3cxb")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_sqk3d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_slbvu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ee5m5"]
+script = ExtResource("3_4k5yx")
+Id = 143
+Building = 0
+Name = "Quickwire Stator"
+Inputs = [SubResource("Resource_4hnak"), SubResource("Resource_sqk3d")]
+Outputs = [SubResource("Resource_slbvu")]
+ProcessingTime = 15.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_4urub"]
+script = ExtResource("2_grnui")
+Item = ExtResource("99_ite01")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_5rjm0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_uf1ot"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_bfw0y"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_q37ya"]
+script = ExtResource("2_grnui")
+Item = ExtResource("102_xtl5i")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_hy8ix"]
+script = ExtResource("3_4k5yx")
+Id = 144
+Building = 0
+Name = "Adaptive Control Unit"
+Inputs = [SubResource("Resource_4urub"), SubResource("Resource_5rjm0"), SubResource("Resource_uf1ot"), SubResource("Resource_bfw0y")]
+Outputs = [SubResource("Resource_q37ya")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_nriyx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j6fes"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_nxyb8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pgept"]
+script = ExtResource("3_4k5yx")
+Id = 145
+Building = 0
+Name = "Circuit Board"
+Inputs = [SubResource("Resource_nriyx"), SubResource("Resource_j6fes")]
+Outputs = [SubResource("Resource_nxyb8")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_7abxu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_qmxob"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_jea4k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_8ibmw"]
+script = ExtResource("3_4k5yx")
+Id = 146
+Building = 0
+Name = "Caterium Circuit Board"
+Inputs = [SubResource("Resource_7abxu"), SubResource("Resource_qmxob")]
+Outputs = [SubResource("Resource_jea4k")]
+ProcessingTime = 48.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_wxtsk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_i7um5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("81_o016e")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_gpuat"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_iyn44"]
+script = ExtResource("3_4k5yx")
+Id = 147
+Building = 0
+Name = "Electrode Circuit Board"
+Inputs = [SubResource("Resource_wxtsk"), SubResource("Resource_i7um5")]
+Outputs = [SubResource("Resource_gpuat")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_8mlev"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 11.0
+
+[sub_resource type="Resource" id="Resource_yjoqp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 11.0
+
+[sub_resource type="Resource" id="Resource_e3pvy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_0vntx"]
+script = ExtResource("3_4k5yx")
+Id = 148
+Building = 0
+Name = "Silicon Circuit Board"
+Inputs = [SubResource("Resource_8mlev"), SubResource("Resource_yjoqp")]
+Outputs = [SubResource("Resource_e3pvy")]
+ProcessingTime = 24.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_irh7e"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_haq61"]
+script = ExtResource("2_grnui")
+Item = ExtResource("29_36uoa")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_qg44g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_55cyc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("90_yhlda")
+Amount = 52.0
+
+[sub_resource type="Resource" id="Resource_6he4s"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_3taut"]
+script = ExtResource("3_4k5yx")
+Id = 149
+Building = 0
+Name = "Computer"
+Inputs = [SubResource("Resource_irh7e"), SubResource("Resource_haq61"), SubResource("Resource_qg44g"), SubResource("Resource_55cyc")]
+Outputs = [SubResource("Resource_6he4s")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_eraef"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_1gx7k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_hyi1f"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_jpfoa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_yheby"]
+script = ExtResource("3_4k5yx")
+Id = 150
+Building = 0
+Name = "Caterium Computer"
+Inputs = [SubResource("Resource_eraef"), SubResource("Resource_1gx7k"), SubResource("Resource_hyi1f")]
+Outputs = [SubResource("Resource_jpfoa")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_c2lh0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_01uts"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_ah1oa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_yrdas"]
+script = ExtResource("3_4k5yx")
+Id = 151
+Building = 0
+Name = "Crystal Computer"
+Inputs = [SubResource("Resource_c2lh0"), SubResource("Resource_01uts")]
+Outputs = [SubResource("Resource_ah1oa")]
+ProcessingTime = 64.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xrcnm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ygwku"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_b7p8x"]
+script = ExtResource("3_4k5yx")
+Id = 152
+Building = 0
+Name = "Empty Canister"
+Inputs = [SubResource("Resource_xrcnm")]
+Outputs = [SubResource("Resource_ygwku")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_frie2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_d4gsq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_v0txl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_m4wcg"]
+script = ExtResource("3_4k5yx")
+Id = 153
+Building = 0
+Name = "Coated Iron Canister"
+Inputs = [SubResource("Resource_frie2"), SubResource("Resource_d4gsq")]
+Outputs = [SubResource("Resource_v0txl")]
+ProcessingTime = 4.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_1yorv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("89_ugsjj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_425m7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_t6e8o"]
+script = ExtResource("3_4k5yx")
+Id = 154
+Building = 0
+Name = "Steel Canister"
+Inputs = [SubResource("Resource_1yorv")]
+Outputs = [SubResource("Resource_425m7")]
+ProcessingTime = 3.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_mj15g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_l2uih"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_w2bcu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_pawac"]
+script = ExtResource("3_4k5yx")
+Id = 155
+Building = 0
+Name = "Fuel"
+Inputs = [SubResource("Resource_mj15g")]
+Outputs = [SubResource("Resource_l2uih"), SubResource("Resource_w2bcu")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_qx63g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j6mo1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_hynrt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("103_6mn6j")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mfhdd"]
+script = ExtResource("3_4k5yx")
+Id = 156
+Building = 0
+Name = "Packaged Fuel"
+Inputs = [SubResource("Resource_qx63g"), SubResource("Resource_j6mo1")]
+Outputs = [SubResource("Resource_hynrt")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_epckc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_bvj35"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_f1m2b"]
+script = ExtResource("3_4k5yx")
+Id = 157
+Building = 0
+Name = "Residual Fuel"
+Inputs = [SubResource("Resource_epckc")]
+Outputs = [SubResource("Resource_bvj35")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lef45"]
+script = ExtResource("2_grnui")
+Item = ExtResource("103_6mn6j")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_swkha"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_h5py6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_t045t"]
+script = ExtResource("3_4k5yx")
+Id = 158
+Building = 0
+Name = "Unpackage Fuel"
+Inputs = [SubResource("Resource_lef45")]
+Outputs = [SubResource("Resource_swkha"), SubResource("Resource_h5py6")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dkvkx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_lm3kp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_pnjqi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_60scp"]
+script = ExtResource("3_4k5yx")
+Id = 159
+Building = 0
+Name = "Diluted Fuel"
+Inputs = [SubResource("Resource_dkvkx"), SubResource("Resource_lm3kp")]
+Outputs = [SubResource("Resource_pnjqi")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_fl0pw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_r3xmk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("22_3bkhg")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_30s6x"]
+script = ExtResource("2_grnui")
+Item = ExtResource("103_6mn6j")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4klu0"]
+script = ExtResource("3_4k5yx")
+Id = 160
+Building = 0
+Name = "Diluted Packaged Fuel"
+Inputs = [SubResource("Resource_fl0pw"), SubResource("Resource_r3xmk")]
+Outputs = [SubResource("Resource_30s6x")]
+ProcessingTime = 2.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_fxv3i"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_e47ec"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mphtv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("104_ji3ik")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1i61q"]
+script = ExtResource("3_4k5yx")
+Id = 161
+Building = 0
+Name = "Packaged Heavy Oil Residue"
+Inputs = [SubResource("Resource_fxv3i"), SubResource("Resource_e47ec")]
+Outputs = [SubResource("Resource_mphtv")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_kc85j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("104_ji3ik")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_fchet"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_suyq5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_nygmq"]
+script = ExtResource("3_4k5yx")
+Id = 162
+Building = 0
+Name = "Unpackage Heavy Oil Residue"
+Inputs = [SubResource("Resource_kc85j")]
+Outputs = [SubResource("Resource_fchet"), SubResource("Resource_suyq5")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dxv6o"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_8q7in"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_msj7d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_om8e2"]
+script = ExtResource("3_4k5yx")
+Id = 163
+Building = 0
+Name = "Heavy Oil Residue"
+Inputs = [SubResource("Resource_dxv6o")]
+Outputs = [SubResource("Resource_8q7in"), SubResource("Resource_msj7d")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_r0wfp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("96_esogv")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_vxwjk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_5inkw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("105_15xbo")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_mt7v2"]
+script = ExtResource("3_4k5yx")
+Id = 164
+Building = 0
+Name = "Liquid Biofuel"
+Inputs = [SubResource("Resource_r0wfp"), SubResource("Resource_vxwjk")]
+Outputs = [SubResource("Resource_5inkw")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4bb7g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("105_15xbo")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_wfyew"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_623ks"]
+script = ExtResource("2_grnui")
+Item = ExtResource("106_o1cv3")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_old83"]
+script = ExtResource("3_4k5yx")
+Id = 165
+Building = 0
+Name = "Packaged Liquid Biofuel"
+Inputs = [SubResource("Resource_4bb7g"), SubResource("Resource_wfyew")]
+Outputs = [SubResource("Resource_623ks")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_cqa58"]
+script = ExtResource("2_grnui")
+Item = ExtResource("106_o1cv3")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_qtca1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("105_15xbo")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_8w3ou"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_n2j8g"]
+script = ExtResource("3_4k5yx")
+Id = 166
+Building = 0
+Name = "Unpackage Liquid Biofuel"
+Inputs = [SubResource("Resource_cqa58")]
+Outputs = [SubResource("Resource_qtca1"), SubResource("Resource_8w3ou")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_0jga8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_s6f45"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_4gs3k"]
+script = ExtResource("2_grnui")
+Item = ExtResource("95_xng5r")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_uesn1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("107_7mx7w")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_lm72p"]
+script = ExtResource("3_4k5yx")
+Id = 167
+Building = 0
+Name = "Modular Engine"
+Inputs = [SubResource("Resource_0jga8"), SubResource("Resource_s6f45"), SubResource("Resource_4gs3k")]
+Outputs = [SubResource("Resource_uesn1")]
+ProcessingTime = 60.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_uo7a7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_yqr12"]
+script = ExtResource("2_grnui")
+Item = ExtResource("81_o016e")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_bxgdp"]
+script = ExtResource("3_4k5yx")
+Id = 168
+Building = 0
+Name = "Petroleum Coke"
+Inputs = [SubResource("Resource_uo7a7")]
+Outputs = [SubResource("Resource_yqr12")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_go18j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_feiru"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ftfql"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_bph42"]
+script = ExtResource("3_4k5yx")
+Id = 169
+Building = 0
+Name = "Plastic"
+Inputs = [SubResource("Resource_go18j")]
+Outputs = [SubResource("Resource_feiru"), SubResource("Resource_ftfql")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_221op"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_57sq4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_i0xdc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_woy1b"]
+script = ExtResource("3_4k5yx")
+Id = 170
+Building = 0
+Name = "Residual Plastic"
+Inputs = [SubResource("Resource_221op"), SubResource("Resource_57sq4")]
+Outputs = [SubResource("Resource_i0xdc")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_mk3i3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_2elw1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_tcibs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_71bii"]
+script = ExtResource("3_4k5yx")
+Id = 171
+Building = 0
+Name = "Recycled Plastic"
+Inputs = [SubResource("Resource_mk3i3"), SubResource("Resource_2elw1")]
+Outputs = [SubResource("Resource_tcibs")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_7vpoi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_f3b3g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 13.0
+
+[sub_resource type="Resource" id="Resource_f7ffu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_58370"]
+script = ExtResource("3_4k5yx")
+Id = 172
+Building = 0
+Name = "Polymer Resin"
+Inputs = [SubResource("Resource_7vpoi")]
+Outputs = [SubResource("Resource_f3b3g"), SubResource("Resource_f7ffu")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_8rho4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("64_jbu3g")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_0ejwd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_c0qbq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_2lkdm"]
+script = ExtResource("3_4k5yx")
+Id = 173
+Building = 0
+Name = "Residual Rubber"
+Inputs = [SubResource("Resource_8rho4"), SubResource("Resource_0ejwd")]
+Outputs = [SubResource("Resource_c0qbq")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_dnaru"]
+script = ExtResource("2_grnui")
+Item = ExtResource("9_2e63a")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_ryco7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_3udum"]
+script = ExtResource("2_grnui")
+Item = ExtResource("72_4855v")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4x48x"]
+script = ExtResource("3_4k5yx")
+Id = 174
+Building = 0
+Name = "Rubber"
+Inputs = [SubResource("Resource_dnaru")]
+Outputs = [SubResource("Resource_ryco7"), SubResource("Resource_3udum")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_l3vw0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_ke176"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_3fp2v"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_e5ht5"]
+script = ExtResource("3_4k5yx")
+Id = 175
+Building = 0
+Name = "Recycled Rubber"
+Inputs = [SubResource("Resource_l3vw0"), SubResource("Resource_ke176")]
+Outputs = [SubResource("Resource_3fp2v")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_x31n1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kynbe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_b4nmu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("109_qlxtu")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_oc3bv"]
+script = ExtResource("3_4k5yx")
+Id = 176
+Building = 0
+Name = "Alclad Aluminum Sheet"
+Inputs = [SubResource("Resource_x31n1"), SubResource("Resource_kynbe")]
+Outputs = [SubResource("Resource_b4nmu")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_rcmv2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("1_gse07")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_rswki"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_f0ojd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_5vnnr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_3gjc8"]
+script = ExtResource("3_4k5yx")
+Id = 177
+Building = 0
+Name = "Alumina Solution"
+Inputs = [SubResource("Resource_rcmv2"), SubResource("Resource_rswki")]
+Outputs = [SubResource("Resource_f0ojd"), SubResource("Resource_5vnnr")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_d02uh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_b7vfs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_8k57b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("111_no7y0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_it250"]
+script = ExtResource("3_4k5yx")
+Id = 178
+Building = 0
+Name = "Packaged Alumina Solution"
+Inputs = [SubResource("Resource_d02uh"), SubResource("Resource_b7vfs")]
+Outputs = [SubResource("Resource_8k57b")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_nsx8n"]
+script = ExtResource("2_grnui")
+Item = ExtResource("111_no7y0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4prn1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mc4eo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_vk7ea"]
+script = ExtResource("3_4k5yx")
+Id = 179
+Building = 0
+Name = "Unpackage Alumina Solution"
+Inputs = [SubResource("Resource_nsx8n")]
+Outputs = [SubResource("Resource_4prn1"), SubResource("Resource_mc4eo")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_r8ix6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("1_gse07")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_e7lpt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_mbqlq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_88n64"]
+script = ExtResource("3_4k5yx")
+Id = 180
+Building = 0
+Name = "Sloppy Alumina"
+Inputs = [SubResource("Resource_r8ix6"), SubResource("Resource_e7lpt")]
+Outputs = [SubResource("Resource_mbqlq")]
+ProcessingTime = 3.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_7aflo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_oc0yv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_wy26u"]
+script = ExtResource("3_4k5yx")
+Id = 181
+Building = 0
+Name = "Aluminum Casing"
+Inputs = [SubResource("Resource_7aflo")]
+Outputs = [SubResource("Resource_oc0yv")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_l6ua0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_0t76c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_p3c1m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_0vohe"]
+script = ExtResource("3_4k5yx")
+Id = 182
+Building = 0
+Name = "Alclad Casing"
+Inputs = [SubResource("Resource_l6ua0"), SubResource("Resource_0t76c")]
+Outputs = [SubResource("Resource_p3c1m")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_lso1n"]
+script = ExtResource("2_grnui")
+Item = ExtResource("112_ulwuk")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_yf8qo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_u2m0a"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_2fc4d"]
+script = ExtResource("3_4k5yx")
+Id = 183
+Building = 0
+Name = "Aluminum Ingot"
+Inputs = [SubResource("Resource_lso1n"), SubResource("Resource_yf8qo")]
+Outputs = [SubResource("Resource_u2m0a")]
+ProcessingTime = 4.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_tj0cu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("112_ulwuk")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_7kuny"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_8h3gj"]
+script = ExtResource("3_4k5yx")
+Id = 184
+Building = 0
+Name = "Pure Aluminum Ingot"
+Inputs = [SubResource("Resource_tj0cu")]
+Outputs = [SubResource("Resource_7kuny")]
+ProcessingTime = 2.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_oge62"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_rf5at"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j3pjt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("112_ulwuk")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_c87h3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_n4fk3"]
+script = ExtResource("3_4k5yx")
+Id = 185
+Building = 0
+Name = "Aluminum Scrap"
+Inputs = [SubResource("Resource_oge62"), SubResource("Resource_rf5at")]
+Outputs = [SubResource("Resource_j3pjt"), SubResource("Resource_c87h3")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_ir1j4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_oxh4g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("81_o016e")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_b1bt4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("112_ulwuk")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_x2pkh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_40hyk"]
+script = ExtResource("3_4k5yx")
+Id = 186
+Building = 0
+Name = "Electrode Aluminum Scrap"
+Inputs = [SubResource("Resource_ir1j4"), SubResource("Resource_oxh4g")]
+Outputs = [SubResource("Resource_b1bt4"), SubResource("Resource_x2pkh")]
+ProcessingTime = 4.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_6nle8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("1_gse07")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_yxs2g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("5_xd3d0")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_0603b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_v0qil"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_02121"]
+script = ExtResource("2_grnui")
+Item = ExtResource("112_ulwuk")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_ae5fa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_wwjkb"]
+script = ExtResource("3_4k5yx")
+Id = 187
+Building = 0
+Name = "Instant Scrap"
+Inputs = [SubResource("Resource_6nle8"), SubResource("Resource_yxs2g"), SubResource("Resource_0603b"), SubResource("Resource_v0qil")]
+Outputs = [SubResource("Resource_02121"), SubResource("Resource_ae5fa")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_a8e7s"]
+script = ExtResource("2_grnui")
+Item = ExtResource("102_xtl5i")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_2bxjv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("75_qaw2e")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mvan5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("114_8cdcw")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_neiyu"]
+script = ExtResource("3_4k5yx")
+Id = 188
+Building = 0
+Name = "Assembly Director System"
+Inputs = [SubResource("Resource_a8e7s"), SubResource("Resource_2bxjv")]
+Outputs = [SubResource("Resource_mvan5")]
+ProcessingTime = 80.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_42syd"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 2.5
+
+[sub_resource type="Resource" id="Resource_5vegl"]
+script = ExtResource("2_grnui")
+Item = ExtResource("110_6mwin")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_v2kyc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_b355d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("79_64vwf")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_wag74"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 1.5
+
+[sub_resource type="Resource" id="Resource_lhxtj"]
+script = ExtResource("3_4k5yx")
+Id = 189
+Building = 0
+Name = "Battery"
+Inputs = [SubResource("Resource_42syd"), SubResource("Resource_5vegl"), SubResource("Resource_v2kyc")]
+Outputs = [SubResource("Resource_b355d"), SubResource("Resource_wag74")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_rd1qc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_h8rtv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("109_qlxtu")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_ynv3g"]
+script = ExtResource("2_grnui")
+Item = ExtResource("74_spxbe")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_ur5oy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("28_t1l6p")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_pwk4v"]
+script = ExtResource("2_grnui")
+Item = ExtResource("79_64vwf")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_vh6uj"]
+script = ExtResource("3_4k5yx")
+Id = 190
+Building = 0
+Name = "Classic Battery"
+Inputs = [SubResource("Resource_rd1qc"), SubResource("Resource_h8rtv"), SubResource("Resource_ynv3g"), SubResource("Resource_ur5oy")]
+Outputs = [SubResource("Resource_pwk4v")]
+ProcessingTime = 8.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_h8q4t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 32.0
+
+[sub_resource type="Resource" id="Resource_odqsb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_5ff43"]
+script = ExtResource("2_grnui")
+Item = ExtResource("73_kgohx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_3i7tp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_pqvgt"]
+script = ExtResource("3_4k5yx")
+Id = 191
+Building = 0
+Name = "Radio Control Unit"
+Inputs = [SubResource("Resource_h8q4t"), SubResource("Resource_odqsb"), SubResource("Resource_5ff43")]
+Outputs = [SubResource("Resource_3i7tp")]
+ProcessingTime = 48.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lxa53"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_t8b8w"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_xj7ha"]
+script = ExtResource("2_grnui")
+Item = ExtResource("48_bw5e7")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_6qnt8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_iuk6j"]
+script = ExtResource("3_4k5yx")
+Id = 192
+Building = 0
+Name = "Radio Connection Unit"
+Inputs = [SubResource("Resource_lxa53"), SubResource("Resource_t8b8w"), SubResource("Resource_xj7ha")]
+Outputs = [SubResource("Resource_6qnt8")]
+ProcessingTime = 16.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_nhrbo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_43a8y"]
+script = ExtResource("2_grnui")
+Item = ExtResource("65_xsed2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_qxyfm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 60.0
+
+[sub_resource type="Resource" id="Resource_omjx2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_v6ms2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_whv4p"]
+script = ExtResource("3_4k5yx")
+Id = 193
+Building = 0
+Name = "Radio Control System"
+Inputs = [SubResource("Resource_nhrbo"), SubResource("Resource_43a8y"), SubResource("Resource_qxyfm"), SubResource("Resource_omjx2")]
+Outputs = [SubResource("Resource_v6ms2")]
+ProcessingTime = 40.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_cdqbs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_nlagp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_gr58j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("116_6jl02")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_bkpjc"]
+script = ExtResource("3_4k5yx")
+Id = 194
+Building = 0
+Name = "Packaged Sulfuric Acid"
+Inputs = [SubResource("Resource_cdqbs"), SubResource("Resource_nlagp")]
+Outputs = [SubResource("Resource_gr58j")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_76tog"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_as0iu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_6s10i"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_njrdb"]
+script = ExtResource("3_4k5yx")
+Id = 195
+Building = 0
+Name = "Sulfuric Acid"
+Inputs = [SubResource("Resource_76tog"), SubResource("Resource_as0iu")]
+Outputs = [SubResource("Resource_6s10i")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_0c4cm"]
+script = ExtResource("2_grnui")
+Item = ExtResource("116_6jl02")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_a04re"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_3cib0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("10_aujto")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_w5tij"]
+script = ExtResource("3_4k5yx")
+Id = 196
+Building = 0
+Name = "Unpackage Sulfuric Acid"
+Inputs = [SubResource("Resource_0c4cm")]
+Outputs = [SubResource("Resource_a04re"), SubResource("Resource_3cib0")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_nveyw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_dkuhj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_aj3s6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_2dgm3"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_e2r1c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("77_lkhms")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pjj2b"]
+script = ExtResource("3_4k5yx")
+Id = 197
+Building = 0
+Name = "Cooling System"
+Inputs = [SubResource("Resource_nveyw"), SubResource("Resource_dkuhj"), SubResource("Resource_aj3s6"), SubResource("Resource_2dgm3")]
+Outputs = [SubResource("Resource_e2r1c")]
+ProcessingTime = 10.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_o5137"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_ynevt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_i6fke"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_jdhkw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("77_lkhms")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_m2bx8"]
+script = ExtResource("3_4k5yx")
+Id = 198
+Building = 0
+Name = "Cooling Device"
+Inputs = [SubResource("Resource_o5137"), SubResource("Resource_ynevt"), SubResource("Resource_i6fke")]
+Outputs = [SubResource("Resource_jdhkw")]
+ProcessingTime = 32.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_8kk0o"]
+script = ExtResource("2_grnui")
+Item = ExtResource("71_m0wut")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_jkjyi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("117_6frg4")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_p07fr"]
+script = ExtResource("3_4k5yx")
+Id = 199
+Building = 0
+Name = "Copper Powder"
+Inputs = [SubResource("Resource_8kk0o")]
+Outputs = [SubResource("Resource_jkjyi")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_cpqd6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kypie"]
+script = ExtResource("2_grnui")
+Item = ExtResource("44_5s833")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4kq6m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_jxws3"]
+script = ExtResource("3_4k5yx")
+Id = 200
+Building = 0
+Name = "Electromagnetic Control Rod"
+Inputs = [SubResource("Resource_cpqd6"), SubResource("Resource_kypie")]
+Outputs = [SubResource("Resource_4kq6m")]
+ProcessingTime = 30.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_vc8li"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_0qhcs"]
+script = ExtResource("2_grnui")
+Item = ExtResource("54_xlytm")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_s7fky"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_tbfdk"]
+script = ExtResource("3_4k5yx")
+Id = 201
+Building = 0
+Name = "Electromagnetic Connection Rod"
+Inputs = [SubResource("Resource_vc8li"), SubResource("Resource_0qhcs")]
+Outputs = [SubResource("Resource_s7fky")]
+ProcessingTime = 15.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_xwp24"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_j8cl5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("15_xtccd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_noil5"]
+script = ExtResource("3_4k5yx")
+Id = 202
+Building = 0
+Name = "Empty Fluid Tank"
+Inputs = [SubResource("Resource_xwp24")]
+Outputs = [SubResource("Resource_j8cl5")]
+ProcessingTime = 1.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_7ndxr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("118_qq43f")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_sfmoy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_vb2tr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("119_2oh48")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_yqslw"]
+script = ExtResource("3_4k5yx")
+Id = 203
+Building = 0
+Name = "Encased Plutonium Cell"
+Inputs = [SubResource("Resource_7ndxr"), SubResource("Resource_sfmoy")]
+Outputs = [SubResource("Resource_vb2tr")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_hajlo"]
+script = ExtResource("2_grnui")
+Item = ExtResource("120_ioteb")
+Amount = 150.0
+
+[sub_resource type="Resource" id="Resource_qfw06"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_yjudg"]
+script = ExtResource("2_grnui")
+Item = ExtResource("119_2oh48")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_v8jbk"]
+script = ExtResource("3_4k5yx")
+Id = 204
+Building = 0
+Name = "Instant Plutonium Cell"
+Inputs = [SubResource("Resource_hajlo"), SubResource("Resource_qfw06")]
+Outputs = [SubResource("Resource_yjudg")]
+ProcessingTime = 120.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ob1wy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("20_hxryk")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_5gcjk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("87_3dm0h")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3a3ll"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_srhnr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("43_wld2r")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_dadxy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_cmtiq"]
+script = ExtResource("3_4k5yx")
+Id = 205
+Building = 0
+Name = "Encased Uranium Cell"
+Inputs = [SubResource("Resource_ob1wy"), SubResource("Resource_5gcjk"), SubResource("Resource_3a3ll")]
+Outputs = [SubResource("Resource_srhnr"), SubResource("Resource_dadxy")]
+ProcessingTime = 12.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_4c48d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("20_hxryk")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_vbf8t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wy4r0"]
+script = ExtResource("2_grnui")
+Item = ExtResource("19_os4nj")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_sbr1d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("36_ji16g")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_tbeve"]
+script = ExtResource("2_grnui")
+Item = ExtResource("43_wld2r")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_ykcxg"]
+script = ExtResource("3_4k5yx")
+Id = 206
+Building = 0
+Name = "Infused Uranium Cell"
+Inputs = [SubResource("Resource_4c48d"), SubResource("Resource_vbf8t"), SubResource("Resource_wy4r0"), SubResource("Resource_sbr1d")]
+Outputs = [SubResource("Resource_tbeve")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_8urgh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_pm8ay"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_dnosx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_f8e3o"]
+script = ExtResource("2_grnui")
+Item = ExtResource("121_2hcft")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_omrch"]
+script = ExtResource("3_4k5yx")
+Id = 207
+Building = 0
+Name = "Fused Modular Frame"
+Inputs = [SubResource("Resource_8urgh"), SubResource("Resource_pm8ay"), SubResource("Resource_dnosx")]
+Outputs = [SubResource("Resource_f8e3o")]
+ProcessingTime = 40.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_7esjn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("101_gxi2y")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ramnn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("108_4u41n")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_srwib"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_we7o7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("80_cusam")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_g1g2n"]
+script = ExtResource("2_grnui")
+Item = ExtResource("121_2hcft")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_yeiic"]
+script = ExtResource("3_4k5yx")
+Id = 208
+Building = 0
+Name = "Heat-Fused Frame"
+Inputs = [SubResource("Resource_7esjn"), SubResource("Resource_ramnn"), SubResource("Resource_srwib"), SubResource("Resource_we7o7")]
+Outputs = [SubResource("Resource_g1g2n")]
+ProcessingTime = 20.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_ylm1m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("109_qlxtu")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_42e16"]
+script = ExtResource("2_grnui")
+Item = ExtResource("56_nrovr")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_67h81"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_1ntmd"]
+script = ExtResource("3_4k5yx")
+Id = 209
+Building = 0
+Name = "Heat Sink"
+Inputs = [SubResource("Resource_ylm1m"), SubResource("Resource_42e16")]
+Outputs = [SubResource("Resource_67h81")]
+ProcessingTime = 8.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_0ajru"]
+script = ExtResource("2_grnui")
+Item = ExtResource("37_bw63l")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_r0djq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_cu4i8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_l1kui"]
+script = ExtResource("3_4k5yx")
+Id = 210
+Building = 0
+Name = "Heat Exchanger"
+Inputs = [SubResource("Resource_0ajru"), SubResource("Resource_r0djq")]
+Outputs = [SubResource("Resource_cu4i8")]
+ProcessingTime = 6.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_bh1p7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("97_tcqcj")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_by7a6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_pga2d"]
+script = ExtResource("2_grnui")
+Item = ExtResource("79_64vwf")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_rim2s"]
+script = ExtResource("2_grnui")
+Item = ExtResource("123_k356u")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_cx1ij"]
+script = ExtResource("3_4k5yx")
+Id = 211
+Building = 0
+Name = "Magnetic Field Generator"
+Inputs = [SubResource("Resource_bh1p7"), SubResource("Resource_by7a6"), SubResource("Resource_pga2d")]
+Outputs = [SubResource("Resource_rim2s")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_g7r4r"]
+script = ExtResource("2_grnui")
+Item = ExtResource("14_juf4s")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_ku5bc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_mum2m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("26_lnskw")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kmj5e"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_j1qxc"]
+script = ExtResource("3_4k5yx")
+Id = 212
+Building = 0
+Name = "Nitric Acid"
+Inputs = [SubResource("Resource_g7r4r"), SubResource("Resource_ku5bc"), SubResource("Resource_mum2m")]
+Outputs = [SubResource("Resource_kmj5e")]
+ProcessingTime = 6.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_jjkjy"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mutdu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("15_xtccd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_eri5x"]
+script = ExtResource("2_grnui")
+Item = ExtResource("124_ki167")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_gshhe"]
+script = ExtResource("3_4k5yx")
+Id = 213
+Building = 0
+Name = "Packaged Nitric Acid"
+Inputs = [SubResource("Resource_jjkjy"), SubResource("Resource_mutdu")]
+Outputs = [SubResource("Resource_eri5x")]
+ProcessingTime = 2.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_31ftq"]
+script = ExtResource("2_grnui")
+Item = ExtResource("124_ki167")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_j5cfn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_m5ptn"]
+script = ExtResource("2_grnui")
+Item = ExtResource("15_xtccd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_1gjw4"]
+script = ExtResource("3_4k5yx")
+Id = 214
+Building = 0
+Name = "Unpackage Nitric Acid"
+Inputs = [SubResource("Resource_31ftq")]
+Outputs = [SubResource("Resource_j5cfn"), SubResource("Resource_m5ptn")]
+ProcessingTime = 3.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_iop2y"]
+script = ExtResource("2_grnui")
+Item = ExtResource("125_pn1y1")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_l23yj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("66_2ct1o")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_uc5k5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_uoioe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_mp81m"]
+script = ExtResource("2_grnui")
+Item = ExtResource("120_ioteb")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_lan55"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_oy3jh"]
+script = ExtResource("3_4k5yx")
+Id = 215
+Building = 0
+Name = "Non-fissile Uranium"
+Inputs = [SubResource("Resource_iop2y"), SubResource("Resource_l23yj"), SubResource("Resource_uc5k5"), SubResource("Resource_uoioe")]
+Outputs = [SubResource("Resource_mp81m"), SubResource("Resource_lan55")]
+ProcessingTime = 24.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_q5cej"]
+script = ExtResource("2_grnui")
+Item = ExtResource("20_hxryk")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_0e17v"]
+script = ExtResource("2_grnui")
+Item = ExtResource("125_pn1y1")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_1qby5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("122_g0a04")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_q8x4p"]
+script = ExtResource("2_grnui")
+Item = ExtResource("113_s2g1c")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_7mxe4"]
+script = ExtResource("2_grnui")
+Item = ExtResource("120_ioteb")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_o4gol"]
+script = ExtResource("2_grnui")
+Item = ExtResource("21_vh0h2")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_iwn0b"]
+script = ExtResource("3_4k5yx")
+Id = 216
+Building = 0
+Name = "Fertile Uranium"
+Inputs = [SubResource("Resource_q5cej"), SubResource("Resource_0e17v"), SubResource("Resource_1qby5"), SubResource("Resource_q8x4p")]
+Outputs = [SubResource("Resource_7mxe4"), SubResource("Resource_o4gol")]
+ProcessingTime = 12.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_q5abt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("117_6frg4")
+Amount = 200.0
+
+[sub_resource type="Resource" id="Resource_junql"]
+script = ExtResource("2_grnui")
+Item = ExtResource("126_xwsms")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ybl8a"]
+script = ExtResource("2_grnui")
+Item = ExtResource("127_vfa7r")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_r8tnt"]
+script = ExtResource("3_4k5yx")
+Id = 217
+Building = 0
+Name = "Nuclear Pasta"
+Inputs = [SubResource("Resource_q5abt"), SubResource("Resource_junql")]
+Outputs = [SubResource("Resource_ybl8a")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_cstt2"]
+script = ExtResource("2_grnui")
+Item = ExtResource("119_2oh48")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_ahv0t"]
+script = ExtResource("2_grnui")
+Item = ExtResource("31_jqxhm")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_4p7pw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_xoofi"]
+script = ExtResource("2_grnui")
+Item = ExtResource("115_rtex1")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_3y5rr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("128_5cmju")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_1ns38"]
+script = ExtResource("3_4k5yx")
+Id = 218
+Building = 0
+Name = "Plutonium Fuel Rod"
+Inputs = [SubResource("Resource_cstt2"), SubResource("Resource_ahv0t"), SubResource("Resource_4p7pw"), SubResource("Resource_xoofi")]
+Outputs = [SubResource("Resource_3y5rr")]
+ProcessingTime = 240.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_scmkx"]
+script = ExtResource("2_grnui")
+Item = ExtResource("119_2oh48")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_c2v6a"]
+script = ExtResource("2_grnui")
+Item = ExtResource("126_xwsms")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ux8iu"]
+script = ExtResource("2_grnui")
+Item = ExtResource("128_5cmju")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_k36y3"]
+script = ExtResource("3_4k5yx")
+Id = 219
+Building = 0
+Name = "Plutonium Fuel Unit"
+Inputs = [SubResource("Resource_scmkx"), SubResource("Resource_c2v6a")]
+Outputs = [SubResource("Resource_ux8iu")]
+ProcessingTime = 120.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_tmfuj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("120_ioteb")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_8xfow"]
+script = ExtResource("2_grnui")
+Item = ExtResource("125_pn1y1")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_d74j1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("118_qq43f")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_trmou"]
+script = ExtResource("3_4k5yx")
+Id = 220
+Building = 0
+Name = "Plutonium Pellet"
+Inputs = [SubResource("Resource_tmfuj"), SubResource("Resource_8xfow")]
+Outputs = [SubResource("Resource_d74j1")]
+ProcessingTime = 60.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_xgssj"]
+script = ExtResource("2_grnui")
+Item = ExtResource("121_2hcft")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_tw4rt"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_png4c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("126_xwsms")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_8uj78"]
+script = ExtResource("3_4k5yx")
+Id = 221
+Building = 0
+Name = "Pressure Conversion Cube"
+Inputs = [SubResource("Resource_xgssj"), SubResource("Resource_tw4rt")]
+Outputs = [SubResource("Resource_png4c")]
+ProcessingTime = 60.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_o0c7h"]
+script = ExtResource("2_grnui")
+Item = ExtResource("107_7mx7w")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_bgtcb"]
+script = ExtResource("2_grnui")
+Item = ExtResource("129_n0r8b")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_gyc6j"]
+script = ExtResource("2_grnui")
+Item = ExtResource("77_lkhms")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_x2yt5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("121_2hcft")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1qm5c"]
+script = ExtResource("2_grnui")
+Item = ExtResource("130_q36yy")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_u10yj"]
+script = ExtResource("3_4k5yx")
+Id = 222
+Building = 0
+Name = "Thermal Propulsion Rocket"
+Inputs = [SubResource("Resource_o0c7h"), SubResource("Resource_bgtcb"), SubResource("Resource_gyc6j"), SubResource("Resource_x2yt5")]
+Outputs = [SubResource("Resource_1qm5c")]
+ProcessingTime = 120.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_lb5up"]
+script = ExtResource("2_grnui")
+Item = ExtResource("77_lkhms")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_3fuji"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_0jvuf"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_1lhjc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("33_mo4ny")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_ml2fa"]
+script = ExtResource("2_grnui")
+Item = ExtResource("129_n0r8b")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ihy46"]
+script = ExtResource("3_4k5yx")
+Id = 223
+Building = 0
+Name = "Turbo Motor"
+Inputs = [SubResource("Resource_lb5up"), SubResource("Resource_3fuji"), SubResource("Resource_0jvuf"), SubResource("Resource_1lhjc")]
+Outputs = [SubResource("Resource_ml2fa")]
+ProcessingTime = 32.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_c2ssp"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_74xg5"]
+script = ExtResource("2_grnui")
+Item = ExtResource("76_7aunj")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_5tokh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_gcvix"]
+script = ExtResource("2_grnui")
+Item = ExtResource("94_57okk")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_3q6ho"]
+script = ExtResource("2_grnui")
+Item = ExtResource("129_n0r8b")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_51o7s"]
+script = ExtResource("3_4k5yx")
+Id = 224
+Building = 0
+Name = "Turbo Electric Motor"
+Inputs = [SubResource("Resource_c2ssp"), SubResource("Resource_74xg5"), SubResource("Resource_5tokh"), SubResource("Resource_gcvix")]
+Outputs = [SubResource("Resource_3q6ho")]
+ProcessingTime = 64.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_cpcf1"]
+script = ExtResource("2_grnui")
+Item = ExtResource("23_4xh1k")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_hr0nc"]
+script = ExtResource("2_grnui")
+Item = ExtResource("126_xwsms")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_dwxca"]
+script = ExtResource("2_grnui")
+Item = ExtResource("16_h4n1o")
+Amount = 24.0
+
+[sub_resource type="Resource" id="Resource_nrvwe"]
+script = ExtResource("2_grnui")
+Item = ExtResource("98_6s566")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_7rmi7"]
+script = ExtResource("2_grnui")
+Item = ExtResource("129_n0r8b")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ox440"]
+script = ExtResource("3_4k5yx")
+Id = 225
+Building = 0
+Name = "Turbo Pressure Motor"
+Inputs = [SubResource("Resource_cpcf1"), SubResource("Resource_hr0nc"), SubResource("Resource_dwxca"), SubResource("Resource_nrvwe")]
+Outputs = [SubResource("Resource_7rmi7")]
+ProcessingTime = 32.0
+IsAlternative = true
+
+[sub_resource type="Resource" id="Resource_vn7bk"]
+script = ExtResource("2_grnui")
+Item = ExtResource("43_wld2r")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_j1bxw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("100_hrt7b")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_52go6"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_idlbv"]
+script = ExtResource("2_grnui")
+Item = ExtResource("131_dar1o")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_b2ogi"]
+script = ExtResource("3_4k5yx")
+Id = 226
+Building = 0
+Name = "Uranium Fuel Rod"
+Inputs = [SubResource("Resource_vn7bk"), SubResource("Resource_j1bxw"), SubResource("Resource_52go6")]
+Outputs = [SubResource("Resource_idlbv")]
+ProcessingTime = 150.0
+IsAlternative = false
+
+[sub_resource type="Resource" id="Resource_a26f8"]
+script = ExtResource("2_grnui")
+Item = ExtResource("43_wld2r")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_05p8b"]
+script = ExtResource("2_grnui")
+Item = ExtResource("78_m4ii2")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_ga8dw"]
+script = ExtResource("2_grnui")
+Item = ExtResource("32_rpjq1")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_58jqr"]
+script = ExtResource("2_grnui")
+Item = ExtResource("30_0vp41")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_mligh"]
+script = ExtResource("2_grnui")
+Item = ExtResource("131_dar1o")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_fdiiw"]
+script = ExtResource("3_4k5yx")
+Id = 227
+Building = 0
+Name = "Uranium Fuel Unit"
+Inputs = [SubResource("Resource_a26f8"), SubResource("Resource_05p8b"), SubResource("Resource_ga8dw"), SubResource("Resource_58jqr")]
+Outputs = [SubResource("Resource_mligh")]
+ProcessingTime = 300.0
+IsAlternative = true
+
+[resource]
+script = ExtResource("132_ggnhb")
+Recipes = [SubResource("Resource_oxc7q"), SubResource("Resource_u2kv7"), SubResource("Resource_chqqh"), SubResource("Resource_qosjs"), SubResource("Resource_vvf14"), SubResource("Resource_ieg6b"), SubResource("Resource_fw68d"), SubResource("Resource_eas4m"), SubResource("Resource_oy337"), SubResource("Resource_n81pc"), SubResource("Resource_7s7jo"), SubResource("Resource_vgvlf"), SubResource("Resource_wayfc"), SubResource("Resource_0hmmo"), SubResource("Resource_i2rx4"), SubResource("Resource_shkbg"), SubResource("Resource_k5r7e"), SubResource("Resource_hpwnh"), SubResource("Resource_yv031"), SubResource("Resource_g3gm5"), SubResource("Resource_ra2v6"), SubResource("Resource_21i8g"), SubResource("Resource_6vke4"), SubResource("Resource_lelgi"), SubResource("Resource_305cl"), SubResource("Resource_m6cdw"), SubResource("Resource_i3bji"), SubResource("Resource_1fvh2"), SubResource("Resource_ig4yl"), SubResource("Resource_ccesy"), SubResource("Resource_4xy1s"), SubResource("Resource_kys6t"), SubResource("Resource_xv5ro"), SubResource("Resource_urs1m"), SubResource("Resource_6w1eo"), SubResource("Resource_d08gp"), SubResource("Resource_q03er"), SubResource("Resource_oiwo6"), SubResource("Resource_3yuoo"), SubResource("Resource_evv2q"), SubResource("Resource_bsv4i"), SubResource("Resource_d51s4"), SubResource("Resource_bkyt6"), SubResource("Resource_kuyfe"), SubResource("Resource_r7i3w"), SubResource("Resource_abiud"), SubResource("Resource_uy7mi"), SubResource("Resource_5wadd"), SubResource("Resource_1hvnt"), SubResource("Resource_woyao"), SubResource("Resource_63vu3"), SubResource("Resource_urlsp"), SubResource("Resource_oook5"), SubResource("Resource_p2c3q"), SubResource("Resource_ox2ua"), SubResource("Resource_03yix"), SubResource("Resource_dhjca"), SubResource("Resource_lj64p"), SubResource("Resource_6ligp"), SubResource("Resource_i61js"), SubResource("Resource_6vigy"), SubResource("Resource_6e1j2"), SubResource("Resource_qnuh2"), SubResource("Resource_vpjrn"), SubResource("Resource_6euuq"), SubResource("Resource_s64li"), SubResource("Resource_d7dfx"), SubResource("Resource_2qgct"), SubResource("Resource_jyu03"), SubResource("Resource_vjc12"), SubResource("Resource_wvqja"), SubResource("Resource_inb2a"), SubResource("Resource_vjnhh"), SubResource("Resource_d6qyv"), SubResource("Resource_v4qgq"), SubResource("Resource_dnpfs"), SubResource("Resource_lb2gp"), SubResource("Resource_5hkmw"), SubResource("Resource_k3mcw"), SubResource("Resource_b117w"), SubResource("Resource_mf0b2"), SubResource("Resource_g36cq"), SubResource("Resource_7dwx3"), SubResource("Resource_gaqyo"), SubResource("Resource_1yt3d"), SubResource("Resource_nsckt"), SubResource("Resource_ckijq"), SubResource("Resource_wrb77"), SubResource("Resource_b01ea"), SubResource("Resource_p4j4w"), SubResource("Resource_ysx8d"), SubResource("Resource_2kqc8"), SubResource("Resource_6hyo4"), SubResource("Resource_iw23e"), SubResource("Resource_tc4ol"), SubResource("Resource_hs1n1"), SubResource("Resource_ptt3t"), SubResource("Resource_b3i6c"), SubResource("Resource_agjbs"), SubResource("Resource_bycqy"), SubResource("Resource_q255e"), SubResource("Resource_x3w3y"), SubResource("Resource_us6l2"), SubResource("Resource_ger1m"), SubResource("Resource_xx4vw"), SubResource("Resource_v5fid"), SubResource("Resource_ouhuq"), SubResource("Resource_e2qcp"), SubResource("Resource_eqwoi"), SubResource("Resource_u4a5m"), SubResource("Resource_bpmsm"), SubResource("Resource_6jksp"), SubResource("Resource_y672l"), SubResource("Resource_ckcoj"), SubResource("Resource_mnw2v"), SubResource("Resource_uouqp"), SubResource("Resource_nh0rd"), SubResource("Resource_3gnt7"), SubResource("Resource_raqk0"), SubResource("Resource_tce6w"), SubResource("Resource_aa80j"), SubResource("Resource_g7sl2"), SubResource("Resource_ljors"), SubResource("Resource_ol56j"), SubResource("Resource_jb7og"), SubResource("Resource_1jhr8"), SubResource("Resource_ew2rj"), SubResource("Resource_l5b1v"), SubResource("Resource_2kwvq"), SubResource("Resource_kdd2t"), SubResource("Resource_55423"), SubResource("Resource_jejqh"), SubResource("Resource_856ql"), SubResource("Resource_4r0tg"), SubResource("Resource_87kls"), SubResource("Resource_dpwjn"), SubResource("Resource_7y7ah"), SubResource("Resource_axhlk"), SubResource("Resource_fxf7n"), SubResource("Resource_uina2"), SubResource("Resource_uxb01"), SubResource("Resource_xg31r"), SubResource("Resource_smbgv"), SubResource("Resource_ee5m5"), SubResource("Resource_hy8ix"), SubResource("Resource_pgept"), SubResource("Resource_8ibmw"), SubResource("Resource_iyn44"), SubResource("Resource_0vntx"), SubResource("Resource_3taut"), SubResource("Resource_yheby"), SubResource("Resource_yrdas"), SubResource("Resource_b7p8x"), SubResource("Resource_m4wcg"), SubResource("Resource_t6e8o"), SubResource("Resource_pawac"), SubResource("Resource_mfhdd"), SubResource("Resource_f1m2b"), SubResource("Resource_t045t"), SubResource("Resource_60scp"), SubResource("Resource_4klu0"), SubResource("Resource_1i61q"), SubResource("Resource_nygmq"), SubResource("Resource_om8e2"), SubResource("Resource_mt7v2"), SubResource("Resource_old83"), SubResource("Resource_n2j8g"), SubResource("Resource_lm72p"), SubResource("Resource_bxgdp"), SubResource("Resource_bph42"), SubResource("Resource_woy1b"), SubResource("Resource_71bii"), SubResource("Resource_58370"), SubResource("Resource_2lkdm"), SubResource("Resource_4x48x"), SubResource("Resource_e5ht5"), SubResource("Resource_oc3bv"), SubResource("Resource_3gjc8"), SubResource("Resource_it250"), SubResource("Resource_vk7ea"), SubResource("Resource_88n64"), SubResource("Resource_wy26u"), SubResource("Resource_0vohe"), SubResource("Resource_2fc4d"), SubResource("Resource_8h3gj"), SubResource("Resource_n4fk3"), SubResource("Resource_40hyk"), SubResource("Resource_wwjkb"), SubResource("Resource_neiyu"), SubResource("Resource_lhxtj"), SubResource("Resource_vh6uj"), SubResource("Resource_pqvgt"), SubResource("Resource_iuk6j"), SubResource("Resource_whv4p"), SubResource("Resource_bkpjc"), SubResource("Resource_njrdb"), SubResource("Resource_w5tij"), SubResource("Resource_pjj2b"), SubResource("Resource_m2bx8"), SubResource("Resource_p07fr"), SubResource("Resource_jxws3"), SubResource("Resource_tbfdk"), SubResource("Resource_noil5"), SubResource("Resource_yqslw"), SubResource("Resource_v8jbk"), SubResource("Resource_cmtiq"), SubResource("Resource_ykcxg"), SubResource("Resource_omrch"), SubResource("Resource_yeiic"), SubResource("Resource_1ntmd"), SubResource("Resource_l1kui"), SubResource("Resource_cx1ij"), SubResource("Resource_j1qxc"), SubResource("Resource_gshhe"), SubResource("Resource_1gjw4"), SubResource("Resource_oy3jh"), SubResource("Resource_iwn0b"), SubResource("Resource_r8tnt"), SubResource("Resource_1ns38"), SubResource("Resource_k36y3"), SubResource("Resource_trmou"), SubResource("Resource_8uj78"), SubResource("Resource_u10yj"), SubResource("Resource_ihy46"), SubResource("Resource_51o7s"), SubResource("Resource_ox440"), SubResource("Resource_b2ogi"), SubResource("Resource_fdiiw")]

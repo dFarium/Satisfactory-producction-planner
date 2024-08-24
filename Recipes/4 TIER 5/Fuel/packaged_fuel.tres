@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://sw4tqjotufar"]
+
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="1_7o72d"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_q4vw8"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_p3400"]
+[ext_resource type="Resource" uid="uid://nnitdr7yoiov" path="res://Items/packaged_fuel.tres" id="4_4i8o0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_mgumf"]
+
+[sub_resource type="Resource" id="Resource_qx63g"]
+script = ExtResource("2_q4vw8")
+Item = ExtResource("1_7o72d")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j6mo1"]
+script = ExtResource("2_q4vw8")
+Item = ExtResource("3_p3400")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_hynrt"]
+script = ExtResource("2_q4vw8")
+Item = ExtResource("4_4i8o0")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_mgumf")
+Id = 158
+Building = 0
+Name = "Packaged Fuel"
+Inputs = [SubResource("Resource_qx63g"), SubResource("Resource_j6mo1")]
+Outputs = [SubResource("Resource_hynrt")]
+ProcessingTime = 3.0
+IsAlternative = false

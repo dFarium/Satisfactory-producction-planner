@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cxutou7qogdg2"]
+
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="1_6xfbf"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_s6g8r"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_4i4ms"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="4_k3uff"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_8gfp7"]
+
+[sub_resource type="Resource" id="Resource_pessh"]
+script = ExtResource("2_s6g8r")
+Item = ExtResource("1_6xfbf")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_sjdgd"]
+script = ExtResource("2_s6g8r")
+Item = ExtResource("3_4i4ms")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_7jair"]
+script = ExtResource("2_s6g8r")
+Item = ExtResource("4_k3uff")
+Amount = 7.0
+
+[resource]
+script = ExtResource("5_8gfp7")
+Id = 59
+Building = 0
+Name = "Pure Quartz Crystal"
+Inputs = [SubResource("Resource_pessh"), SubResource("Resource_sjdgd")]
+Outputs = [SubResource("Resource_7jair")]
+ProcessingTime = 8.0
+IsAlternative = true

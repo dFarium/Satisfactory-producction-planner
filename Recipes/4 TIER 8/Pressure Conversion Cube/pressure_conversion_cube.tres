@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b0dggnb2gdd3r"]
+
+[ext_resource type="Resource" uid="uid://b4jhakhhfhm3" path="res://Items/fused_modular_frame.tres" id="1_2la1u"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_g88af"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="3_66f8g"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="4_8fjw8"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_fpoo5"]
+
+[sub_resource type="Resource" id="Resource_xgssj"]
+script = ExtResource("2_g88af")
+Item = ExtResource("1_2la1u")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_tw4rt"]
+script = ExtResource("2_g88af")
+Item = ExtResource("3_66f8g")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_png4c"]
+script = ExtResource("2_g88af")
+Item = ExtResource("4_8fjw8")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_fpoo5")
+Id = 221
+Building = 0
+Name = "Pressure Conversion Cube"
+Inputs = [SubResource("Resource_xgssj"), SubResource("Resource_tw4rt")]
+Outputs = [SubResource("Resource_png4c")]
+ProcessingTime = 60.0
+IsAlternative = false

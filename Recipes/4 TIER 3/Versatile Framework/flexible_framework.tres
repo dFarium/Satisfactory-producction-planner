@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://c2xw24jbjujm4"]
+
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="1_nmo3s"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_pcs2i"]
+[ext_resource type="Resource" uid="uid://c2rakpd1rmusm" path="res://Items/steel_beam.tres" id="3_rpylu"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="4_0u1vr"]
+[ext_resource type="Resource" uid="uid://cnmsv5td0ybc4" path="res://Items/versatile_framework.tres" id="5_wdt05"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_xd16l"]
+
+[sub_resource type="Resource" id="Resource_k4mg7"]
+script = ExtResource("2_pcs2i")
+Item = ExtResource("1_nmo3s")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_w4qv4"]
+script = ExtResource("2_pcs2i")
+Item = ExtResource("3_rpylu")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_nevwq"]
+script = ExtResource("2_pcs2i")
+Item = ExtResource("4_0u1vr")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_nujxa"]
+script = ExtResource("2_pcs2i")
+Item = ExtResource("5_wdt05")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_xd16l")
+Id = 130
+Building = 0
+Name = "Flexible Framework"
+Inputs = [SubResource("Resource_k4mg7"), SubResource("Resource_w4qv4"), SubResource("Resource_nevwq")]
+Outputs = [SubResource("Resource_nujxa")]
+ProcessingTime = 16.0
+IsAlternative = true

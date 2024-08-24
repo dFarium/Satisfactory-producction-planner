@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://ch0e862an5h3r"]
+
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="1_wm1kv"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6f7y2"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_smdfx"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="4_w57j1"]
+[ext_resource type="Resource" uid="uid://15opoabqkmsg" path="res://Items/nitrogen_gas.tres" id="5_4tqe2"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="6_j4sfe"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_gwbmp"]
+
+[sub_resource type="Resource" id="Resource_nveyw"]
+script = ExtResource("2_6f7y2")
+Item = ExtResource("1_wm1kv")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_dkuhj"]
+script = ExtResource("2_6f7y2")
+Item = ExtResource("3_smdfx")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_aj3s6"]
+script = ExtResource("2_6f7y2")
+Item = ExtResource("4_w57j1")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_2dgm3"]
+script = ExtResource("2_6f7y2")
+Item = ExtResource("5_4tqe2")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_e2r1c"]
+script = ExtResource("2_6f7y2")
+Item = ExtResource("6_j4sfe")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_gwbmp")
+Id = 198
+Building = 0
+Name = "Cooling System"
+Inputs = [SubResource("Resource_nveyw"), SubResource("Resource_dkuhj"), SubResource("Resource_aj3s6"), SubResource("Resource_2dgm3")]
+Outputs = [SubResource("Resource_e2r1c")]
+ProcessingTime = 10.0
+IsAlternative = false

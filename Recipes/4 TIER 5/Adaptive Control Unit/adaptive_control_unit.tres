@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://d1bcougrcxf5s"]
+
+[ext_resource type="Resource" uid="uid://cxri5fyhcy374" path="res://Items/automated_wiring.tres" id="1_clb3j"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6mtts"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="3_53qyf"]
+[ext_resource type="Resource" uid="uid://djljcfkbrf6gh" path="res://Items/heavy_modular_frame.tres" id="4_vypom"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="5_ilt3p"]
+[ext_resource type="Resource" uid="uid://cymv47w84e1xd" path="res://Items/adaptative_control_unit.tres" id="6_tc3km"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_up64o"]
+
+[sub_resource type="Resource" id="Resource_4urub"]
+script = ExtResource("2_6mtts")
+Item = ExtResource("1_clb3j")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_5rjm0"]
+script = ExtResource("2_6mtts")
+Item = ExtResource("3_53qyf")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_uf1ot"]
+script = ExtResource("2_6mtts")
+Item = ExtResource("4_vypom")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_bfw0y"]
+script = ExtResource("2_6mtts")
+Item = ExtResource("5_ilt3p")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_q37ya"]
+script = ExtResource("2_6mtts")
+Item = ExtResource("6_tc3km")
+Amount = 2.0
+
+[resource]
+script = ExtResource("7_up64o")
+Id = 144
+Building = 0
+Name = "Adaptive Control Unit"
+Inputs = [SubResource("Resource_4urub"), SubResource("Resource_5rjm0"), SubResource("Resource_uf1ot"), SubResource("Resource_bfw0y")]
+Outputs = [SubResource("Resource_q37ya")]
+ProcessingTime = 120.0
+IsAlternative = false

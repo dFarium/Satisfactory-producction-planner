@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://by44yolqgmxd6"]
+
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="1_q8i3s"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ech5m"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_t067e"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_vyonf"]
+
+[sub_resource type="Resource" id="Resource_bekbm"]
+script = ExtResource("2_ech5m")
+Item = ExtResource("1_q8i3s")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_1maj0"]
+script = ExtResource("2_ech5m")
+Item = ExtResource("3_t067e")
+Amount = 1.0
+
+[resource]
+script = ExtResource("4_vyonf")
+Id = 82
+Building = 0
+Name = "Cable"
+Inputs = [SubResource("Resource_bekbm")]
+Outputs = [SubResource("Resource_1maj0")]
+ProcessingTime = 2.0
+IsAlternative = false

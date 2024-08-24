@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://thcv2gx4h4wv"]
+
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="1_xcrms"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_eli6s"]
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="3_l68ca"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_lf3xn"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="5_5j6oa"]
+[ext_resource type="Resource" uid="uid://bknddh55j7hca" path="res://Items/turbo_motor.tres" id="6_xyr08"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_rxeqj"]
+
+[sub_resource type="Resource" id="Resource_c2ssp"]
+script = ExtResource("2_eli6s")
+Item = ExtResource("1_xcrms")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_74xg5"]
+script = ExtResource("2_eli6s")
+Item = ExtResource("3_l68ca")
+Amount = 9.0
+
+[sub_resource type="Resource" id="Resource_5tokh"]
+script = ExtResource("2_eli6s")
+Item = ExtResource("4_lf3xn")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_gcvix"]
+script = ExtResource("2_eli6s")
+Item = ExtResource("5_5j6oa")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_3q6ho"]
+script = ExtResource("2_eli6s")
+Item = ExtResource("6_xyr08")
+Amount = 3.0
+
+[resource]
+script = ExtResource("7_rxeqj")
+Id = 223
+Building = 0
+Name = "Turbo Electric Motor"
+Inputs = [SubResource("Resource_c2ssp"), SubResource("Resource_74xg5"), SubResource("Resource_5tokh"), SubResource("Resource_gcvix")]
+Outputs = [SubResource("Resource_3q6ho")]
+ProcessingTime = 64.0
+IsAlternative = true

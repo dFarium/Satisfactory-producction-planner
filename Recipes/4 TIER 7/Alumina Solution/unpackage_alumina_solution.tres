@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c6cqilcskl14i"]
+
+[ext_resource type="Resource" uid="uid://ckusf7675uaog" path="res://Items/packaged_alumina_solution.tres" id="1_g74g2"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_wgski"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="3_gmtnv"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_ji53k"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_t65ek"]
+
+[sub_resource type="Resource" id="Resource_nsx8n"]
+script = ExtResource("2_wgski")
+Item = ExtResource("1_g74g2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4prn1"]
+script = ExtResource("2_wgski")
+Item = ExtResource("3_gmtnv")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_mc4eo"]
+script = ExtResource("2_wgski")
+Item = ExtResource("4_ji53k")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_t65ek")
+Id = 180
+Building = 0
+Name = "Unpackage Alumina Solution"
+Inputs = [SubResource("Resource_nsx8n")]
+Outputs = [SubResource("Resource_4prn1"), SubResource("Resource_mc4eo")]
+ProcessingTime = 1.0
+IsAlternative = false

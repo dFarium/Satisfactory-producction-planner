@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dvriqeslnej5l"]
+
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="1_4p2k5"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_pc05k"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_ro1te"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="4_7gbvk"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="5_p0wx6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_c6u2r"]
+
+[sub_resource type="Resource" id="Resource_rcmv2"]
+script = ExtResource("2_pc05k")
+Item = ExtResource("1_4p2k5")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_rswki"]
+script = ExtResource("2_pc05k")
+Item = ExtResource("3_ro1te")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_f0ojd"]
+script = ExtResource("2_pc05k")
+Item = ExtResource("4_7gbvk")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_5vnnr"]
+script = ExtResource("2_pc05k")
+Item = ExtResource("5_p0wx6")
+Amount = 5.0
+
+[resource]
+script = ExtResource("6_c6u2r")
+Id = 177
+Building = 0
+Name = "Alumina Solution"
+Inputs = [SubResource("Resource_rcmv2"), SubResource("Resource_rswki")]
+Outputs = [SubResource("Resource_f0ojd"), SubResource("Resource_5vnnr")]
+ProcessingTime = 6.0
+IsAlternative = false

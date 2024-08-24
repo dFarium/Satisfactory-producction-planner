@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=15 format=3 uid="uid://b7u3oubrwe58l"]
+
+[ext_resource type="Resource" uid="uid://burvrmcataabx" path="res://Items/uranium.tres" id="1_20psr"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_kc3y2"]
+[ext_resource type="Resource" uid="uid://b8ydcn8gn2wf1" path="res://Items/uranium_waste.tres" id="3_583db"]
+[ext_resource type="Resource" uid="uid://c0pafypp3ujmw" path="res://Items/nitric_acid.tres" id="4_ocq6o"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="5_q818m"]
+[ext_resource type="Resource" uid="uid://dqymlc5nad7xw" path="res://Items/non-fissile_uranium.tres" id="6_ds5q1"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="7_pioa7"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="8_74mpv"]
+
+[sub_resource type="Resource" id="Resource_q5cej"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("1_20psr")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_0e17v"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("3_583db")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_1qby5"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("4_ocq6o")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_q8x4p"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("5_q818m")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_7mxe4"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("6_ds5q1")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_o4gol"]
+script = ExtResource("2_kc3y2")
+Item = ExtResource("7_pioa7")
+Amount = 8.0
+
+[resource]
+script = ExtResource("8_74mpv")
+Id = 215
+Building = 0
+Name = "Fertile Uranium"
+Inputs = [SubResource("Resource_q5cej"), SubResource("Resource_0e17v"), SubResource("Resource_1qby5"), SubResource("Resource_q8x4p")]
+Outputs = [SubResource("Resource_7mxe4"), SubResource("Resource_o4gol")]
+ProcessingTime = 12.0
+IsAlternative = true

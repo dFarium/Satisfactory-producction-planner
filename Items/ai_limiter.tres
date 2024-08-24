@@ -5,6 +5,5 @@
 
 [resource]
 script = ExtResource("2_kbyug")
-Name = "Ai Limiter"
+Name = "AI Limiter"
 Icon = ExtResource("1_ah18w")
-Amount = 0.0

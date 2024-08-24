@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c82a6u0gnmiia"]
+
+[ext_resource type="Texture2D" uid="uid://d1avdkb5q1blk" path="res://ItemIcons/Blue_Power_Slug.png" id="1_ycj03"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.cs" id="2_t20hs"]
+
+[resource]
+script = ExtResource("2_t20hs")
+Name = "Blue Power Slug"
+Icon = ExtResource("1_ycj03")

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://qhovg0yinqoy"]
+
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="1_wgbon"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_yy1xa"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_3nf0x"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_m5bx7"]
+
+[sub_resource type="Resource" id="Resource_tlc31"]
+script = ExtResource("2_yy1xa")
+Item = ExtResource("1_wgbon")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_f4xlm"]
+script = ExtResource("2_yy1xa")
+Item = ExtResource("3_3nf0x")
+Amount = 5.0
+
+[resource]
+script = ExtResource("4_m5bx7")
+Id = 62
+Building = 0
+Name = "Quickwire"
+Inputs = [SubResource("Resource_tlc31")]
+Outputs = [SubResource("Resource_f4xlm")]
+ProcessingTime = 5.0
+IsAlternative = false

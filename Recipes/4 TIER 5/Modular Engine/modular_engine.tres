@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://fufuchjujrrd"]
+
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="1_2inx6"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_cbwiw"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_pxb1r"]
+[ext_resource type="Resource" uid="uid://cxd317xdow8fv" path="res://Items/smart_plating.tres" id="4_wjlq2"]
+[ext_resource type="Resource" uid="uid://dcn7y4m5w4m8b" path="res://Items/modular_engine.tres" id="5_k1f81"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_qcw65"]
+
+[sub_resource type="Resource" id="Resource_0jga8"]
+script = ExtResource("2_cbwiw")
+Item = ExtResource("1_2inx6")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_s6f45"]
+script = ExtResource("2_cbwiw")
+Item = ExtResource("3_pxb1r")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_4gs3k"]
+script = ExtResource("2_cbwiw")
+Item = ExtResource("4_wjlq2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_uesn1"]
+script = ExtResource("2_cbwiw")
+Item = ExtResource("5_k1f81")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_qcw65")
+Id = 167
+Building = 0
+Name = "Modular Engine"
+Inputs = [SubResource("Resource_0jga8"), SubResource("Resource_s6f45"), SubResource("Resource_4gs3k")]
+Outputs = [SubResource("Resource_uesn1")]
+ProcessingTime = 60.0
+IsAlternative = false

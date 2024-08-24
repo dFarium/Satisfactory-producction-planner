@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b4xp8348nctdt"]
+
+[ext_resource type="Resource" uid="uid://cymv47w84e1xd" path="res://Items/adaptative_control_unit.tres" id="1_ck7nh"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_t86ap"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="3_scr44"]
+[ext_resource type="Resource" uid="uid://b0uc67ug7chv8" path="res://Items/assembly_director_system.tres" id="4_p3jku"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_yoa5x"]
+
+[sub_resource type="Resource" id="Resource_a8e7s"]
+script = ExtResource("2_t86ap")
+Item = ExtResource("1_ck7nh")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_2bxjv"]
+script = ExtResource("2_t86ap")
+Item = ExtResource("3_scr44")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_mvan5"]
+script = ExtResource("2_t86ap")
+Item = ExtResource("4_p3jku")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_yoa5x")
+Id = 188
+Building = 0
+Name = "Assembly Director System"
+Inputs = [SubResource("Resource_a8e7s"), SubResource("Resource_2bxjv")]
+Outputs = [SubResource("Resource_mvan5")]
+ProcessingTime = 80.0
+IsAlternative = false

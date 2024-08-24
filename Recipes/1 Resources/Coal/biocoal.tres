@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://cmfkreikipgms"]
+
+[ext_resource type="Resource" uid="uid://bhd3duvummhss" path="res://Items/biomass.tres" id="1_gs785"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_yu5v5"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_okocc"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_r1a5w"]
+
+[sub_resource type="Resource" id="Resource_r4bjt"]
+script = ExtResource("2_yu5v5")
+Item = ExtResource("1_gs785")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_e7ch1"]
+script = ExtResource("2_yu5v5")
+Item = ExtResource("3_okocc")
+Amount = 6.0
+
+[resource]
+script = ExtResource("4_r1a5w")
+Id = 2
+Building = 0
+Name = "Biocoal"
+Inputs = [SubResource("Resource_r4bjt")]
+Outputs = [SubResource("Resource_e7ch1")]
+ProcessingTime = 8.0
+IsAlternative = true

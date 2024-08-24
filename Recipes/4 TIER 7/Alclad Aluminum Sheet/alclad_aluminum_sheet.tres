@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://cnybpxlemxxh5"]
+
+[ext_resource type="Resource" uid="uid://bh740pt57rovw" path="res://Items/aluminum_ingot.tres" id="1_4vi5d"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_0khf3"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="3_71m8f"]
+[ext_resource type="Resource" uid="uid://fmtrhn6gl1k" path="res://Items/alclad_aluminum_sheet.tres" id="4_dkcjc"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_rq37r"]
+
+[sub_resource type="Resource" id="Resource_x31n1"]
+script = ExtResource("2_0khf3")
+Item = ExtResource("1_4vi5d")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_kynbe"]
+script = ExtResource("2_0khf3")
+Item = ExtResource("3_71m8f")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_b4nmu"]
+script = ExtResource("2_0khf3")
+Item = ExtResource("4_dkcjc")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_rq37r")
+Id = 176
+Building = 0
+Name = "Alclad Aluminum Sheet"
+Inputs = [SubResource("Resource_x31n1"), SubResource("Resource_kynbe")]
+Outputs = [SubResource("Resource_b4nmu")]
+ProcessingTime = 6.0
+IsAlternative = false

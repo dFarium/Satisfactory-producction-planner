@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dgl3igj8rr05n"]
+
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="1_6eprl"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_iii7l"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_ng36l"]
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="4_igwyy"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_r5v3x"]
+
+[sub_resource type="Resource" id="Resource_smnqe"]
+script = ExtResource("2_iii7l")
+Item = ExtResource("1_6eprl")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_le6my"]
+script = ExtResource("2_iii7l")
+Item = ExtResource("3_ng36l")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_y2lus"]
+script = ExtResource("2_iii7l")
+Item = ExtResource("4_igwyy")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_r5v3x")
+Id = 120
+Building = 0
+Name = "Steel Rotor"
+Inputs = [SubResource("Resource_smnqe"), SubResource("Resource_le6my")]
+Outputs = [SubResource("Resource_y2lus")]
+ProcessingTime = 12.0
+IsAlternative = true

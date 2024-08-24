@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://bse4xs0hto7bk"]
+
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="1_lseu6"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ytte0"]
+[ext_resource type="Resource" uid="uid://b07hysqsv6hyb" path="res://Items/cable.tres" id="3_340n6"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_hekr7"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="5_7d6m6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_xgjst"]
+
+[sub_resource type="Resource" id="Resource_ja5go"]
+script = ExtResource("2_ytte0")
+Item = ExtResource("1_lseu6")
+Amount = 56.0
+
+[sub_resource type="Resource" id="Resource_xtgm2"]
+script = ExtResource("2_ytte0")
+Item = ExtResource("3_340n6")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_di2ll"]
+script = ExtResource("2_ytte0")
+Item = ExtResource("4_hekr7")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_01djn"]
+script = ExtResource("2_ytte0")
+Item = ExtResource("5_7d6m6")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_xgjst")
+Id = 52
+Building = 0
+Name = "High-Speed Connector"
+Inputs = [SubResource("Resource_ja5go"), SubResource("Resource_xtgm2"), SubResource("Resource_di2ll")]
+Outputs = [SubResource("Resource_01djn")]
+ProcessingTime = 16.0
+IsAlternative = false

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dobeecafvnqp7"]
+
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="1_26ljr"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6jwm7"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="3_0v82x"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_hmtgo"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_b1dek"]
+
+[sub_resource type="Resource" id="Resource_vc8li"]
+script = ExtResource("2_6jwm7")
+Item = ExtResource("1_26ljr")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_0qhcs"]
+script = ExtResource("2_6jwm7")
+Item = ExtResource("3_0v82x")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_s7fky"]
+script = ExtResource("2_6jwm7")
+Item = ExtResource("4_hmtgo")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_b1dek")
+Id = 200
+Building = 0
+Name = "Electromagnetic Connection Rod"
+Inputs = [SubResource("Resource_vc8li"), SubResource("Resource_0qhcs")]
+Outputs = [SubResource("Resource_s7fky")]
+ProcessingTime = 15.0
+IsAlternative = true

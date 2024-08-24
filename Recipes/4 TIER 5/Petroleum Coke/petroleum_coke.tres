@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dn5qoq5uedy6o"]
+
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="1_1ax8t"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_sgmgt"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="3_fnjwn"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_2ylib"]
+
+[sub_resource type="Resource" id="Resource_uo7a7"]
+script = ExtResource("2_sgmgt")
+Item = ExtResource("1_1ax8t")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_yqr12"]
+script = ExtResource("2_sgmgt")
+Item = ExtResource("3_fnjwn")
+Amount = 12.0
+
+[resource]
+script = ExtResource("4_2ylib")
+Id = 168
+Building = 0
+Name = "Petroleum Coke"
+Inputs = [SubResource("Resource_uo7a7")]
+Outputs = [SubResource("Resource_yqr12")]
+ProcessingTime = 6.0
+IsAlternative = false

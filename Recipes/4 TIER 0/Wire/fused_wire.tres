@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c1w23s8xk47ew"]
+
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="1_jxdio"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ljxte"]
+[ext_resource type="Resource" uid="uid://pa7cqrcnpe8w" path="res://Items/caterium_ingot.tres" id="3_oo1hx"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="4_8ir8r"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_gccj2"]
+
+[sub_resource type="Resource" id="Resource_864y0"]
+script = ExtResource("2_ljxte")
+Item = ExtResource("1_jxdio")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_2oou0"]
+script = ExtResource("2_ljxte")
+Item = ExtResource("3_oo1hx")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_kojhp"]
+script = ExtResource("2_ljxte")
+Item = ExtResource("4_8ir8r")
+Amount = 30.0
+
+[resource]
+script = ExtResource("5_gccj2")
+Id = 109
+Building = 0
+Name = "Fused Wire"
+Inputs = [SubResource("Resource_864y0"), SubResource("Resource_2oou0")]
+Outputs = [SubResource("Resource_kojhp")]
+ProcessingTime = 20.0
+IsAlternative = true

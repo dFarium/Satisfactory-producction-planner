@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bhur3qhx5xcs"]
+
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="1_yi181"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_yvdet"]
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="3_6rgty"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="4_0l3le"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_ajgt3"]
+
+[sub_resource type="Resource" id="Resource_oefev"]
+script = ExtResource("2_yvdet")
+Item = ExtResource("1_yi181")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_v73dl"]
+script = ExtResource("2_yvdet")
+Item = ExtResource("3_6rgty")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_7j3mt"]
+script = ExtResource("2_yvdet")
+Item = ExtResource("4_0l3le")
+Amount = 10.0
+
+[resource]
+script = ExtResource("5_ajgt3")
+Id = 87
+Building = 0
+Name = "Fine Concrete"
+Inputs = [SubResource("Resource_oefev"), SubResource("Resource_v73dl")]
+Outputs = [SubResource("Resource_7j3mt")]
+ProcessingTime = 24.0
+IsAlternative = true

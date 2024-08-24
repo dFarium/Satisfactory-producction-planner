@@ -35,7 +35,6 @@ public partial class BuildingSlot : LineEdit
 
     [Export] private SlotType _slotType = SlotType.Undefined;
     private string _lastValidValue = "0";
-
     public string Value
     {
         get => Text;

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://c77e2ku2ceqjt"]
+
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="1_3y3re"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_vyjcr"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="3_ucnhc"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="4_tr1mf"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_gipfv"]
+
+[sub_resource type="Resource" id="Resource_ugm1a"]
+script = ExtResource("2_vyjcr")
+Item = ExtResource("1_3y3re")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_rkplh"]
+script = ExtResource("2_vyjcr")
+Item = ExtResource("3_ucnhc")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_7iwa0"]
+script = ExtResource("2_vyjcr")
+Item = ExtResource("4_tr1mf")
+Amount = 9.0
+
+[resource]
+script = ExtResource("5_gipfv")
+Id = 88
+Building = 0
+Name = "Rubber Concrete"
+Inputs = [SubResource("Resource_ugm1a"), SubResource("Resource_rkplh")]
+Outputs = [SubResource("Resource_7iwa0")]
+ProcessingTime = 12.0
+IsAlternative = true

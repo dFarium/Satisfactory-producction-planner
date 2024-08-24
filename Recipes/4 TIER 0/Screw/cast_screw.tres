@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://2qvy1k2yn0ny"]
+
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="1_c36dk"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_b7nk2"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_ucvtd"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_236wx"]
+
+[sub_resource type="Resource" id="Resource_lyfuc"]
+script = ExtResource("2_b7nk2")
+Item = ExtResource("1_c36dk")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_txy5k"]
+script = ExtResource("2_b7nk2")
+Item = ExtResource("3_ucvtd")
+Amount = 20.0
+
+[resource]
+script = ExtResource("4_236wx")
+Id = 105
+Building = 0
+Name = "Cast Screw"
+Inputs = [SubResource("Resource_lyfuc")]
+Outputs = [SubResource("Resource_txy5k")]
+ProcessingTime = 24.0
+IsAlternative = true

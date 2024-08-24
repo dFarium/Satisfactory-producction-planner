@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dgngqjokksi6m"]
+
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="1_wpit7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_gk85j"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="3_xehi5"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_7bcgj"]
+
+[sub_resource type="Resource" id="Resource_xrcnm"]
+script = ExtResource("2_gk85j")
+Item = ExtResource("1_wpit7")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ygwku"]
+script = ExtResource("2_gk85j")
+Item = ExtResource("3_xehi5")
+Amount = 4.0
+
+[resource]
+script = ExtResource("4_7bcgj")
+Id = 153
+Building = 0
+Name = "Empty Canister"
+Inputs = [SubResource("Resource_xrcnm")]
+Outputs = [SubResource("Resource_ygwku")]
+ProcessingTime = 4.0
+IsAlternative = false

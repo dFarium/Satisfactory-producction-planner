@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://ntdygotijcck"]
+
+[ext_resource type="Resource" uid="uid://cs6gvr3ai2uft" path="res://Items/limestone.tres" id="1_q03bk"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_h8tym"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_pq4xr"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="4_a50wm"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_0y3af"]
+
+[sub_resource type="Resource" id="Resource_b2bus"]
+script = ExtResource("2_h8tym")
+Item = ExtResource("1_q03bk")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_mxqqn"]
+script = ExtResource("2_h8tym")
+Item = ExtResource("3_pq4xr")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_r6wc7"]
+script = ExtResource("2_h8tym")
+Item = ExtResource("4_a50wm")
+Amount = 4.0
+
+[resource]
+script = ExtResource("5_0y3af")
+Id = 89
+Building = 0
+Name = "Wet Concrete"
+Inputs = [SubResource("Resource_b2bus"), SubResource("Resource_mxqqn")]
+Outputs = [SubResource("Resource_r6wc7")]
+ProcessingTime = 3.0
+IsAlternative = true

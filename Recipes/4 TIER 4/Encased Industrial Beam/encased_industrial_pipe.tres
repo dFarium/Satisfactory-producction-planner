@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bg0c8mqdh4iy0"]
+
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="1_wt4bm"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_b0mt5"]
+[ext_resource type="Resource" uid="uid://bb66fjpr8akqa" path="res://Items/concrete.tres" id="3_qgtc8"]
+[ext_resource type="Resource" uid="uid://bgtc0vpo8850s" path="res://Items/encased_industrial_beam.tres" id="4_obytp"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_7em0q"]
+
+[sub_resource type="Resource" id="Resource_kqkcg"]
+script = ExtResource("2_b0mt5")
+Item = ExtResource("1_wt4bm")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_ge0js"]
+script = ExtResource("2_b0mt5")
+Item = ExtResource("3_qgtc8")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_sjhmm"]
+script = ExtResource("2_b0mt5")
+Item = ExtResource("4_obytp")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_7em0q")
+Id = 135
+Building = 0
+Name = "Encased Industrial Pipe"
+Inputs = [SubResource("Resource_kqkcg"), SubResource("Resource_ge0js")]
+Outputs = [SubResource("Resource_sjhmm")]
+ProcessingTime = 15.0
+IsAlternative = true

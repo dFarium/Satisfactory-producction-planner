@@ -5,6 +5,5 @@
 
 [resource]
 script = ExtResource("2_nm3l6")
-Name = "High Speed Connector"
+Name = "High-Speed Connector"
 Icon = ExtResource("1_n7wp0")
-Amount = 0.0

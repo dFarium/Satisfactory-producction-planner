@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bgeo5683bhr5d"]
+
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="1_d0h0o"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ppmae"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="3_t5jv0"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="4_bc3um"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_pmsg2"]
+
+[sub_resource type="Resource" id="Resource_c2054"]
+script = ExtResource("2_ppmae")
+Item = ExtResource("1_d0h0o")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_bb0ei"]
+script = ExtResource("2_ppmae")
+Item = ExtResource("3_t5jv0")
+Amount = 50.0
+
+[sub_resource type="Resource" id="Resource_r85yw"]
+script = ExtResource("2_ppmae")
+Item = ExtResource("4_bc3um")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_pmsg2")
+Id = 102
+Building = 0
+Name = "Bolted Iron Plate"
+Inputs = [SubResource("Resource_c2054"), SubResource("Resource_bb0ei")]
+Outputs = [SubResource("Resource_r85yw")]
+ProcessingTime = 12.0
+IsAlternative = true

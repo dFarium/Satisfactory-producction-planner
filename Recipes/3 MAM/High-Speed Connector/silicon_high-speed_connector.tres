@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://somj8ugxdkk8"]
+
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="1_ury1f"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_umuu5"]
+[ext_resource type="Resource" uid="uid://bb6ykpdaeonc7" path="res://Items/silica.tres" id="3_t02dk"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_lird5"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="5_8c6dy"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_77gvg"]
+
+[sub_resource type="Resource" id="Resource_2pggt"]
+script = ExtResource("2_umuu5")
+Item = ExtResource("1_ury1f")
+Amount = 60.0
+
+[sub_resource type="Resource" id="Resource_jjq3r"]
+script = ExtResource("2_umuu5")
+Item = ExtResource("3_t02dk")
+Amount = 25.0
+
+[sub_resource type="Resource" id="Resource_x4swu"]
+script = ExtResource("2_umuu5")
+Item = ExtResource("4_lird5")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_4cju3"]
+script = ExtResource("2_umuu5")
+Item = ExtResource("5_8c6dy")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_77gvg")
+Id = 53
+Building = 0
+Name = "Silicon High-Speed Connector"
+Inputs = [SubResource("Resource_2pggt"), SubResource("Resource_jjq3r"), SubResource("Resource_x4swu")]
+Outputs = [SubResource("Resource_4cju3")]
+ProcessingTime = 40.0
+IsAlternative = true

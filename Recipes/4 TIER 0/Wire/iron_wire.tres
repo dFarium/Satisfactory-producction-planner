@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://crdgo3y06eqtq"]
+
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="1_ojhuy"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_fp1ge"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_5mjwm"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_n06jw"]
+
+[sub_resource type="Resource" id="Resource_dxn6h"]
+script = ExtResource("2_fp1ge")
+Item = ExtResource("1_ojhuy")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_4ds8j"]
+script = ExtResource("2_fp1ge")
+Item = ExtResource("3_5mjwm")
+Amount = 9.0
+
+[resource]
+script = ExtResource("4_n06jw")
+Id = 110
+Building = 0
+Name = "Iron Wire"
+Inputs = [SubResource("Resource_dxn6h")]
+Outputs = [SubResource("Resource_4ds8j")]
+ProcessingTime = 24.0
+IsAlternative = true

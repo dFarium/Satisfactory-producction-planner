@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://b16gam18jgiu0"]
+
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="1_3si10"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_8kv4k"]
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="3_qj5ac"]
+[ext_resource type="Resource" uid="uid://bdxdhe3xf1y7x" path="res://Items/aluminum_casing.tres" id="4_0h8rb"]
+[ext_resource type="Resource" uid="uid://b33sr4iks1ptb" path="res://Items/battery.tres" id="5_iho4v"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="6_xqv4q"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_vt1nx"]
+
+[sub_resource type="Resource" id="Resource_42syd"]
+script = ExtResource("2_8kv4k")
+Item = ExtResource("1_3si10")
+Amount = 2.5
+
+[sub_resource type="Resource" id="Resource_5vegl"]
+script = ExtResource("2_8kv4k")
+Item = ExtResource("3_qj5ac")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_v2kyc"]
+script = ExtResource("2_8kv4k")
+Item = ExtResource("4_0h8rb")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_b355d"]
+script = ExtResource("2_8kv4k")
+Item = ExtResource("5_iho4v")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_wag74"]
+script = ExtResource("2_8kv4k")
+Item = ExtResource("6_xqv4q")
+Amount = 1.5
+
+[resource]
+script = ExtResource("7_vt1nx")
+Id = 189
+Building = 0
+Name = "Battery"
+Inputs = [SubResource("Resource_42syd"), SubResource("Resource_5vegl"), SubResource("Resource_v2kyc")]
+Outputs = [SubResource("Resource_b355d"), SubResource("Resource_wag74")]
+ProcessingTime = 3.0
+IsAlternative = false

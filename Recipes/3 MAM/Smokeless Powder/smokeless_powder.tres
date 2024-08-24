@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bldjvtq7ceyjm"]
+
+[ext_resource type="Resource" uid="uid://bp2268mghlrux" path="res://Items/black_powder.tres" id="1_r5i5a"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_3gc33"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="3_pjdjw"]
+[ext_resource type="Resource" uid="uid://bupwghadth5lf" path="res://Items/smokeless_powder.tres" id="4_1fbcm"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_c8rox"]
+
+[sub_resource type="Resource" id="Resource_umf2b"]
+script = ExtResource("2_3gc33")
+Item = ExtResource("1_r5i5a")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_kn7ps"]
+script = ExtResource("2_3gc33")
+Item = ExtResource("3_pjdjw")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_iyptb"]
+script = ExtResource("2_3gc33")
+Item = ExtResource("4_1fbcm")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_c8rox")
+Id = 65
+Building = 0
+Name = "Smokeless Powder"
+Inputs = [SubResource("Resource_umf2b"), SubResource("Resource_kn7ps")]
+Outputs = [SubResource("Resource_iyptb")]
+ProcessingTime = 6.0
+IsAlternative = false

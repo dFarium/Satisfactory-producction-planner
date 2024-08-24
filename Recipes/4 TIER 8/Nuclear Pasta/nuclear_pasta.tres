@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dum6s77r5wm2d"]
+
+[ext_resource type="Resource" uid="uid://c1dy2s0u1mmwn" path="res://Items/copper_powder.tres" id="1_kegew"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_guioy"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="3_xgndd"]
+[ext_resource type="Resource" uid="uid://8pomsgf5mmwf" path="res://Items/nuclear_pasta.tres" id="4_471mp"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_fm6ca"]
+
+[sub_resource type="Resource" id="Resource_q5abt"]
+script = ExtResource("2_guioy")
+Item = ExtResource("1_kegew")
+Amount = 200.0
+
+[sub_resource type="Resource" id="Resource_junql"]
+script = ExtResource("2_guioy")
+Item = ExtResource("3_xgndd")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ybl8a"]
+script = ExtResource("2_guioy")
+Item = ExtResource("4_471mp")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_fm6ca")
+Id = 217
+Building = 0
+Name = "Nuclear Pasta"
+Inputs = [SubResource("Resource_q5abt"), SubResource("Resource_junql")]
+Outputs = [SubResource("Resource_ybl8a")]
+ProcessingTime = 120.0
+IsAlternative = false

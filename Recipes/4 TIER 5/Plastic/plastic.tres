@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://47lp3p2cjrio"]
+
+[ext_resource type="Resource" uid="uid://d1gmp3poi3jeg" path="res://Items/crude_oil.tres" id="1_16hwr"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_cajje"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="3_emgb3"]
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="4_n1u2r"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_w0dhh"]
+
+[sub_resource type="Resource" id="Resource_go18j"]
+script = ExtResource("2_cajje")
+Item = ExtResource("1_16hwr")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_feiru"]
+script = ExtResource("2_cajje")
+Item = ExtResource("3_emgb3")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ftfql"]
+script = ExtResource("2_cajje")
+Item = ExtResource("4_n1u2r")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_w0dhh")
+Id = 169
+Building = 0
+Name = "Plastic"
+Inputs = [SubResource("Resource_go18j")]
+Outputs = [SubResource("Resource_feiru"), SubResource("Resource_ftfql")]
+ProcessingTime = 6.0
+IsAlternative = false

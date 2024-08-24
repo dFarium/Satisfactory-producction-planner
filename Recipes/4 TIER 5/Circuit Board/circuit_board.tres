@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://b7gg60eb0jpf7"]
+
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="1_haf02"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_5t3g5"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="3_3wnk2"]
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="4_21fcj"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_dxkxe"]
+
+[sub_resource type="Resource" id="Resource_nriyx"]
+script = ExtResource("2_5t3g5")
+Item = ExtResource("1_haf02")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j6fes"]
+script = ExtResource("2_5t3g5")
+Item = ExtResource("3_3wnk2")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_nxyb8"]
+script = ExtResource("2_5t3g5")
+Item = ExtResource("4_21fcj")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_dxkxe")
+Id = 146
+Building = 0
+Name = "Circuit Board"
+Inputs = [SubResource("Resource_nriyx"), SubResource("Resource_j6fes")]
+Outputs = [SubResource("Resource_nxyb8")]
+ProcessingTime = 8.0
+IsAlternative = false

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://d3m4jdtu3irop"]
+
+[ext_resource type="Resource" uid="uid://i73cktfxw8yc" path="res://Items/radio_control_unit.tres" id="1_og4ul"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_oq3ch"]
+[ext_resource type="Resource" uid="uid://b1rybyc4drlcd" path="res://Items/cooling_system.tres" id="3_fid5a"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="4_uhf2p"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_w5fe5"]
+
+[sub_resource type="Resource" id="Resource_lple5"]
+script = ExtResource("2_oq3ch")
+Item = ExtResource("1_og4ul")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_txbjq"]
+script = ExtResource("2_oq3ch")
+Item = ExtResource("3_fid5a")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_3404f"]
+script = ExtResource("2_oq3ch")
+Item = ExtResource("4_uhf2p")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_w5fe5")
+Id = 66
+Building = 0
+Name = "OC Supercomputer"
+Inputs = [SubResource("Resource_lple5"), SubResource("Resource_txbjq")]
+Outputs = [SubResource("Resource_3404f")]
+ProcessingTime = 20.0
+IsAlternative = true

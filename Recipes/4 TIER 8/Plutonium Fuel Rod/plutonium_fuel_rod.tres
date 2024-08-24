@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://bvq53kanet5in"]
+
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="1_11y0c"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_y6ma5"]
+[ext_resource type="Resource" uid="uid://c2rakpd1rmusm" path="res://Items/steel_beam.tres" id="3_238ol"]
+[ext_resource type="Resource" uid="uid://j383o7khxumv" path="res://Items/electromagnetic_control_rod.tres" id="4_j8vpj"]
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="5_1y4ea"]
+[ext_resource type="Resource" uid="uid://dlvn642optjqs" path="res://Items/plutonium_fuel_rod.tres" id="6_bh4b3"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_air0w"]
+
+[sub_resource type="Resource" id="Resource_cstt2"]
+script = ExtResource("2_y6ma5")
+Item = ExtResource("1_11y0c")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_ahv0t"]
+script = ExtResource("2_y6ma5")
+Item = ExtResource("3_238ol")
+Amount = 18.0
+
+[sub_resource type="Resource" id="Resource_4p7pw"]
+script = ExtResource("2_y6ma5")
+Item = ExtResource("4_j8vpj")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_xoofi"]
+script = ExtResource("2_y6ma5")
+Item = ExtResource("5_1y4ea")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_3y5rr"]
+script = ExtResource("2_y6ma5")
+Item = ExtResource("6_bh4b3")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_air0w")
+Id = 218
+Building = 0
+Name = "Plutonium Fuel Rod"
+Inputs = [SubResource("Resource_cstt2"), SubResource("Resource_ahv0t"), SubResource("Resource_4p7pw"), SubResource("Resource_xoofi")]
+Outputs = [SubResource("Resource_3y5rr")]
+ProcessingTime = 240.0
+IsAlternative = false

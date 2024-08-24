@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://2ongeh7nmvo5"]
+
+[ext_resource type="Resource" uid="uid://ongr047x2t7" path="res://Items/wood.tres" id="1_xc5ld"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_7y1d1"]
+[ext_resource type="Resource" uid="uid://bhd3duvummhss" path="res://Items/biomass.tres" id="3_nl480"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_itm6l"]
+
+[sub_resource type="Resource" id="Resource_p8qb1"]
+script = ExtResource("2_7y1d1")
+Item = ExtResource("1_xc5ld")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_q0mpn"]
+script = ExtResource("2_7y1d1")
+Item = ExtResource("3_nl480")
+Amount = 20.0
+
+[resource]
+script = ExtResource("4_itm6l")
+Id = 81
+Building = 0
+Name = "Biomass (Wood)"
+Inputs = [SubResource("Resource_p8qb1")]
+Outputs = [SubResource("Resource_q0mpn")]
+ProcessingTime = 4.0
+IsAlternative = false

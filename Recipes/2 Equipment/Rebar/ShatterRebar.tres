@@ -9,23 +9,24 @@
 [sub_resource type="Resource" id="Resource_hxff0"]
 script = ExtResource("2_k7d7k")
 Item = ExtResource("3_uuqdo")
-Amount = 2
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_tpc6q"]
 script = ExtResource("2_k7d7k")
 Item = ExtResource("3_3fc66")
-Amount = 3
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_lpej2"]
 script = ExtResource("2_k7d7k")
 Item = ExtResource("3_qf0bp")
-Amount = 1
+Amount = 0.0
 
 [resource]
 script = ExtResource("4_b7711")
+Id = 33
 Building = 7
 Name = "Shatter Rebar"
-Inputs = Array[Object]([SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")])
-Outputs = Array[Object]([SubResource("Resource_lpej2")])
+Inputs = [SubResource("Resource_hxff0"), SubResource("Resource_tpc6q")]
+Outputs = [SubResource("Resource_lpej2")]
 ProcessingTime = 12.0
 IsAlternative = false

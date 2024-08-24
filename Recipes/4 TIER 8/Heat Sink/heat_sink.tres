@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bwy73n8g4aw8k"]
+
+[ext_resource type="Resource" uid="uid://fmtrhn6gl1k" path="res://Items/alclad_aluminum_sheet.tres" id="1_mc5jm"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_8ovqk"]
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="3_e5li0"]
+[ext_resource type="Resource" uid="uid://csa8q0o6q53ux" path="res://Items/heat_sink.tres" id="4_iqhh4"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_ao3rk"]
+
+[sub_resource type="Resource" id="Resource_ylm1m"]
+script = ExtResource("2_8ovqk")
+Item = ExtResource("1_mc5jm")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_42e16"]
+script = ExtResource("2_8ovqk")
+Item = ExtResource("3_e5li0")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_67h81"]
+script = ExtResource("2_8ovqk")
+Item = ExtResource("4_iqhh4")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_ao3rk")
+Id = 210
+Building = 0
+Name = "Heat Sink"
+Inputs = [SubResource("Resource_ylm1m"), SubResource("Resource_42e16")]
+Outputs = [SubResource("Resource_67h81")]
+ProcessingTime = 8.0
+IsAlternative = false

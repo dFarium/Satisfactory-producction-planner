@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://dxf6ehhkvphl7"]
+
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="1_k67ct"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_i10xp"]
+[ext_resource type="Resource" uid="uid://bysowtme8qlop" path="res://Items/copper_ore.tres" id="3_ta5j0"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="4_8k1pj"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_petpy"]
+
+[sub_resource type="Resource" id="Resource_r8o8o"]
+script = ExtResource("2_i10xp")
+Item = ExtResource("1_k67ct")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_by0w3"]
+script = ExtResource("2_i10xp")
+Item = ExtResource("3_ta5j0")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_ado10"]
+script = ExtResource("2_i10xp")
+Item = ExtResource("4_8k1pj")
+Amount = 5.0
+
+[resource]
+script = ExtResource("5_petpy")
+Id = 93
+Building = 0
+Name = "Iron Alloy Ingot"
+Inputs = [SubResource("Resource_r8o8o"), SubResource("Resource_by0w3")]
+Outputs = [SubResource("Resource_ado10")]
+ProcessingTime = 6.0
+IsAlternative = true

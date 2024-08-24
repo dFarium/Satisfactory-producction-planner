@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bileale03c5wo"]
+
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="1_42j5c"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_yej4v"]
+[ext_resource type="Resource" uid="uid://ye75v4rrwtid" path="res://Items/compacted_coal.tres" id="3_d0pal"]
+[ext_resource type="Resource" uid="uid://brr406b6ghoc2" path="res://Items/turbofuel.tres" id="4_c1or8"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_t3hv3"]
+
+[sub_resource type="Resource" id="Resource_qxrxb"]
+script = ExtResource("2_yej4v")
+Item = ExtResource("1_42j5c")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_uph26"]
+script = ExtResource("2_yej4v")
+Item = ExtResource("3_d0pal")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_l8grs"]
+script = ExtResource("2_yej4v")
+Item = ExtResource("4_c1or8")
+Amount = 4.0
+
+[resource]
+script = ExtResource("5_t3hv3")
+Id = 72
+Building = 0
+Name = "Turbo Heavy Fuel"
+Inputs = [SubResource("Resource_qxrxb"), SubResource("Resource_uph26")]
+Outputs = [SubResource("Resource_l8grs")]
+ProcessingTime = 8.0
+IsAlternative = true

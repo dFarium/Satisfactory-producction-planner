@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://bwfsohw5w6oci"]
+
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="1_ldrvw"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_npirg"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_xkuv2"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="4_0rrog"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="5_hlpjs"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_nw3o1"]
+
+[sub_resource type="Resource" id="Resource_oge62"]
+script = ExtResource("2_npirg")
+Item = ExtResource("1_ldrvw")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_rf5at"]
+script = ExtResource("2_npirg")
+Item = ExtResource("3_xkuv2")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_j3pjt"]
+script = ExtResource("2_npirg")
+Item = ExtResource("4_0rrog")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_c87h3"]
+script = ExtResource("2_npirg")
+Item = ExtResource("5_hlpjs")
+Amount = 2.0
+
+[resource]
+script = ExtResource("6_nw3o1")
+Id = 185
+Building = 0
+Name = "Aluminum Scrap"
+Inputs = [SubResource("Resource_oge62"), SubResource("Resource_rf5at")]
+Outputs = [SubResource("Resource_j3pjt"), SubResource("Resource_c87h3")]
+ProcessingTime = 1.0
+IsAlternative = false

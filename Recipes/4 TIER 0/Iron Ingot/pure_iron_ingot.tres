@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://biw7mdiwo6ml5"]
+
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="1_45e3n"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_m6ntb"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_cpjhw"]
+[ext_resource type="Resource" uid="uid://210ek7kyxyhi" path="res://Items/iron_ingot.tres" id="4_kfm34"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_funp6"]
+
+[sub_resource type="Resource" id="Resource_c3stn"]
+script = ExtResource("2_m6ntb")
+Item = ExtResource("1_45e3n")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_0yj25"]
+script = ExtResource("2_m6ntb")
+Item = ExtResource("3_cpjhw")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_0tgpo"]
+script = ExtResource("2_m6ntb")
+Item = ExtResource("4_kfm34")
+Amount = 13.0
+
+[resource]
+script = ExtResource("5_funp6")
+Id = 95
+Building = 0
+Name = "Pure Iron Ingot"
+Inputs = [SubResource("Resource_c3stn"), SubResource("Resource_0yj25")]
+Outputs = [SubResource("Resource_0tgpo")]
+ProcessingTime = 12.0
+IsAlternative = true

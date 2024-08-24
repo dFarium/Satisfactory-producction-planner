@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("2_6aqqa")
-Name = "Adaptative Control Unit"
+Name = "Adaptive Control Unit"
 Icon = ExtResource("1_lsiko")

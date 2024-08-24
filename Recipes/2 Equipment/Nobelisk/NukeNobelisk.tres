@@ -11,33 +11,34 @@
 [sub_resource type="Resource" id="Resource_gc16t"]
 script = ExtResource("2_r7x8r")
 Item = ExtResource("1_iaiqx")
-Amount = 5
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_troca"]
 script = ExtResource("2_r7x8r")
 Item = ExtResource("3_vw8jf")
-Amount = 20
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_we1ar"]
 script = ExtResource("2_r7x8r")
 Item = ExtResource("4_tnokh")
-Amount = 10
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_yphe4"]
 script = ExtResource("2_r7x8r")
 Item = ExtResource("5_5cesv")
-Amount = 6
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_c3n4q"]
 script = ExtResource("2_r7x8r")
 Item = ExtResource("4_777db")
-Amount = 5
+Amount = 0.0
 
 [resource]
 script = ExtResource("5_6gdih")
+Id = 29
 Building = 8
 Name = "Nuke Nobelisk"
-Inputs = Array[Object]([SubResource("Resource_gc16t"), SubResource("Resource_troca"), SubResource("Resource_we1ar"), SubResource("Resource_yphe4")])
-Outputs = Array[Object]([SubResource("Resource_c3n4q")])
+Inputs = [SubResource("Resource_gc16t"), SubResource("Resource_troca"), SubResource("Resource_we1ar"), SubResource("Resource_yphe4")]
+Outputs = [SubResource("Resource_c3n4q")]
 ProcessingTime = 120.0
 IsAlternative = false

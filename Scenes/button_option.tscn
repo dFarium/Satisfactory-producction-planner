@@ -38,6 +38,7 @@ label_settings = SubResource("LabelSettings_wnpu7")
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="option_icon1" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2

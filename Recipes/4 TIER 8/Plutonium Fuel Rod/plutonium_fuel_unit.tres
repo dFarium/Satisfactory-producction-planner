@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bc43frnrj3loq"]
+
+[ext_resource type="Resource" uid="uid://c40pnwo5vvmr0" path="res://Items/encased_plutonium_cell.tres" id="1_g84js"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_xq2b6"]
+[ext_resource type="Resource" uid="uid://btyoks4quwyd5" path="res://Items/pressure_conversion_cube.tres" id="3_gc5qn"]
+[ext_resource type="Resource" uid="uid://dlvn642optjqs" path="res://Items/plutonium_fuel_rod.tres" id="4_1s8nq"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_qcgkw"]
+
+[sub_resource type="Resource" id="Resource_scmkx"]
+script = ExtResource("2_xq2b6")
+Item = ExtResource("1_g84js")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_c2v6a"]
+script = ExtResource("2_xq2b6")
+Item = ExtResource("3_gc5qn")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_ux8iu"]
+script = ExtResource("2_xq2b6")
+Item = ExtResource("4_1s8nq")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_qcgkw")
+Id = 219
+Building = 0
+Name = "Plutonium Fuel Unit"
+Inputs = [SubResource("Resource_scmkx"), SubResource("Resource_c2v6a")]
+Outputs = [SubResource("Resource_ux8iu")]
+ProcessingTime = 120.0
+IsAlternative = true

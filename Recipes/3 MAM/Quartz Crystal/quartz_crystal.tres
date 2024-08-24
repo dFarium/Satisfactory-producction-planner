@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bbecbfjpkfdwk"]
+
+[ext_resource type="Resource" uid="uid://dntuilrxffekp" path="res://Items/raw_quartz.tres" id="1_rrmy7"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_io831"]
+[ext_resource type="Resource" uid="uid://d3e7a874j3dcc" path="res://Items/quartz_crystal.tres" id="3_atiej"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="4_i8pcl"]
+
+[sub_resource type="Resource" id="Resource_mmfs5"]
+script = ExtResource("2_io831")
+Item = ExtResource("1_rrmy7")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_qns0t"]
+script = ExtResource("2_io831")
+Item = ExtResource("3_atiej")
+Amount = 3.0
+
+[resource]
+script = ExtResource("4_i8pcl")
+Id = 60
+Building = 0
+Name = "Quartz Crystal"
+Inputs = [SubResource("Resource_mmfs5")]
+Outputs = [SubResource("Resource_qns0t")]
+ProcessingTime = 8.0
+IsAlternative = false

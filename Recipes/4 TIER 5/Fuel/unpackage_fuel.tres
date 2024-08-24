@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://pxwwyk2cjulj"]
+
+[ext_resource type="Resource" uid="uid://nnitdr7yoiov" path="res://Items/packaged_fuel.tres" id="1_bosoy"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_prnn1"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="3_qvimw"]
+[ext_resource type="Resource" uid="uid://bxckbwiyulx8b" path="res://Items/empty_canister.tres" id="4_1wxqe"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_nem42"]
+
+[sub_resource type="Resource" id="Resource_lef45"]
+script = ExtResource("2_prnn1")
+Item = ExtResource("1_bosoy")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_swkha"]
+script = ExtResource("2_prnn1")
+Item = ExtResource("3_qvimw")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_h5py6"]
+script = ExtResource("2_prnn1")
+Item = ExtResource("4_1wxqe")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_nem42")
+Id = 160
+Building = 0
+Name = "Unpackage Fuel"
+Inputs = [SubResource("Resource_lef45")]
+Outputs = [SubResource("Resource_swkha"), SubResource("Resource_h5py6")]
+ProcessingTime = 2.0
+IsAlternative = false

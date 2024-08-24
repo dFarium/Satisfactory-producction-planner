@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bhwdg056wmhy"]
+
+[ext_resource type="Resource" uid="uid://bhwhddoyagy3s" path="res://Items/iron_plate.tres" id="1_3m65k"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6detg"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="3_03f5q"]
+[ext_resource type="Resource" uid="uid://cpsanu74v801i" path="res://Items/reinforced_iron_plate.tres" id="4_1pq45"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_5or4m"]
+
+[sub_resource type="Resource" id="Resource_gds3y"]
+script = ExtResource("2_6detg")
+Item = ExtResource("1_3m65k")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_76m3w"]
+script = ExtResource("2_6detg")
+Item = ExtResource("3_03f5q")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_c5ugf"]
+script = ExtResource("2_6detg")
+Item = ExtResource("4_1pq45")
+Amount = 3.0
+
+[resource]
+script = ExtResource("5_5or4m")
+Id = 104
+Building = 0
+Name = "Stitched Iron Plate"
+Inputs = [SubResource("Resource_gds3y"), SubResource("Resource_76m3w")]
+Outputs = [SubResource("Resource_c5ugf")]
+ProcessingTime = 32.0
+IsAlternative = true

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://bktlk3k547taq"]
+
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="1_u4r8j"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_v3y60"]
+[ext_resource type="Resource" uid="uid://c2rakpd1rmusm" path="res://Items/steel_beam.tres" id="3_hh0ex"]
+[ext_resource type="Resource" uid="uid://cnmsv5td0ybc4" path="res://Items/versatile_framework.tres" id="4_nq8d5"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_xceqa"]
+
+[sub_resource type="Resource" id="Resource_ukrxs"]
+script = ExtResource("2_v3y60")
+Item = ExtResource("1_u4r8j")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_udrmh"]
+script = ExtResource("2_v3y60")
+Item = ExtResource("3_hh0ex")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_013sq"]
+script = ExtResource("2_v3y60")
+Item = ExtResource("4_nq8d5")
+Amount = 2.0
+
+[resource]
+script = ExtResource("5_xceqa")
+Id = 131
+Building = 0
+Name = "Versatile Framework"
+Inputs = [SubResource("Resource_ukrxs"), SubResource("Resource_udrmh")]
+Outputs = [SubResource("Resource_013sq")]
+ProcessingTime = 24.0
+IsAlternative = false

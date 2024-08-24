@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://4f8f55427set"]
+
+[ext_resource type="Resource" uid="uid://be42jpctj18x7" path="res://Items/modular_frame.tres" id="1_lnvdb"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_6n8ml"]
+[ext_resource type="Resource" uid="uid://c816fjgrp885" path="res://Items/steel_pipe.tres" id="3_0kmje"]
+[ext_resource type="Resource" uid="uid://bgtc0vpo8850s" path="res://Items/encased_industrial_beam.tres" id="4_pgy1s"]
+[ext_resource type="Resource" uid="uid://cwanslgg38lxv" path="res://Items/screw.tres" id="5_53bd2"]
+[ext_resource type="Resource" uid="uid://djljcfkbrf6gh" path="res://Items/heavy_modular_frame.tres" id="6_6a0rw"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_2k6xk"]
+
+[sub_resource type="Resource" id="Resource_beh08"]
+script = ExtResource("2_6n8ml")
+Item = ExtResource("1_lnvdb")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_asbtb"]
+script = ExtResource("2_6n8ml")
+Item = ExtResource("3_0kmje")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_pyyb0"]
+script = ExtResource("2_6n8ml")
+Item = ExtResource("4_pgy1s")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_ytht8"]
+script = ExtResource("2_6n8ml")
+Item = ExtResource("5_53bd2")
+Amount = 100.0
+
+[sub_resource type="Resource" id="Resource_45gkm"]
+script = ExtResource("2_6n8ml")
+Item = ExtResource("6_6a0rw")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_2k6xk")
+Id = 138
+Building = 0
+Name = "Heavy Modular Frame"
+Inputs = [SubResource("Resource_beh08"), SubResource("Resource_asbtb"), SubResource("Resource_pyyb0"), SubResource("Resource_ytht8")]
+Outputs = [SubResource("Resource_45gkm")]
+ProcessingTime = 30.0
+IsAlternative = false

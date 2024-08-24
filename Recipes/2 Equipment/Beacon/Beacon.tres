@@ -11,33 +11,34 @@
 [sub_resource type="Resource" id="Resource_uult6"]
 script = ExtResource("2_7d7dp")
 Item = ExtResource("1_tolsr")
-Amount = 3
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_awme6"]
 script = ExtResource("2_7d7dp")
 Item = ExtResource("3_3kwbu")
-Amount = 1
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_itoew"]
 script = ExtResource("2_7d7dp")
 Item = ExtResource("4_a67gk")
-Amount = 15
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_u5py8"]
 script = ExtResource("2_7d7dp")
 Item = ExtResource("5_t65id")
-Amount = 2
+Amount = 0.0
 
 [sub_resource type="Resource" id="Resource_n80eg"]
 script = ExtResource("2_7d7dp")
 Item = ExtResource("5_fn7co")
-Amount = 1
+Amount = 0.0
 
 [resource]
 script = ExtResource("6_hvkbt")
+Id = 22
 Building = 8
 Name = "Beacon"
-Inputs = Array[Object]([SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew"), SubResource("Resource_u5py8")])
-Outputs = Array[Object]([SubResource("Resource_n80eg")])
+Inputs = [SubResource("Resource_uult6"), SubResource("Resource_awme6"), SubResource("Resource_itoew"), SubResource("Resource_u5py8")]
+Outputs = [SubResource("Resource_n80eg")]
 ProcessingTime = 8.0
 IsAlternative = false

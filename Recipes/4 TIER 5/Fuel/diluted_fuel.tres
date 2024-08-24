@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://rpebp1u4al2j"]
+
+[ext_resource type="Resource" uid="uid://hha01xlcy0vs" path="res://Items/heavy_oil_residue.tres" id="1_pd27e"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_xlqny"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="3_l2snr"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="4_pkrh2"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_w74ca"]
+
+[sub_resource type="Resource" id="Resource_dkvkx"]
+script = ExtResource("2_xlqny")
+Item = ExtResource("1_pd27e")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_lm3kp"]
+script = ExtResource("2_xlqny")
+Item = ExtResource("3_l2snr")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_pnjqi"]
+script = ExtResource("2_xlqny")
+Item = ExtResource("4_pkrh2")
+Amount = 10.0
+
+[resource]
+script = ExtResource("5_w74ca")
+Id = 155
+Building = 0
+Name = "Diluted Fuel"
+Inputs = [SubResource("Resource_dkvkx"), SubResource("Resource_lm3kp")]
+Outputs = [SubResource("Resource_pnjqi")]
+ProcessingTime = 6.0
+IsAlternative = true

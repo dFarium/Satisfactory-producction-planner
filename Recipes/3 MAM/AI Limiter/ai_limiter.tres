@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://csdl8okywqiw7"]
+
+[ext_resource type="Resource" uid="uid://ucdaknlgott" path="res://Items/copper_sheet.tres" id="1_xh33b"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_xmha1"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_pw671"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="4_vxuo0"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_2im0d"]
+
+[sub_resource type="Resource" id="Resource_g6kjt"]
+script = ExtResource("2_xmha1")
+Item = ExtResource("1_xh33b")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_cucir"]
+script = ExtResource("2_xmha1")
+Item = ExtResource("3_pw671")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_kbbjc"]
+script = ExtResource("2_xmha1")
+Item = ExtResource("4_vxuo0")
+Amount = 1.0
+
+[resource]
+script = ExtResource("5_2im0d")
+Id = 39
+Building = 0
+Name = "AI Limiter"
+Inputs = [SubResource("Resource_g6kjt"), SubResource("Resource_cucir")]
+Outputs = [SubResource("Resource_kbbjc")]
+ProcessingTime = 12.0
+IsAlternative = false

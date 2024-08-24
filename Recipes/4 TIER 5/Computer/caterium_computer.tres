@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://d37rt0joocag0"]
+
+[ext_resource type="Resource" uid="uid://bm24t0e7o1uj2" path="res://Items/circuit_board.tres" id="1_2sjge"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_y8gct"]
+[ext_resource type="Resource" uid="uid://pmxuen3kxtxh" path="res://Items/quickwire.tres" id="3_tb8l1"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="4_xpnwx"]
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="5_ntk4f"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_7q4o4"]
+
+[sub_resource type="Resource" id="Resource_eraef"]
+script = ExtResource("2_y8gct")
+Item = ExtResource("1_2sjge")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_1gx7k"]
+script = ExtResource("2_y8gct")
+Item = ExtResource("3_tb8l1")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_hyi1f"]
+script = ExtResource("2_y8gct")
+Item = ExtResource("4_xpnwx")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_jpfoa"]
+script = ExtResource("2_y8gct")
+Item = ExtResource("5_ntk4f")
+Amount = 1.0
+
+[resource]
+script = ExtResource("6_7q4o4")
+Id = 149
+Building = 0
+Name = "Caterium Computer"
+Inputs = [SubResource("Resource_eraef"), SubResource("Resource_1gx7k"), SubResource("Resource_hyi1f")]
+Outputs = [SubResource("Resource_jpfoa")]
+ProcessingTime = 16.0
+IsAlternative = true

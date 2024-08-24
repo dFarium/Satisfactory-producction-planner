@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=14 format=3 uid="uid://cma1etai3p5kt"]
+
+[ext_resource type="Resource" uid="uid://de1x4nfb06uq7" path="res://Items/bauxite.tres" id="1_kgu8t"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_prdab"]
+[ext_resource type="Resource" uid="uid://bv0okmqw8rcc2" path="res://Items/coal.tres" id="3_v8oe7"]
+[ext_resource type="Resource" uid="uid://bertl2ck5ff3y" path="res://Items/sulfuric_acid.tres" id="4_cq7qr"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="5_hkuax"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="6_h0k41"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_3ca5k"]
+
+[sub_resource type="Resource" id="Resource_6nle8"]
+script = ExtResource("2_prdab")
+Item = ExtResource("1_kgu8t")
+Amount = 15.0
+
+[sub_resource type="Resource" id="Resource_yxs2g"]
+script = ExtResource("2_prdab")
+Item = ExtResource("3_v8oe7")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_0603b"]
+script = ExtResource("2_prdab")
+Item = ExtResource("4_cq7qr")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_v0qil"]
+script = ExtResource("2_prdab")
+Item = ExtResource("5_hkuax")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_02121"]
+script = ExtResource("2_prdab")
+Item = ExtResource("6_h0k41")
+Amount = 30.0
+
+[sub_resource type="Resource" id="Resource_ae5fa"]
+script = ExtResource("2_prdab")
+Item = ExtResource("5_hkuax")
+Amount = 5.0
+
+[resource]
+script = ExtResource("7_3ca5k")
+Id = 187
+Building = 0
+Name = "Instant Scrap"
+Inputs = [SubResource("Resource_6nle8"), SubResource("Resource_yxs2g"), SubResource("Resource_0603b"), SubResource("Resource_v0qil")]
+Outputs = [SubResource("Resource_02121"), SubResource("Resource_ae5fa")]
+ProcessingTime = 6.0
+IsAlternative = true

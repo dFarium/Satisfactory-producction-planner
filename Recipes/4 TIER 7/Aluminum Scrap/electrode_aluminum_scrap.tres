@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://chmyarduteypy"]
+
+[ext_resource type="Resource" uid="uid://cpqdktfbylqfo" path="res://Items/alumina_solution.tres" id="1_ssax1"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_s71ou"]
+[ext_resource type="Resource" uid="uid://cc3w815egtf08" path="res://Items/petroleum_coke.tres" id="3_1d4mf"]
+[ext_resource type="Resource" uid="uid://d2jn64cwhb8fl" path="res://Items/aluminum_scrap.tres" id="4_0pyar"]
+[ext_resource type="Resource" uid="uid://bjvn3dtoe33d2" path="res://Items/water.tres" id="5_gdnf2"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_6fkit"]
+
+[sub_resource type="Resource" id="Resource_ir1j4"]
+script = ExtResource("2_s71ou")
+Item = ExtResource("1_ssax1")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_oxh4g"]
+script = ExtResource("2_s71ou")
+Item = ExtResource("3_1d4mf")
+Amount = 4.0
+
+[sub_resource type="Resource" id="Resource_b1bt4"]
+script = ExtResource("2_s71ou")
+Item = ExtResource("4_0pyar")
+Amount = 20.0
+
+[sub_resource type="Resource" id="Resource_x2pkh"]
+script = ExtResource("2_s71ou")
+Item = ExtResource("5_gdnf2")
+Amount = 7.0
+
+[resource]
+script = ExtResource("6_6fkit")
+Id = 186
+Building = 0
+Name = "Electrode Aluminum Scrap"
+Inputs = [SubResource("Resource_ir1j4"), SubResource("Resource_oxh4g")]
+Outputs = [SubResource("Resource_b1bt4"), SubResource("Resource_x2pkh")]
+ProcessingTime = 4.0
+IsAlternative = true

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://brxkruv5o4yd"]
+
+[ext_resource type="Resource" uid="uid://bysowtme8qlop" path="res://Items/copper_ore.tres" id="1_fke4c"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_guwla"]
+[ext_resource type="Resource" uid="uid://b3jodrx7i84vx" path="res://Items/iron_ore.tres" id="3_etsc2"]
+[ext_resource type="Resource" uid="uid://tl68va477y4d" path="res://Items/copper_ingot.tres" id="4_7d7nt"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_bq7y7"]
+
+[sub_resource type="Resource" id="Resource_vavfi"]
+script = ExtResource("2_guwla")
+Item = ExtResource("1_fke4c")
+Amount = 10.0
+
+[sub_resource type="Resource" id="Resource_bch8r"]
+script = ExtResource("2_guwla")
+Item = ExtResource("3_etsc2")
+Amount = 5.0
+
+[sub_resource type="Resource" id="Resource_itkc0"]
+script = ExtResource("2_guwla")
+Item = ExtResource("4_7d7nt")
+Amount = 20.0
+
+[resource]
+script = ExtResource("5_bq7y7")
+Id = 90
+Building = 0
+Name = "Copper Alloy Ingot"
+Inputs = [SubResource("Resource_vavfi"), SubResource("Resource_bch8r")]
+Outputs = [SubResource("Resource_itkc0")]
+ProcessingTime = 12.0
+IsAlternative = true

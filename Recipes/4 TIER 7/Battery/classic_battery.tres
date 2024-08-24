@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://cqt8a58dsfx4g"]
+
+[ext_resource type="Resource" uid="uid://b0oawyd4w1w0k" path="res://Items/sulfur.tres" id="1_gsr20"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_ip541"]
+[ext_resource type="Resource" uid="uid://fmtrhn6gl1k" path="res://Items/alclad_aluminum_sheet.tres" id="3_lqoav"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="4_k2oiq"]
+[ext_resource type="Resource" uid="uid://cjupxg2oewjqj" path="res://Items/wire.tres" id="5_uohj3"]
+[ext_resource type="Resource" uid="uid://b33sr4iks1ptb" path="res://Items/battery.tres" id="6_1u4qf"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_svwsr"]
+
+[sub_resource type="Resource" id="Resource_rd1qc"]
+script = ExtResource("2_ip541")
+Item = ExtResource("1_gsr20")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_h8rtv"]
+script = ExtResource("2_ip541")
+Item = ExtResource("3_lqoav")
+Amount = 7.0
+
+[sub_resource type="Resource" id="Resource_ynv3g"]
+script = ExtResource("2_ip541")
+Item = ExtResource("4_k2oiq")
+Amount = 8.0
+
+[sub_resource type="Resource" id="Resource_ur5oy"]
+script = ExtResource("2_ip541")
+Item = ExtResource("5_uohj3")
+Amount = 12.0
+
+[sub_resource type="Resource" id="Resource_pwk4v"]
+script = ExtResource("2_ip541")
+Item = ExtResource("6_1u4qf")
+Amount = 4.0
+
+[resource]
+script = ExtResource("7_svwsr")
+Id = 190
+Building = 0
+Name = "Classic Battery"
+Inputs = [SubResource("Resource_rd1qc"), SubResource("Resource_h8rtv"), SubResource("Resource_ynv3g"), SubResource("Resource_ur5oy")]
+Outputs = [SubResource("Resource_pwk4v")]
+ProcessingTime = 8.0
+IsAlternative = true

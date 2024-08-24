@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=9 format=3 uid="uid://s8elfa1kbduv"]
+
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="1_4yhnu"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_5m07h"]
+[ext_resource type="Resource" uid="uid://uphgahmi1cf1" path="res://Items/fuel.tres" id="3_p7tax"]
+[ext_resource type="Resource" uid="uid://bxfaawre2j5c3" path="res://Items/rubber.tres" id="4_f3flh"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="5_klmi7"]
+
+[sub_resource type="Resource" id="Resource_l3vw0"]
+script = ExtResource("2_5m07h")
+Item = ExtResource("1_4yhnu")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_ke176"]
+script = ExtResource("2_5m07h")
+Item = ExtResource("3_p7tax")
+Amount = 6.0
+
+[sub_resource type="Resource" id="Resource_3fp2v"]
+script = ExtResource("2_5m07h")
+Item = ExtResource("4_f3flh")
+Amount = 12.0
+
+[resource]
+script = ExtResource("5_klmi7")
+Id = 173
+Building = 0
+Name = "Recycled Rubber"
+Inputs = [SubResource("Resource_l3vw0"), SubResource("Resource_ke176")]
+Outputs = [SubResource("Resource_3fp2v")]
+ProcessingTime = 12.0
+IsAlternative = true

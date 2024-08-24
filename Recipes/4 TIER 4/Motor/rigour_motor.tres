@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=11 format=3 uid="uid://dslukpul2e3jx"]
+
+[ext_resource type="Resource" uid="uid://dnwypupnw0wsu" path="res://Items/rotor.tres" id="1_dv1vh"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_m4xfj"]
+[ext_resource type="Resource" uid="uid://lk3goyvvpxdh" path="res://Items/stator.tres" id="3_iaetg"]
+[ext_resource type="Resource" uid="uid://nsnnbmxpqmn5" path="res://Items/crystal_oscillator.tres" id="4_ak7p8"]
+[ext_resource type="Resource" uid="uid://bxjhlmnj2eam5" path="res://Items/motor.tres" id="5_mogy6"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="6_xrnsp"]
+
+[sub_resource type="Resource" id="Resource_u1ucu"]
+script = ExtResource("2_m4xfj")
+Item = ExtResource("1_dv1vh")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_wme6c"]
+script = ExtResource("2_m4xfj")
+Item = ExtResource("3_iaetg")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_yediu"]
+script = ExtResource("2_m4xfj")
+Item = ExtResource("4_ak7p8")
+Amount = 1.0
+
+[sub_resource type="Resource" id="Resource_i4pwe"]
+script = ExtResource("2_m4xfj")
+Item = ExtResource("5_mogy6")
+Amount = 6.0
+
+[resource]
+script = ExtResource("6_xrnsp")
+Id = 141
+Building = 0
+Name = "Rigour Motor"
+Inputs = [SubResource("Resource_u1ucu"), SubResource("Resource_wme6c"), SubResource("Resource_yediu")]
+Outputs = [SubResource("Resource_i4pwe")]
+ProcessingTime = 48.0
+IsAlternative = true

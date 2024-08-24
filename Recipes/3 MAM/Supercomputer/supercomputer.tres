@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=13 format=3 uid="uid://btybnnilux6ek"]
+
+[ext_resource type="Resource" uid="uid://b8iam5twj7cfd" path="res://Items/computer.tres" id="1_3cvvk"]
+[ext_resource type="Script" path="res://Scripts/Items/ItemAmount.cs" id="2_bo7e0"]
+[ext_resource type="Resource" uid="uid://ivm2dt0e8unl" path="res://Items/ai_limiter.tres" id="3_kkgcq"]
+[ext_resource type="Resource" uid="uid://dmls4ruajx32r" path="res://Items/high_speed_connector.tres" id="4_45143"]
+[ext_resource type="Resource" uid="uid://dww0blj55t6ko" path="res://Items/plastic.tres" id="5_3ex5r"]
+[ext_resource type="Resource" uid="uid://dbe880l6whi" path="res://Items/supercomputer.tres" id="6_l371i"]
+[ext_resource type="Script" path="res://Scripts/Items/Recipe.cs" id="7_m7bsh"]
+
+[sub_resource type="Resource" id="Resource_dpr7g"]
+script = ExtResource("2_bo7e0")
+Item = ExtResource("1_3cvvk")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_rrj20"]
+script = ExtResource("2_bo7e0")
+Item = ExtResource("3_kkgcq")
+Amount = 2.0
+
+[sub_resource type="Resource" id="Resource_oglxf"]
+script = ExtResource("2_bo7e0")
+Item = ExtResource("4_45143")
+Amount = 3.0
+
+[sub_resource type="Resource" id="Resource_km7d2"]
+script = ExtResource("2_bo7e0")
+Item = ExtResource("5_3ex5r")
+Amount = 28.0
+
+[sub_resource type="Resource" id="Resource_6cl30"]
+script = ExtResource("2_bo7e0")
+Item = ExtResource("6_l371i")
+Amount = 1.0
+
+[resource]
+script = ExtResource("7_m7bsh")
+Id = 68
+Building = 0
+Name = "Supercomputer"
+Inputs = [SubResource("Resource_dpr7g"), SubResource("Resource_rrj20"), SubResource("Resource_oglxf"), SubResource("Resource_km7d2")]
+Outputs = [SubResource("Resource_6cl30")]
+ProcessingTime = 32.0
+IsAlternative = false
